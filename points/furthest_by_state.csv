@@ -2,44 +2,44 @@ state,name,lat,lon,miles,nearest_1,nearest_1_mi,nearest_2,nearest_2_mi,nearest_3
 AL,Alabama,31.97133,-87.18085,32.8,"Selma, AL",32.84,"Greenville, AL",32.97,"Thomasville, AL",32.98,,
 AK,Alaska,65.6349,-168.11822,589.5,"Fairbanks, AK",589.53,"Fairbanks, AK",591.46,"Fairbanks, AK",592.87,,
 AZ,Arizona,31.75865,-112.41505,83.8,"Gila Bend, AZ",83.78,"Green Valley, AZ",83.79,"Tucson, AZ",83.92,,
-AR,Arkansas,35.93754,-93.56388,32.7,"Ozark, AR",32.74,"Harrison, AR",32.8,"Fayetteville, AR",32.84,,"assumes these older-list stores are gone: Huntsville, AR (2025, 14.6 mi); Elkins, AR (2025, 26.4 mi); Berryville, AR (2025, 30.4 mi)"
-CA,California,41.71989,-120.00042,96.5,"Klamath Falls, OR",96.51,"Susanville, CA",96.55,"Klamath Falls, OR",99.13,NV,
-CO,Colorado,40.82994,-108.18954,75.8,"Rock Springs, WY",75.8,"Vernal, UT",75.89,"Steamboat Springs, CO",75.9,,"assumes these older-list stores are gone: Craig, CO (2022, 39.6 mi)"
+AR,Arkansas,34.78736,-93.57917,31.0,"Booneville, AR",31.04,"Hot Springs Village, AR",31.12,"Waldron, AR",31.12,,
+CA,California,41.71789,-120.00043,96.4,"Susanville, CA",96.42,"Klamath Falls, OR",96.43,"Klamath Falls, OR",96.56,NV,"pinned by a store only in the older list, not in All the Places (check it is open): Klamath Falls, OR (2022)"
+CO,Colorado,37.06803,-102.91856,73.0,"Lamar, CO",73.01,"Dalhart, TX",73.01,"La Junta, CO",73.07,,pinned by a store missing from the older list (new or previously missed)
 CT,Connecticut,41.84049,-73.37154,13.0,"Canaan, CT",12.96,"Dover Plains, NY",12.99,"Torrington, CT",13.01,,
 DE,Delaware,39.04574,-75.7379,11.4,"Denton, MD",11.39,"Camden, DE",11.4,"Harrington, DE",12.23,MD,"assumes these older-list stores are gone: Camden, DE (2022, 11.0 mi)"
 DC,District of Columbia,38.84714,-77.00963,2.3,"Oxon Hill, MD",2.31,"Arlington, VA",2.36,"Washington, DC",2.37,,
 FL,Florida,24.6284,-82.87244,70.3,"Key West, FL",70.31,"Marathon, FL",113.31,"Marco Island, FL",115.95,,
-GA,Georgia,31.68812,-83.39558,34.7,"Nashville, GA",34.74,"Vienna, GA",34.79,"Douglas, GA",34.87,,"assumes these older-list stores are gone: Fitzgerald, GA (2025, 8.5 mi); Ashburn, GA (2025, 14.5 mi); Tifton, GA (2025, 16.2 mi); Tifton, GA (2025, 17.7 mi)"
+GA,Georgia,30.7517,-82.56027,33.3,"Waycross, GA",33.25,"White Springs, FL",33.27,"Folkston, GA",33.4,,
 HI,Hawaii,18.914,-155.67413,44.5,"Kealakekua, HI",44.53,"Kailua Kona, HI",54.03,"Kailua Kona, HI",54.45,,
-ID,Idaho,44.75222,-114.72125,107.3,"Hamilton, MT",107.26,"Emmett, ID",107.47,"Dillon, MT",107.56,,"assumes these older-list stores are gone: Hailey, ID (2022, 86.9 mi)"
+ID,Idaho,44.91145,-115.04171,102.1,"Hailey, ID",102.11,"Hamilton, MT",102.15,"Emmett, ID",102.25,,"pinned by a store only in the older list, not in All the Places (check it is open): Hailey, ID (2022)"
 IL,Illinois,39.2701,-90.71479,23.8,"Pittsfield, IL",23.85,"Troy, MO",23.88,"Jerseyville, IL",23.92,,
 IN,Indiana,38.15017,-86.49608,20.5,"Tell City, IN",20.54,"Corydon, IN",20.57,"Ferdinand, IN",20.57,,
-IA,Iowa,43.07419,-92.47074,37.1,"Cedar Falls, IA",37.07,"Decorah, IA",37.18,"Mason City, IA",37.2,,"assumes these older-list stores are gone: New Hampton, IA (2025, 7.3 mi); Charles City, IA (2025, 10.4 mi); Waverly, IA (2025, 24.9 mi)"
+IA,Iowa,40.58224,-93.49002,34.4,"Osceola, IA",34.41,"Centerville, IA",34.46,"Bethany, MO",35.15,MO,
 KS,Kansas,39.72354,-98.75688,59.4,"Russell, KS",59.42,"Holdrege, NE",59.5,"Concordia, KS",59.65,,
-KY,Kentucky,36.70776,-88.77185,25.4,"Martin, TN",25.41,"Paducah, KY",25.41,"Benton, KY",25.5,,"assumes these older-list stores are gone: Mayfield, KY (2025, 7.9 mi); Fulton, KY (2025, 14.9 mi); Paducah, KY (2025, 24.2 mi) | pinned by a store missing from the older list (new or previously missed)"
+KY,Kentucky,37.39769,-88.46591,21.6,"Marion, KY",21.61,"Metropolis, IL",21.65,"Vienna, IL",22.48,IL,
 LA,Louisiana,28.9928,-89.14538,78.4,"Cut Off, LA",78.35,"Belle Chasse, LA",78.89,"Meraux, LA",80.01,,
 ME,Maine,46.47553,-69.35368,65.0,"Millinocket, ME",64.97,"Fort Kent, ME",64.99,"Saint-Jean-Port-Joli, QC (CA)",65.02,,pinned by a store missing from the older list (new or previously missed)
 MD,Maryland,38.25594,-76.08162,20.9,"Lexington Park, MD",20.9,"Princess Anne, MD",20.9,"Cambridge, MD",21.31,,
 MA,Massachusetts,41.24839,-69.97579,30.8,"South Yarmouth, MA",30.78,"Hyannis, MA",32.25,"Hyannis, MA",33.25,,
 MI,Michigan,47.41773,-87.59682,51.3,"Houghton, MI",51.34,"Marquette, MI",60.46,"Marquette, MI",60.84,,
-MN,Minnesota,48.17722,-91.08491,84.3,"Two Harbors, MN",84.35,"Thunder Bay, ON (CA)",84.35,"Thunder Bay, ON (CA)",86.39,,"assumes these older-list stores are gone: Cook, MN (2022, 77.7 mi); Virginia, MN (2022, 82.3 mi) | pinned by a store missing from the older list (new or previously missed)"
-MS,Mississippi,31.16265,-91.03754,32.6,"Saint Francisville, LA",32.63,"Natchez, MS",32.64,"Mccomb, MS",32.74,,"assumes these older-list stores are gone: Clinton, LA (2022, 21.9 mi)"
+MN,Minnesota,48.1938,-91.01604,81.0,"Thunder Bay, ON (CA)",81.02,"Cook, MN",81.04,"Thunder Bay, ON (CA)",83.04,,"pinned by a store only in the older list, not in All the Places (check it is open): Cook, MN (2022) | pinned by a store missing from the older list (new or previously missed)"
+MS,Mississippi,31.2791,-90.97638,29.6,"Natchez, MS",29.61,"Mccomb, MS",29.67,"Mccomb, MS",29.67,,
 MO,Missouri,40.50483,-92.03917,34.8,"Fairfield, IA",34.77,"Kirksville, MO",34.86,"Keokuk, IA",34.9,,
-MT,Montana,48.84955,-107.52408,100.9,"Swift Current, SK (CA)",100.85,"Wolf Point, MT",101.05,"Havre, MT",101.12,,"assumes these older-list stores are gone: Glasgow, MT (2022, 60.8 mi) | pinned by a store missing from the older list (new or previously missed)"
-NE,Nebraska,41.94084,-99.87241,72.7,"Valentine, NE",72.74,"North Platte, NE",72.77,"O'Neill, NE",72.88,,"assumes these older-list stores are gone: Broken Bow, NE (2025, 39.2 mi); Gothenburg, NE (2022, 71.9 mi)"
+MT,Montana,45.84744,-104.0456,93.4,"Miles City, MT",93.4,"Spearfish, SD",93.43,"Dickinson, ND",94.05,SD,
+NE,Nebraska,42.12965,-101.51347,70.7,"Ogallala, NE",70.68,"Valentine, NE",70.81,"Alliance, NE",70.94,,
 NV,Nevada,37.92599,-116.31842,119.8,"Pahrump, NV",119.81,"Ely, NV",120.04,"Bishop, CA",120.26,,
 NH,New Hampshire,44.95328,-71.05638,38.8,"Rumford, ME",38.82,"Coaticook, QC (CA)",38.84,"Gorham, NH",39.24,ME,pinned by a store missing from the older list (new or previously missed)
 NJ,New Jersey,39.18675,-75.13663,16.1,"Millville, NJ",16.14,"Bridgeton, NJ",17.29,"North Cape May, NJ",18.04,,
 NM,New Mexico,36.99788,-103.11983,72.9,"La Junta, CO",72.86,"Dalhart, TX",72.88,"Raton, NM",73.13,CO,
 NY,New York,43.62885,-74.62779,42.2,"Tupper Lake, NY",42.2,"Little Falls, NY",42.21,"Gloversville, NY",42.22,,
 NC,North Carolina,35.14967,-75.86894,52.9,"Beaufort, NC",52.86,"Manteo, NC",52.88,"Grantsboro, NC",54.47,,
-ND,North Dakota,48.14122,-99.32133,91.0,"Jamestown, ND",91.03,"Morden, MB (CA)",91.12,"Minot, ND",91.29,,"assumes these older-list stores are gone: Devils Lake, ND (2025, 21.2 mi) | pinned by a store missing from the older list (new or previously missed)"
-OH,Ohio,40.66383,-84.06745,25.0,"Ottawa, OH",24.96,"Sidney, OH",24.96,"Kenton, OH",25.05,,"assumes these older-list stores are gone: Lima, OH (2025, 4.6 mi); Lima, OH (2025, 5.2 mi); Lima, OH (2025, 5.8 mi); Lima, OH (2025, 7.4 mi) | pinned by a store missing from the older list (new or previously missed)"
+ND,North Dakota,45.94731,-104.04349,88.7,"Dickinson, ND",88.75,"Miles City, MT",90.84,"Spearfish, SD",100.28,MT SD,
+OH,Ohio,41.7404,-83.10523,16.2,"Oak Harbor, OH",16.17,"Port Clinton, OH",18.37,"Monroe, MI",18.5,,"pinned by a store only in the older list, not in All the Places (check it is open): Monroe, MI (2025)"
 OK,Oklahoma,36.99789,-103.0002,70.1,"Dalhart, TX",70.05,"La Junta, CO",75.35,"Lamar, CO",78.8,CO NM,pinned by a store missing from the older list (new or previously missed)
-OR,Oregon,41.99792,-119.59512,111.9,"Hines, OR",111.95,"Klamath Falls, OR",111.96,"Klamath Falls, OR",114.1,NV,
+OR,Oregon,41.99792,-119.59512,111.9,"Hines, OR",111.95,"Klamath Falls, OR",111.96,"Klamath Falls, OR",112.13,NV,"pinned by a store only in the older list, not in All the Places (check it is open): Klamath Falls, OR (2022)"
 PA,Pennsylvania,41.34555,-77.99968,29.4,"Coudersport, PA",29.37,"Milesburg, PA",29.4,"Saint Marys, PA",29.48,,
 RI,Rhode Island,41.15352,-71.55695,20.3,"Westerly, RI",20.3,"Wakefield, RI",20.31,"Pawcatuck, CT",23.16,,
-SC,South Carolina,34.40741,-80.28268,25.8,"Pageland, SC",25.78,"Lugoff, SC",25.87,"Darlington, SC",25.88,,"assumes these older-list stores are gone: Hartsville, SC (2025, 13.0 mi); Bishopville, SC (2025, 14.5 mi); Camden, SC (2025, 21.3 mi)"
+SC,South Carolina,33.01131,-79.38113,25.6,"Georgetown, SC",25.6,"Mount Pleasant, SC",25.61,"Mount Pleasant, SC",30.76,,
 SD,South Dakota,45.45886,-101.91232,106.8,"Bismarck, ND",106.84,"Mandan, ND",106.86,"Pierre, SD",106.92,,
 TN,Tennessee,36.22138,-84.64433,21.7,"Harriman, TN",21.68,"Oneida, TN",21.69,"Jamestown, TN",21.73,,
 TX,Texas,28.97392,-103.15456,100.1,"Alpine, TX",100.12,"Fort Stockton, TX",133.47,"Del Rio, TX",138.89,,

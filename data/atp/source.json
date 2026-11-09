@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-09T22:22:22Z",
+ "fetched_at": "2026-11-09T22:25:00Z",
  "spiders": {
   "mcdonalds_us": {
    "url": "https://alltheplaces-data.openaddresses.io/runs/2026-10-10-13-32-41/output/mcdonalds.geojson",
@@ -24,12 +24,14 @@
   }
  },
  "notes": [
-  "Latest All the Places run had no usable US McDonald's file; used run 2026-10-10-13-32-41."
+  "Latest All the Places run had no usable US McDonald's file; used run 2026-10-10-13-32-41.",
+  "Added 704 US stores from data/us_mcdonalds.csv that All the Places lacks (no All the Places store within 0.5 mi)."
  ],
  "counts": {
-  "US": 13486,
+  "US": 14190,
   "CA": 1521,
   "MX": 385
  },
+ "us_from_older_list": 704,
  "us_source": "atp"
 }
