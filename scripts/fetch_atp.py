@@ -165,6 +165,41 @@ def rows_from(feats, spider, keep):
     return rows
 
 
+def older_rows():
+    out = []
+    with open(FALLBACK_US, newline="") as fh:
+        for r in csv.DictReader(fh):
+            out.append(
+                {
+                    "id": f"old:{r['id']}",
+                    "lat": float(r["lat"]),
+                    "lon": float(r["lon"]),
+                    "address": r["address"],
+                    "city": r["city"],
+                    "state": r["state"],
+                    "country": "US",
+                    "source": f"old-{r['source']}",
+                }
+            )
+    return out
+
+
+def older_only(rows, miles=0.5):
+    import numpy as np
+    from scipy.spatial import cKDTree
+
+    def xyz(lat, lon):
+        la, lo = np.radians(lat), np.radians(lon)
+        return np.column_stack([np.cos(la) * np.cos(lo), np.cos(la) * np.sin(lo), np.sin(la)])
+
+    us = [r for r in rows if r["country"] == "US"]
+    old = older_rows()
+    tree = cKDTree(xyz(np.array([r["lat"] for r in us]), np.array([r["lon"] for r in us])))
+    d, _ = tree.query(xyz(np.array([r["lat"] for r in old]), np.array([r["lon"] for r in old])))
+    dmi = 2 * np.arcsin(np.clip(d / 2, 0, 1)) * 3958.76
+    return [r for r, x in zip(old, dmi) if x > miles]
+
+
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     info = {"fetched_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "spiders": {}, "notes": []}
@@ -189,24 +224,20 @@ def main():
                 f"All the Places US output had {counts.get('US', 0)} stores (< {MIN_US}); "
                 "used the older data/us_mcdonalds.csv for US stores instead."
             )
-            got = []
-            with open(FALLBACK_US, newline="") as fh:
-                for r in csv.DictReader(fh):
-                    got.append(
-                        {
-                            "id": f"old:{r['id']}",
-                            "lat": float(r["lat"]),
-                            "lon": float(r["lon"]),
-                            "address": r["address"],
-                            "city": r["city"],
-                            "state": r["state"],
-                            "country": "US",
-                            "source": f"old-{r['source']}",
-                        }
-                    )
+            got = older_rows()
         rows.extend(got)
+    # All the Places' US scrape has holes (e.g. every Lima, OH store was missing in Oct 2026), so keep
+    # older-list stores that have no All the Places store within 0.5 mi. A store missing from the data
+    # would wrongly grow a gap; these rows are marked old-2025 / old-2022 so spots that depend on one get flagged.
+    if not any(r["source"].startswith("old") for r in rows):
+        rows.extend(older_only(rows))
+        info["notes"].append(
+            f"Added {sum(r['source'].startswith('old') for r in rows)} US stores from data/us_mcdonalds.csv "
+            "that All the Places lacks (no All the Places store within 0.5 mi)."
+        )
     info["counts"] = {c: sum(r["country"] == c for r in rows) for c in ("US", "CA", "MX")}
-    info["us_source"] = "old" if any(r["source"].startswith("old") for r in rows) else "atp"
+    info["us_from_older_list"] = sum(r["source"].startswith("old") for r in rows)
+    info["us_source"] = "atp" if any(r["source"] == "atp" and r["country"] == "US" for r in rows) else "old"
     with open(OUT_DIR / "mcdonalds_us_ca_mx.csv", "w", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=["id", "lat", "lon", "address", "city", "state", "country", "source"])
         w.writeheader()

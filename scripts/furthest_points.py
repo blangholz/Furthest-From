@@ -215,8 +215,12 @@ def main():
                 item["in_old_list"] = bool(od[0] < 0.3)
             near.append(item)
         flags = []
-        if any(n["source"] in ("2022", "old-2022") for n in near):
-            flags.append("pinned by a store only in the 2022 list (may have closed)")
+        olds = [n for n in near if str(n["source"]).startswith("old-") or n["source"] in ("2022", "2025")]
+        if olds:
+            flags.append(
+                "pinned by a store only in the older list, not in All the Places (check it is open): "
+                + "; ".join(f"{n['place']} ({n['source'].replace('old-', '')})" for n in olds)
+            )
         if old is not None:
             # stores the old list has inside this empty circle: if they still exist, the gap is smaller
             gd, gi = old.geodesic_nearest(b["lat"], b["lon"], k=10)
@@ -275,7 +279,7 @@ def main():
         "",
         f"Generated {meta['generated_at']} by `.github/workflows/monthly-data.yml`. Straight-line miles on the WGS84 ellipsoid.",
         f"Stores used: {meta['stores']['US']} US, {meta['stores']['CA']} Canada, {meta['stores']['MX']} Mexico "
-        f"(US from {'All the Places' if src.get('us_source') == 'atp' else 'the older repo list'}).",
+        f"(US from {'All the Places, plus ' + str(src.get('us_from_older_list', 0)) + ' older-list stores it lacks' if src.get('us_source') == 'atp' else 'the older repo list'}).",
         "",
         f"**Lower 48:** {lower48['name']}, {lower48['lat']}, {lower48['lon']}, {lower48['miles']} mi "
         f"(nearest: {', '.join(n['place'] + ' ' + str(n['miles']) for n in lower48['nearest'])}).",
