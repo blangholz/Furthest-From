@@ -1,0 +1,72 @@
+name: Monthly McDonald's data and furthest points
+
+# Runs on the 2nd of every month, whenever these scripts change, or by hand:
+# Actions tab > "Monthly McDonald's data and furthest points" > Run workflow.
+on:
+  schedule:
+    - cron: "17 9 2 * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/monthly-data.yml"
+      - "scripts/fetch_atp.py"
+      - "scripts/furthest_points.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: monthly-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install libraries
+        run: pip install "numpy>=1.26" "scipy>=1.11" "shapely>=2.0" "pyproj>=3.6" "pyshp>=2.3"
+
+      - name: Fetch McDonald's (US, Canada, Mexico) from All the Places
+        run: python scripts/fetch_atp.py
+
+      - name: Fetch Census state boundaries (1:500k, clipped to shoreline)
+        run: |
+          mkdir -p /tmp/bnd
+          for y in 2024 2023 2022; do
+            f="/tmp/bnd/cb_${y}_us_state_500k.zip"
+            if curl -fsSL --retry 3 -o "$f" "https://www2.census.gov/geo/tiger/GENZ${y}/shp/cb_${y}_us_state_500k.zip"; then
+              echo "BOUNDARIES=$f" >> "$GITHUB_ENV"
+              break
+            fi
+          done
+          test -n "$(ls /tmp/bnd/*.zip 2>/dev/null)"
+
+      - name: Find each state's furthest point
+        run: |
+          python scripts/furthest_points.py \
+            --stores data/atp/mcdonalds_us_ca_mx.csv \
+            --boundaries "$BOUNDARIES" \
+            --compare data/us_mcdonalds.csv \
+            --source-info data/atp/source.json \
+            --out points
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/atp points
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Monthly refresh: All the Places stores and furthest points"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 10
+          done
+          exit 1
