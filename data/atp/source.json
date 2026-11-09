@@ -1,0 +1,35 @@
+{
+ "fetched_at": "2026-11-09T22:18:05Z",
+ "spiders": {
+  "mcdonalds_us": {
+   "url": null,
+   "features": 0,
+   "kept": {
+    "US": 0
+   }
+  },
+  "mcdonalds": {
+   "url": "https://alltheplaces-data.openaddresses.io/runs/2026-10-31-13-32-34/output/mcdonalds.geojson",
+   "features": 4556,
+   "kept": {
+    "CA": 1521
+   }
+  },
+  "mcdonalds_latin_america": {
+   "url": "https://alltheplaces-data.openaddresses.io/runs/2026-10-31-13-32-34/output/mcdonalds_latin_america.geojson",
+   "features": 4546,
+   "kept": {
+    "MX": 385
+   }
+  }
+ },
+ "notes": [
+  "All the Places US output had 0 stores (< 12000); used the older data/us_mcdonalds.csv for US stores instead."
+ ],
+ "counts": {
+  "US": 13756,
+  "CA": 1521,
+  "MX": 385
+ },
+ "us_source": "old"
+}

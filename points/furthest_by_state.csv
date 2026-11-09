@@ -1,0 +1,52 @@
+state,name,lat,lon,miles,nearest_1,nearest_1_mi,nearest_2,nearest_2_mi,nearest_3,nearest_3_mi,next_to,flags
+AL,Alabama,31.89852,-85.13445,37.9,"Blakely, GA",37.9,"Columbus, GA",37.91,"Union Springs, AL",38.04,GA,
+AK,Alaska,65.6349,-168.11822,589.5,"Fairbanks, AK",589.53,"Fairbanks, AK",591.46,"Fairbanks, AK",592.87,,
+AZ,Arizona,31.75865,-112.41505,83.8,"Gila Bend, AZ",83.78,"Green Valley, AZ",83.79,"Tucson, AZ",83.92,,pinned by a store only in the 2022 list (may have closed)
+AR,Arkansas,34.78736,-93.57917,31.0,"Booneville, AR",31.04,"Hot Springs Village, AR",31.12,"Waldron, AR",31.12,,pinned by a store only in the 2022 list (may have closed)
+CA,California,41.71789,-120.00043,96.4,"Susanville, CA",96.42,"Klamath Falls, OR",96.43,"Klamath Falls, OR",96.56,NV,pinned by a store only in the 2022 list (may have closed)
+CO,Colorado,37.13355,-102.72934,74.9,"Dalhart, TX",74.94,"La Junta, CO",75.06,"Guymon, OK",75.21,,pinned by a store only in the 2022 list (may have closed)
+CT,Connecticut,41.84049,-73.37154,13.0,"North Canaan, CT",12.96,"Dover Plains, NY",12.99,"Torrington, CT",13.01,,
+DE,Delaware,39.04137,-75.73755,11.1,"Denton, MD",11.12,"Camden, DE",11.12,"Camden, DE",11.5,MD,pinned by a store only in the 2022 list (may have closed)
+DC,District of Columbia,38.84714,-77.00963,2.3,"Forest Heights, MD",2.31,"Arlington, VA",2.36,"Washington, DC",2.37,,
+FL,Florida,24.6284,-82.87244,70.3,"Key West, FL",70.31,"Marathon, FL",113.31,"Marco Island, FL",115.95,,
+GA,Georgia,31.89908,-85.10905,37.5,"Columbus, GA",37.47,"Blakely, GA",37.51,"Phenix City, AL",39.32,AL,
+HI,Hawaii,18.914,-155.67413,44.5,"Kealakekua, HI",44.53,"Kailua Kona, HI",54.03,"Kailua Kona, HI",54.45,,pinned by a store only in the 2022 list (may have closed)
+ID,Idaho,44.91145,-115.04171,102.1,"Hailey, ID",102.11,"Hamilton, MT",102.15,"Emmett, ID",102.25,,pinned by a store only in the 2022 list (may have closed)
+IL,Illinois,39.2701,-90.71479,23.8,"Pittsfield, IL",23.85,"Troy, MO",23.88,"Jerseyville, IL",23.92,,
+IN,Indiana,38.15017,-86.49608,20.5,"Tell City, IN",20.54,"Corydon, IN",20.57,"Ferdinand, IN",20.57,,pinned by a store only in the 2022 list (may have closed)
+IA,Iowa,40.58224,-93.49002,34.4,"Osceola, IA",34.41,"Centerville, IA",34.46,"Bethany, MO",35.15,MO,
+KS,Kansas,38.36071,-102.04284,65.8,"Ulysses, KS",65.76,"Burlington, CO",65.8,"Garden City, KS",68.52,CO,pinned by a store only in the 2022 list (may have closed)
+KY,Kentucky,37.55404,-83.54695,26.1,"Stanton, KY",26.06,"Hazard, KY",26.07,"Irvine, KY",26.11,,
+LA,Louisiana,28.9928,-89.14538,78.4,"Cut Off, LA",78.35,"Belle Chasse, LA",78.89,"Meraux, LA",80.01,,
+ME,Maine,46.47553,-69.35368,65.0,"Millinocket, ME",64.97,"Fort Kent, ME",64.99,"Saint-Jean-Port-Joli, QC (CA)",65.02,,pinned by a store only in the 2022 list (may have closed) | pinned by a store missing from the older list (new or previously missed)
+MD,Maryland,38.25594,-76.08162,20.9,"Great Mills, MD",20.9,"Princess Anne, MD",20.9,"Cambridge, MD",21.31,,
+MA,Massachusetts,41.24839,-69.97579,30.8,"South Yarmouth, MA",30.78,"Hyannis, MA",32.25,"Hyannis, MA",33.25,,
+MI,Michigan,47.41773,-87.59682,51.3,"Houghton, MI",51.34,"Marquette, MI",60.46,"Marquette, MI",60.84,,
+MN,Minnesota,48.1938,-91.01604,81.0,"Thunder Bay, ON (CA)",81.02,"Cook, MN",81.04,"Thunder Bay, ON (CA)",83.04,,pinned by a store only in the 2022 list (may have closed) | pinned by a store missing from the older list (new or previously missed)
+MS,Mississippi,32.81264,-90.84008,32.1,"Vicksburg, MS",32.1,"Belzoni, MS",32.16,"Oak Grove, LA",32.25,,
+MO,Missouri,40.50483,-92.03917,34.8,"Fairfield, IA",34.77,"Kirksville, MO",34.86,"Keokuk, IA",34.9,,
+MT,Montana,45.84744,-104.0456,93.4,"Miles City, MT",93.4,"Spearfish, SD",93.43,"Dickinson, ND",94.05,SD,
+NE,Nebraska,42.12965,-101.51347,70.7,"Ogallala, NE",70.68,"Valentine, NE",70.81,"Alliance, NE",70.94,,pinned by a store only in the 2022 list (may have closed)
+NV,Nevada,37.92599,-116.31842,119.8,"Pahrump, NV",119.81,"Ely, NV",120.04,"Bishop, CA",120.26,,pinned by a store only in the 2022 list (may have closed)
+NH,New Hampshire,44.95328,-71.05638,38.8,"Rumford, ME",38.82,"Coaticook, QC (CA)",38.84,"Gorham, NH",39.24,ME,pinned by a store missing from the older list (new or previously missed)
+NJ,New Jersey,39.18675,-75.13663,16.1,"Millville, NJ",16.14,"Bridgeton, NJ",17.29,"North Cape May, NJ",18.04,,
+NM,New Mexico,36.99788,-103.11983,72.9,"La Junta, CO",72.86,"Dalhart, TX",72.88,"Raton, NM",73.13,CO,pinned by a store only in the 2022 list (may have closed)
+NY,New York,43.62885,-74.62779,42.2,"Tupper Lake, NY",42.2,"Little Falls, NY",42.21,"Gloversville, NY",42.22,,
+NC,North Carolina,35.14967,-75.86894,52.9,"Beaufort, NC",52.86,"Manteo, NC",52.88,"Grantsboro, NC",54.47,,pinned by a store only in the 2022 list (may have closed)
+ND,North Dakota,45.94731,-104.04349,88.7,"Dickinson, ND",88.75,"Miles City, MT",90.84,"Spearfish, SD",100.28,MT SD,
+OH,Ohio,41.7404,-83.10523,16.2,"Oak Harbor, OH",16.17,"Port Clinton, OH",18.37,"Monroe, MI",18.5,,
+OK,Oklahoma,36.99789,-103.0002,70.1,"Dalhart, TX",70.05,"La Junta, CO",75.35,"Raton, NM",79.72,CO NM,pinned by a store only in the 2022 list (may have closed)
+OR,Oregon,41.99792,-119.59512,111.9,"Hines, OR",111.95,"Klamath Falls, OR",111.96,"Klamath Falls, OR",112.13,NV,pinned by a store only in the 2022 list (may have closed)
+PA,Pennsylvania,41.34555,-77.99968,29.4,"Coudersport, PA",29.37,"Milesburg, PA",29.4,"Saint Marys, PA",29.48,,
+RI,Rhode Island,41.15352,-71.55695,20.3,"Westerly, RI",20.3,"Wakefield, RI",20.31,"Pawcatuck, CT",23.16,,
+SC,South Carolina,33.01131,-79.38113,25.6,"Georgetown, SC",25.6,"Mount Pleasant, SC",25.61,"Mount Pleasant, SC",30.76,,
+SD,South Dakota,45.45886,-101.91232,106.8,"Bismarck, ND",106.84,"Mandan, ND",106.86,"Pierre, SD",106.92,,pinned by a store only in the 2022 list (may have closed)
+TN,Tennessee,36.22138,-84.64433,21.7,"Harriman, TN",21.68,"Oneida, TN",21.69,"Jamestown, TN",21.73,,
+TX,Texas,28.97392,-103.15456,100.1,"Alpine, TX",100.12,"Fort Stockton, TX",133.47,"Del Rio, TX",138.89,,pinned by a store only in the 2022 list (may have closed)
+UT,Utah,38.00611,-110.89696,82.5,"Page, AZ",82.48,"Richfield, UT",82.65,"Moab, UT",82.71,,pinned by a store only in the 2022 list (may have closed)
+VT,Vermont,44.84275,-71.55452,23.8,"Coaticook, QC (CA)",23.79,"Lancaster, NH",23.81,"Derby, VT",30.62,NH,pinned by a store missing from the older list (new or previously missed)
+VA,Virginia,38.35281,-79.73312,39.4,"Elkins, WV",39.39,"Low Moor, VA",39.39,"Staunton, VA",39.49,WV,
+WA,Washington,48.5772,-120.88996,60.5,"Hope, BC (CA)",60.46,"Granite Falls, WA",60.55,"Brewster, WA",60.56,,pinned by a store only in the 2022 list (may have closed) | pinned by a store missing from the older list (new or previously missed)
+WV,West Virginia,38.35981,-80.05979,40.2,"Low Moor, VA",40.17,"Elkins, WV",40.17,"Sutton, WV",40.27,,
+WI,Wisconsin,47.07491,-90.39675,41.0,"Ashland, WI",40.98,"Ironwood, MI",43.69,"Two Harbors, MN",60.78,,pinned by a store only in the 2022 list (may have closed)
+WY,Wyoming,42.34855,-110.42594,79.8,"Jackson, WY",79.77,"Evanston, WY",79.77,"Rock Springs, WY",79.91,,pinned by a store only in the 2022 list (may have closed)
