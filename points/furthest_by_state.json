@@ -1,19 +1,19 @@
 {
  "meta": {
-  "generated_at": "2026-11-09T22:20:56Z",
+  "generated_at": "2026-11-09T22:23:32Z",
   "stores": {
-   "US": 13756,
+   "US": 13486,
    "CA": 1521,
    "MX": 385
   },
   "store_source": {
-   "fetched_at": "2026-11-09T22:18:05Z",
+   "fetched_at": "2026-11-09T22:22:22Z",
    "spiders": {
     "mcdonalds_us": {
-     "url": null,
-     "features": 0,
+     "url": "https://alltheplaces-data.openaddresses.io/runs/2026-10-10-13-32-41/output/mcdonalds.geojson",
+     "features": 13486,
      "kept": {
-      "US": 0
+      "US": 13486
      }
     },
     "mcdonalds": {
@@ -32,14 +32,14 @@
     }
    },
    "notes": [
-    "All the Places US output had 0 stores (< 12000); used the older data/us_mcdonalds.csv for US stores instead."
+    "Latest All the Places run had no usable US McDonald's file; used run 2026-10-10-13-32-41."
    ],
    "counts": {
-    "US": 13756,
+    "US": 13486,
     "CA": 1521,
     "MX": 385
    },
-   "us_source": "old"
+   "us_source": "atp"
   },
   "boundaries": "cb_2024_us_state_500k.zip",
   "distance": "straight line on the WGS84 ellipsoid, miles",
@@ -56,7 +56,7 @@
      "country": "US",
      "lat": 36.209146,
      "lon": -115.986045,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -66,7 +66,7 @@
      "country": "US",
      "lat": 39.243296,
      "lon": -114.869511,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -76,59 +76,55 @@
      "country": "US",
      "lat": 37.365234,
      "lon": -118.39502,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     }
    ],
-   "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
-   ]
+   "flags": []
   }
  },
  "states": [
   {
    "state": "AL",
    "name": "Alabama",
-   "lat": 31.89852,
-   "lon": -85.13445,
-   "miles": 37.9,
+   "lat": 31.97133,
+   "lon": -87.18085,
+   "miles": 32.8,
    "nearest": [
     {
-     "miles": 37.9,
-     "place": "Blakely, GA",
-     "address": "12310 Columbia St",
+     "miles": 32.84,
+     "place": "Selma, AL",
+     "address": "600 Highland Ave",
      "country": "US",
-     "lat": 31.375067,
-     "lon": -84.936573,
-     "source": "old-2025",
+     "lat": 32.430743,
+     "lon": -87.03184,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 37.91,
-     "place": "Columbus, GA",
-     "address": "3450 Victory Drive",
+     "miles": 32.97,
+     "place": "Greenville, AL",
+     "address": "112 Greenville Byp",
      "country": "US",
-     "lat": 32.425654,
-     "lon": -84.949385,
-     "source": "old-2025",
+     "lat": 31.84811,
+     "lon": -86.638763,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 38.04,
-     "place": "Union Springs, AL",
-     "address": "201 E Conecuh",
+     "miles": 32.98,
+     "place": "Thomasville, AL",
+     "address": "33311 Highway 43",
      "country": "US",
-     "lat": 32.146833,
-     "lon": -85.713147,
-     "source": "old-2025",
+     "lat": 31.925878,
+     "lon": -87.739694,
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
-   "edge_m": 535,
-   "next_to": [
-    "GA"
-   ],
+   "edge_m": 91832,
+   "next_to": [],
    "flags": [],
    "old_list_miles": 37.9,
    "old_list_spot": [
@@ -150,7 +146,7 @@
      "country": "US",
      "lat": 64.848734,
      "lon": -147.820013,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -160,7 +156,7 @@
      "country": "US",
      "lat": 64.837255,
      "lon": -147.759486,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -170,7 +166,7 @@
      "country": "US",
      "lat": 64.859406,
      "lon": -147.696844,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -198,7 +194,7 @@
      "country": "US",
      "lat": 32.944232,
      "lon": -112.732565,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -208,7 +204,7 @@
      "country": "US",
      "lat": 31.852122,
      "lon": -110.995185,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -218,16 +214,14 @@
      "country": "US",
      "lat": 32.171993,
      "lon": -111.071094,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
    "edge_m": 189,
    "next_to": [],
-   "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
-   ],
+   "flags": [],
    "old_list_miles": 83.8,
    "old_list_spot": [
     31.75865,
@@ -237,46 +231,46 @@
   {
    "state": "AR",
    "name": "Arkansas",
-   "lat": 34.78736,
-   "lon": -93.57917,
-   "miles": 31.0,
+   "lat": 35.93754,
+   "lon": -93.56388,
+   "miles": 32.7,
    "nearest": [
     {
-     "miles": 31.04,
-     "place": "Booneville, AR",
-     "address": "110 East Main Street",
+     "miles": 32.74,
+     "place": "Ozark, AR",
+     "address": "2230 N 3rd St",
      "country": "US",
-     "lat": 35.139677,
-     "lon": -93.919926,
-     "source": "old-2025",
+     "lat": 35.511391,
+     "lon": -93.82092,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 31.12,
-     "place": "Hot Springs Village, AR",
-     "address": "4447 Hwy 7 N",
+     "miles": 32.8,
+     "place": "Harrison, AR",
+     "address": "1314 N Main",
      "country": "US",
-     "lat": 34.654392,
-     "lon": -93.056731,
-     "source": "old-2025",
+     "lat": 36.245126,
+     "lon": -93.116853,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 31.12,
-     "place": "Waldron, AR",
-     "address": "34 Hwy 71 Bypass North",
+     "miles": 32.84,
+     "place": "Fayetteville, AR",
+     "address": "1870 N Crossover Rd",
      "country": "US",
-     "lat": 34.904332,
-     "lon": -94.108053,
-     "source": "old-2022",
+     "lat": 36.086298,
+     "lon": -94.120819,
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
-   "edge_m": 79803,
+   "edge_m": 50595,
    "next_to": [],
    "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
+    "assumes these older-list stores are gone: Huntsville, AR (2025, 14.6 mi); Elkins, AR (2025, 26.4 mi); Berryville, AR (2025, 30.4 mi)"
    ],
    "old_list_miles": 31.0,
    "old_list_spot": [
@@ -287,38 +281,38 @@
   {
    "state": "CA",
    "name": "California",
-   "lat": 41.71789,
-   "lon": -120.00043,
-   "miles": 96.4,
+   "lat": 41.71989,
+   "lon": -120.00042,
+   "miles": 96.5,
    "nearest": [
     {
-     "miles": 96.42,
-     "place": "Susanville, CA",
-     "address": "3000 Main St",
-     "country": "US",
-     "lat": 40.40529,
-     "lon": -120.633054,
-     "source": "old-2022",
-     "in_old_list": true
-    },
-    {
-     "miles": 96.43,
-     "place": "Klamath Falls, OR",
-     "address": "3600 Washburn Way",
-     "country": "US",
-     "lat": 42.193358,
-     "lon": -121.760605,
-     "source": "old-2022",
-     "in_old_list": true
-    },
-    {
-     "miles": 96.56,
+     "miles": 96.51,
      "place": "Klamath Falls, OR",
      "address": "1874 Avalon Blvd",
      "country": "US",
      "lat": 42.211706,
      "lon": -121.754484,
-     "source": "old-2022",
+     "source": "atp",
+     "in_old_list": true
+    },
+    {
+     "miles": 96.55,
+     "place": "Susanville, CA",
+     "address": "3000 Main St",
+     "country": "US",
+     "lat": 40.40529,
+     "lon": -120.633054,
+     "source": "atp",
+     "in_old_list": true
+    },
+    {
+     "miles": 99.13,
+     "place": "Klamath Falls, OR",
+     "address": "2481 Campus Dr",
+     "country": "US",
+     "lat": 42.249606,
+     "lon": -121.789978,
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -327,9 +321,7 @@
    "next_to": [
     "NV"
    ],
-   "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
-   ],
+   "flags": [],
    "old_list_miles": 96.4,
    "old_list_spot": [
     41.71789,
@@ -339,46 +331,46 @@
   {
    "state": "CO",
    "name": "Colorado",
-   "lat": 37.13355,
-   "lon": -102.72934,
-   "miles": 74.9,
+   "lat": 40.82994,
+   "lon": -108.18954,
+   "miles": 75.8,
    "nearest": [
     {
-     "miles": 74.94,
-     "place": "Dalhart, TX",
-     "address": "612 Tennessee Ave",
+     "miles": 75.8,
+     "place": "Rock Springs, WY",
+     "address": "1687 Sunset Dr",
      "country": "US",
-     "lat": 36.060704,
-     "lon": -102.514187,
-     "source": "old-2022",
+     "lat": 41.576904,
+     "lon": -109.255796,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 75.06,
-     "place": "La Junta, CO",
-     "address": "27680 Hwy 50 Frontage Road",
+     "miles": 75.89,
+     "place": "Vernal, UT",
+     "address": "1050 W Hwy 40",
      "country": "US",
-     "lat": 37.991418,
-     "lon": -103.570852,
-     "source": "old-2025",
+     "lat": 40.453951,
+     "lon": -109.546505,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 75.21,
-     "place": "Guymon, OK",
-     "address": "1906 Hwy 64 N",
+     "miles": 75.9,
+     "place": "Steamboat Springs, CO",
+     "address": "1150 S Lincoln Ave",
      "country": "US",
-     "lat": 36.698557,
-     "lon": -101.48381,
-     "source": "old-2025",
+     "lat": 40.46839,
+     "lon": -106.825661,
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
-   "edge_m": 12103,
+   "edge_m": 14359,
    "next_to": [],
    "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
+    "assumes these older-list stores are gone: Craig, CO (2022, 39.6 mi)"
    ],
    "old_list_miles": 74.9,
    "old_list_spot": [
@@ -395,12 +387,12 @@
    "nearest": [
     {
      "miles": 12.96,
-     "place": "North Canaan, CT",
+     "place": "Canaan, CT",
      "address": "18 Main St",
      "country": "US",
      "lat": 42.025151,
      "lon": -73.325632,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -410,7 +402,7 @@
      "country": "US",
      "lat": 41.735226,
      "lon": -73.580101,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -420,7 +412,7 @@
      "country": "US",
      "lat": 41.81441,
      "lon": -73.121959,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -437,38 +429,38 @@
   {
    "state": "DE",
    "name": "Delaware",
-   "lat": 39.04137,
-   "lon": -75.73755,
-   "miles": 11.1,
+   "lat": 39.04574,
+   "lon": -75.7379,
+   "miles": 11.4,
    "nearest": [
     {
-     "miles": 11.12,
+     "miles": 11.39,
      "place": "Denton, MD",
      "address": "605 N 6th St",
      "country": "US",
      "lat": 38.894036,
      "lon": -75.821544,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 11.12,
-     "place": "Camden, DE",
-     "address": "263 Walmart Drive",
-     "country": "US",
-     "lat": 39.10272,
-     "lon": -75.546217,
-     "source": "old-2022",
-     "in_old_list": true
-    },
-    {
-     "miles": 11.5,
+     "miles": 11.4,
      "place": "Camden, DE",
      "address": "60 East Street",
      "country": "US",
      "lat": 39.106974,
      "lon": -75.541027,
-     "source": "old-2025",
+     "source": "atp",
+     "in_old_list": true
+    },
+    {
+     "miles": 12.23,
+     "place": "Harrington, DE",
+     "address": "16758 S Dupont Hwy",
+     "country": "US",
+     "lat": 38.929751,
+     "lon": -75.566181,
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -478,7 +470,7 @@
     "MD"
    ],
    "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
+    "assumes these older-list stores are gone: Camden, DE (2022, 11.0 mi)"
    ],
    "old_list_miles": 11.1,
    "old_list_spot": [
@@ -495,32 +487,32 @@
    "nearest": [
     {
      "miles": 2.31,
-     "place": "Forest Heights, MD",
-     "address": "5501 Livingston Rd",
+     "place": "Oxon Hill, MD",
+     "address": "5501 Livingston Rd Unit 5003",
      "country": "US",
      "lat": 38.81489,
      "lon": -76.997762,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
      "miles": 2.36,
      "place": "Arlington, VA",
-     "address": "2620 Jefferson Davis Hwy",
+     "address": "2620 Richmond Hwy",
      "country": "US",
      "lat": 38.850054,
      "lon": -77.053277,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
      "miles": 2.37,
      "place": "Washington, DC",
-     "address": "2529 Good Hope Rd Se",
+     "address": "2529 Marion Barry Ave Se",
      "country": "US",
      "lat": 38.860001,
      "lon": -76.968874,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -548,7 +540,7 @@
      "country": "US",
      "lat": 24.571897,
      "lon": -81.756906,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -558,7 +550,7 @@
      "country": "US",
      "lat": 24.716418,
      "lon": -81.073326,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -568,7 +560,7 @@
      "country": "US",
      "lat": 25.952874,
      "lon": -81.727494,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -585,47 +577,47 @@
   {
    "state": "GA",
    "name": "Georgia",
-   "lat": 31.89908,
-   "lon": -85.10905,
-   "miles": 37.5,
+   "lat": 31.68812,
+   "lon": -83.39558,
+   "miles": 34.7,
    "nearest": [
     {
-     "miles": 37.47,
-     "place": "Columbus, GA",
-     "address": "3450 Victory Drive",
+     "miles": 34.74,
+     "place": "Nashville, GA",
+     "address": "609 S Davis St",
      "country": "US",
-     "lat": 32.425654,
-     "lon": -84.949385,
-     "source": "old-2025",
+     "lat": 31.199247,
+     "lon": -83.25162,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 37.51,
-     "place": "Blakely, GA",
-     "address": "12310 Columbia St",
+     "miles": 34.79,
+     "place": "Vienna, GA",
+     "address": "29 Victory Lane",
      "country": "US",
-     "lat": 31.375067,
-     "lon": -84.936573,
-     "source": "old-2025",
+     "lat": 32.085915,
+     "lon": -83.760155,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 39.32,
-     "place": "Phenix City, AL",
-     "address": "3915 Us Hwy 80",
+     "miles": 34.87,
+     "place": "Douglas, GA",
+     "address": "1300 S Peterson",
      "country": "US",
-     "lat": 32.46956,
-     "lon": -85.093097,
-     "source": "old-2025",
+     "lat": 31.491928,
+     "lon": -82.850528,
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
-   "edge_m": 189,
-   "next_to": [
-    "AL"
+   "edge_m": 99174,
+   "next_to": [],
+   "flags": [
+    "assumes these older-list stores are gone: Fitzgerald, GA (2025, 8.5 mi); Ashburn, GA (2025, 14.5 mi); Tifton, GA (2025, 16.2 mi); Tifton, GA (2025, 17.7 mi)"
    ],
-   "flags": [],
    "old_list_miles": 37.5,
    "old_list_spot": [
     31.89908,
@@ -646,7 +638,7 @@
      "country": "US",
      "lat": 19.51759,
      "lon": -155.920444,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -656,26 +648,24 @@
      "country": "US",
      "lat": 19.639758,
      "lon": -155.990748,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     },
     {
      "miles": 54.45,
      "place": "Kailua Kona, HI",
-     "address": "75-1015 Henry St",
+     "address": "75-1015 HENRY ST (Walmart)",
      "country": "US",
      "lat": 19.646235,
      "lon": -155.990828,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "Hawaii's 8 main islands only",
    "edge_m": 211,
    "next_to": [],
-   "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
-   ],
+   "flags": [],
    "old_list_miles": 44.5,
    "old_list_spot": [
     18.914,
@@ -685,46 +675,46 @@
   {
    "state": "ID",
    "name": "Idaho",
-   "lat": 44.91145,
-   "lon": -115.04171,
-   "miles": 102.1,
+   "lat": 44.75222,
+   "lon": -114.72125,
+   "miles": 107.3,
    "nearest": [
     {
-     "miles": 102.11,
-     "place": "Hailey, ID",
-     "address": "720 N Main St",
-     "country": "US",
-     "lat": 43.526588,
-     "lon": -114.319897,
-     "source": "old-2022",
-     "in_old_list": true
-    },
-    {
-     "miles": 102.15,
+     "miles": 107.26,
      "place": "Hamilton, MT",
      "address": "707 N First Street",
      "country": "US",
      "lat": 46.253881,
      "lon": -114.157066,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 102.25,
+     "miles": 107.47,
      "place": "Emmett, ID",
      "address": "1335 S Washington",
      "country": "US",
      "lat": 43.863313,
      "lon": -116.500629,
-     "source": "old-2025",
+     "source": "atp",
+     "in_old_list": true
+    },
+    {
+     "miles": 107.56,
+     "place": "Dillon, MT",
+     "address": "576 N Montana Street",
+     "country": "US",
+     "lat": 45.22445,
+     "lon": -112.629562,
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
-   "edge_m": 63318,
+   "edge_m": 63376,
    "next_to": [],
    "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
+    "assumes these older-list stores are gone: Hailey, ID (2022, 86.9 mi)"
    ],
    "old_list_miles": 102.1,
    "old_list_spot": [
@@ -746,7 +736,7 @@
      "country": "US",
      "lat": 39.607194,
      "lon": -90.813634,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -756,7 +746,7 @@
      "country": "US",
      "lat": 38.987524,
      "lon": -90.971402,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -766,7 +756,7 @@
      "country": "US",
      "lat": 39.110334,
      "lon": -90.31927,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -794,17 +784,17 @@
      "country": "US",
      "lat": 37.937076,
      "lon": -86.759067,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     },
     {
      "miles": 20.57,
      "place": "Corydon, IN",
-     "address": "2035 Old St Rd 135 N",
+     "address": "2035 Old State Road 135 N",
      "country": "US",
      "lat": 38.23069,
      "lon": -86.132218,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -814,16 +804,14 @@
      "country": "US",
      "lat": 38.208689,
      "lon": -86.866578,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
    "edge_m": 3947,
    "next_to": [],
-   "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
-   ],
+   "flags": [],
    "old_list_miles": 20.5,
    "old_list_spot": [
     38.15017,
@@ -833,47 +821,47 @@
   {
    "state": "IA",
    "name": "Iowa",
-   "lat": 40.58224,
-   "lon": -93.49002,
-   "miles": 34.4,
+   "lat": 43.07419,
+   "lon": -92.47074,
+   "miles": 37.1,
    "nearest": [
     {
-     "miles": 34.41,
-     "place": "Osceola, IA",
-     "address": "1220 Jeffreys Dr",
+     "miles": 37.07,
+     "place": "Cedar Falls, IA",
+     "address": "610 W 1st St",
      "country": "US",
-     "lat": 41.028638,
-     "lon": -93.782581,
-     "source": "old-2025",
+     "lat": 42.537312,
+     "lon": -92.452509,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 34.46,
-     "place": "Centerville, IA",
-     "address": "1000 N 18th St",
+     "miles": 37.18,
+     "place": "Decorah, IA",
+     "address": "915 Short St",
      "country": "US",
-     "lat": 40.742158,
-     "lon": -92.86882,
-     "source": "old-2025",
+     "lat": 43.290721,
+     "lon": -91.796785,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 35.15,
-     "place": "Bethany, MO",
-     "address": "4100 Miller St",
+     "miles": 37.2,
+     "place": "Mason City, IA",
+     "address": "2010 South Federal Avenue",
      "country": "US",
-     "lat": 40.264675,
-     "lon": -94.011287,
-     "source": "old-2025",
+     "lat": 43.132119,
+     "lon": -93.201971,
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
-   "edge_m": 169,
-   "next_to": [
-    "MO"
+   "edge_m": 34653,
+   "next_to": [],
+   "flags": [
+    "assumes these older-list stores are gone: New Hampton, IA (2025, 7.3 mi); Charles City, IA (2025, 10.4 mi); Waverly, IA (2025, 24.9 mi)"
    ],
-   "flags": [],
    "old_list_miles": 34.4,
    "old_list_spot": [
     40.58224,
@@ -883,49 +871,45 @@
   {
    "state": "KS",
    "name": "Kansas",
-   "lat": 38.36071,
-   "lon": -102.04284,
-   "miles": 65.8,
+   "lat": 39.72354,
+   "lon": -98.75688,
+   "miles": 59.4,
    "nearest": [
     {
-     "miles": 65.76,
-     "place": "Ulysses, KS",
-     "address": "105 W Oklahoma",
+     "miles": 59.42,
+     "place": "Russell, KS",
+     "address": "1435 S Fossil",
      "country": "US",
-     "lat": 37.576103,
-     "lon": -101.358468,
-     "source": "old-2025",
+     "lat": 38.865429,
+     "lon": -98.85357,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 65.8,
-     "place": "Burlington, CO",
-     "address": "440 Lincoln Avenue South",
+     "miles": 59.5,
+     "place": "Holdrege, NE",
+     "address": "410 West 4th Avenue",
      "country": "US",
-     "lat": 39.296697,
-     "lon": -102.278363,
-     "source": "old-2025",
+     "lat": 40.438117,
+     "lon": -99.385434,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 68.52,
-     "place": "Garden City, KS",
-     "address": "1106 North Taylor Avenue",
+     "miles": 59.65,
+     "place": "Concordia, KS",
+     "address": "1420 Lincoln St",
      "country": "US",
-     "lat": 37.975437,
-     "lon": -100.882998,
-     "source": "old-2022",
+     "lat": 39.56313,
+     "lon": -97.657858,
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
-   "edge_m": 175,
-   "next_to": [
-    "CO"
-   ],
-   "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
-   ],
+   "edge_m": 23867,
+   "next_to": [],
+   "flags": [],
    "old_list_miles": 65.8,
    "old_list_spot": [
     38.36071,
@@ -935,45 +919,48 @@
   {
    "state": "KY",
    "name": "Kentucky",
-   "lat": 37.55404,
-   "lon": -83.54695,
-   "miles": 26.1,
+   "lat": 36.70776,
+   "lon": -88.77185,
+   "miles": 25.4,
    "nearest": [
     {
-     "miles": 26.06,
-     "place": "Stanton, KY",
-     "address": "385 Furnace Rd",
+     "miles": 25.41,
+     "place": "Martin, TN",
+     "address": "801 University Street",
      "country": "US",
-     "lat": 37.839817,
-     "lon": -83.858025,
-     "source": "old-2025",
+     "lat": 36.348437,
+     "lon": -88.873455,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 26.07,
-     "place": "Hazard, KY",
-     "address": "1326 Combs Road",
+     "miles": 25.41,
+     "place": "Paducah, KY",
+     "address": "5345 Us Hwy 60 W",
      "country": "US",
-     "lat": 37.288021,
-     "lon": -83.210242,
-     "source": "old-2025",
-     "in_old_list": true
+     "lat": 37.072293,
+     "lon": -88.704271,
+     "source": "atp",
+     "in_old_list": false
     },
     {
-     "miles": 26.11,
-     "place": "Irvine, KY",
-     "address": "901 Richmond Rd",
+     "miles": 25.5,
+     "place": "Benton, KY",
+     "address": "25 Commerce Blvd",
      "country": "US",
-     "lat": 37.697001,
-     "lon": -83.987632,
-     "source": "old-2025",
+     "lat": 36.86502,
+     "lon": -88.35576,
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
-   "edge_m": 74585,
+   "edge_m": 18292,
    "next_to": [],
-   "flags": [],
+   "flags": [
+    "assumes these older-list stores are gone: Mayfield, KY (2025, 7.9 mi); Fulton, KY (2025, 14.9 mi); Paducah, KY (2025, 24.2 mi)",
+    "pinned by a store missing from the older list (new or previously missed)"
+   ],
    "old_list_miles": 26.1,
    "old_list_spot": [
     37.55404,
@@ -994,7 +981,7 @@
      "country": "US",
      "lat": 29.468103,
      "lon": -90.32372,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1004,7 +991,7 @@
      "country": "US",
      "lat": 29.862558,
      "lon": -89.996859,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1014,7 +1001,7 @@
      "country": "US",
      "lat": 29.934721,
      "lon": -89.92232,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -1042,7 +1029,7 @@
      "country": "US",
      "lat": 45.656776,
      "lon": -68.688236,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1052,7 +1039,7 @@
      "country": "US",
      "lat": 47.256997,
      "lon": -68.589601,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1070,7 +1057,6 @@
    "edge_m": 46840,
    "next_to": [],
    "flags": [
-    "pinned by a store only in the 2022 list (may have closed)",
     "pinned by a store missing from the older list (new or previously missed)"
    ],
    "old_list_miles": 86.7,
@@ -1088,12 +1074,12 @@
    "nearest": [
     {
      "miles": 20.9,
-     "place": "Great Mills, MD",
-     "address": "21600 Great Mills Road",
+     "place": "Lexington Park, MD",
+     "address": "21600 Great Mills Rd",
      "country": "US",
      "lat": 38.260123,
      "lon": -76.465824,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1103,7 +1089,7 @@
      "country": "US",
      "lat": 38.214228,
      "lon": -75.701049,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1113,7 +1099,7 @@
      "country": "US",
      "lat": 38.564607,
      "lon": -76.065962,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -1141,7 +1127,7 @@
      "country": "US",
      "lat": 41.660179,
      "lon": -70.203476,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1151,7 +1137,7 @@
      "country": "US",
      "lat": 41.652179,
      "lon": -70.288351,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1161,7 +1147,7 @@
      "country": "US",
      "lat": 41.667568,
      "lon": -70.291522,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -1189,7 +1175,7 @@
      "country": "US",
      "lat": 47.110366,
      "lon": -88.590754,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1199,7 +1185,7 @@
      "country": "US",
      "lat": 46.547483,
      "lon": -87.459916,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1209,7 +1195,7 @@
      "country": "US",
      "lat": 46.545495,
      "lon": -87.418521,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -1226,12 +1212,22 @@
   {
    "state": "MN",
    "name": "Minnesota",
-   "lat": 48.1938,
-   "lon": -91.01604,
-   "miles": 81.0,
+   "lat": 48.17722,
+   "lon": -91.08491,
+   "miles": 84.3,
    "nearest": [
     {
-     "miles": 81.02,
+     "miles": 84.35,
+     "place": "Two Harbors, MN",
+     "address": "1130 7th Ave",
+     "country": "US",
+     "lat": 47.025036,
+     "lon": -91.682035,
+     "source": "atp",
+     "in_old_list": true
+    },
+    {
+     "miles": 84.35,
      "place": "Thunder Bay, ON (CA)",
      "address": "201 Arthur St.",
      "country": "CA",
@@ -1241,17 +1237,7 @@
      "in_old_list": false
     },
     {
-     "miles": 81.04,
-     "place": "Cook, MN",
-     "address": "101 S Hwy 53",
-     "country": "US",
-     "lat": 47.848815,
-     "lon": -92.687123,
-     "source": "old-2022",
-     "in_old_list": true
-    },
-    {
-     "miles": 83.04,
+     "miles": 86.39,
      "place": "Thunder Bay, ON (CA)",
      "address": "770 Memorial Avenue",
      "country": "CA",
@@ -1265,7 +1251,7 @@
    "edge_m": 148,
    "next_to": [],
    "flags": [
-    "pinned by a store only in the 2022 list (may have closed)",
+    "assumes these older-list stores are gone: Cook, MN (2022, 77.7 mi); Virginia, MN (2022, 82.3 mi)",
     "pinned by a store missing from the older list (new or previously missed)"
    ],
    "old_list_miles": 101.9,
@@ -1277,45 +1263,47 @@
   {
    "state": "MS",
    "name": "Mississippi",
-   "lat": 32.81264,
-   "lon": -90.84008,
-   "miles": 32.1,
+   "lat": 31.16265,
+   "lon": -91.03754,
+   "miles": 32.6,
    "nearest": [
     {
-     "miles": 32.1,
-     "place": "Vicksburg, MS",
-     "address": "2400 Clay St",
+     "miles": 32.63,
+     "place": "Saint Francisville, LA",
+     "address": "6899 Us Highway 61",
      "country": "US",
-     "lat": 32.347204,
-     "lon": -90.862483,
-     "source": "old-2025",
+     "lat": 30.785584,
+     "lon": -91.370334,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 32.16,
-     "place": "Belzoni, MS",
-     "address": "15846 Us Hwy 49",
+     "miles": 32.64,
+     "place": "Natchez, MS",
+     "address": "55 Sgt Prentiss Drive",
      "country": "US",
-     "lat": 33.178541,
-     "lon": -90.496365,
-     "source": "old-2025",
+     "lat": 31.528023,
+     "lon": -91.389005,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 32.25,
-     "place": "Oak Grove, LA",
-     "address": "708 S Constitution Ave",
+     "miles": 32.74,
+     "place": "Mccomb, MS",
+     "address": "1119 Airport Fernwood Road",
      "country": "US",
-     "lat": 32.853534,
-     "lon": -91.392302,
-     "source": "old-2025",
+     "lat": 31.190825,
+     "lon": -90.485838,
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
-   "edge_m": 21768,
+   "edge_m": 15585,
    "next_to": [],
-   "flags": [],
+   "flags": [
+    "assumes these older-list stores are gone: Clinton, LA (2022, 21.9 mi)"
+   ],
    "old_list_miles": 32.1,
    "old_list_spot": [
     32.81264,
@@ -1336,7 +1324,7 @@
      "country": "US",
      "lat": 41.006894,
      "lon": -91.98284,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1346,7 +1334,7 @@
      "country": "US",
      "lat": 40.217198,
      "lon": -92.582101,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1356,7 +1344,7 @@
      "country": "US",
      "lat": 40.403443,
      "lon": -91.390549,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -1373,47 +1361,48 @@
   {
    "state": "MT",
    "name": "Montana",
-   "lat": 45.84744,
-   "lon": -104.0456,
-   "miles": 93.4,
+   "lat": 48.84955,
+   "lon": -107.52408,
+   "miles": 100.9,
    "nearest": [
     {
-     "miles": 93.4,
-     "place": "Miles City, MT",
-     "address": "1120 S Haynes",
+     "miles": 100.85,
+     "place": "Swift Current, SK (CA)",
+     "address": "420 S. Service Road East",
+     "country": "CA",
+     "lat": 50.29836,
+     "lon": -107.79299,
+     "source": "atp",
+     "in_old_list": false
+    },
+    {
+     "miles": 101.05,
+     "place": "Wolf Point, MT",
+     "address": "303 Hwy 2 W",
      "country": "US",
-     "lat": 46.397784,
-     "lon": -105.822118,
-     "source": "old-2025",
+     "lat": 48.093997,
+     "lon": -105.640918,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 93.43,
-     "place": "Spearfish, SD",
-     "address": "131 Ryan Rd",
+     "miles": 101.12,
+     "place": "Havre, MT",
+     "address": "331 W 1st",
      "country": "US",
-     "lat": 44.500866,
-     "lon": -103.860557,
-     "source": "old-2025",
-     "in_old_list": true
-    },
-    {
-     "miles": 94.05,
-     "place": "Dickinson, ND",
-     "address": "212 Museum Dr",
-     "country": "US",
-     "lat": 46.894605,
-     "lon": -102.78822,
-     "source": "old-2025",
+     "lat": 48.555026,
+     "lon": -109.689773,
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
-   "edge_m": 155,
-   "next_to": [
-    "SD"
+   "edge_m": 10986,
+   "next_to": [],
+   "flags": [
+    "assumes these older-list stores are gone: Glasgow, MT (2022, 60.8 mi)",
+    "pinned by a store missing from the older list (new or previously missed)"
    ],
-   "flags": [],
    "old_list_miles": 108.8,
    "old_list_spot": [
     48.9969,
@@ -1423,46 +1412,46 @@
   {
    "state": "NE",
    "name": "Nebraska",
-   "lat": 42.12965,
-   "lon": -101.51347,
-   "miles": 70.7,
+   "lat": 41.94084,
+   "lon": -99.87241,
+   "miles": 72.7,
    "nearest": [
     {
-     "miles": 70.68,
-     "place": "Ogallala, NE",
-     "address": "301 Stagecoach Trail I80 Exit 126",
-     "country": "US",
-     "lat": 41.1163,
-     "lon": -101.71123,
-     "source": "old-2025",
-     "in_old_list": true
-    },
-    {
-     "miles": 70.81,
+     "miles": 72.74,
      "place": "Valentine, NE",
      "address": "101 W Highway 20",
      "country": "US",
      "lat": 42.867333,
      "lon": -100.550013,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 70.94,
-     "place": "Alliance, NE",
-     "address": "1449 W 3rd Ave",
+     "miles": 72.77,
+     "place": "North Platte, NE",
+     "address": "3211 Newberry Rd",
      "country": "US",
-     "lat": 42.096339,
-     "lon": -102.893246,
-     "source": "old-2025",
+     "lat": 41.102867,
+     "lon": -100.724007,
+     "source": "atp",
+     "in_old_list": true
+    },
+    {
+     "miles": 72.88,
+     "place": "O'Neill, NE",
+     "address": "212 E Hwy 20",
+     "country": "US",
+     "lat": 42.45608,
+     "lon": -98.632822,
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
-   "edge_m": 71607,
+   "edge_m": 87539,
    "next_to": [],
    "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
+    "assumes these older-list stores are gone: Broken Bow, NE (2025, 39.2 mi); Gothenburg, NE (2022, 71.9 mi)"
    ],
    "old_list_miles": 70.7,
    "old_list_spot": [
@@ -1484,7 +1473,7 @@
      "country": "US",
      "lat": 36.209146,
      "lon": -115.986045,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1494,7 +1483,7 @@
      "country": "US",
      "lat": 39.243296,
      "lon": -114.869511,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1504,16 +1493,14 @@
      "country": "US",
      "lat": 37.365234,
      "lon": -118.39502,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
    "edge_m": 111746,
    "next_to": [],
-   "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
-   ],
+   "flags": [],
    "old_list_miles": 119.8,
    "old_list_spot": [
     37.92599,
@@ -1534,7 +1521,7 @@
      "country": "US",
      "lat": 44.51717,
      "lon": -70.558561,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1554,7 +1541,7 @@
      "country": "US",
      "lat": 44.392629,
      "lon": -71.186234,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -1582,11 +1569,11 @@
     {
      "miles": 16.14,
      "place": "Millville, NJ",
-     "address": "1027 N High St",
+     "address": "1027 High St N",
      "country": "US",
      "lat": 39.408076,
      "lon": -75.03901,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1596,7 +1583,7 @@
      "country": "US",
      "lat": 39.42608,
      "lon": -75.232526,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1606,7 +1593,7 @@
      "country": "US",
      "lat": 38.973774,
      "lon": -74.941948,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -1634,7 +1621,7 @@
      "country": "US",
      "lat": 37.991418,
      "lon": -103.570852,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1644,7 +1631,7 @@
      "country": "US",
      "lat": 36.060704,
      "lon": -102.514187,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1654,7 +1641,7 @@
      "country": "US",
      "lat": 36.885512,
      "lon": -104.433594,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -1663,9 +1650,7 @@
    "next_to": [
     "CO"
    ],
-   "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
-   ],
+   "flags": [],
    "old_list_miles": 72.9,
    "old_list_spot": [
     36.99788,
@@ -1686,7 +1671,7 @@
      "country": "US",
      "lat": 44.228341,
      "lon": -74.462506,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1696,7 +1681,7 @@
      "country": "US",
      "lat": 43.041783,
      "lon": -74.861649,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1706,7 +1691,7 @@
      "country": "US",
      "lat": 43.05922,
      "lon": -74.323042,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -1734,7 +1719,7 @@
      "country": "US",
      "lat": 34.725358,
      "lon": -76.644611,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1744,7 +1729,7 @@
      "country": "US",
      "lat": 35.899058,
      "lon": -75.668649,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1754,16 +1739,14 @@
      "country": "US",
      "lat": 35.142986,
      "lon": -76.830805,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
    "edge_m": 182,
    "next_to": [],
-   "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
-   ],
+   "flags": [],
    "old_list_miles": 52.9,
    "old_list_spot": [
     35.14967,
@@ -1773,48 +1756,48 @@
   {
    "state": "ND",
    "name": "North Dakota",
-   "lat": 45.94731,
-   "lon": -104.04349,
-   "miles": 88.7,
+   "lat": 48.14122,
+   "lon": -99.32133,
+   "miles": 91.0,
    "nearest": [
     {
-     "miles": 88.75,
-     "place": "Dickinson, ND",
-     "address": "212 Museum Dr",
+     "miles": 91.03,
+     "place": "Jamestown, ND",
+     "address": "817 20th St Sw",
      "country": "US",
-     "lat": 46.894605,
-     "lon": -102.78822,
-     "source": "old-2025",
+     "lat": 46.887832,
+     "lon": -98.720958,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 90.84,
-     "place": "Miles City, MT",
-     "address": "1120 S Haynes",
-     "country": "US",
-     "lat": 46.397784,
-     "lon": -105.822118,
-     "source": "old-2025",
-     "in_old_list": true
+     "miles": 91.12,
+     "place": "Morden, MB (CA)",
+     "address": "881 Thornhill Street",
+     "country": "CA",
+     "lat": 49.19287,
+     "lon": -98.11997,
+     "source": "atp",
+     "in_old_list": false
     },
     {
-     "miles": 100.28,
-     "place": "Spearfish, SD",
-     "address": "131 Ryan Rd",
+     "miles": 91.29,
+     "place": "Minot, ND",
+     "address": "101 31st Ave Sw",
      "country": "US",
-     "lat": 44.500866,
-     "lon": -103.860557,
-     "source": "old-2025",
+     "lat": 48.201888,
+     "lon": -101.294592,
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
-   "edge_m": 155,
-   "next_to": [
-    "MT",
-    "SD"
+   "edge_m": 63752,
+   "next_to": [],
+   "flags": [
+    "assumes these older-list stores are gone: Devils Lake, ND (2025, 21.2 mi)",
+    "pinned by a store missing from the older list (new or previously missed)"
    ],
-   "flags": [],
    "old_list_miles": 88.7,
    "old_list_spot": [
     45.94731,
@@ -1824,45 +1807,48 @@
   {
    "state": "OH",
    "name": "Ohio",
-   "lat": 41.7404,
-   "lon": -83.10523,
-   "miles": 16.2,
+   "lat": 40.66383,
+   "lon": -84.06745,
+   "miles": 25.0,
    "nearest": [
     {
-     "miles": 16.17,
-     "place": "Oak Harbor, OH",
-     "address": "122 E Water St",
+     "miles": 24.96,
+     "place": "Ottawa, OH",
+     "address": "777 N Perry St",
      "country": "US",
-     "lat": 41.507947,
-     "lon": -83.144071,
-     "source": "old-2025",
+     "lat": 41.025231,
+     "lon": -84.048411,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 18.37,
-     "place": "Port Clinton, OH",
-     "address": "1700 E Perry St",
+     "miles": 24.96,
+     "place": "Sidney, OH",
+     "address": "2362 Deer Oak Way",
      "country": "US",
-     "lat": 41.513932,
-     "lon": -82.918963,
-     "source": "old-2025",
-     "in_old_list": true
+     "lat": 40.311158,
+     "lon": -84.173158,
+     "source": "atp",
+     "in_old_list": false
     },
     {
-     "miles": 18.5,
-     "place": "Monroe, MI",
-     "address": "1180 Dixie Highway",
+     "miles": 25.05,
+     "place": "Kenton, OH",
+     "address": "990 E Columbus St",
      "country": "US",
-     "lat": 41.924881,
-     "lon": -83.365288,
-     "source": "old-2025",
+     "lat": 40.651664,
+     "lon": -83.590926,
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
-   "edge_m": 166,
+   "edge_m": 62054,
    "next_to": [],
-   "flags": [],
+   "flags": [
+    "assumes these older-list stores are gone: Lima, OH (2025, 4.6 mi); Lima, OH (2025, 5.2 mi); Lima, OH (2025, 5.8 mi); Lima, OH (2025, 7.4 mi)",
+    "pinned by a store missing from the older list (new or previously missed)"
+   ],
    "old_list_miles": 16.2,
    "old_list_spot": [
     41.7404,
@@ -1883,7 +1869,7 @@
      "country": "US",
      "lat": 36.060704,
      "lon": -102.514187,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1893,18 +1879,18 @@
      "country": "US",
      "lat": 37.991418,
      "lon": -103.570852,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 79.72,
-     "place": "Raton, NM",
-     "address": "542 Clayton Rd",
+     "miles": 78.8,
+     "place": "Lamar, CO",
+     "address": "1011 N Main St",
      "country": "US",
-     "lat": 36.885512,
-     "lon": -104.433594,
-     "source": "old-2022",
-     "in_old_list": true
+     "lat": 38.099549,
+     "lon": -102.619441,
+     "source": "atp",
+     "in_old_list": false
     }
    ],
    "rule": "",
@@ -1914,7 +1900,7 @@
     "NM"
    ],
    "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
+    "pinned by a store missing from the older list (new or previously missed)"
    ],
    "old_list_miles": 70.1,
    "old_list_spot": [
@@ -1936,7 +1922,7 @@
      "country": "US",
      "lat": 43.573647,
      "lon": -119.074162,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1946,17 +1932,17 @@
      "country": "US",
      "lat": 42.211706,
      "lon": -121.754484,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 112.13,
+     "miles": 114.1,
      "place": "Klamath Falls, OR",
-     "address": "3600 Washburn Way",
+     "address": "2481 Campus Dr",
      "country": "US",
-     "lat": 42.193358,
-     "lon": -121.760605,
-     "source": "old-2022",
+     "lat": 42.249606,
+     "lon": -121.789978,
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -1965,9 +1951,7 @@
    "next_to": [
     "NV"
    ],
-   "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
-   ],
+   "flags": [],
    "old_list_miles": 111.9,
    "old_list_spot": [
     41.99792,
@@ -1988,7 +1972,7 @@
      "country": "US",
      "lat": 41.77087,
      "lon": -78.021671,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -1998,7 +1982,7 @@
      "country": "US",
      "lat": 40.957659,
      "lon": -77.766788,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -2008,7 +1992,7 @@
      "country": "US",
      "lat": 41.411149,
      "lon": -78.560161,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -2036,7 +2020,7 @@
      "country": "US",
      "lat": 41.370323,
      "lon": -71.820557,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -2046,7 +2030,7 @@
      "country": "US",
      "lat": 41.442477,
      "lon": -71.483158,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -2056,7 +2040,7 @@
      "country": "US",
      "lat": 41.405875,
      "lon": -71.850211,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -2073,45 +2057,47 @@
   {
    "state": "SC",
    "name": "South Carolina",
-   "lat": 33.01131,
-   "lon": -79.38113,
-   "miles": 25.6,
+   "lat": 34.40741,
+   "lon": -80.28268,
+   "miles": 25.8,
    "nearest": [
     {
-     "miles": 25.6,
-     "place": "Georgetown, SC",
-     "address": "307 N Fraser St",
+     "miles": 25.78,
+     "place": "Pageland, SC",
+     "address": "203 S Van Lingle Mungo Boulevard",
      "country": "US",
-     "lat": 33.374524,
-     "lon": -79.288391,
-     "source": "old-2025",
+     "lat": 34.772446,
+     "lon": -80.38132,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 25.61,
-     "place": "Mount Pleasant, SC",
-     "address": "3060 Ironclad Alley",
+     "miles": 25.87,
+     "place": "Lugoff, SC",
+     "address": "906 Hwy 1 S",
      "country": "US",
-     "lat": 32.86451,
-     "lon": -79.786022,
-     "source": "old-2025",
+     "lat": 34.226513,
+     "lon": -80.67901,
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 30.76,
-     "place": "Mount Pleasant, SC",
-     "address": "1533 Johnny Dodds Blvd",
+     "miles": 25.88,
+     "place": "Darlington, SC",
+     "address": "1501 S Main St",
      "country": "US",
-     "lat": 32.812666,
-     "lon": -79.854959,
-     "source": "old-2025",
+     "lat": 34.282049,
+     "lon": -79.855905,
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
-   "edge_m": 187,
+   "edge_m": 37301,
    "next_to": [],
-   "flags": [],
+   "flags": [
+    "assumes these older-list stores are gone: Hartsville, SC (2025, 13.0 mi); Bishopville, SC (2025, 14.5 mi); Camden, SC (2025, 21.3 mi)"
+   ],
    "old_list_miles": 25.6,
    "old_list_spot": [
     33.01131,
@@ -2132,7 +2118,7 @@
      "country": "US",
      "lat": 46.795605,
      "lon": -100.792459,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -2142,7 +2128,7 @@
      "country": "US",
      "lat": 46.821028,
      "lon": -100.856991,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -2152,16 +2138,14 @@
      "country": "US",
      "lat": 44.371435,
      "lon": -100.361031,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
    "edge_m": 37922,
    "next_to": [],
-   "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
-   ],
+   "flags": [],
    "old_list_miles": 106.8,
    "old_list_spot": [
     45.45886,
@@ -2182,7 +2166,7 @@
      "country": "US",
      "lat": 35.910903,
      "lon": -84.583132,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -2192,7 +2176,7 @@
      "country": "US",
      "lat": 36.515509,
      "lon": -84.506322,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -2202,7 +2186,7 @@
      "country": "US",
      "lat": 36.432242,
      "lon": -84.933748,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -2230,7 +2214,7 @@
      "country": "US",
      "lat": 30.360684,
      "lon": -103.65342,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -2240,7 +2224,7 @@
      "country": "US",
      "lat": 30.899437,
      "lon": -102.905605,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -2250,16 +2234,14 @@
      "country": "US",
      "lat": 29.380093,
      "lon": -100.903769,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
    "edge_m": 195,
    "next_to": [],
-   "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
-   ],
+   "flags": [],
    "old_list_miles": 100.1,
    "old_list_spot": [
     28.97392,
@@ -2280,7 +2262,7 @@
      "country": "US",
      "lat": 36.905653,
      "lon": -111.484625,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -2290,7 +2272,7 @@
      "country": "US",
      "lat": 38.753709,
      "lon": -112.086648,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -2300,16 +2282,14 @@
      "country": "US",
      "lat": 38.563317,
      "lon": -109.549792,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
    "edge_m": 88002,
    "next_to": [],
-   "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
-   ],
+   "flags": [],
    "old_list_miles": 82.5,
    "old_list_spot": [
     38.00611,
@@ -2340,7 +2320,7 @@
      "country": "US",
      "lat": 44.498312,
      "lon": -71.575872,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -2350,7 +2330,7 @@
      "country": "US",
      "lat": 44.952,
      "lon": -72.159216,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -2382,7 +2362,7 @@
      "country": "US",
      "lat": 38.91713,
      "lon": -79.844327,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -2392,7 +2372,7 @@
      "country": "US",
      "lat": 37.794288,
      "lon": -79.883952,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -2402,7 +2382,7 @@
      "country": "US",
      "lat": 38.021726,
      "lon": -79.141216,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -2442,7 +2422,7 @@
      "country": "US",
      "lat": 48.082745,
      "lon": -121.975046,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -2452,7 +2432,7 @@
      "country": "US",
      "lat": 48.101582,
      "lon": -119.785766,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -2460,7 +2440,6 @@
    "edge_m": 31162,
    "next_to": [],
    "flags": [
-    "pinned by a store only in the 2022 list (may have closed)",
     "pinned by a store missing from the older list (new or previously missed)"
    ],
    "old_list_miles": 73.1,
@@ -2483,7 +2462,7 @@
      "country": "US",
      "lat": 37.794288,
      "lon": -79.883952,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -2493,7 +2472,7 @@
      "country": "US",
      "lat": 38.91713,
      "lon": -79.844327,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -2503,7 +2482,7 @@
      "country": "US",
      "lat": 38.699816,
      "lon": -80.66396,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     }
    ],
@@ -2531,7 +2510,7 @@
      "country": "US",
      "lat": 46.588607,
      "lon": -90.891991,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -2541,7 +2520,7 @@
      "country": "US",
      "lat": 46.462837,
      "lon": -90.164947,
-     "source": "old-2025",
+     "source": "atp",
      "in_old_list": true
     },
     {
@@ -2551,16 +2530,14 @@
      "country": "US",
      "lat": 47.025036,
      "lon": -91.682035,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
    "edge_m": 152,
    "next_to": [],
-   "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
-   ],
+   "flags": [],
    "old_list_miles": 41.0,
    "old_list_spot": [
     47.07491,
@@ -2570,46 +2547,46 @@
   {
    "state": "WY",
    "name": "Wyoming",
-   "lat": 42.34855,
-   "lon": -110.42594,
-   "miles": 79.8,
+   "lat": 42.36414,
+   "lon": -110.47973,
+   "miles": 78.1,
    "nearest": [
     {
-     "miles": 79.77,
+     "miles": 78.13,
      "place": "Jackson, WY",
      "address": "1110 W Broadway",
      "country": "US",
      "lat": 43.47323,
      "lon": -110.786832,
-     "source": "old-2022",
+     "source": "atp",
      "in_old_list": true
     },
     {
-     "miles": 79.77,
-     "place": "Evanston, WY",
-     "address": "212 Front St",
+     "miles": 78.23,
+     "place": "Green River, WY",
+     "address": "599 E 4th S",
      "country": "US",
-     "lat": 41.263188,
-     "lon": -110.957046,
-     "source": "old-2022",
-     "in_old_list": true
+     "lat": 41.52122,
+     "lon": -109.464569,
+     "source": "atp",
+     "in_old_list": false
     },
     {
-     "miles": 79.91,
-     "place": "Rock Springs, WY",
-     "address": "1607 Elk St",
+     "miles": 78.33,
+     "place": "Smithfield, UT",
+     "address": "180 N Main",
      "country": "US",
-     "lat": 41.610071,
-     "lon": -109.230753,
-     "source": "old-2022",
+     "lat": 41.840431,
+     "lon": -111.831838,
+     "source": "atp",
      "in_old_list": true
     }
    ],
    "rule": "",
-   "edge_m": 51102,
+   "edge_m": 46663,
    "next_to": [],
    "flags": [
-    "pinned by a store only in the 2022 list (may have closed)"
+    "pinned by a store missing from the older list (new or previously missed)"
    ],
    "old_list_miles": 79.8,
    "old_list_spot": [
