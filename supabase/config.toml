@@ -1,0 +1,34 @@
+# Supabase CLI config for local development (`supabase start`) and deploys.
+# The project ref is filled in by `supabase link --project-ref <ref>`.
+project_id = "far-from-fries"
+
+[api]
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+
+[db]
+major_version = 16
+
+[auth]
+site_url = "https://farfromfries.app"
+additional_redirect_urls = ["farfromfries://auth-callback", "exp://**"]
+enable_signup = true
+
+[auth.email]
+enable_signup = true
+enable_confirmations = false
+# Magic links go out through Resend once SMTP is set in the dashboard (Auth > SMTP).
+
+[auth.external.apple]
+enabled = true
+client_id = "env(SUPABASE_AUTH_APPLE_CLIENT_ID)"
+secret = "env(SUPABASE_AUTH_APPLE_SECRET)"
+
+[auth.external.google]
+enabled = true
+client_id = "env(SUPABASE_AUTH_GOOGLE_CLIENT_ID)"
+secret = "env(SUPABASE_AUTH_GOOGLE_SECRET)"
+skip_nonce_check = true
+
+[functions.push-dispatch]
+verify_jwt = false
