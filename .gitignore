@@ -1,0 +1,7 @@
+node_modules/
+.env
+.env.local
+pipeline/.cache/
+supabase/.temp/
+supabase/.branches/
+.DS_Store

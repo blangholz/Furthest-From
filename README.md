@@ -11,3 +11,9 @@ No GPS handy? Tap the map to drop a pin, or press **Simulate US 50 drive**.
 
 ## Data: personal testing only
 `data/` holds 13,756 US McDonald's locations (CSV and GeoJSON) merged from two third-party public datasets scraped from McDonald's store locator. Their licensing is unclear, so this data is for personal testing only and should not be reused or redistributed. The public app should be rebuilt from OpenStreetMap (ODbL) or AllThePlaces (CC0). See `data/README.md` for sources and caveats. The same points are embedded in `index.html`, so the page needs no separate download.
+
+## Far From Fries app
+
+The full game is being built in this repo: `mobile/` (iPhone app), `supabase/`
+(backend), `pipeline/` (data load), `web/` (invite links). Rules are in
+`docs/GAME_RULES.md` and the account setup checklist is in `docs/SETUP.md`.
