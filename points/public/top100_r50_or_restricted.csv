@@ -1,0 +1,101 @@
+rank,lat,lon,miles,state,land,nearest_1,nearest_1_mi,nearest_2,nearest_2_mi
+1,37.92599,-116.31842,119.8,NV,"Tonopah Field Office (BLM, OA)","Pahrump, NV",119.81,"Ely, NV",120.04
+2,41.94391,-119.54006,115.0,NV,"Sheldon National Wildlife Refuge (FWS, RA)","Hines, OR",114.96,"Winnemucca, NV",115.2
+3,45.47296,-101.93225,106.4,SD,"Grand River National Grassland (USFS, OA)","Dickinson, ND",106.43,"Mandan, ND",106.46
+4,38.5981,-116.66136,106.3,NV,"Toiyabe National Forest (USFS, OA)","Ely, NV",106.32,"Hawthorne, NV",106.39
+5,44.91145,-115.04171,102.1,ID,"Payette National Forest (USFS, OA)","Hailey, ID (older list)",102.11,"Hamilton, MT",102.15
+6,42.42227,-117.83645,101.1,OR,"Vale Malheur Field Office (BLM, OA)","Winnemucca, NV",101.08,"Hines, OR",101.24
+7,28.97349,-103.1525,100.2,TX,"Big Bend National Park (NPS, OA)","Alpine, TX",100.18,"Fort Stockton, TX",133.48
+8,37.84001,-115.4069,101.1,NV,"Basin And Range Nm Field Office (BLM, OA)","Ely, NV",101.08,"Mesquite, NV",101.23
+9,45.84182,-104.04642,93.0,MT,"Miles City Field Office (BLM, OA)","Spearfish, SD",93.04,"Miles City, MT",93.53
+10,42.14315,-116.9269,92.1,ID,"Owyhee Field Office (BLM, OA)","Winnemucca, NV",92.14,"Mountain Home, ID",92.25
+11,39.2581,-117.0431,95.3,NV,"Mount Lewis Field Office (BLM, OA)","Fallon, NV",95.31,"Battle Mountain, NV",95.33
+12,47.05601,-107.53622,89.3,MT,"Montana State Trust Lands (UNK, OA)","Glasgow, MT (older list)",89.3,"Lewistown, MT",89.52
+13,45.31966,-115.8931,90.9,ID,"Payette National Forest (USFS, OA)","Weiser, ID",90.92,"Lewiston, ID",90.92
+14,45.6363,-103.02091,87.6,SD,"South Dakota Field Office (BLM, OA)","Dickinson, ND",87.62,"Sturgis, SD",87.62
+15,42.5431,-120.09308,87.9,OR,"Lakeview District Lakeview Field Office (BLM, OA)","Hines, OR",87.87,"Klamath Falls, OR",88.04
+16,45.5979,-100.41343,84.7,SD,"Oaha Recreation Area (USACE, OA)","Bismarck, ND",84.7,"Pierre, SD",84.73
+17,30.5827,-101.53187,84.4,TX,"Escondido Draw Recreation Area (NGO, OA)","San Angelo, TX",84.44,"Fort Stockton, TX",84.6
+18,41.2269,-119.38113,86.6,NV,"Black Rock Field Office (BLM, OA)","Lovelock, NV",86.63,"Susanville, CA",86.73
+19,48.99893,-107.99463,83.3,MT,"Malta Field Office (BLM, OA)","Havre, MT",83.27,"Glasgow, MT (older list)",83.42
+20,38.00611,-110.89696,82.5,UT,"Richfield Field Office (BLM, OA)","Page, AZ",82.48,"Richfield, UT",82.65
+21,41.57956,-120.39459,82.0,CA,"Applegate Field Office (BLM, OA)","Susanville, CA",81.98,"Klamath Falls, OR (older list)",82.2
+22,38.07547,-114.5369,82.5,NV,"Caliente Field Office (BLM, OA)","Ely, NV",82.54,"Saint George, UT",82.63
+23,45.39205,-104.94541,81.3,MT,"Miles City Field Office (BLM, OA)","Gillette, WY",81.26,"Gillette, WY",81.28
+24,48.19153,-91.01574,81.0,MN,"Superior National Forest (USFS, OA)","Cook, MN (older list)",81.01,"Thunder Bay, ON",81.03
+25,44.66591,-114.05762,79.7,ID,"Challis Field Office (BLM, OA)","Hailey, ID (older list)",79.74,"Dillon, MT",79.95
+26,28.98149,-89.14011,79.0,LA,"Pass A Loutre Wildlife Management Area (SFW, RA)","Cut Off, LA",78.97,"Belle Chasse, LA",79.69
+27,37.14717,-116.8068,79.0,NV,"Tonopah Field Office (BLM, OA)","Lone Pine, CA",79.04,"Pahrump, NV",79.13
+28,47.88812,-108.2765,78.7,MT,"Malta Field Office (BLM, OA)","Lewistown, MT",78.73,"Glasgow, MT (older list)",78.96
+29,42.36414,-110.47973,78.1,WY,"Pinedale Field Office (BLM, OA)","Jackson, WY",78.13,"Green River, WY",78.23
+30,31.81653,-112.60823,78.0,AZ,"Organ Pipe Cactus National Monument (NPS, OA)","Gila Bend, AZ",78.05,"Eloy, AZ",88.02
+31,41.95113,-115.98598,77.2,NV,"Humboldt National Forest (USFS, OA)","Elko, NV",77.17,"Buhl, ID",77.36
+32,39.64109,-116.2419,78.2,NV,"Mount Lewis Field Office (BLM, OA)","Battle Mountain, NV",78.19,"Ely, NV",78.37
+33,29.28522,-103.91755,75.8,TX,"Big Bend Ranch State Park (SPR, OA)","Alpine, TX",75.76,"Fort Stockton, TX",126.64
+34,43.75274,-101.61902,75.8,SD,"Buffalo Gap National Grassland (USFS, OA)","Pierre, SD",75.81,"Box Elder, SD",75.87
+35,37.98327,-117.23875,76.4,NV,"Tonopah Field Office (BLM, OA)","Bishop, CA",76.38,"Hawthorne, NV",84.34
+36,44.22406,-113.18455,74.3,ID,"Challis National Forest (USFS, OA)","Dillon, MT",74.28,"Hailey, ID (older list)",74.39
+37,29.6726,-102.69717,74.4,TX,"Black Gap Wildlife Management Area (SFW, RA)","Alpine, TX",74.38,"Fort Stockton, TX",85.42
+38,41.9419,-118.5669,80.0,NV,"Humboldt River Field Office (BLM, OA)","Winnemucca, NV",80.04,"Hines, OR",115.55
+39,46.59769,-104.29202,74.3,MT,"Miles City Field Office (BLM, OA)","Miles City, MT",74.28,"Dickinson, ND",74.29
+40,44.62178,-119.4041,74.2,OR,"Prineville Central Oregon Field Office (BLM, OA)","Hines, OR",74.2,"Prineville, OR",74.9
+41,37.06822,-102.91105,72.9,CO,"Comanche National Grassland (USFS, OA)","Dalhart, TX",72.89,"Lamar, CO",72.9
+42,32.06725,-113.42121,72.6,AZ,"Cabeza Prieta National Wildlife Refuge (FWS, RA)","Gila Bend, AZ",72.59,"Yuma, AZ",72.72
+43,31.33416,-108.33216,72.4,NM,"Las Cruces District Office (BLM, OA)","Deming, NM",72.42,"Douglas, AZ",72.6
+44,43.54757,-104.48094,71.4,WY,"Thunder Basin National Grassland (USFS, OA)","Douglas, WY",71.36,"Rapid City, SD",71.45
+45,24.6287,-82.8733,70.4,FL,"Dry Tortugas National Park (NPS, OA)","Key West, FL",70.36,"Marathon, FL",113.37
+46,48.79823,-99.99091,70.4,ND,"Nd State Lands - Surface Ownership (SLB, OA)","Devils Lake, ND (older list)",70.44,"Brandon, MB",71.16
+47,46.0181,-115.60289,71.3,ID,"Nezperce National Forest (USFS, OA)","Lewiston, ID",71.28,"Hamilton, MT",71.31
+48,33.93136,-108.09542,69.7,NM,"State Trust Land (SLB, OA)","Springerville, AZ",69.69,"Socorro, NM",69.71
+49,39.76303,-113.75643,69.3,UT,"Fillmore Field Office (BLM, OA)","West Wendover, NV",69.28,"Ely, NV",69.46
+50,44.53822,-101.73913,69.1,SD,"South Dakota Field Office (BLM, OA)","Pierre, SD",69.12,"Box Elder, SD",71.1
+51,38.5881,-113.88137,69.8,UT,"The State of Utah School and Institutional Trust Lands Administration 2021 (SLB, OA)","Ely, NV",69.84,"Beaver, UT",69.94
+52,37.19205,-115.86923,68.1,NV,"Desert National Wildlife Range (FWS, RA)","Pahrump, NV",68.09,"Las Vegas, NV",68.15
+53,48.96527,-104.93671,68.1,MT,"Montana State Trust Lands (UNK, OA)","Weyburn, SK",68.14,"Wolf Point, MT",68.33
+54,37.60094,-109.75619,67.3,UT,"Monticello Field Office (BLM, OA)","Moab, UT",67.32,"Kayenta, AZ",67.35
+55,41.61275,-113.49612,67.1,UT,"Salt Lake  Field Office (BLM, OA)","Burley, ID",67.14,"West Wendover, NV",67.17
+56,36.03098,-113.35236,67.1,AZ,"Grand Canyon National Park (NPS, OA)","Kingman, AZ",67.06,"Mesquite, NV",67.08
+57,36.12166,-103.70485,66.5,NM,"State Trust Land (SLB, OA)","Raton, NM",66.48,"Tucumcari, NM",66.7
+58,43.1481,-117.84313,68.6,OR,"Vale Malheur Field Office (BLM, OA)","Caldwell, ID",68.6,"Hines, OR",68.61
+59,46.10753,-99.53432,66.4,ND,"Mcintosh County Waterfowl Production Area (FWS, RA)","Jamestown, ND",66.41,"Aberdeen, SD",66.91
+60,43.24901,-120.31557,66.4,OR,"Lakeview District Lakeview Field Office (BLM, OA)","Hines, OR",66.37,"La Pine, OR",66.39
+61,47.71833,-112.71087,65.9,MT,"Lewis & Clark National Forest (USFS, OA)","Cut Bank, MT",65.94,"Great Falls, MT",66.11
+62,47.25063,-106.44674,65.9,MT,"Miles City Field Office (BLM, OA)","Glasgow, MT (older list)",65.91,"Miles City, MT",65.94
+63,42.3998,-101.6757,65.8,NE,"Cottonwood/Steverson Wildlife Management Area (SFW, OA)","Valentine, NE",65.83,"Alliance, NE",65.86
+64,47.67907,-100.12178,65.2,ND,"Lonetree (SFW, RA)","Bismarck, ND",65.23,"Minot, ND",65.34
+65,34.25266,-105.4453,64.9,NM,"State Trust Land (SLB, OA)","Ruidoso, NM",64.89,"Santa Rosa, NM",65.02
+66,29.90015,-104.60357,65.1,TX,"Chinati Mountains (SPR, RA)","Alpine, TX",65.14,"Van Horn, TX",79.59
+67,43.63616,-109.51055,64.9,WY,"Kirk Inberg/Kevin Roy Wildlife Habitat Management Area (SFW, RA)","Cody, WY",64.87,"Jackson, WY",65.06
+68,48.99344,-110.95146,65.1,MT,"Montana State Trust Lands (UNK, OA)","Havre, MT",65.1,"Cut Bank, MT",67.9
+69,40.21906,-102.11408,64.2,CO,"Royal Gorge Field Office (BLM, OA)","Burlington, CO",64.23,"Sterling, CO",64.44
+70,46.66558,-110.65989,64.2,MT,"Montana State Trust Lands (UNK, OA)","Great Falls, MT",64.24,"Lewistown, MT",64.24
+71,46.20571,-101.88447,64.2,ND,"Nd State Lands - Surface Ownership (SLB, OA)","Dickinson, ND",64.18,"Mandan, ND",64.86
+72,45.46187,-105.9731,65.0,MT,"Custer National Forest (USFS, OA)","Miles City, MT",65.05,"Sheridan, WY",65.16
+73,46.46671,-69.30754,63.4,ME,"Allagash Wilderness Waterway State Park (SPR, OA)","Millinocket, ME",63.37,"Presque Isle, ME",63.52
+74,40.15042,-114.97738,62.8,NV,"Wells Field Office (BLM, OA)","Ely, NV",62.85,"Elko, NV",62.96
+75,38.5181,-115.7369,68.5,NV,"Tonopah Field Office (BLM, OA)","Ely, NV",68.48,"Mesquite, NV",148.29
+76,32.00244,-105.19384,62.5,NM,"State Trust Land (SLB, OA)","Carlsbad, NM",62.46,"El Paso, TX",62.5
+77,47.22614,-105.34297,61.5,MT,"Montana State Trust Lands (UNK, OA)","Wolf Point, MT",61.55,"Miles City, MT",61.57
+78,42.6181,-118.9181,66.4,OR,"Burns Andrews Field Office (BLM, OA)","Hines, OR",66.43,"Winnemucca, NV",129.45
+79,46.7381,-115.45677,64.4,ID,"Clearwater National Forest (USFS, OA)","Kellogg, ID",64.37,"Missoula, MT",64.51
+80,45.10066,-99.63377,61.3,SD,"State Lands (SLB, OA)","Aberdeen, SD",61.25,"Pierre, SD",61.78
+81,44.1969,-115.21072,64.2,ID,"Boise National Forest (USFS, OA)","Hailey, ID (older list)",64.2,"Boise, ID",64.23
+82,41.26893,-108.15212,60.6,WY,"Rock Springs Field Office (BLM, OA)","Craig, CO (older list)",60.62,"Rawlins, WY",60.71
+83,48.5772,-120.88996,60.5,WA,"North Cascades National Park (NPS, OA)","Hope, BC",60.46,"Granite Falls, WA",60.55
+84,48.99003,-106.06865,60.7,MT,"Montana State Trust Lands (UNK, OA)","Glasgow, MT (older list)",60.69,"Wolf Point, MT",64.95
+85,41.13243,-121.27237,60.4,CA,"Applegate Field Office (BLM, OA)","Susanville, CA",60.35,"Weed, CA",60.49
+86,41.97098,-100.51,60.0,NE,"Nebraska National Forest (USFS, OA)","North Platte, NE",60.0,"Broken Bow, NE (older list)",60.13
+87,36.32441,-117.04644,59.6,CA,"Death Valley National Park (NPS, OA)","Ridgecrest, CA",59.57,"Lone Pine, CA",59.72
+88,37.75679,-111.7631,60.7,UT,"Kanab Field Office (BLM, OA)","Page, AZ",60.67,"Beaver, UT",60.81
+89,45.38015,-113.8819,61.8,ID,"Salmon National Forest (USFS, OA)","Hamilton, MT",61.79,"Dillon, MT",61.97
+90,38.71227,-110.6769,61.6,UT,"Price Field Office (BLM, OA)","Price, UT",61.61,"Moab, UT",61.84
+91,42.05977,-108.28091,57.9,WY,"Rawlins Field Office (BLM, OA)","Lander, WY",57.91,"Rock Springs, WY",58.02
+92,43.54515,-106.98752,57.8,WY,"Buffalo Field Office (BLM, OA)","Buffalo, WY",57.79,"Casper, WY",57.84
+93,47.479,-101.91342,57.6,ND,"Sakakawea Recreation Area (USACE, OA)","Minot, ND",57.64,"Minot, ND",57.64
+94,48.952,-95.81241,57.1,MN,"Lost River State Forest (SDNR, OA)","Steinbach, MB",57.08,"Baudette, MN (older list)",57.15
+95,47.75692,-110.08769,57.1,MT,"Montana State Trust Lands (UNK, OA)","Lewistown, MT",57.07,"Havre, MT",58.13
+96,34.95736,-115.99984,56.7,CA,"Needles Field Office (BLM, OA)","Twentynine Palms, CA",56.66,"Jean, NV",56.76
+97,33.3546,-108.97017,56.7,NM,"Gila National Forest (USFS, OA)","Springerville, AZ",56.65,"Silver City, NM",56.76
+98,42.59387,-107.43868,56.5,WY,"Lander Field Office (BLM, OA)","Rawlins, WY",56.45,"Riverton, WY",56.59
+99,40.5069,-119.5132,59.4,NV,"Black Rock Field Office (BLM, OA)","Lovelock, NV",59.41,"Susanville, CA",59.44
+100,40.1791,-108.53801,56.4,CO,"White River Field Office (BLM, OA)","Parachute, CO",56.39,"Craig, CO (older list)",56.53

@@ -1,0 +1,52 @@
+state,name,lat,lon,miles,land,nearest_1,nearest_1_mi,nearest_2,nearest_2_mi,any_land_miles,moved_from_any_land_mi
+AK,Alaska,65.6106,-167.84852,581.9,"Anchorage Field Office (BLM, OA)","Fairbanks, AK",581.95,"Fairbanks, AK",583.87,589.5,7.9
+NV,Nevada,37.92599,-116.31842,119.8,"Tonopah Field Office (BLM, OA)","Pahrump, NV",119.81,"Ely, NV",120.04,119.8,0.0
+OR,Oregon,41.99526,-119.5869,112.0,"Applegate Field Office (BLM, OA)","Hines, OR",112.03,"Klamath Falls, OR",112.4,111.9,0.5
+SD,South Dakota,45.47296,-101.93225,106.4,"Grand River National Grassland (USFS, OA)","Dickinson, ND",106.43,"Mandan, ND",106.46,106.8,1.4
+ID,Idaho,44.91145,-115.04171,102.1,"Payette National Forest (USFS, OA)","Hailey, ID (older list)",102.11,"Hamilton, MT",102.15,102.1,0.0
+TX,Texas,28.97349,-103.1525,100.2,"Big Bend National Park (NPS, OA)","Alpine, TX",100.18,"Fort Stockton, TX",133.48,100.1,0.1
+CA,California,41.71502,-120.00019,96.2,"Applegate Field Office (BLM, OA)","Susanville, CA",96.23,"Klamath Falls, OR (older list)",96.51,96.4,0.2
+MT,Montana,45.84182,-104.04642,93.0,"Miles City Field Office (BLM, OA)","Spearfish, SD",93.04,"Miles City, MT",93.53,93.4,0.4
+ND,North Dakota,45.94604,-104.01259,87.8,"Nd State Lands - Surface Ownership (SLB, OA)","Dickinson, ND",87.82,"Miles City, MT",92.26,88.7,1.5
+UT,Utah,38.00611,-110.89696,82.5,"Richfield Field Office (BLM, OA)","Page, AZ",82.48,"Richfield, UT",82.65,82.5,0.0
+MN,Minnesota,48.19153,-91.01574,81.0,"Superior National Forest (USFS, OA)","Cook, MN (older list)",81.01,"Thunder Bay, ON",81.03,81.0,0.2
+LA,Louisiana,28.98149,-89.14011,79.0,"Pass A Loutre Wildlife Management Area (SFW, RA)","Cut Off, LA",78.97,"Belle Chasse, LA",79.69,78.4,0.8
+WY,Wyoming,42.36414,-110.47973,78.1,"Pinedale Field Office (BLM, OA)","Jackson, WY",78.13,"Green River, WY",78.23,78.1,0.0
+AZ,Arizona,31.81653,-112.60823,78.0,"Organ Pipe Cactus National Monument (NPS, OA)","Gila Bend, AZ",78.05,"Eloy, AZ",88.02,83.8,12.0
+CO,Colorado,37.06822,-102.91105,72.9,"Comanche National Grassland (USFS, OA)","Dalhart, TX",72.89,"Lamar, CO",72.9,73.0,0.4
+NM,New Mexico,31.33416,-108.33216,72.4,"Las Cruces District Office (BLM, OA)","Deming, NM",72.42,"Douglas, AZ",72.6,72.9,491.3
+FL,Florida,24.6287,-82.8733,70.4,"Dry Tortugas National Park (NPS, OA)","Key West, FL",70.36,"Marathon, FL",113.37,70.3,0.1
+OK,Oklahoma,36.99837,-102.96573,69.4,"CLO Lands (SLB, RA)","Dalhart, TX",69.37,"La Junta, CO",76.13,70.1,1.9
+NE,Nebraska,42.3998,-101.6757,65.8,"Cottonwood/Steverson Wildlife Management Area (SFW, OA)","Valentine, NE",65.83,"Alliance, NE",65.86,70.7,20.4
+ME,Maine,46.46671,-69.30754,63.4,"Allagash Wilderness Waterway State Park (SPR, OA)","Millinocket, ME",63.37,"Presque Isle, ME",63.52,65.0,2.3
+WA,Washington,48.5772,-120.88996,60.5,"North Cascades National Park (NPS, OA)","Hope, BC",60.46,"Granite Falls, WA",60.55,60.5,0.0
+KS,Kansas,39.66836,-99.13375,54.2,"Kirwin Reservoir (USBR, OA)","Hays, KS",54.21,"Holdrege, NE",54.76,59.4,20.4
+NC,North Carolina,35.14943,-75.86545,52.9,"Cape Hatteras National Seashore (NPS, OA)","Manteo, NC",52.86,"Beaufort, NC",53.02,52.9,0.2
+MI,Michigan,47.41723,-87.59515,51.4,"Manitou Island Light Station Preserve (NGO, RA)","Houghton, MI",51.39,"Marquette, MI",60.42,51.3,0.1
+HI,Hawaii,18.91311,-155.68158,44.4,"State Department of Land State Resource Management Area (SDOL, OA)","Kealakekua, HI",44.41,"Kailua Kona, HI",53.91,44.5,0.5
+NY,New York,43.62885,-74.62779,42.2,"West Canada Lake Wilderness (SDC, OA)","Tupper Lake, NY",42.2,"Little Falls, NY",42.21,42.2,0.0
+WI,Wisconsin,47.07577,-90.39558,41.1,"Apostle Islands National Lakeshore (NPS, OA)","Ashland, WI",41.06,"Ironwood, MI",43.73,41.0,0.1
+WV,West Virginia,38.3581,-80.06305,40.1,"Monongahela National Forest (USFS, OA)","Low Moor, VA",40.09,"Sutton, WV",40.19,40.2,0.2
+VA,Virginia,38.35281,-79.73312,39.4,"George Washington National Forest (USFS, OA)","Elkins, WV",39.39,"Low Moor, VA",39.39,39.4,0.0
+NH,New Hampshire,44.86156,-71.04755,33.1,"Umbagog National Wildlife Refuge (FWS, RA)","Gorham, NH",33.09,"Rumford, ME",33.85,38.8,6.3
+IA,Iowa,40.59892,-93.50903,32.9,"Moore-Gosch Memorial Park (CNTY, OA)","Osceola, IA",32.94,"Centerville, IA",35.06,34.4,1.5
+MO,Missouri,40.02148,-91.98394,31.8,"Sever (Henry) Lake Conservation Area (UNK, RA)","Macon, MO",31.79,"Quincy, IL",31.83,34.8,33.5
+AR,Arkansas,34.21156,-91.11748,31.0,"Dale Bumpers White River National Wildlife Refuge (FWS, RA)","Dumas, AR",30.99,"Stuttgart, AR",31.02,31.0,146.0
+MA,Massachusetts,41.24179,-69.99571,30.8,"Nantucket Island Land Bank (UNK, OA)","South Yarmouth, MA",30.82,"Hyannis, MA",32.14,30.8,1.1
+GA,Georgia,30.66812,-82.48796,30.7,"Okefenokee National Wildlife Refuge (FWS, RA)","White Springs, FL",30.67,"Folkston, GA",30.75,33.3,7.2
+MS,Mississippi,31.27538,-90.97858,29.6,"Homochitto National Forest (USFS, OA)","Clinton, LA (older list)",29.6,"Natchez, MS",29.69,29.6,0.3
+AL,Alabama,32.04906,-87.25791,29.4,"Millers Ferry Lock Recreation Area (USACE, OA)","Selma, AL",29.44,"Thomasville, AL",29.54,32.8,7.0
+PA,Pennsylvania,41.34555,-77.99968,29.4,"Sproul State Forest (SDNR, OA)","Coudersport, PA",29.37,"Milesburg, PA",29.4,29.4,0.0
+SC,South Carolina,33.00943,-79.37704,25.7,"Cape Romain National Wildlife Refuge (FWS, RA)","Georgetown, SC",25.68,"Mount Pleasant, SC",25.78,25.6,0.3
+IL,Illinois,39.26109,-90.72361,23.1,"Osterman Hill Prairies (PVT, RA)","Troy, MO",23.1,"Jerseyville, IL",24.07,23.8,0.8
+VT,Vermont,44.80953,-71.7366,22.9,"Silvio O. Conte National Fish And Wildlife Refuge (FWS, RA)","Coaticook, QC",22.9,"Lancaster, NH",22.9,23.8,9.2
+TN,Tennessee,36.22132,-84.64444,21.7,"Frozen Head (OTHS, OA)","Harriman, TN",21.68,"Oneida, TN",21.7,21.7,0.0
+KY,Kentucky,37.3928,-88.46468,21.4,"Ohio River Islands Wildlife Management Area (SFW, OA)","Metropolis, IL",21.43,"Marion, KY",21.47,21.6,0.3
+IN,Indiana,38.14695,-86.49365,20.5,"Hoosier National Forest (USFS, OA)","Tell City, IN",20.47,"Corydon, IN",20.51,20.5,0.3
+MD,Maryland,38.23517,-76.06096,19.6,"Blackwater National Wildlife Refuge (FWS, RA)","Princess Anne, MD",19.64,"Crisfield, MD",20.55,20.9,1.8
+NJ,New Jersey,39.1811,-75.13778,16.5,"Egg Island Wildlife Management Area (SFW, OA)","Millville, NJ",16.53,"Bridgeton, NJ",17.65,16.1,0.4
+OH,Ohio,41.74152,-83.10562,16.2,"West Sister Island National Wildlife Refuge (FWS, RA)","Oak Harbor, OH",16.24,"Monroe, MI (older list)",18.43,16.2,0.1
+CT,Connecticut,41.841,-73.38923,12.3,"Appalachian National Scenic Trail (NPS, OA)","Dover Plains, NY",12.27,"Canaan, CT",13.13,13.0,0.9
+DE,Delaware,39.29448,-75.43881,9.1,"Bombay Hook National Wildlife Refuge (FWS, RA)","Dover, DE",9.08,"Smyrna, DE",9.1,11.4,23.5
+RI,Rhode Island,41.35511,-71.64693,9.1,"Ninigret National Wildlife Refuge (FWS, RA)","Westerly, RI",9.09,"Wakefield, RI",10.43,20.3,14.7
+DC,District of Columbia,38.93368,-77.11789,2.3,"Chesapeake and Ohio Canal National Historical Park (NPS, RA)","Bethesda, MD",2.26,"Washington, DC",2.27,2.3,8.3

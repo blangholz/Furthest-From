@@ -1,0 +1,9219 @@
+{
+ "open": {
+  "states": {
+   "AK": {
+    "lat": 65.6106,
+    "lon": -167.84852,
+    "miles": 581.9,
+    "nearest": [
+     {
+      "miles": 581.95,
+      "city": "Fairbanks",
+      "state": "AK",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 583.87,
+      "city": "Fairbanks",
+      "state": "AK",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 585.29,
+      "city": "Fairbanks",
+      "state": "AK",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Anchorage Field Office (BLM, OA)"
+   },
+   "AL": {
+    "lat": 32.04906,
+    "lon": -87.25791,
+    "miles": 29.4,
+    "nearest": [
+     {
+      "miles": 29.44,
+      "city": "Selma",
+      "state": "AL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 29.54,
+      "city": "Thomasville",
+      "state": "AL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 37.63,
+      "city": "Monroeville",
+      "state": "AL",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Millers Ferry Lock Recreation Area (USACE, OA)"
+   },
+   "AR": {
+    "lat": 34.7698,
+    "lon": -93.58687,
+    "miles": 30.9,
+    "nearest": [
+     {
+      "miles": 30.91,
+      "city": "Glenwood",
+      "state": "AR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 31.04,
+      "city": "Waldron",
+      "state": "AR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 31.21,
+      "city": "Hot Springs Village",
+      "state": "AR",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Ouachita National Forest (USFS, OA)"
+   },
+   "AZ": {
+    "lat": 31.81653,
+    "lon": -112.60823,
+    "miles": 78.0,
+    "nearest": [
+     {
+      "miles": 78.05,
+      "city": "Gila Bend",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 88.02,
+      "city": "Eloy",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 89.32,
+      "city": "Casa Grande",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Organ Pipe Cactus National Monument (NPS, OA)"
+   },
+   "CA": {
+    "lat": 41.71502,
+    "lon": -120.00019,
+    "miles": 96.2,
+    "nearest": [
+     {
+      "miles": 96.23,
+      "city": "Susanville",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 96.51,
+      "city": "Klamath Falls",
+      "state": "OR",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 96.65,
+      "city": "Klamath Falls",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Applegate Field Office (BLM, OA)"
+   },
+   "CO": {
+    "lat": 37.06822,
+    "lon": -102.91105,
+    "miles": 72.9,
+    "nearest": [
+     {
+      "miles": 72.89,
+      "city": "Dalhart",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 72.9,
+      "city": "Lamar",
+      "state": "CO",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 73.26,
+      "city": "La Junta",
+      "state": "CO",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Comanche National Grassland (USFS, OA)"
+   },
+   "CT": {
+    "lat": 41.841,
+    "lon": -73.38923,
+    "miles": 12.3,
+    "nearest": [
+     {
+      "miles": 12.27,
+      "city": "Dover Plains",
+      "state": "NY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 13.13,
+      "city": "Canaan",
+      "state": "CT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 13.92,
+      "city": "Torrington",
+      "state": "CT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Appalachian National Scenic Trail (NPS, OA)"
+   },
+   "DC": {
+    "lat": 38.84253,
+    "lon": -76.99652,
+    "miles": 1.9,
+    "nearest": [
+     {
+      "miles": 1.91,
+      "city": "Oxon Hill",
+      "state": "MD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 1.92,
+      "city": "Washington",
+      "state": "DC",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 2.49,
+      "city": "Temple Hills",
+      "state": "MD",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Congress Heights (CITY, OA)"
+   },
+   "DE": {
+    "lat": 38.55119,
+    "lon": -75.45465,
+    "miles": 8.6,
+    "nearest": [
+     {
+      "miles": 8.56,
+      "city": "Delmar",
+      "state": "DE",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 9.36,
+      "city": "Millsboro",
+      "state": "DE",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 10.22,
+      "city": "Georgetown",
+      "state": "DE",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Larrimore/Hitchens Tract (OTHS, OA)"
+   },
+   "FL": {
+    "lat": 24.6287,
+    "lon": -82.8733,
+    "miles": 70.4,
+    "nearest": [
+     {
+      "miles": 70.36,
+      "city": "Key West",
+      "state": "FL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 113.37,
+      "city": "Marathon",
+      "state": "FL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 115.97,
+      "city": "Marco Island",
+      "state": "FL",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Dry Tortugas National Park (NPS, OA)"
+   },
+   "GA": {
+    "lat": 30.69898,
+    "lon": -82.55536,
+    "miles": 30.2,
+    "nearest": [
+     {
+      "miles": 30.19,
+      "city": "White Springs",
+      "state": "FL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 33.89,
+      "city": "Folkston",
+      "state": "GA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 35.31,
+      "city": "Live Oak",
+      "state": "FL",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Stephen C. Foster State Park (SDNR, OA)"
+   },
+   "HI": {
+    "lat": 18.91311,
+    "lon": -155.68158,
+    "miles": 44.4,
+    "nearest": [
+     {
+      "miles": 44.41,
+      "city": "Kealakekua",
+      "state": "HI",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 53.91,
+      "city": "Kailua Kona",
+      "state": "HI",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 54.32,
+      "city": "Kailua Kona",
+      "state": "HI",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "State Department of Land State Resource Management Area (SDOL, OA)"
+   },
+   "IA": {
+    "lat": 40.59892,
+    "lon": -93.50903,
+    "miles": 32.9,
+    "nearest": [
+     {
+      "miles": 32.94,
+      "city": "Osceola",
+      "state": "IA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 35.06,
+      "city": "Centerville",
+      "state": "IA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 35.12,
+      "city": "Bethany",
+      "state": "MO",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Moore-Gosch Memorial Park (CNTY, OA)"
+   },
+   "ID": {
+    "lat": 44.91145,
+    "lon": -115.04171,
+    "miles": 102.1,
+    "nearest": [
+     {
+      "miles": 102.11,
+      "city": "Hailey",
+      "state": "ID",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 102.15,
+      "city": "Hamilton",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 102.25,
+      "city": "Emmett",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Payette National Forest (USFS, OA)"
+   },
+   "IL": {
+    "lat": 39.29445,
+    "lon": -90.68073,
+    "miles": 22.7,
+    "nearest": [
+     {
+      "miles": 22.72,
+      "city": "Pittsfield",
+      "state": "IL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 23.19,
+      "city": "Jerseyville",
+      "state": "IL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 26.31,
+      "city": "Troy",
+      "state": "MO",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Church of the Nazarene Camp (NGO, OA)"
+   },
+   "IN": {
+    "lat": 38.14695,
+    "lon": -86.49365,
+    "miles": 20.5,
+    "nearest": [
+     {
+      "miles": 20.47,
+      "city": "Tell City",
+      "state": "IN",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 20.51,
+      "city": "Corydon",
+      "state": "IN",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 20.75,
+      "city": "Ferdinand",
+      "state": "IN",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Hoosier National Forest (USFS, OA)"
+   },
+   "KS": {
+    "lat": 39.66836,
+    "lon": -99.13375,
+    "miles": 54.2,
+    "nearest": [
+     {
+      "miles": 54.21,
+      "city": "Hays",
+      "state": "KS",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 54.76,
+      "city": "Holdrege",
+      "state": "NE",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 55.96,
+      "city": "Hays",
+      "state": "KS",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Kirwin Reservoir (USBR, OA)"
+   },
+   "KY": {
+    "lat": 37.3928,
+    "lon": -88.46468,
+    "miles": 21.4,
+    "nearest": [
+     {
+      "miles": 21.43,
+      "city": "Metropolis",
+      "state": "IL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 21.47,
+      "city": "Marion",
+      "state": "KY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 22.57,
+      "city": "Vienna",
+      "state": "IL",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Ohio River Islands Wildlife Management Area (SFW, OA)"
+   },
+   "LA": {
+    "lat": 28.95282,
+    "lon": -89.38036,
+    "miles": 67.1,
+    "nearest": [
+     {
+      "miles": 67.14,
+      "city": "Cut Off",
+      "state": "LA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 71.23,
+      "city": "Cut Off",
+      "state": "LA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 72.86,
+      "city": "Belle Chasse",
+      "state": "LA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Division Of State Lands (OTHS, OA)"
+   },
+   "MA": {
+    "lat": 41.24179,
+    "lon": -69.99571,
+    "miles": 30.8,
+    "nearest": [
+     {
+      "miles": 30.82,
+      "city": "South Yarmouth",
+      "state": "MA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 32.14,
+      "city": "Hyannis",
+      "state": "MA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 33.16,
+      "city": "Hyannis",
+      "state": "MA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Nantucket Island Land Bank (UNK, OA)"
+   },
+   "MD": {
+    "lat": 38.3555,
+    "lon": -76.12192,
+    "miles": 14.7,
+    "nearest": [
+     {
+      "miles": 14.74,
+      "city": "Cambridge",
+      "state": "MD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 18.43,
+      "city": "Solomons",
+      "state": "MD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 19.81,
+      "city": "Lexington Park",
+      "state": "MD",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Chesapeake Forest Lands (SDNR, OA)"
+   },
+   "ME": {
+    "lat": 46.46671,
+    "lon": -69.30754,
+    "miles": 63.4,
+    "nearest": [
+     {
+      "miles": 63.37,
+      "city": "Millinocket",
+      "state": "ME",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 63.52,
+      "city": "Presque Isle",
+      "state": "ME",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.32,
+      "city": "Fort Kent",
+      "state": "ME",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Allagash Wilderness Waterway State Park (SPR, OA)"
+   },
+   "MI": {
+    "lat": 47.42167,
+    "lon": -87.60234,
+    "miles": 51.2,
+    "nearest": [
+     {
+      "miles": 51.21,
+      "city": "Houghton",
+      "state": "MI",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 60.76,
+      "city": "Marquette",
+      "state": "MI",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 61.15,
+      "city": "Marquette",
+      "state": "MI",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Baraga State Forest Area (SDNR, OA)"
+   },
+   "MN": {
+    "lat": 48.19153,
+    "lon": -91.01574,
+    "miles": 81.0,
+    "nearest": [
+     {
+      "miles": 81.01,
+      "city": "Cook",
+      "state": "MN",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 81.03,
+      "city": "Thunder Bay",
+      "state": "ON",
+      "country": "CA",
+      "source": "atp"
+     },
+     {
+      "miles": 83.06,
+      "city": "Thunder Bay",
+      "state": "ON",
+      "country": "CA",
+      "source": "atp"
+     }
+    ],
+    "land": "Superior National Forest (USFS, OA)"
+   },
+   "MO": {
+    "lat": 40.00044,
+    "lon": -92.01817,
+    "miles": 29.5,
+    "nearest": [
+     {
+      "miles": 29.47,
+      "city": "Macon",
+      "state": "MO",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 31.95,
+      "city": "Kirksville",
+      "state": "MO",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 33.39,
+      "city": "Quincy",
+      "state": "IL",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "White Oak Bend Access (UNK, OA)"
+   },
+   "MS": {
+    "lat": 31.27538,
+    "lon": -90.97858,
+    "miles": 29.6,
+    "nearest": [
+     {
+      "miles": 29.6,
+      "city": "Clinton",
+      "state": "LA",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 29.69,
+      "city": "Natchez",
+      "state": "MS",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 29.75,
+      "city": "Mccomb",
+      "state": "MS",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Homochitto National Forest (USFS, OA)"
+   },
+   "MT": {
+    "lat": 45.84182,
+    "lon": -104.04642,
+    "miles": 93.0,
+    "nearest": [
+     {
+      "miles": 93.04,
+      "city": "Spearfish",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 93.53,
+      "city": "Miles City",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 94.37,
+      "city": "Dickinson",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Miles City Field Office (BLM, OA)"
+   },
+   "NC": {
+    "lat": 35.14943,
+    "lon": -75.86545,
+    "miles": 52.9,
+    "nearest": [
+     {
+      "miles": 52.86,
+      "city": "Manteo",
+      "state": "NC",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 53.02,
+      "city": "Beaufort",
+      "state": "NC",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 54.66,
+      "city": "Grantsboro",
+      "state": "NC",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Cape Hatteras National Seashore (NPS, OA)"
+   },
+   "ND": {
+    "lat": 45.94604,
+    "lon": -104.01259,
+    "miles": 87.8,
+    "nearest": [
+     {
+      "miles": 87.82,
+      "city": "Dickinson",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 92.26,
+      "city": "Miles City",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 100.07,
+      "city": "Spearfish",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Nd State Lands - Surface Ownership (SLB, OA)"
+   },
+   "NE": {
+    "lat": 42.3998,
+    "lon": -101.6757,
+    "miles": 65.8,
+    "nearest": [
+     {
+      "miles": 65.83,
+      "city": "Valentine",
+      "state": "NE",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 65.86,
+      "city": "Alliance",
+      "state": "NE",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 74.48,
+      "city": "Chadron",
+      "state": "NE",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Cottonwood/Steverson Wildlife Management Area (SFW, OA)"
+   },
+   "NH": {
+    "lat": 44.88603,
+    "lon": -71.3219,
+    "miles": 29.4,
+    "nearest": [
+     {
+      "miles": 29.39,
+      "city": "Coaticook",
+      "state": "QC",
+      "country": "CA",
+      "source": "atp"
+     },
+     {
+      "miles": 29.55,
+      "city": "Lancaster",
+      "state": "NH",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 34.72,
+      "city": "Gorham",
+      "state": "NH",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Tillotson Reservation, Neil & Louise (UNK, OA)"
+   },
+   "NJ": {
+    "lat": 39.1811,
+    "lon": -75.13778,
+    "miles": 16.5,
+    "nearest": [
+     {
+      "miles": 16.53,
+      "city": "Millville",
+      "state": "NJ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 17.65,
+      "city": "Bridgeton",
+      "state": "NJ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 17.76,
+      "city": "North Cape May",
+      "state": "NJ",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Egg Island Wildlife Management Area (SFW, OA)"
+   },
+   "NM": {
+    "lat": 31.33416,
+    "lon": -108.33216,
+    "miles": 72.4,
+    "nearest": [
+     {
+      "miles": 72.42,
+      "city": "Deming",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 72.6,
+      "city": "Douglas",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 73.07,
+      "city": "Lordsburg",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Las Cruces District Office (BLM, OA)"
+   },
+   "NV": {
+    "lat": 37.92599,
+    "lon": -116.31842,
+    "miles": 119.8,
+    "nearest": [
+     {
+      "miles": 119.81,
+      "city": "Pahrump",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 120.04,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 120.26,
+      "city": "Bishop",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Tonopah Field Office (BLM, OA)"
+   },
+   "NY": {
+    "lat": 43.62885,
+    "lon": -74.62779,
+    "miles": 42.2,
+    "nearest": [
+     {
+      "miles": 42.2,
+      "city": "Tupper Lake",
+      "state": "NY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 42.21,
+      "city": "Little Falls",
+      "state": "NY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 42.22,
+      "city": "Gloversville",
+      "state": "NY",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "West Canada Lake Wilderness (SDC, OA)"
+   },
+   "OH": {
+    "lat": 39.13746,
+    "lon": -83.28745,
+    "miles": 15.7,
+    "nearest": [
+     {
+      "miles": 15.65,
+      "city": "Greenfield",
+      "state": "OH",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 15.66,
+      "city": "Peebles",
+      "state": "OH",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 15.86,
+      "city": "Waverly",
+      "state": "OH",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Pike State Forest (SDNR, OA)"
+   },
+   "OK": {
+    "lat": 36.962,
+    "lon": -102.98643,
+    "miles": 67.5,
+    "nearest": [
+     {
+      "miles": 67.48,
+      "city": "Dalhart",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 77.92,
+      "city": "La Junta",
+      "state": "CO",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 80.29,
+      "city": "Raton",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Black Mesa State Park & Nature Preserve (SPR, OA)"
+   },
+   "OR": {
+    "lat": 41.99526,
+    "lon": -119.58691,
+    "miles": 112.0,
+    "nearest": [
+     {
+      "miles": 112.03,
+      "city": "Hines",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 112.4,
+      "city": "Klamath Falls",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 112.57,
+      "city": "Klamath Falls",
+      "state": "OR",
+      "country": "US",
+      "source": "old-2022"
+     }
+    ],
+    "land": "Applegate Field Office (BLM, OA)"
+   },
+   "PA": {
+    "lat": 41.34555,
+    "lon": -77.99968,
+    "miles": 29.4,
+    "nearest": [
+     {
+      "miles": 29.37,
+      "city": "Coudersport",
+      "state": "PA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 29.4,
+      "city": "Milesburg",
+      "state": "PA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 29.48,
+      "city": "Saint Marys",
+      "state": "PA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Sproul State Forest (SDNR, OA)"
+   },
+   "RI": {
+    "lat": 41.95683,
+    "lon": -71.73081,
+    "miles": 8.1,
+    "nearest": [
+     {
+      "miles": 8.08,
+      "city": "Uxbridge",
+      "state": "MA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 8.08,
+      "city": "Putnam",
+      "state": "CT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 10.02,
+      "city": "Webster",
+      "state": "MA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Edward D. Vock Conservation Area (NGO, OA)"
+   },
+   "SC": {
+    "lat": 33.88344,
+    "lon": -82.35455,
+    "miles": 23.4,
+    "nearest": [
+     {
+      "miles": 23.37,
+      "city": "Evans",
+      "state": "GA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 23.38,
+      "city": "Greenwood",
+      "state": "SC",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 23.44,
+      "city": "Washington",
+      "state": "GA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "J. Strom Thurmond Recreation Area (USACE, OA)"
+   },
+   "SD": {
+    "lat": 45.47296,
+    "lon": -101.93225,
+    "miles": 106.4,
+    "nearest": [
+     {
+      "miles": 106.43,
+      "city": "Dickinson",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 106.46,
+      "city": "Mandan",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 106.49,
+      "city": "Bismarck",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Grand River National Grassland (USFS, OA)"
+   },
+   "TN": {
+    "lat": 36.22132,
+    "lon": -84.64444,
+    "miles": 21.7,
+    "nearest": [
+     {
+      "miles": 21.68,
+      "city": "Harriman",
+      "state": "TN",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 21.7,
+      "city": "Oneida",
+      "state": "TN",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 21.73,
+      "city": "Jamestown",
+      "state": "TN",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Frozen Head (OTHS, OA)"
+   },
+   "TX": {
+    "lat": 28.97349,
+    "lon": -103.1525,
+    "miles": 100.2,
+    "nearest": [
+     {
+      "miles": 100.18,
+      "city": "Alpine",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 133.48,
+      "city": "Fort Stockton",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 138.77,
+      "city": "Del Rio",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Big Bend National Park (NPS, OA)"
+   },
+   "UT": {
+    "lat": 38.00611,
+    "lon": -110.89696,
+    "miles": 82.5,
+    "nearest": [
+     {
+      "miles": 82.48,
+      "city": "Page",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 82.65,
+      "city": "Richfield",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 82.71,
+      "city": "Moab",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Richfield Field Office (BLM, OA)"
+   },
+   "VA": {
+    "lat": 38.35281,
+    "lon": -79.73312,
+    "miles": 39.4,
+    "nearest": [
+     {
+      "miles": 39.39,
+      "city": "Elkins",
+      "state": "WV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 39.39,
+      "city": "Low Moor",
+      "state": "VA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 39.49,
+      "city": "Staunton",
+      "state": "VA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "George Washington National Forest (USFS, OA)"
+   },
+   "VT": {
+    "lat": 44.90513,
+    "lon": -71.49672,
+    "miles": 22.1,
+    "nearest": [
+     {
+      "miles": 22.07,
+      "city": "Coaticook",
+      "state": "QC",
+      "country": "CA",
+      "source": "atp"
+     },
+     {
+      "miles": 28.36,
+      "city": "Lancaster",
+      "state": "NH",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 32.66,
+      "city": "Derby",
+      "state": "VT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Johnson Farm Wildlife Management Area (UNK, OA)"
+   },
+   "WA": {
+    "lat": 48.5772,
+    "lon": -120.88996,
+    "miles": 60.5,
+    "nearest": [
+     {
+      "miles": 60.46,
+      "city": "Hope",
+      "state": "BC",
+      "country": "CA",
+      "source": "atp"
+     },
+     {
+      "miles": 60.55,
+      "city": "Granite Falls",
+      "state": "WA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 60.56,
+      "city": "Brewster",
+      "state": "WA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "North Cascades National Park (NPS, OA)"
+   },
+   "WI": {
+    "lat": 47.07577,
+    "lon": -90.39558,
+    "miles": 41.1,
+    "nearest": [
+     {
+      "miles": 41.06,
+      "city": "Ashland",
+      "state": "WI",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 43.73,
+      "city": "Ironwood",
+      "state": "MI",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 60.84,
+      "city": "Two Harbors",
+      "state": "MN",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Apostle Islands National Lakeshore (NPS, OA)"
+   },
+   "WV": {
+    "lat": 38.3581,
+    "lon": -80.06305,
+    "miles": 40.1,
+    "nearest": [
+     {
+      "miles": 40.09,
+      "city": "Low Moor",
+      "state": "VA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 40.19,
+      "city": "Sutton",
+      "state": "WV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 40.34,
+      "city": "Elkins",
+      "state": "WV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Monongahela National Forest (USFS, OA)"
+   },
+   "WY": {
+    "lat": 42.36414,
+    "lon": -110.47973,
+    "miles": 78.1,
+    "nearest": [
+     {
+      "miles": 78.13,
+      "city": "Jackson",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 78.23,
+      "city": "Green River",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 78.33,
+      "city": "Smithfield",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Pinedale Field Office (BLM, OA)"
+   }
+  },
+  "top100": [
+   {
+    "lat": 37.92599,
+    "lon": -116.31842,
+    "miles": 119.8,
+    "nearest": [
+     {
+      "miles": 119.81,
+      "city": "Pahrump",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 120.04,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 120.26,
+      "city": "Bishop",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 1,
+    "land": "Tonopah Field Office (BLM, OA)"
+   },
+   {
+    "lat": 41.91009,
+    "lon": -119.55926,
+    "miles": 114.7,
+    "nearest": [
+     {
+      "miles": 114.68,
+      "city": "Winnemucca",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 114.8,
+      "city": "Klamath Falls",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 114.91,
+      "city": "Klamath Falls",
+      "state": "OR",
+      "country": "US",
+      "source": "old-2022"
+     }
+    ],
+    "state": "NV",
+    "rank": 2,
+    "land": "Applegate Field Office (BLM, OA)"
+   },
+   {
+    "lat": 45.47296,
+    "lon": -101.93225,
+    "miles": 106.4,
+    "nearest": [
+     {
+      "miles": 106.43,
+      "city": "Dickinson",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 106.46,
+      "city": "Mandan",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 106.49,
+      "city": "Bismarck",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Grand River National Grassland (USFS, OA)",
+    "state": "SD",
+    "from_state_point": true,
+    "rank": 3
+   },
+   {
+    "lat": 38.5981,
+    "lon": -116.66136,
+    "miles": 106.3,
+    "nearest": [
+     {
+      "miles": 106.32,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 106.39,
+      "city": "Hawthorne",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 127.22,
+      "city": "Bishop",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 4,
+    "land": "Toiyabe National Forest (USFS, OA)"
+   },
+   {
+    "lat": 44.91145,
+    "lon": -115.04171,
+    "miles": 102.1,
+    "nearest": [
+     {
+      "miles": 102.11,
+      "city": "Hailey",
+      "state": "ID",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 102.15,
+      "city": "Hamilton",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 102.25,
+      "city": "Emmett",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Payette National Forest (USFS, OA)",
+    "state": "ID",
+    "from_state_point": true,
+    "rank": 5
+   },
+   {
+    "lat": 42.42227,
+    "lon": -117.83645,
+    "miles": 101.1,
+    "nearest": [
+     {
+      "miles": 101.08,
+      "city": "Winnemucca",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 101.24,
+      "city": "Hines",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 101.24,
+      "city": "Nampa",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "OR",
+    "rank": 6,
+    "land": "Vale Malheur Field Office (BLM, OA)"
+   },
+   {
+    "lat": 28.97349,
+    "lon": -103.1525,
+    "miles": 100.2,
+    "nearest": [
+     {
+      "miles": 100.18,
+      "city": "Alpine",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 133.48,
+      "city": "Fort Stockton",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 138.77,
+      "city": "Del Rio",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "TX",
+    "rank": 7,
+    "land": "Big Bend National Park (NPS, OA)"
+   },
+   {
+    "lat": 37.84001,
+    "lon": -115.4069,
+    "miles": 101.1,
+    "nearest": [
+     {
+      "miles": 101.08,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 101.23,
+      "city": "Mesquite",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 102.26,
+      "city": "Mesquite",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 8,
+    "land": "Basin And Range Nm Field Office (BLM, OA)"
+   },
+   {
+    "lat": 45.84182,
+    "lon": -104.04642,
+    "miles": 93.0,
+    "nearest": [
+     {
+      "miles": 93.04,
+      "city": "Spearfish",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 93.53,
+      "city": "Miles City",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 94.37,
+      "city": "Dickinson",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Miles City Field Office (BLM, OA)",
+    "state": "MT",
+    "from_state_point": true,
+    "rank": 9
+   },
+   {
+    "lat": 42.14315,
+    "lon": -116.9269,
+    "miles": 92.1,
+    "nearest": [
+     {
+      "miles": 92.14,
+      "city": "Winnemucca",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 92.25,
+      "city": "Mountain Home",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 94.05,
+      "city": "Mountain Home",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ID",
+    "rank": 10,
+    "land": "Owyhee Field Office (BLM, OA)"
+   },
+   {
+    "lat": 39.2581,
+    "lon": -117.0431,
+    "miles": 95.3,
+    "nearest": [
+     {
+      "miles": 95.31,
+      "city": "Fallon",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 95.33,
+      "city": "Battle Mountain",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 98.82,
+      "city": "Hawthorne",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 11,
+    "land": "Mount Lewis Field Office (BLM, OA)"
+   },
+   {
+    "lat": 47.05601,
+    "lon": -107.53622,
+    "miles": 89.3,
+    "nearest": [
+     {
+      "miles": 89.3,
+      "city": "Glasgow",
+      "state": "MT",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 89.52,
+      "city": "Lewistown",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 90.83,
+      "city": "Hardin",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 12,
+    "land": "Montana State Trust Lands (UNK, OA)"
+   },
+   {
+    "lat": 45.31966,
+    "lon": -115.8931,
+    "miles": 90.9,
+    "nearest": [
+     {
+      "miles": 90.92,
+      "city": "Weiser",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 90.92,
+      "city": "Lewiston",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 92.54,
+      "city": "Lewiston",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ID",
+    "rank": 13,
+    "land": "Payette National Forest (USFS, OA)"
+   },
+   {
+    "lat": 45.6363,
+    "lon": -103.02091,
+    "miles": 87.6,
+    "nearest": [
+     {
+      "miles": 87.62,
+      "city": "Dickinson",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 87.62,
+      "city": "Sturgis",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 88.52,
+      "city": "Spearfish",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "SD",
+    "rank": 14,
+    "land": "South Dakota Field Office (BLM, OA)"
+   },
+   {
+    "lat": 42.52529,
+    "lon": -120.07629,
+    "miles": 88.4,
+    "nearest": [
+     {
+      "miles": 88.38,
+      "city": "Hines",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 88.58,
+      "city": "Klamath Falls",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 89.21,
+      "city": "Klamath Falls",
+      "state": "OR",
+      "country": "US",
+      "source": "old-2022"
+     }
+    ],
+    "state": "OR",
+    "rank": 15,
+    "land": "Lakeview District Lakeview Field Office (BLM, OA)"
+   },
+   {
+    "lat": 45.5979,
+    "lon": -100.41343,
+    "miles": 84.7,
+    "nearest": [
+     {
+      "miles": 84.7,
+      "city": "Bismarck",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 84.73,
+      "city": "Pierre",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 85.23,
+      "city": "Bismarck",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "SD",
+    "rank": 16,
+    "land": "Oaha Recreation Area (USACE, OA)"
+   },
+   {
+    "lat": 30.5827,
+    "lon": -101.53187,
+    "miles": 84.4,
+    "nearest": [
+     {
+      "miles": 84.44,
+      "city": "San Angelo",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 84.6,
+      "city": "Fort Stockton",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 87.72,
+      "city": "San Angelo",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "TX",
+    "rank": 17,
+    "land": "Escondido Draw Recreation Area (NGO, OA)"
+   },
+   {
+    "lat": 48.99893,
+    "lon": -107.99463,
+    "miles": 83.3,
+    "nearest": [
+     {
+      "miles": 83.27,
+      "city": "Havre",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 83.42,
+      "city": "Glasgow",
+      "state": "MT",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 90.26,
+      "city": "Swift Current",
+      "state": "SK",
+      "country": "CA",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 18,
+    "land": "Malta Field Office (BLM, OA)"
+   },
+   {
+    "lat": 38.00611,
+    "lon": -110.89696,
+    "miles": 82.5,
+    "nearest": [
+     {
+      "miles": 82.48,
+      "city": "Page",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 82.65,
+      "city": "Richfield",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 82.71,
+      "city": "Moab",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "UT",
+    "rank": 19,
+    "land": "Richfield Field Office (BLM, OA)"
+   },
+   {
+    "lat": 41.1969,
+    "lon": -119.38671,
+    "miles": 85.1,
+    "nearest": [
+     {
+      "miles": 85.08,
+      "city": "Lovelock",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 85.17,
+      "city": "Susanville",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 87.11,
+      "city": "Winnemucca",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 20,
+    "land": "Black Rock Field Office (BLM, OA)"
+   },
+   {
+    "lat": 38.07547,
+    "lon": -114.5369,
+    "miles": 82.5,
+    "nearest": [
+     {
+      "miles": 82.54,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 82.63,
+      "city": "Saint George",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 84.34,
+      "city": "Cedar City",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 21,
+    "land": "Caliente Field Office (BLM, OA)"
+   },
+   {
+    "lat": 45.39205,
+    "lon": -104.94541,
+    "miles": 81.3,
+    "nearest": [
+     {
+      "miles": 81.26,
+      "city": "Gillette",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 81.28,
+      "city": "Gillette",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 81.31,
+      "city": "Miles City",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 22,
+    "land": "Miles City Field Office (BLM, OA)"
+   },
+   {
+    "lat": 48.19153,
+    "lon": -91.01574,
+    "miles": 81.0,
+    "nearest": [
+     {
+      "miles": 81.01,
+      "city": "Cook",
+      "state": "MN",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 81.03,
+      "city": "Thunder Bay",
+      "state": "ON",
+      "country": "CA",
+      "source": "atp"
+     },
+     {
+      "miles": 83.06,
+      "city": "Thunder Bay",
+      "state": "ON",
+      "country": "CA",
+      "source": "atp"
+     }
+    ],
+    "land": "Superior National Forest (USFS, OA)",
+    "state": "MN",
+    "from_state_point": true,
+    "rank": 23
+   },
+   {
+    "lat": 41.55993,
+    "lon": -120.45247,
+    "miles": 80.2,
+    "nearest": [
+     {
+      "miles": 80.23,
+      "city": "Susanville",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 80.4,
+      "city": "Klamath Falls",
+      "state": "OR",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 80.82,
+      "city": "Klamath Falls",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "CA",
+    "rank": 24,
+    "land": "Applegate Field Office (BLM, OA)"
+   },
+   {
+    "lat": 44.66591,
+    "lon": -114.05762,
+    "miles": 79.7,
+    "nearest": [
+     {
+      "miles": 79.74,
+      "city": "Hailey",
+      "state": "ID",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 79.95,
+      "city": "Dillon",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 109.77,
+      "city": "Hamilton",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ID",
+    "rank": 25,
+    "land": "Challis Field Office (BLM, OA)"
+   },
+   {
+    "lat": 37.14717,
+    "lon": -116.8068,
+    "miles": 79.0,
+    "nearest": [
+     {
+      "miles": 79.04,
+      "city": "Lone Pine",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 79.13,
+      "city": "Pahrump",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 88.83,
+      "city": "Bishop",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 26,
+    "land": "Tonopah Field Office (BLM, OA)"
+   },
+   {
+    "lat": 47.88812,
+    "lon": -108.2765,
+    "miles": 78.7,
+    "nearest": [
+     {
+      "miles": 78.73,
+      "city": "Lewistown",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 78.96,
+      "city": "Glasgow",
+      "state": "MT",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 79.88,
+      "city": "Havre",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 27,
+    "land": "Malta Field Office (BLM, OA)"
+   },
+   {
+    "lat": 42.36414,
+    "lon": -110.47973,
+    "miles": 78.1,
+    "nearest": [
+     {
+      "miles": 78.13,
+      "city": "Jackson",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 78.23,
+      "city": "Green River",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 78.33,
+      "city": "Smithfield",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Pinedale Field Office (BLM, OA)",
+    "state": "WY",
+    "from_state_point": true,
+    "rank": 28
+   },
+   {
+    "lat": 31.81653,
+    "lon": -112.60823,
+    "miles": 78.0,
+    "nearest": [
+     {
+      "miles": 78.05,
+      "city": "Gila Bend",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 88.02,
+      "city": "Eloy",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 89.32,
+      "city": "Casa Grande",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Organ Pipe Cactus National Monument (NPS, OA)",
+    "state": "AZ",
+    "from_state_point": true,
+    "rank": 29
+   },
+   {
+    "lat": 42.46627,
+    "lon": -118.87397,
+    "miles": 77.1,
+    "nearest": [
+     {
+      "miles": 77.11,
+      "city": "Hines",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 119.19,
+      "city": "Winnemucca",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 138.39,
+      "city": "Caldwell",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "OR",
+    "rank": 30,
+    "land": "Burns Andrews Field Office (BLM, OA)"
+   },
+   {
+    "lat": 41.95113,
+    "lon": -115.98598,
+    "miles": 77.2,
+    "nearest": [
+     {
+      "miles": 77.17,
+      "city": "Elko",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 77.36,
+      "city": "Buhl",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 77.45,
+      "city": "Elko",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 31,
+    "land": "Humboldt National Forest (USFS, OA)"
+   },
+   {
+    "lat": 39.64109,
+    "lon": -116.2419,
+    "miles": 78.2,
+    "nearest": [
+     {
+      "miles": 78.19,
+      "city": "Battle Mountain",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 78.37,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 86.0,
+      "city": "Elko",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 32,
+    "land": "Mount Lewis Field Office (BLM, OA)"
+   },
+   {
+    "lat": 29.28522,
+    "lon": -103.91755,
+    "miles": 75.8,
+    "nearest": [
+     {
+      "miles": 75.76,
+      "city": "Alpine",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 126.64,
+      "city": "Fort Stockton",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 132.95,
+      "city": "Van Horn",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "TX",
+    "rank": 33,
+    "land": "Big Bend Ranch State Park (SPR, OA)"
+   },
+   {
+    "lat": 43.75274,
+    "lon": -101.61902,
+    "miles": 75.8,
+    "nearest": [
+     {
+      "miles": 75.81,
+      "city": "Pierre",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 75.87,
+      "city": "Box Elder",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 79.99,
+      "city": "Rapid City",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "SD",
+    "rank": 34,
+    "land": "Buffalo Gap National Grassland (USFS, OA)"
+   },
+   {
+    "lat": 37.98327,
+    "lon": -117.23875,
+    "miles": 76.4,
+    "nearest": [
+     {
+      "miles": 76.38,
+      "city": "Bishop",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 84.34,
+      "city": "Hawthorne",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 105.48,
+      "city": "Lone Pine",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 35,
+    "land": "Tonopah Field Office (BLM, OA)"
+   },
+   {
+    "lat": 44.22406,
+    "lon": -113.18455,
+    "miles": 74.3,
+    "nearest": [
+     {
+      "miles": 74.28,
+      "city": "Dillon",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 74.39,
+      "city": "Hailey",
+      "state": "ID",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 74.46,
+      "city": "Rexburg",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ID",
+    "rank": 36,
+    "land": "Challis National Forest (USFS, OA)"
+   },
+   {
+    "lat": 46.59769,
+    "lon": -104.29202,
+    "miles": 74.3,
+    "nearest": [
+     {
+      "miles": 74.28,
+      "city": "Miles City",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 74.29,
+      "city": "Dickinson",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 76.52,
+      "city": "Sidney",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 37,
+    "land": "Miles City Field Office (BLM, OA)"
+   },
+   {
+    "lat": 44.62178,
+    "lon": -119.4041,
+    "miles": 74.2,
+    "nearest": [
+     {
+      "miles": 74.2,
+      "city": "Hines",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 74.9,
+      "city": "Prineville",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 77.14,
+      "city": "Pendleton",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "OR",
+    "rank": 38,
+    "land": "Prineville Central Oregon Field Office (BLM, OA)"
+   },
+   {
+    "lat": 37.06822,
+    "lon": -102.91105,
+    "miles": 72.9,
+    "nearest": [
+     {
+      "miles": 72.89,
+      "city": "Dalhart",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 72.9,
+      "city": "Lamar",
+      "state": "CO",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 73.26,
+      "city": "La Junta",
+      "state": "CO",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "CO",
+    "rank": 39,
+    "land": "Comanche National Grassland (USFS, OA)"
+   },
+   {
+    "lat": 31.33416,
+    "lon": -108.33216,
+    "miles": 72.4,
+    "nearest": [
+     {
+      "miles": 72.42,
+      "city": "Deming",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 72.6,
+      "city": "Douglas",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 73.07,
+      "city": "Lordsburg",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Las Cruces District Office (BLM, OA)",
+    "state": "NM",
+    "from_state_point": true,
+    "rank": 40
+   },
+   {
+    "lat": 43.54757,
+    "lon": -104.48094,
+    "miles": 71.4,
+    "nearest": [
+     {
+      "miles": 71.36,
+      "city": "Douglas",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 71.45,
+      "city": "Rapid City",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 71.55,
+      "city": "Gillette",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "WY",
+    "rank": 41,
+    "land": "Thunder Basin National Grassland (USFS, OA)"
+   },
+   {
+    "lat": 24.6287,
+    "lon": -82.8733,
+    "miles": 70.4,
+    "nearest": [
+     {
+      "miles": 70.36,
+      "city": "Key West",
+      "state": "FL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 113.37,
+      "city": "Marathon",
+      "state": "FL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 115.97,
+      "city": "Marco Island",
+      "state": "FL",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Dry Tortugas National Park (NPS, OA)",
+    "state": "FL",
+    "from_state_point": true,
+    "rank": 42
+   },
+   {
+    "lat": 48.79823,
+    "lon": -99.99091,
+    "miles": 70.4,
+    "nearest": [
+     {
+      "miles": 70.44,
+      "city": "Devils Lake",
+      "state": "ND",
+      "country": "US",
+      "source": "old-2025"
+     },
+     {
+      "miles": 71.16,
+      "city": "Brandon",
+      "state": "MB",
+      "country": "CA",
+      "source": "atp"
+     },
+     {
+      "miles": 71.45,
+      "city": "Minot",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ND",
+    "rank": 43,
+    "land": "Nd State Lands - Surface Ownership (SLB, OA)"
+   },
+   {
+    "lat": 46.0181,
+    "lon": -115.60289,
+    "miles": 71.3,
+    "nearest": [
+     {
+      "miles": 71.28,
+      "city": "Lewiston",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 71.31,
+      "city": "Hamilton",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 72.39,
+      "city": "Lewiston",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ID",
+    "rank": 44,
+    "land": "Nezperce National Forest (USFS, OA)"
+   },
+   {
+    "lat": 33.93136,
+    "lon": -108.09542,
+    "miles": 69.7,
+    "nearest": [
+     {
+      "miles": 69.69,
+      "city": "Springerville",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 69.71,
+      "city": "Socorro",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 72.45,
+      "city": "Truth Or Consequences",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NM",
+    "rank": 45,
+    "land": "State Trust Land (SLB, OA)"
+   },
+   {
+    "lat": 39.76303,
+    "lon": -113.75643,
+    "miles": 69.3,
+    "nearest": [
+     {
+      "miles": 69.28,
+      "city": "West Wendover",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 69.46,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 69.49,
+      "city": "Delta",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "UT",
+    "rank": 46,
+    "land": "Fillmore Field Office (BLM, OA)"
+   },
+   {
+    "lat": 41.7639,
+    "lon": -118.57173,
+    "miles": 70.1,
+    "nearest": [
+     {
+      "miles": 70.12,
+      "city": "Winnemucca",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 109.5,
+      "city": "Lovelock",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 115.02,
+      "city": "Battle Mountain",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 47,
+    "land": "Humboldt River Field Office (BLM, OA)"
+   },
+   {
+    "lat": 44.53822,
+    "lon": -101.73913,
+    "miles": 69.1,
+    "nearest": [
+     {
+      "miles": 69.12,
+      "city": "Pierre",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 71.1,
+      "city": "Box Elder",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 76.33,
+      "city": "Rapid City",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "SD",
+    "rank": 48,
+    "land": "South Dakota Field Office (BLM, OA)"
+   },
+   {
+    "lat": 38.5881,
+    "lon": -113.88137,
+    "miles": 69.8,
+    "nearest": [
+     {
+      "miles": 69.84,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 69.94,
+      "city": "Beaver",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 76.39,
+      "city": "Cedar City",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "UT",
+    "rank": 49,
+    "land": "The State of Utah School and Institutional Trust Lands Administration 2021 (SLB, OA)"
+   },
+   {
+    "lat": 48.96527,
+    "lon": -104.93671,
+    "miles": 68.1,
+    "nearest": [
+     {
+      "miles": 68.14,
+      "city": "Weyburn",
+      "state": "SK",
+      "country": "CA",
+      "source": "atp"
+     },
+     {
+      "miles": 68.33,
+      "city": "Wolf Point",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 81.65,
+      "city": "Williston",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 50,
+    "land": "Montana State Trust Lands (UNK, OA)"
+   },
+   {
+    "lat": 37.60094,
+    "lon": -109.75619,
+    "miles": 67.3,
+    "nearest": [
+     {
+      "miles": 67.32,
+      "city": "Moab",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 67.35,
+      "city": "Kayenta",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 67.58,
+      "city": "Cortez",
+      "state": "CO",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "UT",
+    "rank": 51,
+    "land": "Monticello Field Office (BLM, OA)"
+   },
+   {
+    "lat": 41.61275,
+    "lon": -113.49612,
+    "miles": 67.1,
+    "nearest": [
+     {
+      "miles": 67.14,
+      "city": "Burley",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 67.17,
+      "city": "West Wendover",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 67.37,
+      "city": "Tremonton",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "UT",
+    "rank": 52,
+    "land": "Salt Lake  Field Office (BLM, OA)"
+   },
+   {
+    "lat": 28.95282,
+    "lon": -89.38036,
+    "miles": 67.1,
+    "nearest": [
+     {
+      "miles": 67.14,
+      "city": "Cut Off",
+      "state": "LA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 71.23,
+      "city": "Cut Off",
+      "state": "LA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 72.86,
+      "city": "Belle Chasse",
+      "state": "LA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Division Of State Lands (OTHS, OA)",
+    "state": "LA",
+    "from_state_point": true,
+    "rank": 53
+   },
+   {
+    "lat": 36.03098,
+    "lon": -113.35236,
+    "miles": 67.1,
+    "nearest": [
+     {
+      "miles": 67.06,
+      "city": "Kingman",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 67.08,
+      "city": "Mesquite",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 67.69,
+      "city": "Kingman",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "AZ",
+    "rank": 54,
+    "land": "Grand Canyon National Park (NPS, OA)"
+   },
+   {
+    "lat": 36.12166,
+    "lon": -103.70485,
+    "miles": 66.5,
+    "nearest": [
+     {
+      "miles": 66.48,
+      "city": "Raton",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 66.7,
+      "city": "Tucumcari",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 66.76,
+      "city": "Dalhart",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NM",
+    "rank": 55,
+    "land": "State Trust Land (SLB, OA)"
+   },
+   {
+    "lat": 43.1481,
+    "lon": -117.84313,
+    "miles": 68.6,
+    "nearest": [
+     {
+      "miles": 68.6,
+      "city": "Caldwell",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 68.61,
+      "city": "Hines",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 68.73,
+      "city": "Caldwell",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "OR",
+    "rank": 56,
+    "land": "Vale Malheur Field Office (BLM, OA)"
+   },
+   {
+    "lat": 43.24901,
+    "lon": -120.31557,
+    "miles": 66.4,
+    "nearest": [
+     {
+      "miles": 66.37,
+      "city": "Hines",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 66.39,
+      "city": "La Pine",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 73.26,
+      "city": "Bend",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "OR",
+    "rank": 57,
+    "land": "Lakeview District Lakeview Field Office (BLM, OA)"
+   },
+   {
+    "lat": 47.71833,
+    "lon": -112.71087,
+    "miles": 65.9,
+    "nearest": [
+     {
+      "miles": 65.94,
+      "city": "Cut Bank",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 66.11,
+      "city": "Great Falls",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 66.12,
+      "city": "Polson",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 58,
+    "land": "Lewis & Clark National Forest (USFS, OA)"
+   },
+   {
+    "lat": 47.25063,
+    "lon": -106.44674,
+    "miles": 65.9,
+    "nearest": [
+     {
+      "miles": 65.91,
+      "city": "Glasgow",
+      "state": "MT",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 65.94,
+      "city": "Miles City",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 69.34,
+      "city": "Wolf Point",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 59,
+    "land": "Miles City Field Office (BLM, OA)"
+   },
+   {
+    "lat": 42.3998,
+    "lon": -101.6757,
+    "miles": 65.8,
+    "nearest": [
+     {
+      "miles": 65.83,
+      "city": "Valentine",
+      "state": "NE",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 65.86,
+      "city": "Alliance",
+      "state": "NE",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 74.48,
+      "city": "Chadron",
+      "state": "NE",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Cottonwood/Steverson Wildlife Management Area (SFW, OA)",
+    "state": "NE",
+    "from_state_point": true,
+    "rank": 60
+   },
+   {
+    "lat": 46.1146,
+    "lon": -99.51331,
+    "miles": 65.4,
+    "nearest": [
+     {
+      "miles": 65.43,
+      "city": "Jamestown",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 66.48,
+      "city": "Aberdeen",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 67.95,
+      "city": "Aberdeen",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ND",
+    "rank": 61,
+    "land": "Nd State Lands - Surface Ownership (SLB, OA)"
+   },
+   {
+    "lat": 34.25266,
+    "lon": -105.4453,
+    "miles": 64.9,
+    "nearest": [
+     {
+      "miles": 64.89,
+      "city": "Ruidoso",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 65.02,
+      "city": "Santa Rosa",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 70.12,
+      "city": "Edgewood",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NM",
+    "rank": 62,
+    "land": "State Trust Land (SLB, OA)"
+   },
+   {
+    "lat": 48.99344,
+    "lon": -110.95146,
+    "miles": 65.1,
+    "nearest": [
+     {
+      "miles": 65.1,
+      "city": "Havre",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 67.9,
+      "city": "Cut Bank",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 70.51,
+      "city": "Medicine Hat",
+      "state": "AB",
+      "country": "CA",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 63,
+    "land": "Montana State Trust Lands (UNK, OA)"
+   },
+   {
+    "lat": 40.21906,
+    "lon": -102.11408,
+    "miles": 64.2,
+    "nearest": [
+     {
+      "miles": 64.23,
+      "city": "Burlington",
+      "state": "CO",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.44,
+      "city": "Sterling",
+      "state": "CO",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.62,
+      "city": "Goodland",
+      "state": "KS",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "CO",
+    "rank": 64,
+    "land": "Royal Gorge Field Office (BLM, OA)"
+   },
+   {
+    "lat": 46.66558,
+    "lon": -110.65989,
+    "miles": 64.2,
+    "nearest": [
+     {
+      "miles": 64.24,
+      "city": "Great Falls",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.24,
+      "city": "Lewistown",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.28,
+      "city": "Helena",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 65,
+    "land": "Montana State Trust Lands (UNK, OA)"
+   },
+   {
+    "lat": 46.20571,
+    "lon": -101.88447,
+    "miles": 64.2,
+    "nearest": [
+     {
+      "miles": 64.18,
+      "city": "Dickinson",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.86,
+      "city": "Mandan",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 66.13,
+      "city": "Bismarck",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ND",
+    "rank": 66,
+    "land": "Nd State Lands - Surface Ownership (SLB, OA)"
+   },
+   {
+    "lat": 43.65516,
+    "lon": -109.53228,
+    "miles": 64.0,
+    "nearest": [
+     {
+      "miles": 64.04,
+      "city": "Cody",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.22,
+      "city": "Jackson",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 66.16,
+      "city": "Thermopolis",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "WY",
+    "rank": 67,
+    "land": "State Lands 1111116417 (SLB, OA)"
+   },
+   {
+    "lat": 45.46187,
+    "lon": -105.9731,
+    "miles": 65.0,
+    "nearest": [
+     {
+      "miles": 65.05,
+      "city": "Miles City",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 65.16,
+      "city": "Sheridan",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 67.12,
+      "city": "Sheridan",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 68,
+    "land": "Custer National Forest (USFS, OA)"
+   },
+   {
+    "lat": 46.46671,
+    "lon": -69.30754,
+    "miles": 63.4,
+    "nearest": [
+     {
+      "miles": 63.37,
+      "city": "Millinocket",
+      "state": "ME",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 63.52,
+      "city": "Presque Isle",
+      "state": "ME",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.32,
+      "city": "Fort Kent",
+      "state": "ME",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Allagash Wilderness Waterway State Park (SPR, OA)",
+    "state": "ME",
+    "from_state_point": true,
+    "rank": 69
+   },
+   {
+    "lat": 40.15042,
+    "lon": -114.97738,
+    "miles": 62.8,
+    "nearest": [
+     {
+      "miles": 62.85,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 62.96,
+      "city": "Elko",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 63.0,
+      "city": "West Wendover",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 70,
+    "land": "Wells Field Office (BLM, OA)"
+   },
+   {
+    "lat": 47.63503,
+    "lon": -100.108,
+    "miles": 62.8,
+    "nearest": [
+     {
+      "miles": 62.81,
+      "city": "Bismarck",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 63.44,
+      "city": "Bismarck",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.82,
+      "city": "Bismarck",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ND",
+    "rank": 71,
+    "land": "Nd State Lands - Surface Ownership (SLB, OA)"
+   },
+   {
+    "lat": 38.5181,
+    "lon": -115.7369,
+    "miles": 68.5,
+    "nearest": [
+     {
+      "miles": 68.48,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 148.29,
+      "city": "Mesquite",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 148.97,
+      "city": "Mesquite",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 72,
+    "land": "Tonopah Field Office (BLM, OA)"
+   },
+   {
+    "lat": 32.00244,
+    "lon": -105.19384,
+    "miles": 62.5,
+    "nearest": [
+     {
+      "miles": 62.46,
+      "city": "Carlsbad",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 62.5,
+      "city": "El Paso",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 62.65,
+      "city": "Carlsbad",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NM",
+    "rank": 73,
+    "land": "State Trust Land (SLB, OA)"
+   },
+   {
+    "lat": 47.22614,
+    "lon": -105.34297,
+    "miles": 61.5,
+    "nearest": [
+     {
+      "miles": 61.55,
+      "city": "Wolf Point",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 61.57,
+      "city": "Miles City",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.2,
+      "city": "Sidney",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 74,
+    "land": "Montana State Trust Lands (UNK, OA)"
+   },
+   {
+    "lat": 46.7381,
+    "lon": -115.45677,
+    "miles": 64.4,
+    "nearest": [
+     {
+      "miles": 64.37,
+      "city": "Kellogg",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.51,
+      "city": "Missoula",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 65.31,
+      "city": "Lolo",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ID",
+    "rank": 75,
+    "land": "Clearwater National Forest (USFS, OA)"
+   },
+   {
+    "lat": 45.10066,
+    "lon": -99.63377,
+    "miles": 61.3,
+    "nearest": [
+     {
+      "miles": 61.25,
+      "city": "Aberdeen",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 61.78,
+      "city": "Pierre",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 62.2,
+      "city": "Aberdeen",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "SD",
+    "rank": 76,
+    "land": "State Lands (SLB, OA)"
+   },
+   {
+    "lat": 44.1969,
+    "lon": -115.21072,
+    "miles": 64.2,
+    "nearest": [
+     {
+      "miles": 64.2,
+      "city": "Hailey",
+      "state": "ID",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 64.23,
+      "city": "Boise",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.27,
+      "city": "Boise",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ID",
+    "rank": 77,
+    "land": "Boise National Forest (USFS, OA)"
+   },
+   {
+    "lat": 41.26893,
+    "lon": -108.15212,
+    "miles": 60.6,
+    "nearest": [
+     {
+      "miles": 60.62,
+      "city": "Craig",
+      "state": "CO",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 60.71,
+      "city": "Rawlins",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 60.76,
+      "city": "Rock Springs",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "WY",
+    "rank": 78,
+    "land": "Rock Springs Field Office (BLM, OA)"
+   },
+   {
+    "lat": 48.5772,
+    "lon": -120.88996,
+    "miles": 60.5,
+    "nearest": [
+     {
+      "miles": 60.46,
+      "city": "Hope",
+      "state": "BC",
+      "country": "CA",
+      "source": "atp"
+     },
+     {
+      "miles": 60.55,
+      "city": "Granite Falls",
+      "state": "WA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 60.56,
+      "city": "Brewster",
+      "state": "WA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "North Cascades National Park (NPS, OA)",
+    "state": "WA",
+    "from_state_point": true,
+    "rank": 79
+   },
+   {
+    "lat": 48.99003,
+    "lon": -106.06865,
+    "miles": 60.7,
+    "nearest": [
+     {
+      "miles": 60.69,
+      "city": "Glasgow",
+      "state": "MT",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 64.95,
+      "city": "Wolf Point",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 100.68,
+      "city": "Moose Jaw",
+      "state": "SK",
+      "country": "CA",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 80,
+    "land": "Montana State Trust Lands (UNK, OA)"
+   },
+   {
+    "lat": 41.13243,
+    "lon": -121.27237,
+    "miles": 60.4,
+    "nearest": [
+     {
+      "miles": 60.35,
+      "city": "Susanville",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 60.49,
+      "city": "Weed",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.47,
+      "city": "Shasta Lake",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "CA",
+    "rank": 81,
+    "land": "Applegate Field Office (BLM, OA)"
+   },
+   {
+    "lat": 41.97098,
+    "lon": -100.51,
+    "miles": 60.0,
+    "nearest": [
+     {
+      "miles": 60.0,
+      "city": "North Platte",
+      "state": "NE",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 60.13,
+      "city": "Broken Bow",
+      "state": "NE",
+      "country": "US",
+      "source": "old-2025"
+     },
+     {
+      "miles": 60.93,
+      "city": "North Platte",
+      "state": "NE",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NE",
+    "rank": 82,
+    "land": "Nebraska National Forest (USFS, OA)"
+   },
+   {
+    "lat": 36.32441,
+    "lon": -117.04644,
+    "miles": 59.6,
+    "nearest": [
+     {
+      "miles": 59.57,
+      "city": "Ridgecrest",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 59.72,
+      "city": "Lone Pine",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 59.74,
+      "city": "Pahrump",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "CA",
+    "rank": 83,
+    "land": "Death Valley National Park (NPS, OA)"
+   },
+   {
+    "lat": 37.75679,
+    "lon": -111.7631,
+    "miles": 60.7,
+    "nearest": [
+     {
+      "miles": 60.67,
+      "city": "Page",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 60.81,
+      "city": "Beaver",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.64,
+      "city": "Kanab",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "UT",
+    "rank": 84,
+    "land": "Kanab Field Office (BLM, OA)"
+   },
+   {
+    "lat": 45.38015,
+    "lon": -113.8819,
+    "miles": 61.8,
+    "nearest": [
+     {
+      "miles": 61.79,
+      "city": "Hamilton",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 61.97,
+      "city": "Dillon",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 68.97,
+      "city": "Anaconda",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ID",
+    "rank": 85,
+    "land": "Salmon National Forest (USFS, OA)"
+   },
+   {
+    "lat": 38.71227,
+    "lon": -110.6769,
+    "miles": 61.6,
+    "nearest": [
+     {
+      "miles": 61.61,
+      "city": "Price",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 61.84,
+      "city": "Moab",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 65.85,
+      "city": "Ephraim",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "UT",
+    "rank": 86,
+    "land": "Price Field Office (BLM, OA)"
+   },
+   {
+    "lat": 42.05977,
+    "lon": -108.28091,
+    "miles": 57.9,
+    "nearest": [
+     {
+      "miles": 57.91,
+      "city": "Lander",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 58.02,
+      "city": "Rock Springs",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 58.06,
+      "city": "Rawlins",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "WY",
+    "rank": 87,
+    "land": "Rawlins Field Office (BLM, OA)"
+   },
+   {
+    "lat": 43.54515,
+    "lon": -106.98752,
+    "miles": 57.8,
+    "nearest": [
+     {
+      "miles": 57.79,
+      "city": "Buffalo",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 57.84,
+      "city": "Casper",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 57.92,
+      "city": "Worland",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "WY",
+    "rank": 88,
+    "land": "Buffalo Field Office (BLM, OA)"
+   },
+   {
+    "lat": 47.479,
+    "lon": -101.91342,
+    "miles": 57.6,
+    "nearest": [
+     {
+      "miles": 57.64,
+      "city": "Minot",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 57.64,
+      "city": "Minot",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 57.68,
+      "city": "Dickinson",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ND",
+    "rank": 89,
+    "land": "Sakakawea Recreation Area (USACE, OA)"
+   },
+   {
+    "lat": 48.952,
+    "lon": -95.81241,
+    "miles": 57.1,
+    "nearest": [
+     {
+      "miles": 57.08,
+      "city": "Steinbach",
+      "state": "MB",
+      "country": "CA",
+      "source": "atp"
+     },
+     {
+      "miles": 57.15,
+      "city": "Baudette",
+      "state": "MN",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 60.0,
+      "city": "Thief River Falls",
+      "state": "MN",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MN",
+    "rank": 90,
+    "land": "Lost River State Forest (SDNR, OA)"
+   },
+   {
+    "lat": 47.75692,
+    "lon": -110.08769,
+    "miles": 57.1,
+    "nearest": [
+     {
+      "miles": 57.07,
+      "city": "Lewistown",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 58.13,
+      "city": "Havre",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 58.44,
+      "city": "Great Falls",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 91,
+    "land": "Montana State Trust Lands (UNK, OA)"
+   },
+   {
+    "lat": 34.95736,
+    "lon": -115.99984,
+    "miles": 56.7,
+    "nearest": [
+     {
+      "miles": 56.66,
+      "city": "Twentynine Palms",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 56.76,
+      "city": "Jean",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 56.92,
+      "city": "Barstow",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "CA",
+    "rank": 92,
+    "land": "Needles Field Office (BLM, OA)"
+   },
+   {
+    "lat": 33.3546,
+    "lon": -108.97017,
+    "miles": 56.7,
+    "nearest": [
+     {
+      "miles": 56.65,
+      "city": "Springerville",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 56.76,
+      "city": "Silver City",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 56.78,
+      "city": "Safford",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NM",
+    "rank": 93,
+    "land": "Gila National Forest (USFS, OA)"
+   },
+   {
+    "lat": 42.93896,
+    "lon": -109.84119,
+    "miles": 57.2,
+    "nearest": [
+     {
+      "miles": 57.19,
+      "city": "Lander",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 60.34,
+      "city": "Jackson",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 74.33,
+      "city": "Riverton",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "WY",
+    "rank": 94,
+    "land": "Bridger National Forest (USFS, OA)"
+   },
+   {
+    "lat": 42.59387,
+    "lon": -107.43868,
+    "miles": 56.5,
+    "nearest": [
+     {
+      "miles": 56.45,
+      "city": "Rawlins",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 56.59,
+      "city": "Riverton",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 56.64,
+      "city": "Casper",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "WY",
+    "rank": 95,
+    "land": "Lander Field Office (BLM, OA)"
+   },
+   {
+    "lat": 40.1791,
+    "lon": -108.53801,
+    "miles": 56.4,
+    "nearest": [
+     {
+      "miles": 56.39,
+      "city": "Parachute",
+      "state": "CO",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 56.53,
+      "city": "Craig",
+      "state": "CO",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 56.54,
+      "city": "Vernal",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "CO",
+    "rank": 96,
+    "land": "White River Field Office (BLM, OA)"
+   },
+   {
+    "lat": 43.99864,
+    "lon": -118.11531,
+    "miles": 56.1,
+    "nearest": [
+     {
+      "miles": 56.1,
+      "city": "Baker City",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 56.22,
+      "city": "Hines",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 56.28,
+      "city": "Ontario",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "OR",
+    "rank": 97,
+    "land": "Vale Malheur Field Office (BLM, OA)"
+   },
+   {
+    "lat": 42.0309,
+    "lon": -106.1128,
+    "miles": 55.9,
+    "nearest": [
+     {
+      "miles": 55.91,
+      "city": "Casper",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 56.03,
+      "city": "Laramie",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 57.27,
+      "city": "Casper",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "WY",
+    "rank": 98,
+    "land": "Rawlins Field Office (BLM, OA)"
+   },
+   {
+    "lat": 44.9315,
+    "lon": -110.02933,
+    "miles": 55.8,
+    "nearest": [
+     {
+      "miles": 55.83,
+      "city": "Livingston",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 55.92,
+      "city": "Cody",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 55.95,
+      "city": "West Yellowstone",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "WY",
+    "rank": 99,
+    "land": "Yellowstone National Park (NPS, OA)"
+   },
+   {
+    "lat": 42.75747,
+    "lon": -111.31865,
+    "miles": 56.3,
+    "nearest": [
+     {
+      "miles": 56.26,
+      "city": "Jackson",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 57.2,
+      "city": "Pocatello",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 58.3,
+      "city": "Pocatello",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ID",
+    "rank": 100,
+    "land": "Caribou National Forest (USFS, OA)"
+   }
+  ]
+ },
+ "open_or_restricted": {
+  "states": {
+   "AK": {
+    "lat": 65.6106,
+    "lon": -167.84852,
+    "miles": 581.9,
+    "nearest": [
+     {
+      "miles": 581.95,
+      "city": "Fairbanks",
+      "state": "AK",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 583.87,
+      "city": "Fairbanks",
+      "state": "AK",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 585.29,
+      "city": "Fairbanks",
+      "state": "AK",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Anchorage Field Office (BLM, OA)"
+   },
+   "AL": {
+    "lat": 32.04906,
+    "lon": -87.25791,
+    "miles": 29.4,
+    "nearest": [
+     {
+      "miles": 29.44,
+      "city": "Selma",
+      "state": "AL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 29.54,
+      "city": "Thomasville",
+      "state": "AL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 37.63,
+      "city": "Monroeville",
+      "state": "AL",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Millers Ferry Lock Recreation Area (USACE, OA)"
+   },
+   "AR": {
+    "lat": 34.21156,
+    "lon": -91.11748,
+    "miles": 31.0,
+    "nearest": [
+     {
+      "miles": 30.99,
+      "city": "Dumas",
+      "state": "AR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 31.02,
+      "city": "Stuttgart",
+      "state": "AR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 31.07,
+      "city": "Clarksdale",
+      "state": "MS",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Dale Bumpers White River National Wildlife Refuge (FWS, RA)"
+   },
+   "AZ": {
+    "lat": 31.81653,
+    "lon": -112.60823,
+    "miles": 78.0,
+    "nearest": [
+     {
+      "miles": 78.05,
+      "city": "Gila Bend",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 88.02,
+      "city": "Eloy",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 89.32,
+      "city": "Casa Grande",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Organ Pipe Cactus National Monument (NPS, OA)"
+   },
+   "CA": {
+    "lat": 41.71502,
+    "lon": -120.00019,
+    "miles": 96.2,
+    "nearest": [
+     {
+      "miles": 96.23,
+      "city": "Susanville",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 96.51,
+      "city": "Klamath Falls",
+      "state": "OR",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 96.65,
+      "city": "Klamath Falls",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Applegate Field Office (BLM, OA)"
+   },
+   "CO": {
+    "lat": 37.06822,
+    "lon": -102.91105,
+    "miles": 72.9,
+    "nearest": [
+     {
+      "miles": 72.89,
+      "city": "Dalhart",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 72.9,
+      "city": "Lamar",
+      "state": "CO",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 73.26,
+      "city": "La Junta",
+      "state": "CO",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Comanche National Grassland (USFS, OA)"
+   },
+   "CT": {
+    "lat": 41.841,
+    "lon": -73.38923,
+    "miles": 12.3,
+    "nearest": [
+     {
+      "miles": 12.27,
+      "city": "Dover Plains",
+      "state": "NY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 13.13,
+      "city": "Canaan",
+      "state": "CT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 13.92,
+      "city": "Torrington",
+      "state": "CT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Appalachian National Scenic Trail (NPS, OA)"
+   },
+   "DC": {
+    "lat": 38.93368,
+    "lon": -77.11789,
+    "miles": 2.3,
+    "nearest": [
+     {
+      "miles": 2.26,
+      "city": "Bethesda",
+      "state": "MD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 2.27,
+      "city": "Washington",
+      "state": "DC",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 2.62,
+      "city": "Arlington",
+      "state": "VA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Chesapeake and Ohio Canal National Historical Park (NPS, RA)"
+   },
+   "DE": {
+    "lat": 39.29448,
+    "lon": -75.43881,
+    "miles": 9.1,
+    "nearest": [
+     {
+      "miles": 9.08,
+      "city": "Dover",
+      "state": "DE",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 9.1,
+      "city": "Smyrna",
+      "state": "DE",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 9.15,
+      "city": "Dover",
+      "state": "DE",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Bombay Hook National Wildlife Refuge (FWS, RA)"
+   },
+   "FL": {
+    "lat": 24.6287,
+    "lon": -82.8733,
+    "miles": 70.4,
+    "nearest": [
+     {
+      "miles": 70.36,
+      "city": "Key West",
+      "state": "FL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 113.37,
+      "city": "Marathon",
+      "state": "FL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 115.97,
+      "city": "Marco Island",
+      "state": "FL",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Dry Tortugas National Park (NPS, OA)"
+   },
+   "GA": {
+    "lat": 30.66812,
+    "lon": -82.48796,
+    "miles": 30.7,
+    "nearest": [
+     {
+      "miles": 30.67,
+      "city": "White Springs",
+      "state": "FL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 30.75,
+      "city": "Folkston",
+      "state": "GA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 33.98,
+      "city": "Hilliard",
+      "state": "FL",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Okefenokee National Wildlife Refuge (FWS, RA)"
+   },
+   "HI": {
+    "lat": 18.91311,
+    "lon": -155.68158,
+    "miles": 44.4,
+    "nearest": [
+     {
+      "miles": 44.41,
+      "city": "Kealakekua",
+      "state": "HI",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 53.91,
+      "city": "Kailua Kona",
+      "state": "HI",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 54.32,
+      "city": "Kailua Kona",
+      "state": "HI",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "State Department of Land State Resource Management Area (SDOL, OA)"
+   },
+   "IA": {
+    "lat": 40.59892,
+    "lon": -93.50903,
+    "miles": 32.9,
+    "nearest": [
+     {
+      "miles": 32.94,
+      "city": "Osceola",
+      "state": "IA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 35.06,
+      "city": "Centerville",
+      "state": "IA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 35.12,
+      "city": "Bethany",
+      "state": "MO",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Moore-Gosch Memorial Park (CNTY, OA)"
+   },
+   "ID": {
+    "lat": 44.91145,
+    "lon": -115.04171,
+    "miles": 102.1,
+    "nearest": [
+     {
+      "miles": 102.11,
+      "city": "Hailey",
+      "state": "ID",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 102.15,
+      "city": "Hamilton",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 102.25,
+      "city": "Emmett",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Payette National Forest (USFS, OA)"
+   },
+   "IL": {
+    "lat": 39.26109,
+    "lon": -90.72361,
+    "miles": 23.1,
+    "nearest": [
+     {
+      "miles": 23.1,
+      "city": "Troy",
+      "state": "MO",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 24.07,
+      "city": "Jerseyville",
+      "state": "IL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 24.36,
+      "city": "Pittsfield",
+      "state": "IL",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Osterman Hill Prairies (PVT, RA)"
+   },
+   "IN": {
+    "lat": 38.14695,
+    "lon": -86.49365,
+    "miles": 20.5,
+    "nearest": [
+     {
+      "miles": 20.47,
+      "city": "Tell City",
+      "state": "IN",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 20.51,
+      "city": "Corydon",
+      "state": "IN",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 20.75,
+      "city": "Ferdinand",
+      "state": "IN",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Hoosier National Forest (USFS, OA)"
+   },
+   "KS": {
+    "lat": 39.66836,
+    "lon": -99.13375,
+    "miles": 54.2,
+    "nearest": [
+     {
+      "miles": 54.21,
+      "city": "Hays",
+      "state": "KS",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 54.76,
+      "city": "Holdrege",
+      "state": "NE",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 55.96,
+      "city": "Hays",
+      "state": "KS",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Kirwin Reservoir (USBR, OA)"
+   },
+   "KY": {
+    "lat": 37.3928,
+    "lon": -88.46468,
+    "miles": 21.4,
+    "nearest": [
+     {
+      "miles": 21.43,
+      "city": "Metropolis",
+      "state": "IL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 21.47,
+      "city": "Marion",
+      "state": "KY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 22.57,
+      "city": "Vienna",
+      "state": "IL",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Ohio River Islands Wildlife Management Area (SFW, OA)"
+   },
+   "LA": {
+    "lat": 28.98149,
+    "lon": -89.14011,
+    "miles": 79.0,
+    "nearest": [
+     {
+      "miles": 78.97,
+      "city": "Cut Off",
+      "state": "LA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 79.69,
+      "city": "Belle Chasse",
+      "state": "LA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 80.83,
+      "city": "Meraux",
+      "state": "LA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Pass A Loutre Wildlife Management Area (SFW, RA)"
+   },
+   "MA": {
+    "lat": 41.24179,
+    "lon": -69.99571,
+    "miles": 30.8,
+    "nearest": [
+     {
+      "miles": 30.82,
+      "city": "South Yarmouth",
+      "state": "MA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 32.14,
+      "city": "Hyannis",
+      "state": "MA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 33.16,
+      "city": "Hyannis",
+      "state": "MA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Nantucket Island Land Bank (UNK, OA)"
+   },
+   "MD": {
+    "lat": 38.23517,
+    "lon": -76.06096,
+    "miles": 19.6,
+    "nearest": [
+     {
+      "miles": 19.64,
+      "city": "Princess Anne",
+      "state": "MD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 20.55,
+      "city": "Crisfield",
+      "state": "MD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 22.09,
+      "city": "Lexington Park",
+      "state": "MD",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Blackwater National Wildlife Refuge (FWS, RA)"
+   },
+   "ME": {
+    "lat": 46.46671,
+    "lon": -69.30754,
+    "miles": 63.4,
+    "nearest": [
+     {
+      "miles": 63.37,
+      "city": "Millinocket",
+      "state": "ME",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 63.52,
+      "city": "Presque Isle",
+      "state": "ME",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.32,
+      "city": "Fort Kent",
+      "state": "ME",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Allagash Wilderness Waterway State Park (SPR, OA)"
+   },
+   "MI": {
+    "lat": 47.41723,
+    "lon": -87.59515,
+    "miles": 51.4,
+    "nearest": [
+     {
+      "miles": 51.39,
+      "city": "Houghton",
+      "state": "MI",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 60.42,
+      "city": "Marquette",
+      "state": "MI",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 60.79,
+      "city": "Marquette",
+      "state": "MI",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Manitou Island Light Station Preserve (NGO, RA)"
+   },
+   "MN": {
+    "lat": 48.19153,
+    "lon": -91.01574,
+    "miles": 81.0,
+    "nearest": [
+     {
+      "miles": 81.01,
+      "city": "Cook",
+      "state": "MN",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 81.03,
+      "city": "Thunder Bay",
+      "state": "ON",
+      "country": "CA",
+      "source": "atp"
+     },
+     {
+      "miles": 83.06,
+      "city": "Thunder Bay",
+      "state": "ON",
+      "country": "CA",
+      "source": "atp"
+     }
+    ],
+    "land": "Superior National Forest (USFS, OA)"
+   },
+   "MO": {
+    "lat": 40.02148,
+    "lon": -91.98394,
+    "miles": 31.8,
+    "nearest": [
+     {
+      "miles": 31.79,
+      "city": "Macon",
+      "state": "MO",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 31.83,
+      "city": "Quincy",
+      "state": "IL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 33.1,
+      "city": "Kirksville",
+      "state": "MO",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Sever (Henry) Lake Conservation Area (UNK, RA)"
+   },
+   "MS": {
+    "lat": 31.27538,
+    "lon": -90.97858,
+    "miles": 29.6,
+    "nearest": [
+     {
+      "miles": 29.6,
+      "city": "Clinton",
+      "state": "LA",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 29.69,
+      "city": "Natchez",
+      "state": "MS",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 29.75,
+      "city": "Mccomb",
+      "state": "MS",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Homochitto National Forest (USFS, OA)"
+   },
+   "MT": {
+    "lat": 45.84182,
+    "lon": -104.04642,
+    "miles": 93.0,
+    "nearest": [
+     {
+      "miles": 93.04,
+      "city": "Spearfish",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 93.53,
+      "city": "Miles City",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 94.37,
+      "city": "Dickinson",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Miles City Field Office (BLM, OA)"
+   },
+   "NC": {
+    "lat": 35.14943,
+    "lon": -75.86545,
+    "miles": 52.9,
+    "nearest": [
+     {
+      "miles": 52.86,
+      "city": "Manteo",
+      "state": "NC",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 53.02,
+      "city": "Beaufort",
+      "state": "NC",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 54.66,
+      "city": "Grantsboro",
+      "state": "NC",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Cape Hatteras National Seashore (NPS, OA)"
+   },
+   "ND": {
+    "lat": 45.94604,
+    "lon": -104.01259,
+    "miles": 87.8,
+    "nearest": [
+     {
+      "miles": 87.82,
+      "city": "Dickinson",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 92.26,
+      "city": "Miles City",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 100.07,
+      "city": "Spearfish",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Nd State Lands - Surface Ownership (SLB, OA)"
+   },
+   "NE": {
+    "lat": 42.3998,
+    "lon": -101.6757,
+    "miles": 65.8,
+    "nearest": [
+     {
+      "miles": 65.83,
+      "city": "Valentine",
+      "state": "NE",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 65.86,
+      "city": "Alliance",
+      "state": "NE",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 74.48,
+      "city": "Chadron",
+      "state": "NE",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Cottonwood/Steverson Wildlife Management Area (SFW, OA)"
+   },
+   "NH": {
+    "lat": 44.86156,
+    "lon": -71.04755,
+    "miles": 33.1,
+    "nearest": [
+     {
+      "miles": 33.09,
+      "city": "Gorham",
+      "state": "NH",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 33.85,
+      "city": "Rumford",
+      "state": "ME",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 36.15,
+      "city": "Lancaster",
+      "state": "NH",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Umbagog National Wildlife Refuge (FWS, RA)"
+   },
+   "NJ": {
+    "lat": 39.1811,
+    "lon": -75.13778,
+    "miles": 16.5,
+    "nearest": [
+     {
+      "miles": 16.53,
+      "city": "Millville",
+      "state": "NJ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 17.65,
+      "city": "Bridgeton",
+      "state": "NJ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 17.76,
+      "city": "North Cape May",
+      "state": "NJ",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Egg Island Wildlife Management Area (SFW, OA)"
+   },
+   "NM": {
+    "lat": 31.33416,
+    "lon": -108.33216,
+    "miles": 72.4,
+    "nearest": [
+     {
+      "miles": 72.42,
+      "city": "Deming",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 72.6,
+      "city": "Douglas",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 73.07,
+      "city": "Lordsburg",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Las Cruces District Office (BLM, OA)"
+   },
+   "NV": {
+    "lat": 37.92599,
+    "lon": -116.31842,
+    "miles": 119.8,
+    "nearest": [
+     {
+      "miles": 119.81,
+      "city": "Pahrump",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 120.04,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 120.26,
+      "city": "Bishop",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Tonopah Field Office (BLM, OA)"
+   },
+   "NY": {
+    "lat": 43.62885,
+    "lon": -74.62779,
+    "miles": 42.2,
+    "nearest": [
+     {
+      "miles": 42.2,
+      "city": "Tupper Lake",
+      "state": "NY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 42.21,
+      "city": "Little Falls",
+      "state": "NY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 42.22,
+      "city": "Gloversville",
+      "state": "NY",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "West Canada Lake Wilderness (SDC, OA)"
+   },
+   "OH": {
+    "lat": 41.74152,
+    "lon": -83.10562,
+    "miles": 16.2,
+    "nearest": [
+     {
+      "miles": 16.24,
+      "city": "Oak Harbor",
+      "state": "OH",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 18.43,
+      "city": "Monroe",
+      "state": "MI",
+      "country": "US",
+      "source": "old-2025"
+     },
+     {
+      "miles": 18.44,
+      "city": "Port Clinton",
+      "state": "OH",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "West Sister Island National Wildlife Refuge (FWS, RA)"
+   },
+   "OK": {
+    "lat": 36.99837,
+    "lon": -102.96573,
+    "miles": 69.4,
+    "nearest": [
+     {
+      "miles": 69.37,
+      "city": "Dalhart",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 76.13,
+      "city": "La Junta",
+      "state": "CO",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 78.29,
+      "city": "Lamar",
+      "state": "CO",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "CLO Lands (SLB, RA)"
+   },
+   "OR": {
+    "lat": 41.99526,
+    "lon": -119.5869,
+    "miles": 112.0,
+    "nearest": [
+     {
+      "miles": 112.03,
+      "city": "Hines",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 112.4,
+      "city": "Klamath Falls",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 112.57,
+      "city": "Klamath Falls",
+      "state": "OR",
+      "country": "US",
+      "source": "old-2022"
+     }
+    ],
+    "land": "Applegate Field Office (BLM, OA)"
+   },
+   "PA": {
+    "lat": 41.34555,
+    "lon": -77.99968,
+    "miles": 29.4,
+    "nearest": [
+     {
+      "miles": 29.37,
+      "city": "Coudersport",
+      "state": "PA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 29.4,
+      "city": "Milesburg",
+      "state": "PA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 29.48,
+      "city": "Saint Marys",
+      "state": "PA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Sproul State Forest (SDNR, OA)"
+   },
+   "RI": {
+    "lat": 41.35511,
+    "lon": -71.64693,
+    "miles": 9.1,
+    "nearest": [
+     {
+      "miles": 9.09,
+      "city": "Westerly",
+      "state": "RI",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 10.43,
+      "city": "Wakefield",
+      "state": "RI",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 11.06,
+      "city": "Wyoming",
+      "state": "RI",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Ninigret National Wildlife Refuge (FWS, RA)"
+   },
+   "SC": {
+    "lat": 33.00943,
+    "lon": -79.37704,
+    "miles": 25.7,
+    "nearest": [
+     {
+      "miles": 25.68,
+      "city": "Georgetown",
+      "state": "SC",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 25.78,
+      "city": "Mount Pleasant",
+      "state": "SC",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 30.91,
+      "city": "Mount Pleasant",
+      "state": "SC",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Cape Romain National Wildlife Refuge (FWS, RA)"
+   },
+   "SD": {
+    "lat": 45.47296,
+    "lon": -101.93225,
+    "miles": 106.4,
+    "nearest": [
+     {
+      "miles": 106.43,
+      "city": "Dickinson",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 106.46,
+      "city": "Mandan",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 106.49,
+      "city": "Bismarck",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Grand River National Grassland (USFS, OA)"
+   },
+   "TN": {
+    "lat": 36.22132,
+    "lon": -84.64444,
+    "miles": 21.7,
+    "nearest": [
+     {
+      "miles": 21.68,
+      "city": "Harriman",
+      "state": "TN",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 21.7,
+      "city": "Oneida",
+      "state": "TN",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 21.73,
+      "city": "Jamestown",
+      "state": "TN",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Frozen Head (OTHS, OA)"
+   },
+   "TX": {
+    "lat": 28.97349,
+    "lon": -103.1525,
+    "miles": 100.2,
+    "nearest": [
+     {
+      "miles": 100.18,
+      "city": "Alpine",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 133.48,
+      "city": "Fort Stockton",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 138.77,
+      "city": "Del Rio",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Big Bend National Park (NPS, OA)"
+   },
+   "UT": {
+    "lat": 38.00611,
+    "lon": -110.89696,
+    "miles": 82.5,
+    "nearest": [
+     {
+      "miles": 82.48,
+      "city": "Page",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 82.65,
+      "city": "Richfield",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 82.71,
+      "city": "Moab",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Richfield Field Office (BLM, OA)"
+   },
+   "VA": {
+    "lat": 38.35281,
+    "lon": -79.73312,
+    "miles": 39.4,
+    "nearest": [
+     {
+      "miles": 39.39,
+      "city": "Elkins",
+      "state": "WV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 39.39,
+      "city": "Low Moor",
+      "state": "VA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 39.49,
+      "city": "Staunton",
+      "state": "VA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "George Washington National Forest (USFS, OA)"
+   },
+   "VT": {
+    "lat": 44.80953,
+    "lon": -71.7366,
+    "miles": 22.9,
+    "nearest": [
+     {
+      "miles": 22.9,
+      "city": "Coaticook",
+      "state": "QC",
+      "country": "CA",
+      "source": "atp"
+     },
+     {
+      "miles": 22.9,
+      "city": "Lancaster",
+      "state": "NH",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 22.96,
+      "city": "Derby",
+      "state": "VT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Silvio O. Conte National Fish And Wildlife Refuge (FWS, RA)"
+   },
+   "WA": {
+    "lat": 48.5772,
+    "lon": -120.88996,
+    "miles": 60.5,
+    "nearest": [
+     {
+      "miles": 60.46,
+      "city": "Hope",
+      "state": "BC",
+      "country": "CA",
+      "source": "atp"
+     },
+     {
+      "miles": 60.55,
+      "city": "Granite Falls",
+      "state": "WA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 60.56,
+      "city": "Brewster",
+      "state": "WA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "North Cascades National Park (NPS, OA)"
+   },
+   "WI": {
+    "lat": 47.07577,
+    "lon": -90.39558,
+    "miles": 41.1,
+    "nearest": [
+     {
+      "miles": 41.06,
+      "city": "Ashland",
+      "state": "WI",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 43.73,
+      "city": "Ironwood",
+      "state": "MI",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 60.84,
+      "city": "Two Harbors",
+      "state": "MN",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Apostle Islands National Lakeshore (NPS, OA)"
+   },
+   "WV": {
+    "lat": 38.3581,
+    "lon": -80.06305,
+    "miles": 40.1,
+    "nearest": [
+     {
+      "miles": 40.09,
+      "city": "Low Moor",
+      "state": "VA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 40.19,
+      "city": "Sutton",
+      "state": "WV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 40.34,
+      "city": "Elkins",
+      "state": "WV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Monongahela National Forest (USFS, OA)"
+   },
+   "WY": {
+    "lat": 42.36414,
+    "lon": -110.47973,
+    "miles": 78.1,
+    "nearest": [
+     {
+      "miles": 78.13,
+      "city": "Jackson",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 78.23,
+      "city": "Green River",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 78.33,
+      "city": "Smithfield",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Pinedale Field Office (BLM, OA)"
+   }
+  },
+  "top100": [
+   {
+    "lat": 37.92599,
+    "lon": -116.31842,
+    "miles": 119.8,
+    "nearest": [
+     {
+      "miles": 119.81,
+      "city": "Pahrump",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 120.04,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 120.26,
+      "city": "Bishop",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 1,
+    "land": "Tonopah Field Office (BLM, OA)"
+   },
+   {
+    "lat": 41.94391,
+    "lon": -119.54006,
+    "miles": 115.0,
+    "nearest": [
+     {
+      "miles": 114.96,
+      "city": "Hines",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 115.2,
+      "city": "Winnemucca",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 115.35,
+      "city": "Klamath Falls",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 2,
+    "land": "Sheldon National Wildlife Refuge (FWS, RA)"
+   },
+   {
+    "lat": 45.47296,
+    "lon": -101.93225,
+    "miles": 106.4,
+    "nearest": [
+     {
+      "miles": 106.43,
+      "city": "Dickinson",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 106.46,
+      "city": "Mandan",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 106.49,
+      "city": "Bismarck",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Grand River National Grassland (USFS, OA)",
+    "state": "SD",
+    "from_state_point": true,
+    "rank": 3
+   },
+   {
+    "lat": 38.5981,
+    "lon": -116.66136,
+    "miles": 106.3,
+    "nearest": [
+     {
+      "miles": 106.32,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 106.39,
+      "city": "Hawthorne",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 127.22,
+      "city": "Bishop",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 4,
+    "land": "Toiyabe National Forest (USFS, OA)"
+   },
+   {
+    "lat": 44.91145,
+    "lon": -115.04171,
+    "miles": 102.1,
+    "nearest": [
+     {
+      "miles": 102.11,
+      "city": "Hailey",
+      "state": "ID",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 102.15,
+      "city": "Hamilton",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 102.25,
+      "city": "Emmett",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Payette National Forest (USFS, OA)",
+    "state": "ID",
+    "from_state_point": true,
+    "rank": 5
+   },
+   {
+    "lat": 42.42227,
+    "lon": -117.83645,
+    "miles": 101.1,
+    "nearest": [
+     {
+      "miles": 101.08,
+      "city": "Winnemucca",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 101.24,
+      "city": "Hines",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 101.24,
+      "city": "Nampa",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "OR",
+    "rank": 6,
+    "land": "Vale Malheur Field Office (BLM, OA)"
+   },
+   {
+    "lat": 28.97349,
+    "lon": -103.1525,
+    "miles": 100.2,
+    "nearest": [
+     {
+      "miles": 100.18,
+      "city": "Alpine",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 133.48,
+      "city": "Fort Stockton",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 138.77,
+      "city": "Del Rio",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "TX",
+    "rank": 7,
+    "land": "Big Bend National Park (NPS, OA)"
+   },
+   {
+    "lat": 37.84001,
+    "lon": -115.4069,
+    "miles": 101.1,
+    "nearest": [
+     {
+      "miles": 101.08,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 101.23,
+      "city": "Mesquite",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 102.26,
+      "city": "Mesquite",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 8,
+    "land": "Basin And Range Nm Field Office (BLM, OA)"
+   },
+   {
+    "lat": 45.84182,
+    "lon": -104.04642,
+    "miles": 93.0,
+    "nearest": [
+     {
+      "miles": 93.04,
+      "city": "Spearfish",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 93.53,
+      "city": "Miles City",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 94.37,
+      "city": "Dickinson",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Miles City Field Office (BLM, OA)",
+    "state": "MT",
+    "from_state_point": true,
+    "rank": 9
+   },
+   {
+    "lat": 42.14315,
+    "lon": -116.9269,
+    "miles": 92.1,
+    "nearest": [
+     {
+      "miles": 92.14,
+      "city": "Winnemucca",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 92.25,
+      "city": "Mountain Home",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 94.05,
+      "city": "Mountain Home",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ID",
+    "rank": 10,
+    "land": "Owyhee Field Office (BLM, OA)"
+   },
+   {
+    "lat": 39.2581,
+    "lon": -117.0431,
+    "miles": 95.3,
+    "nearest": [
+     {
+      "miles": 95.31,
+      "city": "Fallon",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 95.33,
+      "city": "Battle Mountain",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 98.82,
+      "city": "Hawthorne",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 11,
+    "land": "Mount Lewis Field Office (BLM, OA)"
+   },
+   {
+    "lat": 47.05601,
+    "lon": -107.53622,
+    "miles": 89.3,
+    "nearest": [
+     {
+      "miles": 89.3,
+      "city": "Glasgow",
+      "state": "MT",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 89.52,
+      "city": "Lewistown",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 90.83,
+      "city": "Hardin",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 12,
+    "land": "Montana State Trust Lands (UNK, OA)"
+   },
+   {
+    "lat": 45.31966,
+    "lon": -115.8931,
+    "miles": 90.9,
+    "nearest": [
+     {
+      "miles": 90.92,
+      "city": "Weiser",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 90.92,
+      "city": "Lewiston",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 92.54,
+      "city": "Lewiston",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ID",
+    "rank": 13,
+    "land": "Payette National Forest (USFS, OA)"
+   },
+   {
+    "lat": 45.6363,
+    "lon": -103.02091,
+    "miles": 87.6,
+    "nearest": [
+     {
+      "miles": 87.62,
+      "city": "Dickinson",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 87.62,
+      "city": "Sturgis",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 88.52,
+      "city": "Spearfish",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "SD",
+    "rank": 14,
+    "land": "South Dakota Field Office (BLM, OA)"
+   },
+   {
+    "lat": 42.5431,
+    "lon": -120.09308,
+    "miles": 87.9,
+    "nearest": [
+     {
+      "miles": 87.87,
+      "city": "Hines",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 88.04,
+      "city": "Klamath Falls",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 88.7,
+      "city": "Klamath Falls",
+      "state": "OR",
+      "country": "US",
+      "source": "old-2022"
+     }
+    ],
+    "state": "OR",
+    "rank": 15,
+    "land": "Lakeview District Lakeview Field Office (BLM, OA)"
+   },
+   {
+    "lat": 45.5979,
+    "lon": -100.41343,
+    "miles": 84.7,
+    "nearest": [
+     {
+      "miles": 84.7,
+      "city": "Bismarck",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 84.73,
+      "city": "Pierre",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 85.23,
+      "city": "Bismarck",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "SD",
+    "rank": 16,
+    "land": "Oaha Recreation Area (USACE, OA)"
+   },
+   {
+    "lat": 30.5827,
+    "lon": -101.53187,
+    "miles": 84.4,
+    "nearest": [
+     {
+      "miles": 84.44,
+      "city": "San Angelo",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 84.6,
+      "city": "Fort Stockton",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 87.72,
+      "city": "San Angelo",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "TX",
+    "rank": 17,
+    "land": "Escondido Draw Recreation Area (NGO, OA)"
+   },
+   {
+    "lat": 41.2269,
+    "lon": -119.38113,
+    "miles": 86.6,
+    "nearest": [
+     {
+      "miles": 86.63,
+      "city": "Lovelock",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 86.73,
+      "city": "Susanville",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 87.22,
+      "city": "Winnemucca",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 18,
+    "land": "Black Rock Field Office (BLM, OA)"
+   },
+   {
+    "lat": 48.99893,
+    "lon": -107.99463,
+    "miles": 83.3,
+    "nearest": [
+     {
+      "miles": 83.27,
+      "city": "Havre",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 83.42,
+      "city": "Glasgow",
+      "state": "MT",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 90.26,
+      "city": "Swift Current",
+      "state": "SK",
+      "country": "CA",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 19,
+    "land": "Malta Field Office (BLM, OA)"
+   },
+   {
+    "lat": 38.00611,
+    "lon": -110.89696,
+    "miles": 82.5,
+    "nearest": [
+     {
+      "miles": 82.48,
+      "city": "Page",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 82.65,
+      "city": "Richfield",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 82.71,
+      "city": "Moab",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "UT",
+    "rank": 20,
+    "land": "Richfield Field Office (BLM, OA)"
+   },
+   {
+    "lat": 41.57956,
+    "lon": -120.39459,
+    "miles": 82.0,
+    "nearest": [
+     {
+      "miles": 81.98,
+      "city": "Susanville",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 82.2,
+      "city": "Klamath Falls",
+      "state": "OR",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 82.59,
+      "city": "Klamath Falls",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "CA",
+    "rank": 21,
+    "land": "Applegate Field Office (BLM, OA)"
+   },
+   {
+    "lat": 38.07547,
+    "lon": -114.5369,
+    "miles": 82.5,
+    "nearest": [
+     {
+      "miles": 82.54,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 82.63,
+      "city": "Saint George",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 84.34,
+      "city": "Cedar City",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 22,
+    "land": "Caliente Field Office (BLM, OA)"
+   },
+   {
+    "lat": 45.39205,
+    "lon": -104.94541,
+    "miles": 81.3,
+    "nearest": [
+     {
+      "miles": 81.26,
+      "city": "Gillette",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 81.28,
+      "city": "Gillette",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 81.31,
+      "city": "Miles City",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 23,
+    "land": "Miles City Field Office (BLM, OA)"
+   },
+   {
+    "lat": 48.19153,
+    "lon": -91.01574,
+    "miles": 81.0,
+    "nearest": [
+     {
+      "miles": 81.01,
+      "city": "Cook",
+      "state": "MN",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 81.03,
+      "city": "Thunder Bay",
+      "state": "ON",
+      "country": "CA",
+      "source": "atp"
+     },
+     {
+      "miles": 83.06,
+      "city": "Thunder Bay",
+      "state": "ON",
+      "country": "CA",
+      "source": "atp"
+     }
+    ],
+    "land": "Superior National Forest (USFS, OA)",
+    "state": "MN",
+    "from_state_point": true,
+    "rank": 24
+   },
+   {
+    "lat": 44.66591,
+    "lon": -114.05762,
+    "miles": 79.7,
+    "nearest": [
+     {
+      "miles": 79.74,
+      "city": "Hailey",
+      "state": "ID",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 79.95,
+      "city": "Dillon",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 109.77,
+      "city": "Hamilton",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ID",
+    "rank": 25,
+    "land": "Challis Field Office (BLM, OA)"
+   },
+   {
+    "lat": 28.98149,
+    "lon": -89.14011,
+    "miles": 79.0,
+    "nearest": [
+     {
+      "miles": 78.97,
+      "city": "Cut Off",
+      "state": "LA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 79.69,
+      "city": "Belle Chasse",
+      "state": "LA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 80.83,
+      "city": "Meraux",
+      "state": "LA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Pass A Loutre Wildlife Management Area (SFW, RA)",
+    "state": "LA",
+    "from_state_point": true,
+    "rank": 26
+   },
+   {
+    "lat": 37.14717,
+    "lon": -116.8068,
+    "miles": 79.0,
+    "nearest": [
+     {
+      "miles": 79.04,
+      "city": "Lone Pine",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 79.13,
+      "city": "Pahrump",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 88.83,
+      "city": "Bishop",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 27,
+    "land": "Tonopah Field Office (BLM, OA)"
+   },
+   {
+    "lat": 47.88812,
+    "lon": -108.2765,
+    "miles": 78.7,
+    "nearest": [
+     {
+      "miles": 78.73,
+      "city": "Lewistown",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 78.96,
+      "city": "Glasgow",
+      "state": "MT",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 79.88,
+      "city": "Havre",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 28,
+    "land": "Malta Field Office (BLM, OA)"
+   },
+   {
+    "lat": 42.36414,
+    "lon": -110.47973,
+    "miles": 78.1,
+    "nearest": [
+     {
+      "miles": 78.13,
+      "city": "Jackson",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 78.23,
+      "city": "Green River",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 78.33,
+      "city": "Smithfield",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Pinedale Field Office (BLM, OA)",
+    "state": "WY",
+    "from_state_point": true,
+    "rank": 29
+   },
+   {
+    "lat": 31.81653,
+    "lon": -112.60823,
+    "miles": 78.0,
+    "nearest": [
+     {
+      "miles": 78.05,
+      "city": "Gila Bend",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 88.02,
+      "city": "Eloy",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 89.32,
+      "city": "Casa Grande",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Organ Pipe Cactus National Monument (NPS, OA)",
+    "state": "AZ",
+    "from_state_point": true,
+    "rank": 30
+   },
+   {
+    "lat": 41.95113,
+    "lon": -115.98598,
+    "miles": 77.2,
+    "nearest": [
+     {
+      "miles": 77.17,
+      "city": "Elko",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 77.36,
+      "city": "Buhl",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 77.45,
+      "city": "Elko",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 31,
+    "land": "Humboldt National Forest (USFS, OA)"
+   },
+   {
+    "lat": 39.64109,
+    "lon": -116.2419,
+    "miles": 78.2,
+    "nearest": [
+     {
+      "miles": 78.19,
+      "city": "Battle Mountain",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 78.37,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 86.0,
+      "city": "Elko",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 32,
+    "land": "Mount Lewis Field Office (BLM, OA)"
+   },
+   {
+    "lat": 29.28522,
+    "lon": -103.91755,
+    "miles": 75.8,
+    "nearest": [
+     {
+      "miles": 75.76,
+      "city": "Alpine",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 126.64,
+      "city": "Fort Stockton",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 132.95,
+      "city": "Van Horn",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "TX",
+    "rank": 33,
+    "land": "Big Bend Ranch State Park (SPR, OA)"
+   },
+   {
+    "lat": 43.75274,
+    "lon": -101.61902,
+    "miles": 75.8,
+    "nearest": [
+     {
+      "miles": 75.81,
+      "city": "Pierre",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 75.87,
+      "city": "Box Elder",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 79.99,
+      "city": "Rapid City",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "SD",
+    "rank": 34,
+    "land": "Buffalo Gap National Grassland (USFS, OA)"
+   },
+   {
+    "lat": 37.98327,
+    "lon": -117.23875,
+    "miles": 76.4,
+    "nearest": [
+     {
+      "miles": 76.38,
+      "city": "Bishop",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 84.34,
+      "city": "Hawthorne",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 105.48,
+      "city": "Lone Pine",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 35,
+    "land": "Tonopah Field Office (BLM, OA)"
+   },
+   {
+    "lat": 44.22406,
+    "lon": -113.18455,
+    "miles": 74.3,
+    "nearest": [
+     {
+      "miles": 74.28,
+      "city": "Dillon",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 74.39,
+      "city": "Hailey",
+      "state": "ID",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 74.46,
+      "city": "Rexburg",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ID",
+    "rank": 36,
+    "land": "Challis National Forest (USFS, OA)"
+   },
+   {
+    "lat": 29.6726,
+    "lon": -102.69717,
+    "miles": 74.4,
+    "nearest": [
+     {
+      "miles": 74.38,
+      "city": "Alpine",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 85.42,
+      "city": "Fort Stockton",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 109.86,
+      "city": "Del Rio",
+      "state": "TX",
+      "country": "US",
+      "source": "old-2022"
+     }
+    ],
+    "state": "TX",
+    "rank": 37,
+    "land": "Black Gap Wildlife Management Area (SFW, RA)"
+   },
+   {
+    "lat": 41.9419,
+    "lon": -118.5669,
+    "miles": 80.0,
+    "nearest": [
+     {
+      "miles": 80.04,
+      "city": "Winnemucca",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 115.55,
+      "city": "Hines",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 121.76,
+      "city": "Lovelock",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 38,
+    "land": "Humboldt River Field Office (BLM, OA)"
+   },
+   {
+    "lat": 46.59769,
+    "lon": -104.29202,
+    "miles": 74.3,
+    "nearest": [
+     {
+      "miles": 74.28,
+      "city": "Miles City",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 74.29,
+      "city": "Dickinson",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 76.52,
+      "city": "Sidney",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 39,
+    "land": "Miles City Field Office (BLM, OA)"
+   },
+   {
+    "lat": 44.62178,
+    "lon": -119.4041,
+    "miles": 74.2,
+    "nearest": [
+     {
+      "miles": 74.2,
+      "city": "Hines",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 74.9,
+      "city": "Prineville",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 77.14,
+      "city": "Pendleton",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "OR",
+    "rank": 40,
+    "land": "Prineville Central Oregon Field Office (BLM, OA)"
+   },
+   {
+    "lat": 37.06822,
+    "lon": -102.91105,
+    "miles": 72.9,
+    "nearest": [
+     {
+      "miles": 72.89,
+      "city": "Dalhart",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 72.9,
+      "city": "Lamar",
+      "state": "CO",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 73.26,
+      "city": "La Junta",
+      "state": "CO",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "CO",
+    "rank": 41,
+    "land": "Comanche National Grassland (USFS, OA)"
+   },
+   {
+    "lat": 32.06725,
+    "lon": -113.42121,
+    "miles": 72.6,
+    "nearest": [
+     {
+      "miles": 72.59,
+      "city": "Gila Bend",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 72.72,
+      "city": "Yuma",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 75.13,
+      "city": "Yuma",
+      "state": "AZ",
+      "country": "US",
+      "source": "old-2022"
+     }
+    ],
+    "state": "AZ",
+    "rank": 42,
+    "land": "Cabeza Prieta National Wildlife Refuge (FWS, RA)"
+   },
+   {
+    "lat": 31.33416,
+    "lon": -108.33216,
+    "miles": 72.4,
+    "nearest": [
+     {
+      "miles": 72.42,
+      "city": "Deming",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 72.6,
+      "city": "Douglas",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 73.07,
+      "city": "Lordsburg",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Las Cruces District Office (BLM, OA)",
+    "state": "NM",
+    "from_state_point": true,
+    "rank": 43
+   },
+   {
+    "lat": 43.54757,
+    "lon": -104.48094,
+    "miles": 71.4,
+    "nearest": [
+     {
+      "miles": 71.36,
+      "city": "Douglas",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 71.45,
+      "city": "Rapid City",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 71.55,
+      "city": "Gillette",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "WY",
+    "rank": 44,
+    "land": "Thunder Basin National Grassland (USFS, OA)"
+   },
+   {
+    "lat": 24.6287,
+    "lon": -82.8733,
+    "miles": 70.4,
+    "nearest": [
+     {
+      "miles": 70.36,
+      "city": "Key West",
+      "state": "FL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 113.37,
+      "city": "Marathon",
+      "state": "FL",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 115.97,
+      "city": "Marco Island",
+      "state": "FL",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Dry Tortugas National Park (NPS, OA)",
+    "state": "FL",
+    "from_state_point": true,
+    "rank": 45
+   },
+   {
+    "lat": 48.79823,
+    "lon": -99.99091,
+    "miles": 70.4,
+    "nearest": [
+     {
+      "miles": 70.44,
+      "city": "Devils Lake",
+      "state": "ND",
+      "country": "US",
+      "source": "old-2025"
+     },
+     {
+      "miles": 71.16,
+      "city": "Brandon",
+      "state": "MB",
+      "country": "CA",
+      "source": "atp"
+     },
+     {
+      "miles": 71.45,
+      "city": "Minot",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ND",
+    "rank": 46,
+    "land": "Nd State Lands - Surface Ownership (SLB, OA)"
+   },
+   {
+    "lat": 46.0181,
+    "lon": -115.60289,
+    "miles": 71.3,
+    "nearest": [
+     {
+      "miles": 71.28,
+      "city": "Lewiston",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 71.31,
+      "city": "Hamilton",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 72.39,
+      "city": "Lewiston",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ID",
+    "rank": 47,
+    "land": "Nezperce National Forest (USFS, OA)"
+   },
+   {
+    "lat": 33.93136,
+    "lon": -108.09542,
+    "miles": 69.7,
+    "nearest": [
+     {
+      "miles": 69.69,
+      "city": "Springerville",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 69.71,
+      "city": "Socorro",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 72.45,
+      "city": "Truth Or Consequences",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NM",
+    "rank": 48,
+    "land": "State Trust Land (SLB, OA)"
+   },
+   {
+    "lat": 39.76303,
+    "lon": -113.75643,
+    "miles": 69.3,
+    "nearest": [
+     {
+      "miles": 69.28,
+      "city": "West Wendover",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 69.46,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 69.49,
+      "city": "Delta",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "UT",
+    "rank": 49,
+    "land": "Fillmore Field Office (BLM, OA)"
+   },
+   {
+    "lat": 44.53822,
+    "lon": -101.73913,
+    "miles": 69.1,
+    "nearest": [
+     {
+      "miles": 69.12,
+      "city": "Pierre",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 71.1,
+      "city": "Box Elder",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 76.33,
+      "city": "Rapid City",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "SD",
+    "rank": 50,
+    "land": "South Dakota Field Office (BLM, OA)"
+   },
+   {
+    "lat": 38.5881,
+    "lon": -113.88137,
+    "miles": 69.8,
+    "nearest": [
+     {
+      "miles": 69.84,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 69.94,
+      "city": "Beaver",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 76.39,
+      "city": "Cedar City",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "UT",
+    "rank": 51,
+    "land": "The State of Utah School and Institutional Trust Lands Administration 2021 (SLB, OA)"
+   },
+   {
+    "lat": 37.19205,
+    "lon": -115.86923,
+    "miles": 68.1,
+    "nearest": [
+     {
+      "miles": 68.09,
+      "city": "Pahrump",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 68.15,
+      "city": "Las Vegas",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 69.51,
+      "city": "Las Vegas",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 52,
+    "land": "Desert National Wildlife Range (FWS, RA)"
+   },
+   {
+    "lat": 48.96527,
+    "lon": -104.93671,
+    "miles": 68.1,
+    "nearest": [
+     {
+      "miles": 68.14,
+      "city": "Weyburn",
+      "state": "SK",
+      "country": "CA",
+      "source": "atp"
+     },
+     {
+      "miles": 68.33,
+      "city": "Wolf Point",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 81.65,
+      "city": "Williston",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 53,
+    "land": "Montana State Trust Lands (UNK, OA)"
+   },
+   {
+    "lat": 37.60094,
+    "lon": -109.75619,
+    "miles": 67.3,
+    "nearest": [
+     {
+      "miles": 67.32,
+      "city": "Moab",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 67.35,
+      "city": "Kayenta",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 67.58,
+      "city": "Cortez",
+      "state": "CO",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "UT",
+    "rank": 54,
+    "land": "Monticello Field Office (BLM, OA)"
+   },
+   {
+    "lat": 41.61275,
+    "lon": -113.49612,
+    "miles": 67.1,
+    "nearest": [
+     {
+      "miles": 67.14,
+      "city": "Burley",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 67.17,
+      "city": "West Wendover",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 67.37,
+      "city": "Tremonton",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "UT",
+    "rank": 55,
+    "land": "Salt Lake  Field Office (BLM, OA)"
+   },
+   {
+    "lat": 36.03098,
+    "lon": -113.35236,
+    "miles": 67.1,
+    "nearest": [
+     {
+      "miles": 67.06,
+      "city": "Kingman",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 67.08,
+      "city": "Mesquite",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 67.69,
+      "city": "Kingman",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "AZ",
+    "rank": 56,
+    "land": "Grand Canyon National Park (NPS, OA)"
+   },
+   {
+    "lat": 36.12166,
+    "lon": -103.70485,
+    "miles": 66.5,
+    "nearest": [
+     {
+      "miles": 66.48,
+      "city": "Raton",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 66.7,
+      "city": "Tucumcari",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 66.76,
+      "city": "Dalhart",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NM",
+    "rank": 57,
+    "land": "State Trust Land (SLB, OA)"
+   },
+   {
+    "lat": 43.1481,
+    "lon": -117.84313,
+    "miles": 68.6,
+    "nearest": [
+     {
+      "miles": 68.6,
+      "city": "Caldwell",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 68.61,
+      "city": "Hines",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 68.73,
+      "city": "Caldwell",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "OR",
+    "rank": 58,
+    "land": "Vale Malheur Field Office (BLM, OA)"
+   },
+   {
+    "lat": 46.10753,
+    "lon": -99.53432,
+    "miles": 66.4,
+    "nearest": [
+     {
+      "miles": 66.41,
+      "city": "Jamestown",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 66.91,
+      "city": "Aberdeen",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 68.39,
+      "city": "Aberdeen",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ND",
+    "rank": 59,
+    "land": "Mcintosh County Waterfowl Production Area (FWS, RA)"
+   },
+   {
+    "lat": 43.24901,
+    "lon": -120.31557,
+    "miles": 66.4,
+    "nearest": [
+     {
+      "miles": 66.37,
+      "city": "Hines",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 66.39,
+      "city": "La Pine",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 73.26,
+      "city": "Bend",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "OR",
+    "rank": 60,
+    "land": "Lakeview District Lakeview Field Office (BLM, OA)"
+   },
+   {
+    "lat": 47.71833,
+    "lon": -112.71087,
+    "miles": 65.9,
+    "nearest": [
+     {
+      "miles": 65.94,
+      "city": "Cut Bank",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 66.11,
+      "city": "Great Falls",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 66.12,
+      "city": "Polson",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 61,
+    "land": "Lewis & Clark National Forest (USFS, OA)"
+   },
+   {
+    "lat": 47.25063,
+    "lon": -106.44674,
+    "miles": 65.9,
+    "nearest": [
+     {
+      "miles": 65.91,
+      "city": "Glasgow",
+      "state": "MT",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 65.94,
+      "city": "Miles City",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 69.34,
+      "city": "Wolf Point",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 62,
+    "land": "Miles City Field Office (BLM, OA)"
+   },
+   {
+    "lat": 42.3998,
+    "lon": -101.6757,
+    "miles": 65.8,
+    "nearest": [
+     {
+      "miles": 65.83,
+      "city": "Valentine",
+      "state": "NE",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 65.86,
+      "city": "Alliance",
+      "state": "NE",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 74.48,
+      "city": "Chadron",
+      "state": "NE",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Cottonwood/Steverson Wildlife Management Area (SFW, OA)",
+    "state": "NE",
+    "from_state_point": true,
+    "rank": 63
+   },
+   {
+    "lat": 47.67907,
+    "lon": -100.12178,
+    "miles": 65.2,
+    "nearest": [
+     {
+      "miles": 65.23,
+      "city": "Bismarck",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 65.34,
+      "city": "Minot",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 65.36,
+      "city": "Devils Lake",
+      "state": "ND",
+      "country": "US",
+      "source": "old-2025"
+     }
+    ],
+    "state": "ND",
+    "rank": 64,
+    "land": "Lonetree (SFW, RA)"
+   },
+   {
+    "lat": 34.25266,
+    "lon": -105.4453,
+    "miles": 64.9,
+    "nearest": [
+     {
+      "miles": 64.89,
+      "city": "Ruidoso",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 65.02,
+      "city": "Santa Rosa",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 70.12,
+      "city": "Edgewood",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NM",
+    "rank": 65,
+    "land": "State Trust Land (SLB, OA)"
+   },
+   {
+    "lat": 29.90015,
+    "lon": -104.60357,
+    "miles": 65.1,
+    "nearest": [
+     {
+      "miles": 65.14,
+      "city": "Alpine",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 79.59,
+      "city": "Van Horn",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 122.55,
+      "city": "Fort Stockton",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "TX",
+    "rank": 66,
+    "land": "Chinati Mountains (SPR, RA)"
+   },
+   {
+    "lat": 43.63616,
+    "lon": -109.51055,
+    "miles": 64.9,
+    "nearest": [
+     {
+      "miles": 64.87,
+      "city": "Cody",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 65.06,
+      "city": "Jackson",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 65.07,
+      "city": "Thermopolis",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "WY",
+    "rank": 67,
+    "land": "Kirk Inberg/Kevin Roy Wildlife Habitat Management Area (SFW, RA)"
+   },
+   {
+    "lat": 48.99344,
+    "lon": -110.95146,
+    "miles": 65.1,
+    "nearest": [
+     {
+      "miles": 65.1,
+      "city": "Havre",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 67.9,
+      "city": "Cut Bank",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 70.51,
+      "city": "Medicine Hat",
+      "state": "AB",
+      "country": "CA",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 68,
+    "land": "Montana State Trust Lands (UNK, OA)"
+   },
+   {
+    "lat": 40.21906,
+    "lon": -102.11408,
+    "miles": 64.2,
+    "nearest": [
+     {
+      "miles": 64.23,
+      "city": "Burlington",
+      "state": "CO",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.44,
+      "city": "Sterling",
+      "state": "CO",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.62,
+      "city": "Goodland",
+      "state": "KS",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "CO",
+    "rank": 69,
+    "land": "Royal Gorge Field Office (BLM, OA)"
+   },
+   {
+    "lat": 46.66558,
+    "lon": -110.65989,
+    "miles": 64.2,
+    "nearest": [
+     {
+      "miles": 64.24,
+      "city": "Great Falls",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.24,
+      "city": "Lewistown",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.28,
+      "city": "Helena",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 70,
+    "land": "Montana State Trust Lands (UNK, OA)"
+   },
+   {
+    "lat": 46.20571,
+    "lon": -101.88447,
+    "miles": 64.2,
+    "nearest": [
+     {
+      "miles": 64.18,
+      "city": "Dickinson",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.86,
+      "city": "Mandan",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 66.13,
+      "city": "Bismarck",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ND",
+    "rank": 71,
+    "land": "Nd State Lands - Surface Ownership (SLB, OA)"
+   },
+   {
+    "lat": 45.46187,
+    "lon": -105.9731,
+    "miles": 65.0,
+    "nearest": [
+     {
+      "miles": 65.05,
+      "city": "Miles City",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 65.16,
+      "city": "Sheridan",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 67.12,
+      "city": "Sheridan",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 72,
+    "land": "Custer National Forest (USFS, OA)"
+   },
+   {
+    "lat": 46.46671,
+    "lon": -69.30754,
+    "miles": 63.4,
+    "nearest": [
+     {
+      "miles": 63.37,
+      "city": "Millinocket",
+      "state": "ME",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 63.52,
+      "city": "Presque Isle",
+      "state": "ME",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.32,
+      "city": "Fort Kent",
+      "state": "ME",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "Allagash Wilderness Waterway State Park (SPR, OA)",
+    "state": "ME",
+    "from_state_point": true,
+    "rank": 73
+   },
+   {
+    "lat": 40.15042,
+    "lon": -114.97738,
+    "miles": 62.8,
+    "nearest": [
+     {
+      "miles": 62.85,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 62.96,
+      "city": "Elko",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 63.0,
+      "city": "West Wendover",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 74,
+    "land": "Wells Field Office (BLM, OA)"
+   },
+   {
+    "lat": 38.5181,
+    "lon": -115.7369,
+    "miles": 68.5,
+    "nearest": [
+     {
+      "miles": 68.48,
+      "city": "Ely",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 148.29,
+      "city": "Mesquite",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 148.97,
+      "city": "Mesquite",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 75,
+    "land": "Tonopah Field Office (BLM, OA)"
+   },
+   {
+    "lat": 32.00244,
+    "lon": -105.19384,
+    "miles": 62.5,
+    "nearest": [
+     {
+      "miles": 62.46,
+      "city": "Carlsbad",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 62.5,
+      "city": "El Paso",
+      "state": "TX",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 62.65,
+      "city": "Carlsbad",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NM",
+    "rank": 76,
+    "land": "State Trust Land (SLB, OA)"
+   },
+   {
+    "lat": 47.22614,
+    "lon": -105.34297,
+    "miles": 61.5,
+    "nearest": [
+     {
+      "miles": 61.55,
+      "city": "Wolf Point",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 61.57,
+      "city": "Miles City",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.2,
+      "city": "Sidney",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 77,
+    "land": "Montana State Trust Lands (UNK, OA)"
+   },
+   {
+    "lat": 42.6181,
+    "lon": -118.9181,
+    "miles": 66.4,
+    "nearest": [
+     {
+      "miles": 66.43,
+      "city": "Hines",
+      "state": "OR",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 129.45,
+      "city": "Winnemucca",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 134.25,
+      "city": "Caldwell",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "OR",
+    "rank": 78,
+    "land": "Burns Andrews Field Office (BLM, OA)"
+   },
+   {
+    "lat": 46.7381,
+    "lon": -115.45677,
+    "miles": 64.4,
+    "nearest": [
+     {
+      "miles": 64.37,
+      "city": "Kellogg",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.51,
+      "city": "Missoula",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 65.31,
+      "city": "Lolo",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ID",
+    "rank": 79,
+    "land": "Clearwater National Forest (USFS, OA)"
+   },
+   {
+    "lat": 45.10066,
+    "lon": -99.63377,
+    "miles": 61.3,
+    "nearest": [
+     {
+      "miles": 61.25,
+      "city": "Aberdeen",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 61.78,
+      "city": "Pierre",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 62.2,
+      "city": "Aberdeen",
+      "state": "SD",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "SD",
+    "rank": 80,
+    "land": "State Lands (SLB, OA)"
+   },
+   {
+    "lat": 44.1969,
+    "lon": -115.21072,
+    "miles": 64.2,
+    "nearest": [
+     {
+      "miles": 64.2,
+      "city": "Hailey",
+      "state": "ID",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 64.23,
+      "city": "Boise",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.27,
+      "city": "Boise",
+      "state": "ID",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ID",
+    "rank": 81,
+    "land": "Boise National Forest (USFS, OA)"
+   },
+   {
+    "lat": 41.26893,
+    "lon": -108.15212,
+    "miles": 60.6,
+    "nearest": [
+     {
+      "miles": 60.62,
+      "city": "Craig",
+      "state": "CO",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 60.71,
+      "city": "Rawlins",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 60.76,
+      "city": "Rock Springs",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "WY",
+    "rank": 82,
+    "land": "Rock Springs Field Office (BLM, OA)"
+   },
+   {
+    "lat": 48.5772,
+    "lon": -120.88996,
+    "miles": 60.5,
+    "nearest": [
+     {
+      "miles": 60.46,
+      "city": "Hope",
+      "state": "BC",
+      "country": "CA",
+      "source": "atp"
+     },
+     {
+      "miles": 60.55,
+      "city": "Granite Falls",
+      "state": "WA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 60.56,
+      "city": "Brewster",
+      "state": "WA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "land": "North Cascades National Park (NPS, OA)",
+    "state": "WA",
+    "from_state_point": true,
+    "rank": 83
+   },
+   {
+    "lat": 48.99003,
+    "lon": -106.06865,
+    "miles": 60.7,
+    "nearest": [
+     {
+      "miles": 60.69,
+      "city": "Glasgow",
+      "state": "MT",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 64.95,
+      "city": "Wolf Point",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 100.68,
+      "city": "Moose Jaw",
+      "state": "SK",
+      "country": "CA",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 84,
+    "land": "Montana State Trust Lands (UNK, OA)"
+   },
+   {
+    "lat": 41.13243,
+    "lon": -121.27237,
+    "miles": 60.4,
+    "nearest": [
+     {
+      "miles": 60.35,
+      "city": "Susanville",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 60.49,
+      "city": "Weed",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.47,
+      "city": "Shasta Lake",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "CA",
+    "rank": 85,
+    "land": "Applegate Field Office (BLM, OA)"
+   },
+   {
+    "lat": 41.97098,
+    "lon": -100.51,
+    "miles": 60.0,
+    "nearest": [
+     {
+      "miles": 60.0,
+      "city": "North Platte",
+      "state": "NE",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 60.13,
+      "city": "Broken Bow",
+      "state": "NE",
+      "country": "US",
+      "source": "old-2025"
+     },
+     {
+      "miles": 60.93,
+      "city": "North Platte",
+      "state": "NE",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NE",
+    "rank": 86,
+    "land": "Nebraska National Forest (USFS, OA)"
+   },
+   {
+    "lat": 36.32441,
+    "lon": -117.04644,
+    "miles": 59.6,
+    "nearest": [
+     {
+      "miles": 59.57,
+      "city": "Ridgecrest",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 59.72,
+      "city": "Lone Pine",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 59.74,
+      "city": "Pahrump",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "CA",
+    "rank": 87,
+    "land": "Death Valley National Park (NPS, OA)"
+   },
+   {
+    "lat": 37.75679,
+    "lon": -111.7631,
+    "miles": 60.7,
+    "nearest": [
+     {
+      "miles": 60.67,
+      "city": "Page",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 60.81,
+      "city": "Beaver",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 64.64,
+      "city": "Kanab",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "UT",
+    "rank": 88,
+    "land": "Kanab Field Office (BLM, OA)"
+   },
+   {
+    "lat": 45.38015,
+    "lon": -113.8819,
+    "miles": 61.8,
+    "nearest": [
+     {
+      "miles": 61.79,
+      "city": "Hamilton",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 61.97,
+      "city": "Dillon",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 68.97,
+      "city": "Anaconda",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ID",
+    "rank": 89,
+    "land": "Salmon National Forest (USFS, OA)"
+   },
+   {
+    "lat": 38.71227,
+    "lon": -110.6769,
+    "miles": 61.6,
+    "nearest": [
+     {
+      "miles": 61.61,
+      "city": "Price",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 61.84,
+      "city": "Moab",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 65.85,
+      "city": "Ephraim",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "UT",
+    "rank": 90,
+    "land": "Price Field Office (BLM, OA)"
+   },
+   {
+    "lat": 42.05977,
+    "lon": -108.28091,
+    "miles": 57.9,
+    "nearest": [
+     {
+      "miles": 57.91,
+      "city": "Lander",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 58.02,
+      "city": "Rock Springs",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 58.06,
+      "city": "Rawlins",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "WY",
+    "rank": 91,
+    "land": "Rawlins Field Office (BLM, OA)"
+   },
+   {
+    "lat": 43.54515,
+    "lon": -106.98752,
+    "miles": 57.8,
+    "nearest": [
+     {
+      "miles": 57.79,
+      "city": "Buffalo",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 57.84,
+      "city": "Casper",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 57.92,
+      "city": "Worland",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "WY",
+    "rank": 92,
+    "land": "Buffalo Field Office (BLM, OA)"
+   },
+   {
+    "lat": 47.479,
+    "lon": -101.91342,
+    "miles": 57.6,
+    "nearest": [
+     {
+      "miles": 57.64,
+      "city": "Minot",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 57.64,
+      "city": "Minot",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 57.68,
+      "city": "Dickinson",
+      "state": "ND",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "ND",
+    "rank": 93,
+    "land": "Sakakawea Recreation Area (USACE, OA)"
+   },
+   {
+    "lat": 48.952,
+    "lon": -95.81241,
+    "miles": 57.1,
+    "nearest": [
+     {
+      "miles": 57.08,
+      "city": "Steinbach",
+      "state": "MB",
+      "country": "CA",
+      "source": "atp"
+     },
+     {
+      "miles": 57.15,
+      "city": "Baudette",
+      "state": "MN",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 60.0,
+      "city": "Thief River Falls",
+      "state": "MN",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MN",
+    "rank": 94,
+    "land": "Lost River State Forest (SDNR, OA)"
+   },
+   {
+    "lat": 47.75692,
+    "lon": -110.08769,
+    "miles": 57.1,
+    "nearest": [
+     {
+      "miles": 57.07,
+      "city": "Lewistown",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 58.13,
+      "city": "Havre",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 58.44,
+      "city": "Great Falls",
+      "state": "MT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "MT",
+    "rank": 95,
+    "land": "Montana State Trust Lands (UNK, OA)"
+   },
+   {
+    "lat": 34.95736,
+    "lon": -115.99984,
+    "miles": 56.7,
+    "nearest": [
+     {
+      "miles": 56.66,
+      "city": "Twentynine Palms",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 56.76,
+      "city": "Jean",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 56.92,
+      "city": "Barstow",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "CA",
+    "rank": 96,
+    "land": "Needles Field Office (BLM, OA)"
+   },
+   {
+    "lat": 33.3546,
+    "lon": -108.97017,
+    "miles": 56.7,
+    "nearest": [
+     {
+      "miles": 56.65,
+      "city": "Springerville",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 56.76,
+      "city": "Silver City",
+      "state": "NM",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 56.78,
+      "city": "Safford",
+      "state": "AZ",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NM",
+    "rank": 97,
+    "land": "Gila National Forest (USFS, OA)"
+   },
+   {
+    "lat": 42.59387,
+    "lon": -107.43868,
+    "miles": 56.5,
+    "nearest": [
+     {
+      "miles": 56.45,
+      "city": "Rawlins",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 56.59,
+      "city": "Riverton",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 56.64,
+      "city": "Casper",
+      "state": "WY",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "WY",
+    "rank": 98,
+    "land": "Lander Field Office (BLM, OA)"
+   },
+   {
+    "lat": 40.5069,
+    "lon": -119.5132,
+    "miles": 59.4,
+    "nearest": [
+     {
+      "miles": 59.41,
+      "city": "Lovelock",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 59.44,
+      "city": "Susanville",
+      "state": "CA",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 60.76,
+      "city": "Sparks",
+      "state": "NV",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "NV",
+    "rank": 99,
+    "land": "Black Rock Field Office (BLM, OA)"
+   },
+   {
+    "lat": 40.1791,
+    "lon": -108.53801,
+    "miles": 56.4,
+    "nearest": [
+     {
+      "miles": 56.39,
+      "city": "Parachute",
+      "state": "CO",
+      "country": "US",
+      "source": "atp"
+     },
+     {
+      "miles": 56.53,
+      "city": "Craig",
+      "state": "CO",
+      "country": "US",
+      "source": "old-2022"
+     },
+     {
+      "miles": 56.54,
+      "city": "Vernal",
+      "state": "UT",
+      "country": "US",
+      "source": "atp"
+     }
+    ],
+    "state": "CO",
+    "rank": 100,
+    "land": "White River Field Office (BLM, OA)"
+   }
+  ]
+ },
+ "dropped_parcels": {
+  "OA": [
+   "Submerged Land In Biscayne Bay Adjacent To Baywood Park",
+   "Ken Thompson Park Submerged Lands",
+   "Shamrock Park Submerged",
+   "State-owned Submerged Lands",
+   "NC Submerged Lands",
+   "State-owned Submerged Lands",
+   "State-owned Submerged Lands"
+  ],
+  "RA": [
+   "Alaska Maritime National Wildlife Refuge",
+   "Alaska Maritime National Wildlife Refuge",
+   "Alaska Maritime National Wildlife Refuge",
+   "Pacific Remote Islands Marine National Monument",
+   "Papahanaumokuakea Marine National Monument",
+   "Alaska Maritime National Wildlife Refuge",
+   "Alaska Maritime National Wildlife Refuge",
+   "Pacific Remote Islands Marine National Monument",
+   "Papahanaumokuakea Marine National Monument"
+  ]
+ },
+ "generated_at": "2026-11-12T07:32:07Z"
+}

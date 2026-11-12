@@ -12,6 +12,7 @@ on:
       - ".github/workflows/monthly-data.yml"
       - "scripts/fetch_atp.py"
       - "scripts/furthest_points.py"
+      - "scripts/public_points.py"
 
 permissions:
   contents: write
@@ -23,7 +24,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
 
@@ -32,7 +33,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install libraries
-        run: pip install "numpy>=1.26" "scipy>=1.11" "shapely>=2.0" "pyproj>=3.6" "pyshp>=2.3"
+        run: pip install "numpy>=1.26" "scipy>=1.11" "shapely>=2.0" "pyproj>=3.6" "pyshp>=2.3" "pyarrow>=15" "rasterio>=1.3"
 
       - name: Fetch McDonald's (US, Canada, Mexico) from All the Places
         run: python scripts/fetch_atp.py
@@ -57,6 +58,21 @@ jobs:
             --compare data/us_mcdonalds.csv \
             --source-info data/atp/source.json \
             --out points
+
+      - name: Find spots on accessible public land (PAD-US 4.1, open access)
+        run: |
+          mkdir -p /tmp/padus /tmp/natstates
+          curl -fsSL --retry 3 -o /tmp/padus/fee.parquet \
+            "https://s3.us-west-2.amazonaws.com/us-west-2.opendata.source.coop/cboettig/padus/padus-4-1/fee.parquet"
+          curl -fsSL --retry 3 -o /tmp/natstates/st.tgz \
+            "https://prd-tnm.s3.amazonaws.com/StagedProducts/Small-scale/data/Boundaries/statesp010g.shp_nt00938.tar.gz"
+          tar xzf /tmp/natstates/st.tgz -C /tmp/natstates
+          python scripts/public_points.py \
+            --stores data/atp/mcdonalds_us_ca_mx.csv \
+            --padus /tmp/padus/fee.parquet \
+            --states /tmp/natstates/statesp010g \
+            --prev points/furthest_by_state.csv \
+            --out points/public
 
       - name: Commit results
         run: |
