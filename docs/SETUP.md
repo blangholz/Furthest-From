@@ -73,10 +73,8 @@ Skip it for launch if you like: Apple and email cover iPhone users.
 
 Build settings are in `mobile/eas.json` (development, preview, production).
 
-1. On expo.dev, create a project with the slug `far-from-fries`, then copy its
-   project ID into `mobile/app.json` under `expo.extra.eas.projectId` (or run
-   `eas init` in `mobile/` on your Mac, which does the same). Push notifications
-   stay off until this is set.
+1. Done: the expo.dev project `far-from-fries` (owner `blangholzs-team`) is set
+   in `mobile/app.json`.
 2. Project settings > GitHub: link `blangholz/Furthest-From` with base directory
    `mobile`, so builds can run from the repo without your Mac.
 3. Project > Environment variables: add `EXPO_PUBLIC_SUPABASE_URL` and

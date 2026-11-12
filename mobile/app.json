@@ -68,6 +68,18 @@
     "experiments": {
       "typedRoutes": false,
       "reactCompiler": true
+    },
+    "owner": "blangholzs-team",
+    "extra": {
+      "eas": {
+        "projectId": "90f8bd7f-12ee-4197-b52b-afc520caa2cd"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/90f8bd7f-12ee-4197-b52b-afc520caa2cd"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
