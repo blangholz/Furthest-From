@@ -71,15 +71,21 @@ Skip it for launch if you like: Apple and email cover iPhone users.
 
 ## 5. Expo / EAS (builds)
 
-```bash
-npm install -g eas-cli
-cd mobile
-eas login
-eas init                    # adds the project id that push notifications need
-eas build --profile development --platform ios   # dev build on your phone
-eas build --platform ios && eas submit --platform ios   # TestFlight
-```
-EAS handles the push key with Apple for you during the first build.
+Build settings are in `mobile/eas.json` (development, preview, production).
+
+1. On expo.dev, create a project with the slug `far-from-fries`, then copy its
+   project ID into `mobile/app.json` under `expo.extra.eas.projectId` (or run
+   `eas init` in `mobile/` on your Mac, which does the same). Push notifications
+   stay off until this is set.
+2. Project settings > GitHub: link `blangholz/Furthest-From` with base directory
+   `mobile`, so builds can run from the repo without your Mac.
+3. Project > Environment variables: add `EXPO_PUBLIC_SUPABASE_URL` and
+   `EXPO_PUBLIC_SUPABASE_ANON_KEY` (plain text is fine; both are public values).
+   Builds without them run in demo mode.
+4. iOS builds need the Apple Developer membership (step 3). The first build
+   asks to sign in to Apple once and sets up the certificates and push key.
+5. Build a development build for your phone (`eas build --profile development --platform ios`
+   or from the expo.dev site), then later `production` and `eas submit` for TestFlight.
 
 ## 6. Website (invite links, privacy page)
 
