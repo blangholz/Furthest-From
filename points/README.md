@@ -1,6 +1,6 @@
 # Furthest point from any McDonald's, by state
 
-Generated 2026-11-09T22:25:49Z by `.github/workflows/monthly-data.yml`. Straight-line miles on the WGS84 ellipsoid.
+Generated 2026-11-12T07:33:51Z by `.github/workflows/monthly-data.yml`. Straight-line miles on the WGS84 ellipsoid.
 Stores used: 14190 US, 1521 Canada, 385 Mexico (US from All the Places, plus 704 older-list stores it lacks).
 
 **Lower 48:** Nevada, 37.92599, -116.31842, 119.8 mi (nearest: Pahrump, NV 119.81, Ely, NV 120.04, Bishop, CA 120.26).
