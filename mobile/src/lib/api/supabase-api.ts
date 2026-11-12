@@ -1,4 +1,4 @@
-import type { SupabaseClient } from '@supabase/supabase-js';
+import type { supabase } from '../supabase';
 import { ApiError, type Api, type ApiErrorCode, type FeedItem, type Friend, type LeaderRow, type MyLog, type Spot, type Status } from './types';
 
 const KNOWN: ApiErrorCode[] = [
@@ -16,7 +16,7 @@ function toApiError(e: { message?: string; details?: string | null } | unknown):
 
 const num = (v: unknown) => (v == null ? 0 : Number(v));
 
-export function supabaseApi(db: SupabaseClient): Api {
+export function supabaseApi(db: NonNullable<typeof supabase>): Api {
   async function rpc<T>(fn: string, args?: Record<string, unknown>): Promise<T> {
     let res;
     try {
@@ -67,6 +67,9 @@ export function supabaseApi(db: SupabaseClient): Api {
 
     async updateProfile({ username, displayName }) {
       await rpc('update_profile', { p_username: username ?? null, p_display_name: displayName ?? null });
+    },
+    async ensureProfile() {
+      await rpc('ensure_profile');
     },
     async setTimeZone(tz) {
       await rpc('set_time_zone', { p_time_zone: tz });

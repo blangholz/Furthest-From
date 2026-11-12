@@ -25,12 +25,12 @@ function Root() {
       return;
     }
     const sync = async () => {
+      await api.ensureProfile().catch(() => {});
       await api.setTimeZone(deviceTimeZone()).catch(() => {});
       await flushQueue().catch(() => {});
       await refreshStatus();
     };
-    sync();
-    registerForPush().catch(() => {});
+    sync().then(() => registerForPush().catch(() => {}));
     const sub = AppState.addEventListener('change', (s) => s === 'active' && sync());
     return () => sub.remove();
   }, [signedIn]);

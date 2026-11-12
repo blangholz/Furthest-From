@@ -118,6 +118,8 @@ export interface Api {
   status(): Promise<Status>;
   submitLog(p: { lat: number; lon: number; kind: LogKind; loggedAt?: string; extremeId?: number }): Promise<LogResult>;
   updateProfile(p: { username?: string; displayName?: string }): Promise<void>;
+  /** Makes this player's profile the first time they open the app. Safe to repeat. */
+  ensureProfile(): Promise<void>;
   setTimeZone(tz: string): Promise<void>;
   setHome(lat: number, lon: number): Promise<{ lockedUntil: string }>;
   myHome(): Promise<{ lat: number; lon: number; lockedUntil: string | null } | null>;

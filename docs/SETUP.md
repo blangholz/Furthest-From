@@ -6,44 +6,54 @@ your local `.env.local`.
 
 ## 1. Supabase (backend)
 
-Use a project of its own. These migrations assume they own the project:
-`20261112000005_security.sql` revokes API access to every table and function
-in the `public` schema (which would cut off any other app there), a trigger
-gives every new sign-in a Far From Fries profile, and "Delete account" removes
-the whole sign-in. Don't run them in a project that other apps use without
-first moving them to their own schema.
+Far From Fries goes into the existing project "blangholz's project", next to
+your other apps. It keeps to its own two schemas, `fff` (tables and the
+functions the app calls) and `fff_private` (internals), and never changes
+anything in `public`. What it does share is the sign-in list: someone who
+already signed in to another of your apps there can sign in to this one with
+the same account. A player's Far From Fries profile is only made when they
+open this app, and "Delete account" removes their game data but leaves the
+shared sign-in.
 
-1. Create a project at supabase.com (free tier is fine to start).
-2. On your Mac, from the repo root:
+1. Take a backup first (Database > Backups), since other apps live here.
+2. Settings > API > Exposed schemas: add `fff`.
+3. Run the migrations. From the repo root on your Mac, with the project's
+   database connection string (Settings > Database, "Session pooler"):
    ```bash
-   brew install supabase/tap/supabase
-   supabase login
-   supabase link --project-ref <your-project-ref>
-   supabase db push            # runs supabase/migrations
+   for f in supabase/migrations/*.sql; do psql "<connection string>" -v ON_ERROR_STOP=1 -f "$f" || break; done
    ```
-3. In the dashboard SQL editor, add the two secrets the minute job uses to send pushes:
+   This skips `supabase db push`, which would trip over your other apps'
+   migration history in the same project.
+4. In the SQL editor, add the two secrets the minute job uses to send pushes:
    ```sql
-   select vault.create_secret('https://<project-ref>.supabase.co', 'project_url');
-   select vault.create_secret('<service role key>', 'service_role_key');
+   select vault.create_secret('https://<project-ref>.supabase.co', 'fff_project_url');
+   select vault.create_secret('<service role key>', 'fff_service_role_key');
    ```
-   Then confirm Database > Extensions shows `pg_cron` and `pg_net` on. If the cron
-   migration ran before they were on, run `supabase/migrations/20261112000006_cron.sql` again.
-4. Deploy the push sender: `supabase functions deploy push-dispatch --no-verify-jwt`.
-5. Load the stores, spots and state/country shapes (first time with `--regions`):
+   Then check Database > Extensions shows `pg_cron` and `pg_net` on. If they
+   weren't on when step 3 ran, run `supabase/migrations/20261112000006_cron.sql` again.
+5. Deploy the push sender (`brew install supabase/tap/supabase`, `supabase login`,
+   `supabase link --project-ref <project-ref>`):
+   `supabase functions deploy push-dispatch --no-verify-jwt`.
+6. Load the stores, spots and state/country shapes (first time with `--regions`):
    ```bash
    python3 pipeline/fff_data.py sql --regions > /tmp/load.sql
-   psql "<database connection string>" -v ON_ERROR_STOP=1 -f /tmp/load.sql
+   psql "<connection string>" -v ON_ERROR_STOP=1 -f /tmp/load.sql
    ```
-   Re-run without `--regions` after each monthly data refresh (or add it to the
-   monthly workflow with a `SUPABASE_DB_URL` repository secret).
-6. Copy the project URL and anon key into `mobile/.env.local` (see `mobile/.env.example`).
+   Re-run without `--regions` after each monthly data refresh.
+7. Copy the project URL and anon (publishable) key into `mobile/.env.local`
+   (see `mobile/.env.example`).
+
+Shared settings to check: Authentication > URL configuration and the email
+templates are shared with your other apps. Add `farfromfries://auth-callback`
+to the redirect list rather than replacing what's there.
 
 ## 2. Email sign-in (magic link / code)
 
-Supabase's built-in email is rate limited to a few per hour. Add a sender
-(Resend is simplest): Authentication > SMTP settings. In Authentication > Email
-templates, include `{{ .Token }}` so people can type the 6-digit code.
-Add `farfromfries://auth-callback` to Authentication > URL configuration > Redirect URLs.
+Supabase's built-in email is rate limited to a few per hour. Your shared
+project may already send through Resend (Authentication > SMTP settings); if
+not, add it there. The app also accepts the 6-digit code from the email, which
+needs `{{ .Token }}` in the Magic Link template. That template is shared with
+your other apps, so add the code line without removing anything they rely on.
 
 ## 3. Apple (needed for TestFlight and the App Store)
 

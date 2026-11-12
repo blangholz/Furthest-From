@@ -22,4 +22,9 @@ $$;
 grant usage on schema auth, extensions to anon, authenticated, service_role;
 grant execute on function auth.uid() to anon, authenticated, service_role;
 grant usage on schema public to anon, authenticated, service_role;
-alter database current_db_placeholder set search_path = public, extensions;
+alter database current_db_placeholder set search_path = fff, extensions, public;
+-- Stand-in for another app sharing the project: the migrations must leave it alone.
+create table public.other_app_notes (id int primary key, body text);
+grant select, insert on public.other_app_notes to authenticated;
+create function public.other_app_hello() returns text language sql as $$ select 'hi' $$;
+grant execute on function public.other_app_hello() to authenticated;

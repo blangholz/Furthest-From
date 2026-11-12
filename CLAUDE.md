@@ -9,7 +9,8 @@ Two things live here:
 
 ## App pieces
 - `supabase/migrations`: Postgres + PostGIS schema, game logic as SQL functions,
-  RLS. Clients only call the RPCs granted in `20261112000005_security.sql`.
+  RLS. Everything lives in schemas `fff` and `fff_private` because the Supabase
+  project is shared with other apps: never touch `public` or add triggers on `auth.users`. Clients only call the RPCs granted in `20261112000005_security.sql`.
   Exact coordinates go into `public.submit_log` and are never stored.
 - `supabase/tests`: pgTAP tests. Run with a local Postgres 16 + PostGIS + pg_cron + pgTAP:
   `su postgres -c "bash supabase/tests/run_local.sh"`.

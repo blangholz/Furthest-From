@@ -199,6 +199,7 @@ export const demoApi: Api & { openDemoPing(): Promise<void>; reset(): Promise<vo
     if (displayName != null) s.displayName = displayName.trim().slice(0, 40);
     await save();
   },
+  async ensureProfile() {},
   async setTimeZone() {},
   async setHome(lat, lon) {
     const s = await load();

@@ -14,7 +14,10 @@ Deno.serve(async (req) => {
   const serviceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
   if (auth !== `Bearer ${serviceKey}`) return new Response('forbidden', { status: 403 });
 
-  const db = createClient(Deno.env.get('SUPABASE_URL')!, serviceKey, { auth: { persistSession: false } });
+  const db = createClient(Deno.env.get('SUPABASE_URL')!, serviceKey, {
+    auth: { persistSession: false },
+    db: { schema: 'fff' },
+  });
   const { data, error } = await db.rpc('claim_outbox', { p_limit: 500 });
   if (error) return Response.json({ error: error.message }, { status: 500 });
   const rows = (data ?? []) as Claimed[];
