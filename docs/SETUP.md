@@ -6,6 +6,13 @@ your local `.env.local`.
 
 ## 1. Supabase (backend)
 
+Use a project of its own. These migrations assume they own the project:
+`20261112000005_security.sql` revokes API access to every table and function
+in the `public` schema (which would cut off any other app there), a trigger
+gives every new sign-in a Far From Fries profile, and "Delete account" removes
+the whole sign-in. Don't run them in a project that other apps use without
+first moving them to their own schema.
+
 1. Create a project at supabase.com (free tier is fine to start).
 2. On your Mac, from the repo root:
    ```bash
