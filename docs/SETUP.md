@@ -112,3 +112,10 @@ domain. `farfromfries.app` is a placeholder used in `mobile/app.json`
 - Passport distances outside the US, Canada and Mexico need worldwide store data;
   today they measure to the nearest North American store, which is wrong abroad.
 - Privacy page draft in `web/privacy.html` needs a contact address and a read-through.
+- TODO: sign-in email sender and template. Emails still come from
+  "PackUp <auth@packupgear.com>", because the shared Supabase project allows one
+  sender. Before launch, either move McFarthest to its own Supabase project (own
+  sender on a verified McFarthest domain in Resend, own site_url, own template)
+  or pick a sender name that suits both apps. Then redo the McFarthest template
+  (`supabase/templates/mcfarthest_magic_link.html`) with final branding and
+  domain, and drop the `{{ if .RedirectTo }}` branch if it moves projects.
