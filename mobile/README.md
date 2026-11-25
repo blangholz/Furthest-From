@@ -1,4 +1,4 @@
-# Far From Fries: iPhone app
+# McFarthest: iPhone app
 
 Expo (SDK 58) app with expo-router. Backend is Supabase (see `../supabase`).
 

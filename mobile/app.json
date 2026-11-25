@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Far From Fries",
+    "name": "McFarthest",
     "slug": "far-from-fries",
     "version": "0.1.0",
     "orientation": "portrait",
@@ -15,7 +15,7 @@
         "applinks:farfromfries.app"
       ],
       "infoPlist": {
-        "NSLocationWhenInUseUsageDescription": "Far From Fries uses your location to measure how far you are from the nearest McDonald's. Your exact location is never shown to friends.",
+        "NSLocationWhenInUseUsageDescription": "McFarthest uses your location to measure how far you are from the nearest McDonald's. Your exact location is never shown to anyone.",
         "ITSAppUsesNonExemptEncryption": false
       }
     },
@@ -52,7 +52,7 @@
       [
         "expo-location",
         {
-          "locationWhenInUsePermission": "Far From Fries uses your location to measure how far you are from the nearest McDonald's. Your exact location is never shown to friends.",
+          "locationWhenInUsePermission": "McFarthest uses your location to measure how far you are from the nearest McDonald's. Your exact location is never shown to anyone.",
           "isIosBackgroundLocationEnabled": false,
           "isAndroidBackgroundLocationEnabled": false
         }

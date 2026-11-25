@@ -1,4 +1,4 @@
--- Far From Fries: profile, home pin, friends, invites, feed, leaderboards, status.
+-- McFarthest: profile, home pin, friends, invites, feed, leaderboards, status.
 set search_path = fff, extensions, public;
 
 -- ---------------------------------------------------------------------------
@@ -74,7 +74,7 @@ create or replace function fff.delete_my_account()
 returns void language plpgsql security definer set search_path = fff, extensions, public as $$
 begin
   if auth.uid() is null then raise exception 'not_signed_in' using errcode = '28000'; end if;
-  -- Removes every Far From Fries row for this player (all tables cascade from
+  -- Removes every McFarthest row for this player (all tables cascade from
   -- profiles). The sign-in itself is left alone because other apps in the same
   -- Supabase project may use it.
   delete from fff.profiles where id = auth.uid();
@@ -149,7 +149,7 @@ begin
   if f.user_a is null then
     insert into fff.friendships (user_a, user_b, requested_by) values (p.lo, p.hi, uid);
     perform fff_private.notify(other, '🍟 Friend request',
-      fff_private.player_name(uid) || ' wants to be friends on Far From Fries.', jsonb_build_object('type', 'friend_request'));
+      fff_private.player_name(uid) || ' wants to be friends on McFarthest.', jsonb_build_object('type', 'friend_request'));
     return 'requested';
   elsif f.status = 'pending' and f.requested_by <> uid then
     update fff.friendships set status = 'accepted', accepted_at = now() where user_a = p.lo and user_b = p.hi;

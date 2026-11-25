@@ -28,15 +28,15 @@ export default function SignIn() {
     <Screen>
       <Gap size={space.xxl} />
       <Text style={s.logo}>🍟</Text>
-      <Text style={s.name}>Far From Fries</Text>
+      <Text style={s.name}>McFarthest</Text>
       <Body center muted>
-        Once a day, at 1:20 PM, see how far you are from the nearest McDonald's. Get out there and beat your friends.
+        Once a day, at 1:20 PM, see how far you are from the nearest McDonald's. Get out there and climb the leaderboard.
       </Body>
       <Gap size={space.xl} />
 
       {demoMode ? (
         <Card tone="gold">
-          <Body>Demo mode: the app isn't connected to a server yet, so everything runs on this phone with sample friends.</Body>
+          <Body>Demo mode: the app isn't connected to a server yet, so everything runs on this phone with sample players.</Body>
           <Button title="Try the demo" busy={busy === 'demo'} onPress={run('demo', auth.signInDemo)} />
         </Card>
       ) : (

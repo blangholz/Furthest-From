@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { Alert, Share, StyleSheet, Text, TextInput, View } from 'react-native';
 import MapView, { Circle, Marker, type MapPressEvent } from 'react-native-maps';
 import { api, errorText } from '@/lib/api';
-import { config } from '@/lib/config';
+import { config, features } from '@/lib/config';
 import { currentFix, ensureForegroundPermission } from '@/lib/location';
 import { notificationPermission, registerForPush } from '@/lib/notifications';
 import { RULES } from '@/lib/rules';
@@ -22,7 +22,7 @@ function Welcome({ next }: StepProps) {
       <Title>How far from fries are you?</Title>
       <Body>Every day at 1:20 PM your phone pings. Open the app within an hour and you score a point for every mile, as the crow flies, between you and the nearest McDonald's.</Body>
       <Body>Near home doesn't count. Getting out does.</Body>
-      <Body muted>Your friends only ever see your distance, never where you are.</Body>
+      <Body muted>Other players only ever see your distance, never where you are.</Body>
       <Gap />
       <Button title="Let's go" onPress={next} />
     </>
@@ -35,11 +35,11 @@ function Name({ next }: StepProps) {
   const [busy, setBusy] = useState(false);
   return (
     <>
-      <Title>What should friends call you?</Title>
-      <TextInput style={s.input} placeholder="Name (shown to friends)" value={displayName} onChangeText={setDisplayName} maxLength={40} />
+      <Title>What should we call you?</Title>
+      <TextInput style={s.input} placeholder={features.friends ? 'Name (shown to friends)' : 'Name (shown on the leaderboard)'} value={displayName} onChangeText={setDisplayName} maxLength={40} />
       <TextInput style={s.input} placeholder="username" autoCapitalize="none" autoCorrect={false} value={username}
         onChangeText={(t) => setUsername(t.toLowerCase().replace(/[^a-z0-9_]/g, ''))} maxLength={20} />
-      <Small>Friends find you by username. 3 to 20 letters, numbers or underscores.</Small>
+      <Small>{features.friends ? 'Friends find you by username. ' : ''}3 to 20 letters, numbers or underscores.</Small>
       <Button title="Next" busy={busy} disabled={username.length < 3 || !displayName.trim()} onPress={async () => {
         setBusy(true);
         try {
@@ -59,13 +59,13 @@ function LocationStep({ next }: StepProps) {
   return (
     <>
       <Title>Location, only while you use it</Title>
-      <Body>Far From Fries reads your location only when the app is open: to show your live distance, log a ping, or claim a spot. No background tracking.</Body>
+      <Body>McFarthest reads your location only when the app is open: to show your live distance, log a ping, or claim a spot. No background tracking.</Body>
       <Body>Your exact spot is used to work out the distance and then thrown away. It's never saved or shown to anyone.</Body>
       <Small>Choose "Allow While Using App" on the next screen.</Small>
       <Gap />
       <Button title="Turn on location" onPress={async () => {
         const ok = await ensureForegroundPermission();
-        if (!ok) Alert.alert('Location is off', 'You can turn it on later in Settings > Far From Fries > Location.');
+        if (!ok) Alert.alert('Location is off', 'You can turn it on later in Settings > McFarthest > Location.');
         next();
       }} />
     </>
@@ -113,7 +113,7 @@ function Notifications({ next }: StepProps) {
   return (
     <>
       <Title>Don't miss the ping</Title>
-      <Body>Every day at 1:20 PM, wherever you are, you get one ping and an hour to log. You'll also hear when a friend logs a big one.</Body>
+      <Body>Every day at 1:20 PM, wherever you are, you get one ping and an hour to log.{features.friends ? " You'll also hear when a friend logs a big one." : ''}</Body>
       <Gap />
       <Button title="Turn on notifications" onPress={async () => {
         await notificationPermission(true);
@@ -130,7 +130,7 @@ function Friends({ next }: StepProps) {
   const invite = async () => {
     try {
       const code = await api.createInvite();
-      await Share.share({ message: `Play Far From Fries with me: ${config.webUrl}/i/${code}` });
+      await Share.share({ message: `Play McFarthest with me: ${config.webUrl}/i/${code}` });
     } catch (e) {
       Alert.alert('Hmm', errorText(e));
     }
@@ -138,7 +138,7 @@ function Friends({ next }: StepProps) {
   return (
     <>
       <Title>Bring your friends</Title>
-      <Body>Far From Fries is better with friends. Send an invite link or add someone by username.</Body>
+      <Body>McFarthest is better with friends. Send an invite link or add someone by username.</Body>
       <Button title="Share an invite link" kind="secondary" onPress={invite} />
       <Card>
         <TextInput style={s.input} placeholder="Friend's username" autoCapitalize="none" value={username} onChangeText={setUsername} />
@@ -164,7 +164,7 @@ export const ONBOARDING_STEPS: Step[] = [
   { key: 'location', Component: LocationStep },
   { key: 'home', Component: HomePin },
   { key: 'notifications', Component: Notifications },
-  { key: 'friends', Component: Friends },
+  ...(features.friends ? [{ key: 'friends', Component: Friends }] : []),
 ];
 
 const s = StyleSheet.create({

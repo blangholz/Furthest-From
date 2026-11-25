@@ -1,4 +1,6 @@
-// Demo backend: the whole game on the phone, with sample friends and no account.
+// Demo backend: the whole game on the phone, with sample players and no account.
+// The sample players are stored as friends so the friends screens still work when
+// features.friends is turned back on; with it off they only show on the global board.
 // Used when no Supabase URL is configured, so the app can be tried right away.
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { haversineMi, miToFt } from '../geo';
@@ -281,7 +283,7 @@ export const demoApi: Api & { openDemoPing(): Promise<void>; reset(): Promise<vo
     const rows = ids.map((id) => {
       const ls = s.logs.filter((l) => l.userId === id && l.zone === 'scoring' && (period === 'all' || seasonName(new Date(l.loggedAt)) === season));
       return { userId: id, displayName: nameOf(s, id), points: ls.reduce((a, l) => a + l.distanceMi, 0), logs: ls.length, isMe: id === ME };
-    });
+    }).filter((r) => scope !== 'global' || r.logs > 0 || r.isMe); // like the server: global lists players who have scored
     rows.sort((a, b) => b.points - a.points);
     return rows.map((r, i): LeaderRow => ({ ...r, rank: i + 1 }));
   },

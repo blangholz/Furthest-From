@@ -1,4 +1,4 @@
-# Far From Fries: setup checklist
+# McFarthest: setup checklist
 
 Everything here needs an account or a decision from Benjamin. The code is ready
 for each step. Nothing secret goes in the repo: keys live in Supabase, EAS or
@@ -6,12 +6,12 @@ your local `.env.local`.
 
 ## 1. Supabase (backend)
 
-Far From Fries goes into the existing project "blangholz's project", next to
+McFarthest goes into the existing project "blangholz's project", next to
 your other apps. It keeps to its own two schemas, `fff` (tables and the
 functions the app calls) and `fff_private` (internals), and never changes
 anything in `public`. What it does share is the sign-in list: someone who
 already signed in to another of your apps there can sign in to this one with
-the same account. A player's Far From Fries profile is only made when they
+the same account. A player's McFarthest profile is only made when they
 open this app, and "Delete account" removes their game data but leaves the
 shared sign-in.
 
@@ -94,7 +94,8 @@ domain. `farfromfries.app` is a placeholder used in `mobile/app.json`
 
 ## Decisions still open
 
-- Name and domain: "Far From Fries" and farfromfries.app are placeholders.
+- Name: McFarthest (Decision #25), pending an App Store and trademark check.
+- Domain: farfromfries.app is a placeholder; bundle id `app.farfromfries` and scheme `farfromfries` still use the old name.
 - Seasons: built as meteorological seasons (Mar 1, Jun 1, Sep 1, Dec 1) on Pacific time.
 - Passport distances outside the US, Canada and Mexico need worldwide store data;
   today they measure to the nearest North American store, which is wrong abroad.

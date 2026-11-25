@@ -34,7 +34,7 @@ export function useLiveLocation(enabled: boolean) {
     let cancelled = false;
     (async () => {
       if (!(await ensureForegroundPermission())) {
-        setError('Location is off for Far From Fries. Turn it on in Settings to see your distance.');
+        setError('Location is off for McFarthest. Turn it on in Settings to see your distance.');
         return;
       }
       setError(null);

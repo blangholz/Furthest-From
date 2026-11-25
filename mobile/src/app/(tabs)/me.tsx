@@ -3,7 +3,7 @@ import { useCallback, useState } from 'react';
 import { Alert, Share } from 'react-native';
 import { api, demoApi, errorText } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
-import { config, demoMode } from '@/lib/config';
+import { config, demoMode, features } from '@/lib/config';
 import { formatMiles } from '@/lib/geo';
 import { pendingCount } from '@/lib/offline-queue';
 import { RULES } from '@/lib/rules';
@@ -29,15 +29,20 @@ export default function Me() {
 
   const invite = async () => {
     try {
+      if (!features.friends) {
+        // No friendships yet, so just share the app.
+        await Share.share({ message: `How far from fries can you get? Play McFarthest: ${config.webUrl}` });
+        return;
+      }
       const code = await api.createInvite();
-      await Share.share({ message: `Play Far From Fries with me: ${config.webUrl}/i/${code}` });
+      await Share.share({ message: `Play McFarthest with me: ${config.webUrl}/i/${code}` });
     } catch (e) {
       Alert.alert('Hmm', errorText(e));
     }
   };
 
   const del = () =>
-    Alert.alert('Delete your account?', 'This removes your profile, scores, ticks and friends for good.', [
+    Alert.alert('Delete your account?', `This removes your profile, scores, ticks${features.friends ? ' and friends' : ''} for good.`, [
       { text: 'Cancel', style: 'cancel' },
       { text: 'Delete', style: 'destructive', onPress: async () => {
         try {
@@ -72,10 +77,12 @@ export default function Me() {
       </Card>
 
       <Card>
-        <Row left="Friends" sub={`${status.friendCount} friend${status.friendCount === 1 ? '' : 's'}`} right="›" onPress={() => router.push('/friends')} />
+        {features.friends ? (
+          <Row left="Friends" sub={`${status.friendCount} friend${status.friendCount === 1 ? '' : 's'}`} right="›" onPress={() => router.push('/friends')} />
+        ) : null}
         <Row left="Passport" sub="Logs outside the lower 48" right="›" onPress={() => router.push({ pathname: '/logs/[zone]', params: { zone: 'passport' } })} />
         <Row left="Home log" sub="Check-ins from your home zone" right="›" onPress={() => router.push({ pathname: '/logs/[zone]', params: { zone: 'home' } })} />
-        <Button title="Invite a friend" kind="secondary" onPress={invite} />
+        <Button title={features.friends ? 'Invite a friend' : 'Tell a friend'} kind="secondary" onPress={invite} />
       </Card>
 
       <Card>
@@ -89,7 +96,7 @@ export default function Me() {
       {demoMode ? (
         <Card tone="teal">
           <H2>Demo mode</H2>
-          <Body>No server is connected, so this runs on your phone with sample friends.</Body>
+          <Body>No server is connected, so this runs on your phone with sample players.</Body>
           <Button title="Open a practice ping now" onPress={async () => {
             await demoApi.openDemoPing();
             await refreshStatus();
@@ -104,7 +111,7 @@ export default function Me() {
 
       <Button title="Sign out" kind="quiet" onPress={signOut} />
       <Button title="Delete account" kind="danger" onPress={del} />
-      <Small center>Far From Fries is not affiliated with or endorsed by McDonald's. Store locations come from the open AllThePlaces dataset and are used only to measure distance.</Small>
+      <Small center>McFarthest is not affiliated with or endorsed by McDonald's. Store locations come from the open AllThePlaces dataset and are used only to measure distance.</Small>
     </Screen>
   );
 }

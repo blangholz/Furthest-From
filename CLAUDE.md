@@ -5,7 +5,7 @@ Two things live here:
 1. **The original test page and data** (root `index.html`, `data/`, `points/`,
    `scripts/`, `.github/workflows/monthly-data.yml`). GitHub Pages serves
    `index.html`. A monthly job refreshes the McDonald's list and furthest points.
-2. **Far From Fries, the app** (`mobile/`, `supabase/`, `pipeline/`, `web/`, `docs/`).
+2. **McFarthest, the app** (`mobile/`, `supabase/`, `pipeline/`, `web/`, `docs/`).
 
 ## App pieces
 - `supabase/migrations`: Postgres + PostGIS schema, game logic as SQL functions,

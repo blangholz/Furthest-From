@@ -25,7 +25,7 @@ select is((select count(*)::int from fff.friendships where status = 'accepted'),
 -- Global board needs 3 friends: give Ana a third friend
 insert into auth.users (id, email) values ('00000000-0000-0000-0000-00000000000d', 'dee@example.com');
 select is((select count(*)::int from fff.profiles where id = '00000000-0000-0000-0000-00000000000d'), 0,
-  'a sign-in from another app gets no Far From Fries profile');
+  'a sign-in from another app gets no McFarthest profile');
 select set_config('request.jwt.claim.sub', '00000000-0000-0000-0000-00000000000d', true);
 select fff.ensure_profile();
 select fff.ensure_profile();

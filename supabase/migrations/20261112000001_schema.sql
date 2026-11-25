@@ -1,4 +1,4 @@
--- Far From Fries: core schema.
+-- McFarthest: core schema.
 -- Privacy rule that shapes everything here: no table stores where a player was
 -- when they logged. Exact coordinates go into fff.submit_log(), which scores
 -- them and throws them away. The only stored coordinates belong to McDonald's
@@ -97,7 +97,7 @@ create table fff.profiles (
 );
 
 -- No trigger on auth.users: the sign-in list may be shared with other apps, so a
--- profile is made only when someone opens Far From Fries (fff.ensure_profile).
+-- profile is made only when someone opens McFarthest (fff.ensure_profile).
 
 create table fff.friendships (
   user_a uuid not null references fff.profiles (id) on delete cascade,

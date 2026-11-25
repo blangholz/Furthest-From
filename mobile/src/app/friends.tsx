@@ -41,7 +41,7 @@ export default function Friends() {
         </View>
         <Button title="Share an invite link" kind="secondary" onPress={async () => {
           const code = await api.createInvite();
-          await Share.share({ message: `Play Far From Fries with me: ${config.webUrl}/i/${code}` });
+          await Share.share({ message: `Play McFarthest with me: ${config.webUrl}/i/${code}` });
         }} />
       </Card>
 

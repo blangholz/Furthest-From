@@ -1,4 +1,5 @@
 import { NativeTabs } from 'expo-router/native-tabs';
+import { features } from '@/lib/config';
 import { colors } from '@/ui/theme';
 
 export default function Tabs() {
@@ -8,7 +9,7 @@ export default function Tabs() {
         <NativeTabs.Trigger.Label>Distance</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon sf="location.north.circle.fill" md="explore" />
       </NativeTabs.Trigger>
-      <NativeTabs.Trigger name="feed">
+      <NativeTabs.Trigger name="feed" hidden={!features.friends}>
         <NativeTabs.Trigger.Label>Friends</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon sf="person.2.fill" md="group" />
       </NativeTabs.Trigger>

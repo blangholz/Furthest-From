@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Alert, Linking, StyleSheet, View } from 'react-native';
 import MapView, { Circle, Marker } from 'react-native-maps';
 import { api, errorText, type Spot } from '@/lib/api';
+import { features } from '@/lib/config';
 import { formatFeet, formatMiles, haversineMi, miToFt } from '@/lib/geo';
 import { currentFix, useLiveLocation } from '@/lib/location';
 import { RULES } from '@/lib/rules';
@@ -31,7 +32,7 @@ export default function SpotScreen() {
     try {
       const fix = await currentFix();
       const r = await api.submitLog({ lat: fix.lat, lon: fix.lon, kind: 'extreme', extremeId: spot.id });
-      Alert.alert('Claimed! 🍟', `${name}: ${formatMiles(r.distanceMi)} miles from the nearest McDonald's. Your friends have been told.`);
+      Alert.alert('Claimed! 🍟', `${name}: ${formatMiles(r.distanceMi)} miles from the nearest McDonald's.${features.friends ? ' Your friends have been told.' : ''}`);
       await Promise.all([load(), refreshStatus()]);
     } catch (e) {
       Alert.alert('Not claimed', errorText(e));

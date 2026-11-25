@@ -10,7 +10,7 @@ export const RULES = {
   friesPerCredits: 7,
   doubleCreditStreak: 12,
   friesTtlDays: 14,
-  globalMinFriends: 3,
+  globalMinFriends: 0, // 3 when friends return (game_settings.global_min_friends)
   mapRadiusMi: 25,
 } as const;
 

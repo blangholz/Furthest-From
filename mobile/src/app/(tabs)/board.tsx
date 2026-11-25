@@ -1,13 +1,15 @@
 import { useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { api, type LeaderRow } from '@/lib/api';
+import { features } from '@/lib/config';
 import { formatMiles } from '@/lib/geo';
 import { useStatus } from '@/lib/status';
 import { Body, Card, Loading, Row, Screen, Segmented, Small, Title } from '@/ui/kit';
 
 export default function Board() {
   const { status } = useStatus();
-  const [scope, setScope] = useState<'friends' | 'global'>('friends');
+  // With friends off there is only the global board.
+  const [scope, setScope] = useState<'friends' | 'global'>(features.friends ? 'friends' : 'global');
   const [period, setPeriod] = useState<'season' | 'all'>('season');
   const [rows, setRows] = useState<LeaderRow[] | null>(null);
 
@@ -16,11 +18,13 @@ export default function Board() {
     api.leaderboard(scope, period).then(setRows).catch(() => setRows([]));
   }, [scope, period]));
 
-  const needFriends = scope === 'global' && status && status.friendCount < status.globalMinFriends;
+  const needFriends = features.friends && scope === 'global' && status && status.friendCount < status.globalMinFriends;
   return (
     <Screen>
       <Title>Leaderboard</Title>
-      <Segmented value={scope} onChange={setScope} options={[{ value: 'friends', label: 'Friends' }, { value: 'global', label: 'Everyone' }]} />
+      {features.friends ? (
+        <Segmented value={scope} onChange={setScope} options={[{ value: 'friends', label: 'Friends' }, { value: 'global', label: 'Everyone' }]} />
+      ) : null}
       <Segmented value={period} onChange={setPeriod} options={[{ value: 'season', label: status?.season.name ?? 'Season' }, { value: 'all', label: 'All time' }]} />
       {needFriends ? (
         <Card tone="gold">

@@ -1,4 +1,4 @@
--- Far From Fries: scheduled jobs.
+-- McFarthest: scheduled jobs.
 set search_path = fff, extensions, public;
 -- Every minute: close finished ping windows, open 1:20 PM pings for players
 -- whose local clock just reached it, warn about expiring Extra Fries, then call

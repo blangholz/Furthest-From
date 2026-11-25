@@ -7,7 +7,7 @@ import { config, demoMode } from './config';
 export const supabase = demoMode
   ? null
   : createClient(config.supabaseUrl, config.supabaseAnonKey, {
-      // Far From Fries lives in its own "fff" schema so it can share a Supabase
+      // McFarthest lives in its own "fff" schema so it can share a Supabase
       // project with other apps. Add "fff" to the project's exposed API schemas.
       db: { schema: 'fff' },
       auth: { storage: AsyncStorage, autoRefreshToken: true, persistSession: true, detectSessionInUrl: false, flowType: 'pkce' },

@@ -1,4 +1,4 @@
--- Far From Fries: State Extremes / Top 100 listing, monthly data import, push outbox.
+-- McFarthest: State Extremes / Top 100 listing, monthly data import, push outbox.
 set search_path = fff, extensions, public;
 
 -- All active spots with whether you've claimed them. Ticks are permanent: a state

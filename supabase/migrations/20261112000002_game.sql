@@ -1,4 +1,4 @@
--- Far From Fries: scoring, pings, streaks, Extra Fries, State Extremes and Top 100 claims.
+-- McFarthest: scoring, pings, streaks, Extra Fries, State Extremes and Top 100 claims.
 set search_path = fff, extensions, public;
 
 -- ---------------------------------------------------------------------------
@@ -226,11 +226,11 @@ begin
       end,
       jsonb_build_object('type', 'extreme', 'log_id', v_log));
   elsif c.zone = 'scoring' then
-    perform fff_private.notify_friends(uid, '🍟 Far From Fries',
+    perform fff_private.notify_friends(uid, '🍟 McFarthest',
       who || ' is ' || fff_private.fmt_mi(dist) || ' miles from the nearest McDonald''s.',
       jsonb_build_object('type', 'log', 'log_id', v_log));
   elsif c.zone = 'passport' then
-    perform fff_private.notify_friends(uid, '🍟 Far From Fries',
+    perform fff_private.notify_friends(uid, '🍟 McFarthest',
       who || ' is ' || fff_private.fmt_mi(dist) || ' miles from the nearest McDonald''s, in ' || c.region_name || '.',
       jsonb_build_object('type', 'log', 'log_id', v_log));
   end if;

@@ -1,4 +1,4 @@
--- Far From Fries: row-level security and grants.
+-- McFarthest: row-level security and grants.
 set search_path = fff, extensions, public;
 -- Players read only their own rows directly. Anything about friends comes through
 -- security-definer functions that return distances, never coordinates.
