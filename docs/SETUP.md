@@ -55,6 +55,18 @@ not, add it there. The app also accepts the 6-digit code from the email, which
 needs `{{ .Token }}` in the Magic Link template. That template is shared with
 your other apps, so add the code line without removing anything they rely on.
 
+Done (Nov 2026): the shared Magic Link template and subject now branch on the
+redirect. `{{ if eq .RedirectTo "farfromfries://auth-callback" }}` sends the
+McFarthest email (`supabase/templates/mcfarthest_magic_link.html`: the 6-digit
+code plus a `{{ .ConfirmationURL }}` button that goes through Supabase and back
+into the app with `?code=`), and `{{ else }}` sends PackUpGear's original email
+unchanged. To edit it, PATCH `mailer_templates_magic_link_content` and
+`mailer_subjects_magic_link` through the Management API (`/v1/projects/<ref>/config/auth`)
+and keep both branches. Changes can take up to 10 minutes to show up, because
+the auth server caches templates. The sender name and address (PackUp,
+auth@packupgear.com) are set once for the whole project, so they can't
+change per app.
+
 ## 3. Apple (needed for TestFlight and the App Store)
 
 1. Apple Developer Program ($99/year).

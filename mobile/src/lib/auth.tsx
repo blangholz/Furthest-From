@@ -11,7 +11,11 @@ import { supabase } from './supabase';
 WebBrowser.maybeCompleteAuthSession();
 
 const DEMO_KEY = 'fff-demo-signed-in';
-export const authRedirect = () => Linking.createURL('auth-callback');
+// Always the app's own scheme, never Linking.createURL: in dev builds that returns
+// exp://… which isn't on the shared Supabase project's redirect allow list, so
+// Supabase silently falls back to the project's site_url (another app's website).
+// The shared magic-link email template also branches on this exact value.
+export const authRedirect = () => 'farfromfries://auth-callback';
 
 type AuthValue = {
   ready: boolean;
