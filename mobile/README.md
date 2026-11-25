@@ -5,7 +5,7 @@ Expo (SDK 58) app with expo-router. Backend is Supabase (see `../supabase`).
 ## Try it now (demo mode)
 
 No accounts needed. With no Supabase settings the app runs fully on the phone
-with three sample friends.
+with three sample players.
 
 ```bash
 cd mobile
@@ -25,7 +25,8 @@ See `../docs/SETUP.md` for the whole checklist (Supabase, Apple, Google, Expo/EA
 ## Layout
 
 - `src/app`: screens (expo-router). `(tabs)` is the main tab bar: Distance,
-  Friends, Leaderboard, Extremes, Me. `onboarding/[step]` is the first-run flow.
+  Leaderboard, Extremes, Me. (A Friends tab exists but is hidden while
+  `features.friends` in `src/lib/config.ts` is off.) `onboarding/[step]` is the first-run flow.
 - `src/lib`: geometry and game rules (`geo.ts`, `rules.ts`, with tests), the API
   (`api/` has a Supabase version and a demo version with the same interface),
   sign-in, location, notifications, offline queue.

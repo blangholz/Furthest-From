@@ -1,5 +1,5 @@
 begin;
-select plan(48);
+select plan(50);
 
 -- ids
 \set ana '''00000000-0000-0000-0000-00000000000a'''
@@ -66,7 +66,11 @@ select t_as(:ana);
 select is((select count(*)::int from fff.feed() where zone = 'home'), 0, 'friend home check-ins hidden');
 select is((select count(*)::int from fff.leaderboard('friends', 'season')), 2, 'friends board has both');
 select is((select display_name from fff.leaderboard('friends', 'season') where rank = 1), 'Ana', 'Ana leads');
-select is((select count(*)::int from fff.leaderboard('global', 'season')), 0, 'global needs 3 friends');
+-- Global board: no friend minimum; lists players who have scored this season, plus you.
+select is((select count(*)::int from fff.leaderboard('global', 'season')), 1, 'global has Ana (Ben has only a home check-in)');
+select t_as(:cy);
+select is((select count(*)::int from fff.leaderboard('global', 'season') where display_name = 'Ana'), 1, 'a stranger sees Ana on the global board');
+select is((select count(*)::int from fff.leaderboard('global', 'season') where is_me), 1, 'Cy sees himself with no friends and no logs');
 select t_admin();
 
 -- Extra Fries: earn at 7 credits, spend for a Passport log in Iceland

@@ -22,7 +22,7 @@ select is((fff.accept_invite((select code from inv)) ->> 'status'), 'accepted', 
 select t_admin();
 select is((select count(*)::int from fff.friendships where status = 'accepted'), 3, 'three friendships');
 
--- Global board needs 3 friends: give Ana a third friend
+-- A sign-in from another app, then Ana befriends that player
 insert into auth.users (id, email) values ('00000000-0000-0000-0000-00000000000d', 'dee@example.com');
 select is((select count(*)::int from fff.profiles where id = '00000000-0000-0000-0000-00000000000d'), 0,
   'a sign-in from another app gets no McFarthest profile');
@@ -37,7 +37,7 @@ select ok(has_function_privilege('authenticated', 'public.other_app_hello()', 'e
 insert into fff.friendships values (least(:ana::uuid, '00000000-0000-0000-0000-00000000000d'::uuid),
   greatest(:ana::uuid, '00000000-0000-0000-0000-00000000000d'::uuid), :ana, 'accepted', now(), now());
 select t_as(:ana);
-select is((select count(*)::int from fff.leaderboard('global', 'all') where is_me), 1, 'Ana with 3 friends is on the global board');
+select is((select count(*)::int from fff.leaderboard('global', 'all') where is_me), 1, 'Ana is on the global board');
 select t_admin();
 
 -- Streak derivation: scored counts, home pauses, miss breaks
