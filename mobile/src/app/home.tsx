@@ -15,7 +15,7 @@ import { submitOrQueue } from '@/lib/offline-queue';
 import { useStatus, refreshStatus } from '@/lib/status';
 import { storeIndex } from '@/lib/stores';
 import { countdown, formatLatLon, resultHeadline } from '@/ui/format';
-import { brand, Button, Card, IconButton, Label, Row, Rows, Screen, Small, Title } from '@/ui/kit';
+import { brand, BurgerMark, Button, Card, IconButton, Label, Row, Rows, Screen, Small, Title } from '@/ui/kit';
 import { Leaderboard } from '@/ui/Leaderboard';
 import { Radar } from '@/ui/Radar';
 import { colors, font, space } from '@/ui/theme';
@@ -86,7 +86,10 @@ export default function Home() {
       setRefreshing(false);
     }} />}>
       <View style={s.header}>
-        <Text style={s.wordmark} adjustsFontSizeToFit numberOfLines={1}>{brand('McFarthest')}</Text>
+        <View style={s.brandRow}>
+          <BurgerMark />
+          <Text style={s.wordmark} adjustsFontSizeToFit numberOfLines={1}>{brand('McFarthest')}</Text>
+        </View>
         <IconButton icon="person" android="person" label="Me" onPress={() => router.push('/me')} />
       </View>
 
@@ -156,6 +159,7 @@ export default function Home() {
 
 const s = StyleSheet.create({
   header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginRight: -10 },
+  brandRow: { flexDirection: 'row', alignItems: 'center', gap: space.sm, flexShrink: 1 },
   wordmark: { ...font.title, fontSize: 30, color: colors.ink },
   big: { ...font.huge, color: colors.ink, lineHeight: 104, marginBottom: -6 },
   // Room above and below for the radar's N label and facing tick.

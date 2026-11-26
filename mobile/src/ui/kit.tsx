@@ -146,6 +146,20 @@ export function IconButton({ icon, android, label, onPress }: { icon: string; an
   );
 }
 
+/** The burger mark beside the wordmark: a solid ink silhouette (domed bun, patty, flat bun),
+ *  drawn from the canvas's 24-unit icon so it needs no SVG library. */
+export function BurgerMark({ size = 26 }: { size?: number }) {
+  const u = size / 24;
+  return (
+    <View accessibilityElementsHidden importantForAccessibility="no-hide-descendants"
+      style={{ width: size, height: size, alignItems: 'center', paddingTop: 4 * u }}>
+      <View style={{ width: 18 * u, height: 7 * u, backgroundColor: colors.ink, borderTopLeftRadius: 9 * u, borderTopRightRadius: 9 * u }} />
+      <View style={{ width: 20 * u, height: 3 * u, marginTop: 1.5 * u, backgroundColor: colors.ink, borderRadius: 1.5 * u }} />
+      <View style={{ width: 18 * u, height: 3 * u, marginTop: 1.5 * u, backgroundColor: colors.ink, borderBottomLeftRadius: 2 * u, borderBottomRightRadius: 2 * u }} />
+    </View>
+  );
+}
+
 // Drawn stand-in where symbols aren't available (web previews).
 const PersonGlyph = () => (
   <View style={{ alignItems: 'center' }}>
