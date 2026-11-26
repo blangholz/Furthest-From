@@ -137,11 +137,13 @@ export const Pill = ({ text }: { text: string }) => (
 );
 
 /** 44pt tap target holding a thin SF Symbol (Material symbol on Android). */
-export function IconButton({ icon, android, label, onPress }: { icon: string; android: string; label: string; onPress: () => void }) {
+export function IconButton({ icon, android, label, onPress, fallback }: {
+  icon: string; android: string; label: string; onPress: () => void; fallback?: ReactNode;
+}) {
   return (
     <Pressable accessibilityRole="button" accessibilityLabel={label} onPress={onPress} hitSlop={4}
       style={({ pressed }) => [s.iconButton, { opacity: pressed ? 0.6 : 1 }]}>
-      <SymbolView name={{ ios: icon, android } as never} size={24} weight="light" tintColor={colors.ink} fallback={<PersonGlyph />} />
+      <SymbolView name={{ ios: icon, android } as never} size={24} weight="light" tintColor={colors.ink} fallback={fallback ?? <PersonGlyph />} />
     </Pressable>
   );
 }
@@ -159,6 +161,13 @@ export function BurgerMark({ size = 26 }: { size?: number }) {
     </View>
   );
 }
+
+/** Drawn "i" in a circle, the web-preview stand-in for the info symbol. */
+export const InfoGlyph = () => (
+  <View style={{ width: 22, height: 22, borderRadius: 11, borderWidth: 1.5, borderColor: colors.ink, alignItems: 'center', justifyContent: 'center' }}>
+    <Text style={{ ...fonts.condensed, textTransform: 'none', fontSize: 15, color: colors.ink, marginTop: 2 }}>i</Text>
+  </View>
+);
 
 // Drawn stand-in where symbols aren't available (web previews).
 const PersonGlyph = () => (
