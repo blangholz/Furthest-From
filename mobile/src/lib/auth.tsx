@@ -11,6 +11,11 @@ import { supabase } from './supabase';
 WebBrowser.maybeCompleteAuthSession();
 
 const DEMO_KEY = 'fff-demo-signed-in';
+// DEV rehearsal (testers, from Me > DEV > Reset onboarding): the real session is kept,
+// but the app acts signed out so the sign-in screen can be walked through. Nothing is
+// sent; the code 00000 "signs in". Safe because it only works while already signed in.
+const REHEARSAL_KEY = 'fff-dev-rehearsal';
+export const REHEARSAL_CODE = /^0{5,6}$/;
 // Always the app's own scheme, never Linking.createURL: in dev builds that returns
 // exp://… which isn't on the shared Supabase project's redirect allow list, so
 // Supabase silently falls back to the project's site_url (another app's website).
@@ -20,6 +25,9 @@ export const authRedirect = () => 'farfromfries://auth-callback';
 type AuthValue = {
   ready: boolean;
   signedIn: boolean;
+  /** DEV: walking through sign-in again while the real session is kept. */
+  rehearsing: boolean;
+  startRehearsal(): Promise<void>;
   email: string | null;
   sendMagicLink(email: string): Promise<void>;
   verifyEmailCode(email: string, code: string): Promise<void>;
@@ -36,6 +44,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [ready, setReady] = useState(false);
   const [session, setSession] = useState<Session | null>(null);
   const [demoSignedIn, setDemoSignedIn] = useState(false);
+  const [rehearsing, setRehearsing] = useState(false);
+
+  useEffect(() => {
+    AsyncStorage.getItem(REHEARSAL_KEY).then((v) => setRehearsing(v === '1')).catch(() => {});
+  }, []);
 
   useEffect(() => {
     if (demoMode || !supabase) {
@@ -66,11 +79,22 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       if (error) throw error;
       return true;
     };
+    const endRehearsal = async () => {
+      await AsyncStorage.removeItem(REHEARSAL_KEY);
+      setRehearsing(false);
+    };
+    const signedInReally = demoMode ? demoSignedIn : !!session;
     return {
       ready,
-      signedIn: demoMode ? demoSignedIn : !!session,
+      signedIn: signedInReally && !rehearsing,
+      rehearsing: signedInReally && rehearsing,
+      async startRehearsal() {
+        await AsyncStorage.setItem(REHEARSAL_KEY, '1');
+        setRehearsing(true);
+      },
       email: session?.user?.email ?? null,
       async sendMagicLink(email) {
+        if (rehearsing) return; // DEV rehearsal: nothing is sent
         const { error } = await need().auth.signInWithOtp({
           email: email.trim(),
           options: { emailRedirectTo: authRedirect(), shouldCreateUser: true },
@@ -78,10 +102,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         if (error) throw error;
       },
       async verifyEmailCode(email, code) {
+        if (rehearsing) {
+          if (!REHEARSAL_CODE.test(code.trim())) throw new Error('DEV rehearsal: use the code 00000.');
+          return endRehearsal();
+        }
         const { error } = await need().auth.verifyOtp({ email: email.trim(), token: code.trim(), type: 'email' });
         if (error) throw error;
       },
       async signInWithApple() {
+        if (rehearsing) return endRehearsal();
         const raw = Crypto.randomUUID();
         const hashed = await Crypto.digestStringAsync(Crypto.CryptoDigestAlgorithm.SHA256, raw);
         const cred = await AppleAuthentication.signInAsync({
@@ -96,6 +125,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         if (name) await need().auth.updateUser({ data: { full_name: name } });
       },
       async signInWithGoogle() {
+        if (rehearsing) return endRehearsal();
         const redirectTo = authRedirect();
         const { data, error } = await need().auth.signInWithOAuth({
           provider: 'google',
@@ -111,12 +141,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setDemoSignedIn(true);
       },
       async signOut() {
+        await endRehearsal();
         if (supabase) await supabase.auth.signOut();
         await AsyncStorage.removeItem(DEMO_KEY);
         setDemoSignedIn(false);
       },
     };
-  }, [ready, session, demoSignedIn]);
+  }, [ready, session, demoSignedIn, rehearsing]);
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }

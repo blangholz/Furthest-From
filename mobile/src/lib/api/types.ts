@@ -8,6 +8,8 @@ export type Status = {
   username: string | null;
   displayName: string;
   onboarded: boolean;
+  /** Can use the DEV tools on Me (test pings, reset onboarding). */
+  isTester: boolean;
   hasHome: boolean;
   homeLockedUntil: string | null;
   streak: number;
@@ -138,6 +140,8 @@ export interface Api {
   myLogs(zone: 'passport' | 'home'): Promise<MyLog[]>;
   /** Testers only: opens a ping that starts in `delaySeconds` (development builds). */
   openTestPing(delaySeconds: number): Promise<{ opensAt: string; closesAt: string }>;
+  /** Testers only: clears onboarding and the home pin so the flow can run from the start. */
+  devResetOnboarding(): Promise<void>;
 }
 
 /** Friendly words for an error code. */

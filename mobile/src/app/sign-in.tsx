@@ -50,6 +50,12 @@ export default function SignIn() {
       </Body>
       <Gap size={space.lg} />
 
+      {auth.rehearsing ? (
+        <Card label="Dev rehearsal">
+          <Small>You're still signed in. Nothing gets sent: tap any option, and for email use the code 00000.</Small>
+        </Card>
+      ) : null}
+
       {demoMode ? (
         <Card>
           <Body>Demo mode: the app isn't connected to a server yet, so everything runs on this phone with sample players.</Body>
@@ -95,7 +101,7 @@ export default function SignIn() {
                 <Body>Check {email}. Tap the link on this phone, or type or paste the code from the email.</Body>
                 <TextInput
                   style={s.input}
-                  placeholder="123456"
+                  placeholder={auth.rehearsing ? '00000' : '123456'}
                   keyboardType="number-pad"
                   textContentType="oneTimeCode"
                   autoComplete="one-time-code"
@@ -105,7 +111,7 @@ export default function SignIn() {
                   // digits only, up to Supabase's longest code length (10).
                   onChangeText={(t) => setCode(t.replace(/\D/g, '').slice(0, 10))}
                 />
-                <Button title="Sign in with code" disabled={code.length < 6} busy={busy === 'code'} onPress={run('code', () => auth.verifyEmailCode(email, code))} />
+                <Button title="Sign in with code" disabled={code.length < (auth.rehearsing ? 5 : 6)} busy={busy === 'code'} onPress={run('code', () => auth.verifyEmailCode(email, code))} />
                 <Button title="Use a different email" kind="quiet" onPress={() => setSent(false)} />
               </>
             )}

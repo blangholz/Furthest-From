@@ -38,6 +38,7 @@ export function supabaseApi(db: NonNullable<typeof supabase>): Api {
         username: s.username,
         displayName: s.display_name ?? '',
         onboarded: s.onboarded,
+        isTester: !!s.is_tester,
         hasHome: s.has_home,
         homeLockedUntil: s.home_locked_until,
         streak: s.streak,
@@ -153,6 +154,9 @@ export function supabaseApi(db: NonNullable<typeof supabase>): Api {
     async openTestPing(delaySeconds) {
       const r = await rpc<Record<string, any>>('open_test_ping', { p_delay_seconds: delaySeconds });
       return { opensAt: r.opens_at, closesAt: r.closes_at };
+    },
+    async devResetOnboarding() {
+      await rpc('dev_reset_onboarding');
     },
   };
 }

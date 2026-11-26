@@ -121,7 +121,7 @@ export const demoApi: Api & { openDemoPing(): Promise<void>; reset(): Promise<vo
     const sum = (ls: DemoLog[]) => ls.reduce((a, l) => a + pointsFor(l.zone, l.distanceMi), 0);
     await save();
     return {
-      userId: ME, username: s.username, displayName: s.displayName, onboarded: s.onboarded, hasHome: !!s.home,
+      userId: ME, username: s.username, displayName: s.displayName, onboarded: s.onboarded, isTester: false, hasHome: !!s.home,
       homeLockedUntil: s.home ? 'end of season' : null, streak: streak(s), bestStreak: s.bestStreak,
       friesCredits: s.credits, friesPer: RULES.friesPerCredits, friendCount: s.friends.filter((f) => f.status === 'accepted').length,
       globalMinFriends: RULES.globalMinFriends,
@@ -308,5 +308,11 @@ export const demoApi: Api & { openDemoPing(): Promise<void>; reset(): Promise<vo
     s.pings.unshift({ date: `test-${opens.getTime()}`, opensAt: opens.toISOString(), closesAt: closes.toISOString(), status: 'open' });
     await save();
     return { opensAt: opens.toISOString(), closesAt: closes.toISOString() };
+  },
+  async devResetOnboarding() {
+    const s = await load();
+    s.onboarded = false;
+    s.home = null;
+    await save();
   },
 };

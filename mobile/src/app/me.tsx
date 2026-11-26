@@ -18,7 +18,7 @@ import { colors, font } from '@/ui/theme';
 
 export default function Me() {
   const { status } = useStatus();
-  const { signOut } = useAuth();
+  const { signOut, startRehearsal } = useAuth();
   const [pending, setPending] = useState(0);
   const [spots, setSpots] = useState<Spot[] | null>(null);
   const { pos } = useLiveLocation(true);
@@ -149,33 +149,73 @@ export default function Me() {
         </Card>
       ) : null}
 
-      {__DEV__ && !demoMode ? (
-        <Card>
-          <H2>Testing</H2>
-          <Body>Opens a test check-in in 5 seconds so you can try the flow. It scores like a real check-in but never affects your streak. Only shows in development builds.</Body>
-          <Button title="Open a check-in in 5 seconds" onPress={async () => {
-            try {
-              await api.openTestPing(5);
-              await scheduleLocalPing(5);
-              setTimeout(() => {
-                refreshStatus();
-                router.navigate('/home');
-              }, 5500);
-            } catch (e) {
-              Alert.alert('Test check-in failed', errorText(e));
-            }
-          }} />
-        </Card>
-      ) : null}
 
       <Button title="Sign out" kind="quiet" onPress={signOut} />
       <Button title="Delete account" kind="danger" onPress={del} />
       <Small center>McFarthest is not affiliated with or endorsed by McDonald's. Store locations come from the open AllThePlaces dataset and are used only to measure distance.</Small>
+
+      {status.isTester && !demoMode ? <DevTools onReset={async () => {
+        await api.devResetOnboarding();
+        await startRehearsal();
+      }} /> : null}
     </Screen>
   );
 }
 
+// Only for tester accounts (profiles.is_tester), set apart under a DEV rule.
+function DevTools({ onReset }: { onReset: () => Promise<void> }) {
+  const [busy, setBusy] = useState<string | null>(null);
+  const testPing = async () => {
+    setBusy('ping');
+    try {
+      await api.openTestPing(5);
+      await scheduleLocalPing(5);
+      setTimeout(() => {
+        refreshStatus();
+        router.navigate('/home');
+      }, 5500);
+    } catch (e) {
+      Alert.alert('Test check-in failed', errorText(e));
+    } finally {
+      setBusy(null);
+    }
+  };
+  const reset = () =>
+    Alert.alert('Reset onboarding?', 'You go back to the sign-in screen and run onboarding from the start. Your home pin is cleared so you can set it again. Scores and ticks stay.', [
+      { text: 'Cancel', style: 'cancel' },
+      { text: 'Reset', style: 'destructive', onPress: async () => {
+        setBusy('reset');
+        try {
+          await onReset();
+        } catch (e) {
+          setBusy(null);
+          Alert.alert('Reset failed', errorText(e));
+        }
+      } },
+    ]);
+  return (
+    <>
+      <View style={s.devRule}>
+        <View style={s.devLine} />
+        <Text style={s.devText}>DEV</Text>
+        <View style={s.devLine} />
+      </View>
+      <Card label="Test check-in">
+        <Small>Opens a check-in in 5 seconds. It scores like a real one but never touches your streak.</Small>
+        <Button title="Ping me in 5 seconds" kind="secondary" busy={busy === 'ping'} onPress={testPing} />
+      </Card>
+      <Card label="Onboarding">
+        <Small>Run sign-in and onboarding from the beginning. Nothing is emailed: use the code 00000.</Small>
+        <Button title="Reset onboarding" kind="secondary" busy={busy === 'reset'} onPress={reset} />
+      </Card>
+    </>
+  );
+}
+
 const s = StyleSheet.create({
+  devRule: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 24 },
+  devLine: { flex: 1, height: StyleSheet.hairlineWidth, backgroundColor: colors.ink },
+  devText: { ...font.label, color: colors.ink },
   tickHead: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline' },
   tickCount: { ...font.value, fontSize: 24, color: colors.ink },
 });
