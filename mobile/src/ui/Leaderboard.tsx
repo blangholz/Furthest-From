@@ -8,7 +8,7 @@ import { features } from '@/lib/config';
 import { formatMiles } from '@/lib/geo';
 import { useStatus } from '@/lib/status';
 import { View } from 'react-native';
-import { Body, Card, IconButton, InfoGlyph, Loading, Row, Rows, Segmented, Title } from '@/ui/kit';
+import { Body, Card, IconButton, InfoGlyph, Label, Loading, Row, Rows, Segmented } from '@/ui/kit';
 import { RulesSheet } from '@/ui/RulesSheet';
 import { space } from '@/ui/theme';
 
@@ -30,11 +30,7 @@ export function Leaderboard({ refreshKey = 0 }: { refreshKey?: number }) {
 
   const needFriends = features.friends && scope === 'global' && status && status.friendCount < status.globalMinFriends;
   return (
-    <View style={{ marginTop: space.lg, gap: space.md }}>
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginRight: -10 }}>
-        <Title>Leaderboard</Title>
-        <IconButton icon="info.circle" android="info" label="How scoring works" onPress={() => setRulesOpen(true)} fallback={<InfoGlyph />} />
-      </View>
+    <View style={{ gap: space.md }}>
       {features.friends ? (
         <Segmented value={scope} onChange={setScope} options={[{ value: 'friends', label: 'Friends' }, { value: 'global', label: 'Everyone' }]} />
       ) : null}
@@ -44,7 +40,13 @@ export function Leaderboard({ refreshKey = 0 }: { refreshKey?: number }) {
         </Card>
       ) : null}
       {!rows ? <Loading /> : (
-        <Card label={status?.season.name ? `Season · ${status.season.name}` : 'This season'}>
+        <Card>
+          {/* A secondary section: named by a small label like every other box, not a big
+              heading that would outrank the wordmark. */}
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginVertical: -10, marginRight: -12 }}>
+            <Label>{status?.season.name ? `Leaderboard · ${status.season.name}` : 'Leaderboard'}</Label>
+            <IconButton icon="info.circle" android="info" label="How scoring works" onPress={() => setRulesOpen(true)} fallback={<InfoGlyph />} />
+          </View>
           {rows.length === 0 ? <Body muted>No scores yet this season.</Body> : (
             <Rows>
               {rows.map((r) => (
