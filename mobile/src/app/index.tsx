@@ -11,5 +11,5 @@ export default function Index() {
   if (!status?.onboarded) {
     return <Redirect href={{ pathname: '/onboarding/[step]', params: { step: ONBOARDING_STEPS[0].key } }} />;
   }
-  return <Redirect href="/(tabs)/home" />;
+  return <Redirect href="/home" />;
 }

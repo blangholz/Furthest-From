@@ -1,8 +1,10 @@
-// Home: the big live distance number, a radar to the nearest McDonald's, today's check-in, Extra Fries,
-// and the leaderboard below (scroll down).
+// Home, the app's only screen (Decision #29): wordmark + person icon (Me), the big live
+// distance with the nearest McDonald's town and coordinates, a radar, your own coordinates
+// (only you see them), today's check-in as a register entry, and the leaderboard below.
 // The live number is computed on the phone from the bundled store list; watching it
 // never sends anything. Only "Check in" sends one point, once.
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { router } from 'expo-router';
 import { Alert, RefreshControl, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { errorText, type LogResult } from '@/lib/api';
 import { demoMode } from '@/lib/config';
@@ -12,8 +14,8 @@ import { currentFix, useHeading, useLiveLocation } from '@/lib/location';
 import { submitOrQueue } from '@/lib/offline-queue';
 import { useStatus, refreshStatus } from '@/lib/status';
 import { storeIndex } from '@/lib/stores';
-import { countdown, resultHeadline } from '@/ui/format';
-import { Body, brand, Button, Card, H2, Pill, Screen, Small } from '@/ui/kit';
+import { countdown, formatLatLon, resultHeadline } from '@/ui/format';
+import { brand, Button, Card, IconButton, Label, Row, Rows, Screen, Small, Title } from '@/ui/kit';
 import { Leaderboard } from '@/ui/Leaderboard';
 import { Radar } from '@/ui/Radar';
 import { colors, font, space } from '@/ui/theme';
@@ -38,7 +40,7 @@ export default function Home() {
 
   const nearest = useMemo(() => (pos ? storeIndex().nearest(pos) : null), [pos]);
   const { width } = useWindowDimensions();
-  const radarSize = Math.min(width - space.lg * 4, 420);
+  const radarSize = Math.min(width - space.lg * 6, 380);
 
   const log = useCallback(async (kind: 'ping' | 'extra_fries') => {
     setBusy(kind === 'ping' ? 'ping' : 'fries');
@@ -72,69 +74,80 @@ export default function Home() {
     refreshStatus();
   });
 
+  const nearestLine = nearest
+    ? [nearest.store.place, formatLatLon(nearest.store)].filter(Boolean).join(' · ')
+    : null;
+
   return (
-    <Screen refreshControl={<RefreshControl refreshing={refreshing} onRefresh={async () => {
+    <Screen refreshControl={<RefreshControl refreshing={refreshing} tintColor={colors.ink} onRefresh={async () => {
       setRefreshing(true);
       setBoardKey((k) => k + 1);
       await refreshStatus();
       setRefreshing(false);
     }} />}>
-      <View style={s.topRow}>
-        <Pill text={status?.season.name ?? ''} tone="muted" />
-        <View style={{ flexDirection: 'row', gap: space.sm }}>
-          <Pill text={`🔥 ${status?.streak ?? 0}`} />
-          <Pill text={`🍟 ${fries}`} tone="teal" />
-        </View>
+      <View style={s.header}>
+        <Text style={s.wordmark} adjustsFontSizeToFit numberOfLines={1}>{brand('McFarthest')}</Text>
+        <IconButton icon="person" android="person" label="Me" onPress={() => router.push('/me')} />
       </View>
 
-      <View style={s.hero}>
+      <Card label="Miles from the nearest McDonald's">
         <Text style={s.big} adjustsFontSizeToFit numberOfLines={1}>{formatMiles(nearest?.mi)}</Text>
-        <Text style={s.unit}>{brand("miles from the nearest McDonald's")}</Text>
-        {error ? <Small center>{error}</Small> : !pos ? <Small center>Finding you…</Small> : null}
-      </View>
+        {error ? <Small>{error}</Small> : !pos ? <Small>Finding you…</Small> : null}
+        {nearestLine ? <Label>Nearest: {nearestLine}</Label> : null}
+      </Card>
 
-      <View style={s.radar}>
+      <Card style={s.radarBox}>
         <Radar size={radarSize} you={pos} store={nearest?.store ?? null} heading={heading} />
-      </View>
+      </Card>
+
+      <Card label="You are here · only you see this">
+        <Text style={s.coords}>{pos ? formatLatLon(pos) : '—'}</Text>
+      </Card>
 
       {result ? (
-        <Card tone="gold">
-          <H2>{resultHeadline(result)}</H2>
-          <Body>
-            {formatMiles(result.distanceMi)} miles from the nearest McDonald's
-            {result.zone === 'home' ? '. Home check-ins score zero and pause your streak.' : '.'}
-          </Body>
-          <Small>
-            Streak {result.streak}
-            {result.extraFriesEarned ? ` · You earned ${result.extraFriesEarned} Extra Fries!` : ''}
-          </Small>
-          <Button title="Nice" kind="quiet" onPress={() => setResult(null)} />
-        </Card>
-      ) : open ? (
-        <Card tone="teal">
-          <Text style={s.clockLabel}>You have</Text>
-          <Text style={s.clock} adjustsFontSizeToFit numberOfLines={1}>{countdown(open.closesAt)}</Text>
-          <Text style={s.clockLabel}>to check in</Text>
-          <Small center>Your exact spot is used for the score and then thrown away.</Small>
-          <Button title="Check in" busy={busy === 'ping'} onPress={() => log('ping')} />
+        <Card label={`Signed · ${new Date().toLocaleDateString(undefined, { month: '2-digit', day: '2-digit', year: '2-digit' })}`}>
+          <Title>{resultHeadline(result)}</Title>
+          <Rows>
+            <Row left="Time" right={new Date().toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' })} />
+            <Row left="Place" right={result.regionName ?? '—'} />
+            <Row left="Distance" right={`${formatMiles(result.distanceMi)} mi`} />
+            <Row left="Points" right={result.zone === 'scoring' ? `+${formatMiles(result.points)}` : '0'} />
+            <Row left="Streak" right={String(result.streak)} />
+            {result.extraFriesEarned ? <Row left="Extra Fries earned" right={`+${result.extraFriesEarned}`} /> : null}
+          </Rows>
+          {result.zone === 'home' ? <Small>Home check-ins score zero and pause your streak.</Small> : null}
+          <Button title="Done" onPress={() => setResult(null)} />
         </Card>
       ) : (
-        <Card>
-          <Text style={s.clockLabel}>{nextOpens ? 'Next check-in in' : 'Check-in opening…'}</Text>
-          {nextOpens ? <Text style={s.clockSmall} adjustsFontSizeToFit numberOfLines={1}>{countdown(nextOpens)}</Text> : null}
-          {demoMode ? <Small center>Demo mode: open a practice check-in from the Me tab.</Small> : null}
+        <Card label="Today's check-in">
+          {open ? (
+            <>
+              <Text style={s.clock} adjustsFontSizeToFit numberOfLines={1}>{countdown(open.closesAt)}</Text>
+              <Label>Left to check in</Label>
+            </>
+          ) : null}
+          <Rows>
+            <Row left="Status" right={open ? 'Open' : status?.todayLogged ? 'Done for today' : nextOpens ? 'Closed' : 'Opening…'} />
+            {!open && nextOpens ? <Row left="Next check-in in" right={countdown(nextOpens)} /> : null}
+            <Row left="Streak" right={String(status?.streak ?? 0)} />
+            <Row left="Extra Fries" right={fries > 0
+              ? `${fries} · exp. ${new Date(status!.extraFries[0].expiresAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}`
+              : '0'} />
+          </Rows>
+          {open ? (
+            <>
+              <Small>Your exact spot is used for the score and then thrown away.</Small>
+              <Button title="Check in" busy={busy === 'ping'} onPress={() => log('ping')} />
+            </>
+          ) : fries > 0 ? (
+            <>
+              <Small>Use Extra Fries when you know you're far out. It checks you in right now.</Small>
+              <Button title="Use Extra Fries" kind="secondary" busy={busy === 'fries'} onPress={useFries} />
+            </>
+          ) : null}
+          {demoMode && !open ? <Small>Demo mode: open a practice check-in from Me.</Small> : null}
         </Card>
       )}
-
-      {fries > 0 && !open ? (
-        <Card>
-          <Body>
-            You have {fries} Extra Fries. Use one when you know you're far out. The next expires{' '}
-            {new Date(status!.extraFries[0].expiresAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}.
-          </Body>
-          <Button title="Use Extra Fries" kind="secondary" busy={busy === 'fries'} onPress={useFries} />
-        </Card>
-      ) : null}
 
       <Leaderboard refreshKey={boardKey} />
     </Screen>
@@ -142,13 +155,12 @@ export default function Home() {
 }
 
 const s = StyleSheet.create({
-  topRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  hero: { alignItems: 'center', paddingVertical: space.xl },
-  big: { ...font.huge, color: colors.ink },
-  unit: { ...font.body, fontSize: 16, color: colors.muted, marginTop: -4 },
-  radar: { alignItems: 'center', paddingTop: 48, paddingBottom: space.xl },
+  header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginRight: -10 },
+  wordmark: { ...font.title, fontSize: 30, color: colors.ink },
+  big: { ...font.huge, color: colors.ink, lineHeight: 104, marginBottom: -6 },
+  // Room above and below for the radar's N label and facing tick.
+  radarBox: { alignItems: 'center', paddingTop: 52, paddingBottom: space.lg },
+  coords: { ...font.h2, color: colors.ink, fontVariant: ['tabular-nums'] },
   // Countdown in big clock digits (think the TV show 24): fixed-width so it doesn't jitter.
-  clock: { ...font.huge, fontSize: 96, color: colors.ink, textAlign: 'center', lineHeight: 100 },
-  clockSmall: { ...font.huge, fontSize: 56, letterSpacing: -1, color: colors.ink, textAlign: 'center', lineHeight: 62 },
-  clockLabel: { ...font.h2, fontSize: 18, color: colors.ink, textAlign: 'center' },
+  clock: { ...font.huge, fontSize: 88, lineHeight: 92, color: colors.ink, fontVariant: ['tabular-nums'] },
 });

@@ -1,14 +1,16 @@
-// State Extremes and Top 100 Spots: tick lists of the furthest points from any
-// McDonald's, on accessible public land. Claim one by standing within 150 ft.
-import { router, useFocusEffect } from 'expo-router';
+// Ticks as a list (Decision #28): the furthest point from any McDonald's in each
+// state, and the Top 100, on accessible public land. Tick one by standing within
+// 150 ft. Opened from Me; Me shows the state ticks as a grid.
+import { router, useFocusEffect, useLocalSearchParams } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
 import { api, type Spot } from '@/lib/api';
 import { formatMiles, haversineMi } from '@/lib/geo';
 import { useLiveLocation } from '@/lib/location';
-import { Body, Card, H2, Loading, Pill, Row, Screen, Segmented, Small, Title } from '@/ui/kit';
+import { Body, Card, H2, Loading, Pill, Row, Rows, Screen, Segmented, Small, Title } from '@/ui/kit';
 
-export default function Spots() {
-  const [tab, setTab] = useState<'state' | 'top100'>('state');
+export default function Ticks() {
+  const params = useLocalSearchParams<{ tab?: string }>();
+  const [tab, setTab] = useState<'state' | 'top100'>(params.tab === 'top100' ? 'top100' : 'state');
   const [spots, setSpots] = useState<Spot[] | null>(null);
   const { pos } = useLiveLocation(true);
 
@@ -33,9 +35,9 @@ export default function Spots() {
   }, [pos, list]);
 
   return (
-    <Screen>
-      <Title>Extremes</Title>
-      <Segmented value={tab} onChange={setTab} options={[{ value: 'state', label: 'State Extremes' }, { value: 'top100', label: 'Top 100' }]} />
+    <Screen edges={[]}>
+      <Title>Ticks</Title>
+      <Segmented value={tab} onChange={setTab} options={[{ value: 'state', label: 'States' }, { value: 'top100', label: 'Top 100' }]} />
       <Body muted>
         {tab === 'state'
           ? "The furthest point from any McDonald's in each state, on public land you can visit."
@@ -43,29 +45,31 @@ export default function Spots() {
       </Body>
       {!spots ? <Loading /> : (
         <>
-          <Card tone="gold">
-            <H2>{claimed} of {list.length} claimed</H2>
+          <Card>
+            <H2>{claimed} of {list.length} ticked</H2>
             {nearestOpen ? (
               <Row
                 onPress={() => router.push({ pathname: '/spot/[id]', params: { id: String(nearestOpen.spot.id) } })}
-                left={`Nearest unclaimed: ${label(nearestOpen.spot)}`}
+                left={`Nearest unticked: ${label(nearestOpen.spot)}`}
                 sub={`${formatMiles(nearestOpen.mi)} miles from you`}
                 right="›"
               />
             ) : null}
           </Card>
           <Card>
+            <Rows>
             {list.map((s) => (
               <Row
                 key={s.id}
                 onPress={() => router.push({ pathname: '/spot/[id]', params: { id: String(s.id) } })}
                 left={label(s)}
                 sub={`${formatMiles(s.distanceMi)} mi from fries${pos ? ` · ${formatMiles(haversineMi(pos, s))} mi from you` : ''}`}
-                right={s.claimed ? <Pill text="✓ Claimed" tone="teal" /> : '›'}
+                right={s.claimed ? <Pill text="Ticked" /> : '›'}
               />
             ))}
+            </Rows>
           </Card>
-          <Small>Spots are refreshed monthly as McDonald's open and close. Your ticks are permanent.</Small>
+          <Small>Points are refreshed monthly as McDonald's open and close. Your ticks are permanent.</Small>
         </>
       )}
     </Screen>

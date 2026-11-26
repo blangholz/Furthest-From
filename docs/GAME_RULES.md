@@ -22,11 +22,12 @@ the daily window is still a `ping` and a submitted check-in is still a `log`.
   when they return there is also a Friends board, and the global board can require
   `global_min_friends` friends again.
 - **Seasons**: Mar 1, Jun 1, Sep 1, Dec 1, Pacific time.
-- **State Extremes**: the furthest point from any McDonald's in each state on
-  accessible public land (PAD-US open access). Claim by standing within 150 ft.
+- **Ticks** (formerly State Extremes): the furthest point from any McDonald's in
+  each state and DC on accessible public land (PAD-US open access). Tick one by standing within 150 ft.
   Once per state, permanent even if the point moves.
-- **Top 100 Spots**: the 100 furthest points in the lower 48, at least 50 miles
-  apart, on accessible public land. Same 150 ft claim, once each, permanent.
+- **Top 100 ticks** (formerly Top 100 Spots): the 100 furthest points in the lower 48,
+  at least 50 miles apart, on accessible public land. Same 150 ft rule, once each, permanent.
+  Ticks live in Me (state grid, Top 100, full list).
 - **Monthly refresh**: spots that move less than 2 miles keep their identity.
 - **Privacy**: check-ins store distance, region and time only. Exact positions are
   used once on the server and discarded. Other players never see locations or home.

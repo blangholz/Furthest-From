@@ -259,6 +259,7 @@ Topic: Visual style
 Question: What should the app look like?
 Decision: Field Notes memo book meets a summit register (2026-11-25). Bold, condensed, all-uppercase sans headings and labels (the one exception: the lowercase "c" in McFarthest). Thin rules and boxed fields like a printed log form: dotted or hairline lines for entries, labeled blanks ("PERTINENT COORDINATES", "DISTANCE"). Background color #EED202 (a bold yellow, like a field-book cover) with dark ink, flat and printed, not glossy: sharp square corners everywhere (no rounded corners), sections (leaderboard, cards) are thin ink-stroked rectangles with a margin around them, never a different fill color; the page stays one flat #EED202 (reference: a thin white box framing "HOOD RIVER, OREGON / 45.7067° N, 121.5220° W" over a photo), no gradients or soft shadows. Logs read like signing a summit register: name, date, distance in a ruled row.
 References: (1) Field Notes memo books: kraft cover, bold condensed caps, ruled form fields. (2) A thin white outline box framing "HOOD RIVER, OREGON / 45.7067° N, 121.5220° W" in monospace over a photo. (3) A clean fintech screen (2026-11-26): monospace throughout, lots of white space, one bold headline, a short bold lead line, muted gray body text, label-and-value rows split by hairline dividers, one solid black primary button, one graphic as the only decoration. Take its restraint, monospace and label/value rows; keep our uppercase and sharp corners over its lowercase and pill-shaped button.
+Direction (2026-11-26): Ben compared three directions on the Claude Design canvas "McFarthest Field Notes" (https://claude.ai/artifact/PBTz9CKozTxYmiiYRwKmn8) and chose **A · Field Notes**: condensed caps, solid hairlines, every section a 1pt ink box with a small caps label, label/value rows split by thin rules, one solid ink button per screen, the coordinates box from reference (2). Rows B (all monospace) and C (mixed) were not chosen. Stamped ticks (#39) are the one other filled shape. On satellite maps, pins and circles use the #EED202 yellow, since ink disappears there.
 Rationale: Fits the outdoorsy, go-explore spirit of the game and gives it a distinct, printed look.
 Status: `decided`
 Phase decided: Build
@@ -356,6 +357,32 @@ Decision: (2026-11-26) Two more alerts once the friend graph exists:
 Both multipliers live in `fff.game_settings` so they can be tuned from real data without a migration. Both alerts go through the existing push outbox (`push-dispatch`) and each gets its own toggle in notification settings.
 Rationale: Rank changes and personal outliers are the moments that make friends react. Comparing a player against their own history means a homebody's big day counts as much as a road-tripper's.
 Status: `decided` (builds with friends, after launch)
+Phase decided: Build
+
+**Decision #39**
+Topic: Ticks
+Question: What do players call State Extremes and Top 100 Spots, and where do they live?
+Decision: (2026-11-26) **Ticks**, as in a climber's tick list. A state's furthest point is a tick; the Top 100 are "Top 100" ticks. "Claim" becomes "tick it". Ticks live inside Me (#40): a grid of the 50 states plus DC (7 across, ticked squares stamped solid ink, tap one to open it), the nearest unticked state, a Top 100 count, and a full list screen. Code and database keep `extreme`, `spots` and `kind: 'state' | 'top100'`.
+Rationale: Shorter, and matches the outdoors and summit-register feel. Ben's call on the design canvas.
+Status: `decided`
+Phase decided: Build
+Note: renames #16 and #32 for players; their rules don't change. #16's "national point" never shipped; the data has 51 state points.
+
+**Decision #40**
+Topic: Navigation
+Question: Keep the bottom tab bar (Distance, Extremes, Me)?
+Decision: (2026-11-26) No. The app is one screen, Home, with a person icon top right that opens Me. Ticks (#39), Extra Fries, Passport, home check-ins, home pin and account all live in Me. The Friends feed, when friends return (#26), is a row in Me. Home, top to bottom: wordmark and person icon; miles from the nearest McDonald's with that store's town and coordinates (#41); the radar; "You are here · only you see this" with your own coordinates; today's check-in as label/value rows with the Check in button; the result as a register entry (Signed, date, time, place, distance, points, streak); the season leaderboard.
+Rationale: Players do one thing daily, so it belongs on one screen. Ben's call on the design canvas.
+Status: `decided`
+Phase decided: Build
+Note: supersedes the tab labels mentioned in #36. The leaderboard stays season-only for now (the canvas's All-time toggle wasn't built).
+
+**Decision #41**
+Topic: Naming the nearest McDonald's
+Question: Home shows the nearest store's town ("Nearest: Hines, OR"). Where does the name come from?
+Decision: (2026-11-26) From the bundled store list: `pipeline/fff_data.py app-data` now writes a `places` array ("Town, ST") next to `points` in `mobile/assets/data/stores.json` (about 590 KB). The player's own spot shows coordinates only, with no place name, because naming it would mean sending the location to Apple's geocoder.
+Rationale: Keeps the promise that watching your distance never sends your location anywhere (#13).
+Status: `decided`
 Phase decided: Build
 
 ---

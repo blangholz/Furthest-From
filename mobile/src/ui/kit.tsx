@@ -1,8 +1,13 @@
-import { Fragment, type ReactNode, type RefObject } from 'react';
+import { Children, Fragment, isValidElement, type ReactNode, type RefObject } from 'react';
 import type { ScrollViewInstance } from 'react-native';
 import { ActivityIndicator, KeyboardAvoidingView, Pressable, ScrollView, StyleSheet, Text, View, type ViewStyle, type RefreshControlProps } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { colors, font, fonts, radius, space } from './theme';
+import { SymbolView } from 'expo-symbols';
+import { colors, font, fonts, radius, space, stroke } from './theme';
+
+// Field Notes kit (Spec Decision #27, canvas direction A): one flat page color,
+// 1pt ink outlines around sections, label/value rows split by thin rules, one
+// solid ink button per screen. No fills, no rounded corners.
 
 // The keyboard-avoiding wrapper shrinks the screen to the space above the
 // keyboard, so anything scrolled into view is never hidden behind it.
@@ -45,32 +50,59 @@ export const Body = ({ children, muted, center }: { children: ReactNode; muted?:
 export const Small = ({ children, center }: { children: ReactNode; center?: boolean }) => (
   <Text style={[s.small, center && { textAlign: 'center' }]}>{brand(children)}</Text>
 );
+/** Small spaced caps that name a box or a field ("MILES FROM THE NEAREST McDONALD'S"). */
+export const Label = ({ children }: { children: ReactNode }) => <Text style={s.label}>{brand(children)}</Text>;
 
-// Sections are thin-stroked boxes on the page color, never a fill (Spec
-// Decision #27). `tone` is kept for callers but no longer changes the look.
-export function Card({ children, style }: { children: ReactNode; style?: ViewStyle; tone?: 'gold' | 'teal' }) {
-  return <View style={[s.card, style]}>{children}</View>;
+/** A section: a thin-stroked box, optionally named by a small label at the top. */
+export function Card({ children, label, style }: { children: ReactNode; label?: string; style?: ViewStyle }) {
+  return (
+    <View style={[s.card, style]}>
+      {label ? <Label>{label}</Label> : null}
+      {children}
+    </View>
+  );
+}
+
+/** Stacks Rows with a thin rule between each (none above the first or below the last). */
+export function Rows({ children }: { children: ReactNode }) {
+  const items = Children.toArray(children).filter(isValidElement);
+  return (
+    <View>
+      {items.map((child, i) => (
+        <View key={child.key ?? i} style={i > 0 && s.rule}>{child}</View>
+      ))}
+    </View>
+  );
 }
 
 export function Button({ title, onPress, kind = 'primary', busy, disabled }: {
   title: string; onPress: () => void; kind?: 'primary' | 'secondary' | 'quiet' | 'danger'; busy?: boolean; disabled?: boolean;
 }) {
-  const bg = { primary: colors.teal, secondary: colors.gold, quiet: 'transparent', danger: 'transparent' }[kind];
-  const fg = { primary: '#fff', secondary: colors.ink, quiet: colors.teal, danger: colors.bad }[kind];
+  const solid = kind === 'primary';
+  const fg = solid ? colors.bg : kind === 'danger' ? colors.bad : colors.ink;
   return (
     <Pressable
       accessibilityRole="button"
       onPress={onPress}
       disabled={disabled || busy}
-      style={({ pressed }) => [s.button, { backgroundColor: bg, opacity: disabled ? 0.4 : pressed ? 0.8 : 1 },
-        (kind === 'quiet' || kind === 'danger') && s.quiet]}>
-      {busy ? <ActivityIndicator color={fg} /> : <Text style={[s.buttonText, { color: fg }]}>{brand(title)}</Text>}
+      style={({ pressed }) => [
+        s.button,
+        solid && { backgroundColor: colors.ink },
+        kind === 'secondary' && s.outline,
+        (kind === 'quiet' || kind === 'danger') && s.quiet,
+        { opacity: disabled ? 0.4 : pressed ? 0.75 : 1 },
+      ]}>
+      {busy ? <ActivityIndicator color={fg} /> : (
+        <Text style={[solid || kind === 'secondary' ? s.buttonText : s.quietText, { color: fg }]}>{brand(title)}</Text>
+      )}
     </Pressable>
   );
 }
 
-// highlight: a full-bleed band of the brand yellow across the card (e.g. your own leaderboard row).
-export function Row({ left, right, sub, onPress, highlight }: { left: ReactNode; right?: ReactNode; sub?: ReactNode; onPress?: () => void; highlight?: boolean }) {
+/** Label on the left, value on the right. `highlight` draws a 2pt box around it (your own leaderboard row). */
+export function Row({ left, right, sub, onPress, highlight }: {
+  left: ReactNode; right?: ReactNode; sub?: ReactNode; onPress?: () => void; highlight?: boolean;
+}) {
   const inner = (
     <View style={[s.row, highlight && s.rowHighlight]}>
       <View style={{ flex: 1 }}>
@@ -80,7 +112,7 @@ export function Row({ left, right, sub, onPress, highlight }: { left: ReactNode;
       {right != null ? (typeof right === 'string' || typeof right === 'number' ? <Text style={s.rowRight}>{brand(right)}</Text> : right) : null}
     </View>
   );
-  return onPress ? <Pressable onPress={onPress}>{inner}</Pressable> : inner;
+  return onPress ? <Pressable accessibilityRole="button" onPress={onPress}>{inner}</Pressable> : inner;
 }
 
 export function Segmented<T extends string>({ value, options, onChange }: {
@@ -89,17 +121,36 @@ export function Segmented<T extends string>({ value, options, onChange }: {
   return (
     <View style={s.seg}>
       {options.map((o) => (
-        <Pressable key={o.value} onPress={() => onChange(o.value)} style={[s.segItem, value === o.value && s.segOn]}>
-          <Text style={[s.small, { color: value === o.value ? colors.bg : colors.ink, fontWeight: '600' }]}>{brand(o.label)}</Text>
+        <Pressable key={o.value} accessibilityRole="tab" accessibilityState={{ selected: value === o.value }}
+          onPress={() => onChange(o.value)} style={[s.segItem, value === o.value && s.segOn]}>
+          <Text style={[s.segText, { color: value === o.value ? colors.bg : colors.ink }]}>{brand(o.label)}</Text>
         </Pressable>
       ))}
     </View>
   );
 }
 
-export const Pill = ({ text }: { text: string; tone?: 'gold' | 'teal' | 'muted' }) => (
+export const Pill = ({ text }: { text: string }) => (
   <View style={s.pill}>
-    <Text style={[s.small, { color: colors.ink, fontWeight: '600' }]}>{brand(text)}</Text>
+    <Text style={[s.small, { color: colors.ink }]}>{brand(text)}</Text>
+  </View>
+);
+
+/** 44pt tap target holding a thin SF Symbol (Material symbol on Android). */
+export function IconButton({ icon, android, label, onPress }: { icon: string; android: string; label: string; onPress: () => void }) {
+  return (
+    <Pressable accessibilityRole="button" accessibilityLabel={label} onPress={onPress} hitSlop={4}
+      style={({ pressed }) => [s.iconButton, { opacity: pressed ? 0.6 : 1 }]}>
+      <SymbolView name={{ ios: icon, android } as never} size={24} weight="light" tintColor={colors.ink} fallback={<PersonGlyph />} />
+    </Pressable>
+  );
+}
+
+// Drawn stand-in where symbols aren't available (web previews).
+const PersonGlyph = () => (
+  <View style={{ alignItems: 'center' }}>
+    <View style={{ width: 10, height: 10, borderRadius: 5, borderWidth: 1.5, borderColor: colors.ink }} />
+    <View style={{ width: 18, height: 8, marginTop: 2, borderTopLeftRadius: 9, borderTopRightRadius: 9, borderWidth: 1.5, borderBottomWidth: 0, borderColor: colors.ink }} />
   </View>
 );
 
@@ -107,26 +158,32 @@ export const Gap = ({ size = space.md }: { size?: number }) => <View style={{ he
 
 export const Loading = () => (
   <View style={{ padding: space.xxl, alignItems: 'center' }}>
-    <ActivityIndicator color={colors.teal} />
+    <ActivityIndicator color={colors.ink} />
   </View>
 );
 
 const s = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.bg },
-  content: { padding: space.lg, paddingBottom: 120, gap: space.md },
+  content: { padding: space.lg, paddingBottom: 120, gap: space.lg },
   title: { ...font.title, color: colors.ink },
   h2: { ...font.h2, color: colors.ink },
   body: { ...font.body, color: colors.ink },
   small: { ...font.small, color: colors.muted },
-  card: { borderRadius: radius.md, padding: space.lg, borderWidth: 1, borderColor: colors.ink, gap: space.sm },
-  button: { borderRadius: radius.md, paddingVertical: 15, paddingHorizontal: space.lg, alignItems: 'center' },
-  quiet: { paddingVertical: 10 },
-  buttonText: { ...fonts.condensed, fontSize: 21, letterSpacing: 1 },
-  row: { flexDirection: 'row', alignItems: 'center', paddingVertical: space.sm, gap: space.md },
-  rowHighlight: { backgroundColor: colors.bg, marginHorizontal: -space.lg, paddingHorizontal: space.lg },
-  rowRight: { ...font.body, fontWeight: '700', color: colors.ink, fontVariant: ['tabular-nums'] },
-  seg: { flexDirection: 'row', borderWidth: 1, borderColor: colors.ink, borderRadius: radius.sm, padding: 3 },
-  segItem: { flex: 1, paddingVertical: 8, alignItems: 'center', borderRadius: radius.sm - 2 },
+  label: { ...font.label, color: colors.ink },
+  card: { borderRadius: radius.md, paddingHorizontal: space.lg, paddingVertical: space.md, borderWidth: stroke, borderColor: colors.ink, gap: space.sm },
+  rule: { borderTopWidth: stroke, borderTopColor: colors.ink },
+  button: { borderRadius: radius.md, paddingVertical: 17, paddingHorizontal: space.lg, alignItems: 'center', minHeight: 56, justifyContent: 'center' },
+  outline: { borderWidth: stroke, borderColor: colors.ink, paddingVertical: 16 },
+  quiet: { paddingVertical: 12, minHeight: 44 },
+  buttonText: { ...fonts.condensed, fontSize: 22, letterSpacing: 2 },
+  quietText: { ...fonts.condensed, fontSize: 18, letterSpacing: 1.5, textDecorationLine: 'underline' },
+  row: { flexDirection: 'row', alignItems: 'center', paddingVertical: 10, gap: space.md, minHeight: 44 },
+  rowHighlight: { borderWidth: 2, borderColor: colors.ink, marginHorizontal: -space.sm, paddingHorizontal: space.sm - 2 },
+  rowRight: { ...font.value, color: colors.ink, marginTop: 5 },
+  seg: { flexDirection: 'row', borderWidth: stroke, borderColor: colors.ink, borderRadius: radius.sm },
+  segItem: { flex: 1, paddingVertical: 12, alignItems: 'center', minHeight: 44, justifyContent: 'center' },
   segOn: { backgroundColor: colors.ink },
-  pill: { alignSelf: 'flex-start', paddingHorizontal: 10, paddingVertical: 4, borderRadius: 0, borderWidth: 1, borderColor: colors.ink },
+  segText: { ...fonts.condensed, fontSize: 16, letterSpacing: 1.5 },
+  pill: { alignSelf: 'flex-start', paddingHorizontal: 8, paddingVertical: 3, borderRadius: 0, borderWidth: stroke, borderColor: colors.ink },
+  iconButton: { width: 44, height: 44, alignItems: 'center', justifyContent: 'center' },
 });

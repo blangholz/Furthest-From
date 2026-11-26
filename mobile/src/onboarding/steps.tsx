@@ -69,7 +69,6 @@ function usePrimer(kind: PrimerKind, request: () => Promise<boolean>, after: (gr
 function Welcome({ next }: StepProps) {
   return (
     <StepScreen primary={{ title: "Let's go", onPress: next }}>
-      <Text style={{ fontSize: 64 }}>🍟</Text>
       <Title>How far from fries are you?</Title>
       <Body>Every day at 1:20 PM it's check-in time. Open the app within an hour and you score a point for every mile, as the crow flies, between you and the nearest McDonald's.</Body>
       <Body>Near home doesn't count. Getting out does.</Body>
@@ -154,7 +153,7 @@ function LocationStep({ next }: StepProps) {
       <Body>It's only read while the app is open: to show your live distance, check in, or claim a spot. No background tracking.</Body>
       <Body>Your exact spot is used to work out the distance and then thrown away. It's never saved or shown to anyone.</Body>
       {state === 'blocked' ? (
-        <Card tone="gold">
+        <Card>
           <Body>Location is off for McFarthest. In Settings, tap Location and choose "While Using the App", then come back.</Body>
         </Card>
       ) : null}
@@ -239,7 +238,7 @@ function HomePin({ next }: StepProps) {
         <TextInput style={[s.input, { flex: 1 }]} placeholder="Search your home address" value={query} onChangeText={setQuery}
           autoComplete="street-address" textContentType="fullStreetAddress" returnKeyType="search" onSubmitEditing={search} />
         <Pressable style={s.searchBtn} onPress={search} disabled={!query.trim() || searching} accessibilityRole="button" accessibilityLabel="Search">
-          {searching ? <ActivityIndicator color="#fff" /> : <Text style={s.searchBtnText}>Find</Text>}
+          {searching ? <ActivityIndicator color={colors.bg} /> : <Text style={s.searchBtnText}>Find</Text>}
         </Pressable>
       </View>
       <View style={s.map}>
@@ -249,7 +248,7 @@ function HomePin({ next }: StepProps) {
             <Marker coordinate={{ latitude: pin.lat, longitude: pin.lon }} draggable
               onDragEnd={(e) => moveTo({ lat: e.nativeEvent.coordinate.latitude, lon: e.nativeEvent.coordinate.longitude })} />
             <Circle center={{ latitude: pin.lat, longitude: pin.lon }} radius={RULES.homeRadiusMi * 1609.344}
-              strokeColor={colors.teal} fillColor="rgba(15,82,87,0.12)" />
+              strokeColor={colors.bg} fillColor="rgba(238,210,2,0.2)" />
           </MapView>
         ) : null}
       </View>
@@ -335,8 +334,8 @@ const s = StyleSheet.create({
   skip: { ...font.small, color: colors.muted },
   input: { borderWidth: 1, borderColor: colors.ink, borderRadius: radius.sm, padding: space.md, fontSize: 17, ...fonts.input },
   searchRow: { flexDirection: 'row', gap: space.sm },
-  searchBtn: { backgroundColor: colors.teal, paddingHorizontal: space.lg, justifyContent: 'center', minWidth: 64, alignItems: 'center' },
-  searchBtnText: { ...fonts.condensed, color: '#fff', fontSize: 21, letterSpacing: 1 },
-  map: { height: 300, borderRadius: radius.md, overflow: 'hidden', backgroundColor: colors.line },
-  link: { ...font.body, color: colors.teal, paddingVertical: space.xs },
+  searchBtn: { backgroundColor: colors.ink, paddingHorizontal: space.lg, justifyContent: 'center', minWidth: 64, alignItems: 'center' },
+  searchBtnText: { ...fonts.condensed, color: colors.bg, fontSize: 21, letterSpacing: 1 },
+  map: { height: 300, borderRadius: radius.md, overflow: 'hidden', borderWidth: 1, borderColor: colors.ink },
+  link: { ...font.body, color: colors.ink, textDecorationLine: 'underline', paddingVertical: space.xs },
 });

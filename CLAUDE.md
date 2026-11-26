@@ -28,3 +28,6 @@ Visual style (Decision #27 in `Spec/`): Field Notes meets a summit register. Bol
 (except the lowercase "c" in McFarthest), thin ruled lines, boxed form fields, #EED202
 background with dark ink, flat print look. Sharp corners, never rounded.
 Sections are thin-stroked outline boxes with a margin, never a background fill. No gradients or soft shadows.
+Reference: direction A on the design canvas https://claude.ai/artifact/PBTz9CKozTxYmiiYRwKmn8.
+Shared pieces live in `mobile/src/ui/kit.tsx` (Card with label, Rows, Button, IconButton) and
+`mobile/src/ui/TickGrid.tsx`. One screen (Home) plus Me behind a person icon (#40).

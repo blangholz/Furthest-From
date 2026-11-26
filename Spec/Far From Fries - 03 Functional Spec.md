@@ -247,7 +247,7 @@ Cross-platform codebase; Android must ship with minimal extra work.
 ### 10.6 Branding
 Avoid McDonald's trademarks ("Mc" names, Happy Meal) in the app's branding; include a "not affiliated" note.
 
-Visual style: Field Notes meets a summit register (Decision #27). Bold uppercase sans type (except the lowercase "c" in McFarthest), thin ruled lines and boxed form fields, sharp square corners (no rounding), sections as thin-stroked outline boxes with a margin, no background fills, #EED202 background with dark ink, flat print look.
+Visual style: Field Notes meets a summit register (Decision #27). Bold uppercase sans type (except the lowercase "c" in McFarthest), thin ruled lines and boxed form fields, sharp square corners (no rounding), sections as thin-stroked outline boxes with a margin, no background fills, #EED202 background with dark ink, flat print look. Reference design: direction A on the canvas https://claude.ai/artifact/PBTz9CKozTxYmiiYRwKmn8. Navigation is a single Home screen with Me behind a person icon (Decision #40); State Extremes and Top 100 are called Ticks (Decision #39).
 
 ### 10.7 Integrations
 

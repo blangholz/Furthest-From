@@ -33,7 +33,7 @@ export default function OnboardingStep() {
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.bg }} edges={['top', 'bottom']}>
       <View style={{ flexDirection: 'row', gap: 6, paddingHorizontal: space.lg, paddingTop: space.lg, paddingBottom: space.sm }}>
         {ONBOARDING_STEPS.map((x, j) => (
-          <View key={x.key} style={{ flex: 1, height: 4, backgroundColor: j <= i ? colors.teal : colors.line }} />
+          <View key={x.key} style={{ flex: 1, height: j <= i ? 4 : 1, alignSelf: 'center', backgroundColor: colors.ink }} />
         ))}
       </View>
       <Component next={next} />

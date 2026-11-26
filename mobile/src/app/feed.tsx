@@ -36,7 +36,7 @@ export default function Feed() {
             <Row
               left={feedLine(item)}
               sub={timeAgo(item.loggedAt)}
-              right={item.zone === 'scoring' ? <Pill text={`+${formatMiles(item.points)}`} /> : item.zone === 'passport' ? <Pill text="Passport" tone="teal" /> : <Small>home</Small>}
+              right={item.zone === 'scoring' ? <Pill text={`+${formatMiles(item.points)}`} /> : item.zone === 'passport' ? <Pill text="Passport" /> : <Small>home</Small>}
             />
           </View>
         )}

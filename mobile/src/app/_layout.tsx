@@ -71,6 +71,7 @@ function Root() {
       <StatusBar style="dark" />
       <Stack screenOptions={{
         headerShown: false, contentStyle: { backgroundColor: colors.bg },
+        headerStyle: { backgroundColor: colors.bg }, headerTintColor: colors.ink, headerShadowVisible: false,
         headerTitleStyle: { fontFamily: fonts.condensed.fontFamily, fontWeight: '700', fontSize: 20 },
         headerBackTitleStyle: { fontFamily: fonts.condensed.fontFamily, fontSize: 17 },
       }}>
@@ -81,8 +82,11 @@ function Root() {
           <Stack.Screen name="onboarding/[step]" />
         </Stack.Protected>
         <Stack.Protected guard={signedIn && onboarded}>
-          <Stack.Screen name="(tabs)" />
-          <Stack.Screen name="spot/[id]" options={{ headerShown: true, title: '', headerBackTitle: 'SPOTS' }} />
+          <Stack.Screen name="home" />
+          <Stack.Screen name="me" options={{ headerShown: true, title: '', headerBackTitle: 'HOME' }} />
+          <Stack.Screen name="ticks" options={{ headerShown: true, title: '', headerBackTitle: 'ME' }} />
+          <Stack.Screen name="feed" options={{ headerShown: true, title: '', headerBackTitle: 'ME' }} />
+          <Stack.Screen name="spot/[id]" options={{ headerShown: true, title: '', headerBackTitle: 'TICKS' }} />
           <Stack.Screen name="friends" options={{ headerShown: true, title: 'FRIENDS', headerBackTitle: 'BACK' }} />
           <Stack.Screen name="logs/[zone]" options={{ headerShown: true, title: '', headerBackTitle: 'BACK' }} />
         </Stack.Protected>

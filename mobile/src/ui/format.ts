@@ -10,6 +10,12 @@ export function timeAgo(iso: string, now = Date.now()): string {
   return new Date(iso).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
 }
 
+/** "43.5884° N, 118.9512° W": four decimals is about 30 ft, like a GPS readout. */
+export function formatLatLon(p: { lat: number; lon: number }): string {
+  const deg = (v: number, pos: string, neg: string) => `${Math.abs(v).toFixed(4)}° ${v >= 0 ? pos : neg}`;
+  return `${deg(p.lat, 'N', 'S')}, ${deg(p.lon, 'E', 'W')}`;
+}
+
 /** Clock-style countdown: MM:SS under an hour, HH:MM:SS from an hour up. */
 export function countdown(to: string | Date, now = Date.now()): string {
   const s = Math.max(0, Math.floor((new Date(to).getTime() - now) / 1000));

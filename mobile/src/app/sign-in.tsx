@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Alert, Keyboard, Platform, StyleSheet, Text, TextInput, type ScrollViewInstance } from 'react-native';
 import { useAuth } from '@/lib/auth';
 import { demoMode } from '@/lib/config';
-import { Body, brand, Button, Card, Gap, Screen, Small } from '@/ui/kit';
+import { Body, brand, Button, Card, Gap, H2, Screen, Small } from '@/ui/kit';
 import { colors, font, fonts, radius, space } from '@/ui/theme';
 
 export default function SignIn() {
@@ -43,15 +43,15 @@ export default function SignIn() {
   return (
     <Screen scrollRef={scrollRef}>
       <Gap size={space.xxl} />
-      <Text style={s.logo}>🍟</Text>
-      <Text style={s.name}>{brand('McFarthest')}</Text>
-      <Body center muted>
-        Once a day, at 1:20 PM, see how far you are from the nearest McDonald's. Get out there and climb the leaderboard.
+      <Text style={s.name} adjustsFontSizeToFit numberOfLines={1}>{brand('McFarthest')}</Text>
+      <H2>How far can you get from the nearest McDonald's?</H2>
+      <Body muted>
+        Once a day, at 1:20 PM, see how far you are from the nearest McDonald's. One mile is one point. Get out there and climb the leaderboard.
       </Body>
-      <Gap size={space.xl} />
+      <Gap size={space.lg} />
 
       {demoMode ? (
-        <Card tone="gold">
+        <Card>
           <Body>Demo mode: the app isn't connected to a server yet, so everything runs on this phone with sample players.</Body>
           <Button title="Try the demo" busy={busy === 'demo'} onPress={run('demo', auth.signInDemo)} />
         </Card>
@@ -68,10 +68,9 @@ export default function SignIn() {
           ) : null}
           <Button title="Continue with Google" kind="secondary" busy={busy === 'google'} onPress={run('google', auth.signInWithGoogle)} />
           <Gap />
-          <Card>
+          <Card label={sent ? 'Check your email' : 'Or sign in by email'}>
             {!sent ? (
               <>
-                <Body>Or get a sign-in link by email</Body>
                 <TextInput
                   style={s.input}
                   placeholder="you@example.com"
@@ -114,13 +113,12 @@ export default function SignIn() {
         </>
       )}
       <Gap size={space.xl} />
-      <Small center>Not affiliated with or endorsed by McDonald's. Store locations are used only to measure distance.</Small>
+      <Small>Not affiliated with or endorsed by McDonald's. Store locations are used only to measure distance.</Small>
     </Screen>
   );
 }
 
 const s = StyleSheet.create({
-  logo: { fontSize: 72, textAlign: 'center' },
-  name: { ...font.title, fontSize: 34, textAlign: 'center', color: colors.ink },
+  name: { ...font.title, fontSize: 64, lineHeight: 64, color: colors.ink },
   input: { borderWidth: 1, borderColor: colors.ink, borderRadius: radius.sm, padding: space.md, fontSize: 17, ...fonts.input },
 });

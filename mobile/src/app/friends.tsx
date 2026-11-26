@@ -46,7 +46,7 @@ export default function Friends() {
       </Card>
 
       {incoming.length ? (
-        <Card tone="gold">
+        <Card>
           <H2>Requests</H2>
           {incoming.map((f) => (
             <View key={f.userId} style={{ gap: space.xs }}>
@@ -64,7 +64,7 @@ export default function Friends() {
         <H2>Friends</H2>
         {friends.length === 0 ? <Body muted>No friends yet. Invite a few: it's more fun with rivals.</Body> : null}
         {friends.map((f) => (
-          <Row key={f.userId} left={f.displayName} sub={`🔥 ${f.streak ?? 0} · ${formatMiles(f.seasonPoints ?? 0)} pts this season`}
+          <Row key={f.userId} left={f.displayName} sub={`Streak ${f.streak ?? 0} · ${formatMiles(f.seasonPoints ?? 0)} pts this season`}
             onPress={() => Alert.alert(f.displayName, undefined, [
               { text: 'Cancel', style: 'cancel' },
               { text: 'Remove friend', style: 'destructive', onPress: () => api.removeFriend(f.userId).then(load) },

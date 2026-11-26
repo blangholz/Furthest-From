@@ -1,5 +1,5 @@
 // Radar readout for Home: you at the center with a pulsing blip, a sweep arm, and
-// a dashed line out to the nearest McDonald's along its real compass bearing.
+// a dashed line out to the nearest McDonald's (an ink square) along its real compass bearing.
 // The store always sits at the same radius; the big number above is the scale.
 // With a compass heading the whole dial turns so N points at real north; labels
 // counter-rotate to stay upright, and a fixed tick at the top marks where you face.
@@ -14,8 +14,7 @@ const PULSE_MS = 3000;
 const ECHO = 84; // diameter of the ring that radiates from the store on each pass
 // Built-in condensed faces, no font download.
 const CONDENSED = Platform.select({ ios: 'DIN Condensed', android: 'sans-serif-condensed', default: undefined });
-const FRIES = 30; // emoji box, centered on the store point
-const TAG_W = 120;
+const STORE = 12; // store marker, centered on the store point
 const STORE_AT = 0.72; // fraction of the radius where the store blip sits
 const DASH = 6;
 const GAP = 5;
@@ -102,7 +101,7 @@ export function Radar({ size, you, store, heading = null }: {
   }, [bearing, sweep]);
 
   const lineLen = r * STORE_AT;
-  const dashes = Math.max(1, Math.floor((lineLen - 24) / (DASH + GAP))); // stop short of the 🍟
+  const dashes = Math.max(1, Math.floor((lineLen - 16) / (DASH + GAP))); // stop short of the store marker
   const sx = bearing == null ? 0 : r + Math.sin(toRad(bearing)) * lineLen;
   const sy = bearing == null ? 0 : r - Math.cos(toRad(bearing)) * lineLen;
 
@@ -139,11 +138,8 @@ export function Radar({ size, you, store, heading = null }: {
         <>
           <Animated.View style={[s.echo, { left: sx - ECHO / 2, top: sy - ECHO / 2, opacity: echo.ringOpacity,
             transform: [{ scale: echo.ringScale }] }]} />
-          {/* Fries + coordinates turn together around the fries, so the coords always read upright beneath it. */}
-          <Animated.View style={[s.tag, { left: sx - TAG_W / 2, top: sy - FRIES / 2, transform: [{ rotate: upright }] }]}>
-            <Animated.Text style={[s.fries, { opacity: echo.glow }]}>🍟</Animated.Text>
-            <Animated.Text style={s.coord}>{store ? formatCoord(store, '\n') : ''}</Animated.Text>
-          </Animated.View>
+          {/* The store: a solid ink square, like a survey marker. It brightens as the sweep passes. */}
+          <Animated.View style={[s.store, { left: sx - STORE / 2, top: sy - STORE / 2, opacity: echo.glow }]} />
         </>
       ) : null}
       </Animated.View>
@@ -163,11 +159,8 @@ const s = StyleSheet.create({
   arm: { position: 'absolute', height: 2, backgroundColor: colors.ink, transformOrigin: 'left center' },
   line: { position: 'absolute', height: 2, transformOrigin: 'left center' },
   dash: { position: 'absolute', top: 0, width: DASH, height: 2, backgroundColor: colors.ink },
-  tag: { position: 'absolute', width: TAG_W, alignItems: 'center', transformOrigin: `50% ${FRIES / 2}px` },
-  fries: { fontSize: FRIES - 6, lineHeight: FRIES, height: FRIES, textAlign: 'center' },
-  coord: { fontFamily: CONDENSED, fontSize: 9, lineHeight: 10, letterSpacing: -0.2, textAlign: 'center', color: colors.ink,
-    fontVariant: ['tabular-nums'] },
-  echo: { position: 'absolute', width: ECHO, height: ECHO, borderRadius: ECHO / 2, borderWidth: 2, borderColor: colors.bad },
+  store: { position: 'absolute', width: STORE, height: STORE, backgroundColor: colors.ink },
+  echo: { position: 'absolute', width: ECHO, height: ECHO, borderRadius: ECHO / 2, borderWidth: 1, borderColor: colors.ink },
   facing: { position: 'absolute', width: 2, height: 10, backgroundColor: colors.ink },
   pulse: { position: 'absolute', width: 60, height: 60, borderRadius: 30, borderWidth: 2, borderColor: colors.ink },
   you: { position: 'absolute', width: 12, height: 12, borderRadius: 6, backgroundColor: colors.ink },
