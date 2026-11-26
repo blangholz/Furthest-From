@@ -2,14 +2,15 @@
 // Extra Fries, logs, home pin and account. Opened from the person icon on Home.
 import { router, useFocusEffect } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
-import { Alert, Share, StyleSheet, Text, View } from 'react-native';
+import { Alert, StyleSheet, Text, View } from 'react-native';
 import { api, demoApi, errorText, type Spot } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
-import { config, demoMode, features } from '@/lib/config';
+import { demoMode, features } from '@/lib/config';
 import { formatMiles, haversineMi } from '@/lib/geo';
 import { useLiveLocation } from '@/lib/location';
 import { scheduleLocalPing } from '@/lib/notifications';
 import { requestReport, useShakeToReport } from '@/lib/bug-report';
+import { shareInvite } from '@/lib/invites';
 import { pendingCount } from '@/lib/offline-queue';
 import { RULES } from '@/lib/rules';
 import { refreshStatus, useStatus } from '@/lib/status';
@@ -43,20 +44,6 @@ export default function Me() {
   }, [pos, states]);
 
   if (!status) return <Screen edges={[]}><Loading /></Screen>;
-
-  const invite = async () => {
-    try {
-      if (!features.friends) {
-        // No friendships yet, so just share the app.
-        await Share.share({ message: `How far from fries can you get? Play McFarthest: ${config.webUrl}` });
-        return;
-      }
-      const code = await api.createInvite();
-      await Share.share({ message: `Play McFarthest with me: ${config.webUrl}/i/${code}` });
-    } catch (e) {
-      Alert.alert('Hmm', errorText(e));
-    }
-  };
 
   const del = () =>
     Alert.alert('Delete your account?', `This removes your profile, scores, ticks${features.friends ? ' and friends' : ''} for good.`, [
@@ -124,7 +111,7 @@ export default function Me() {
           <Row left="Passport" sub="Check-ins outside the lower 48" right="›" onPress={() => router.push({ pathname: '/logs/[zone]', params: { zone: 'passport' } })} />
           <Row left="Home check-ins" sub="Check-ins from your home zone" right="›" onPress={() => router.push({ pathname: '/logs/[zone]', params: { zone: 'home' } })} />
         </Rows>
-        <Button title={features.friends ? 'Invite a friend' : 'Tell a friend'} kind="secondary" onPress={invite} />
+        <Button title={features.friends ? 'Invite a friend' : 'Tell a friend'} kind="secondary" onPress={shareInvite} />
       </Card>
 
       <Card label="Home pin">

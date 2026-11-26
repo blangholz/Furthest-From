@@ -9,10 +9,11 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { router } from 'expo-router';
 import { Alert, RefreshControl, StyleSheet, Text, View } from 'react-native';
 import { errorText, type LogResult } from '@/lib/api';
-import { demoMode } from '@/lib/config';
+import { demoMode, features } from '@/lib/config';
 import { bearingDeg, escapeBearing, formatMiles, haversineMi } from '@/lib/geo';
 import { nextCheckInOpensAt } from '@/lib/rules';
 import { currentFix, useHeading, useLiveLocation } from '@/lib/location';
+import { shareInvite } from '@/lib/invites';
 import { submitOrQueue } from '@/lib/offline-queue';
 import { useStatus, refreshStatus } from '@/lib/status';
 import { storeIndex } from '@/lib/stores';
@@ -152,6 +153,7 @@ export default function Home() {
       ) : null}
 
       <Leaderboard refreshKey={boardKey} />
+      <Button title={features.friends ? 'Invite your friends' : 'Tell your friends'} kind="secondary" onPress={shareInvite} />
     </Screen>
     {SHOW_EDGE_COMPASS ? <EdgeCompass stores={edgeStores} escape={escape} heading={heading} /> : null}
     </View>
