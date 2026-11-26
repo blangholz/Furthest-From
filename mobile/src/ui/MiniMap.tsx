@@ -1,4 +1,4 @@
-// Vicinity: an abstract map below the leaderboard, the root test page's dot map redrawn in
+// An abstract map right under the "You are currently" box, filling its own box edge to edge; the root test page's dot map redrawn in
 // the Field Notes style. No tiles or roads: thin ruled grid lines, an ink dot per McDonald's,
 // a crosshair for you and a dashed line to the nearest. It opens zoomed so the nearest store
 // (or, in town, the six nearest) sits well inside; pinch or tap + / − to zoom, FIT to reset.
@@ -13,8 +13,8 @@ import { haversineMi, type LatLon, type Store } from '@/lib/geo';
 import { binPoints, clampSpan, clipSegment, dashes, fitSpanMi, gridLines, nearProjection, type Pt } from '@/lib/minimap';
 import { storeIndex } from '@/lib/stores';
 import { useSmoothAngle } from './EdgeCompass';
-import { Card, Small } from './kit';
-import { colors, fonts } from './theme';
+import { Small } from './kit';
+import { colors, fonts, space, stroke } from './theme';
 
 const DOT = 6;
 const BIN_DOT = 4; // smaller dots once a zoomed-out view gets thinned
@@ -29,12 +29,13 @@ export function MiniMap({ pos, nearest, heading = null }: {
   pos: LatLon | null; nearest: { store: Store; mi: number } | null; heading?: number | null;
 }) {
   const [w, setW] = useState(0);
+  // A Card-style outline with no label or padding: the map is the whole box.
   return (
-    <Card label="Vicinity">
-      <View onLayout={(e) => setW(Math.floor(e.nativeEvent.layout.width))}>
-        {w > 0 && pos && nearest ? <NearMap w={w} pos={pos} nearest={nearest} heading={heading} /> : <Small>Finding you…</Small>}
-      </View>
-    </Card>
+    <View style={s.box} onLayout={(e) => setW(Math.floor(e.nativeEvent.layout.width) - 2 * stroke)}>
+      {w > 0 && pos && nearest ? <NearMap w={w} pos={pos} nearest={nearest} heading={heading} /> : (
+        <View style={s.waiting}><Small>Finding you…</Small></View>
+      )}
+    </View>
   );
 }
 
@@ -149,7 +150,9 @@ const Crosshair = ({ p }: { p: Pt }) => (
 );
 
 const s = StyleSheet.create({
-  frame: { overflow: 'hidden', borderWidth: StyleSheet.hairlineWidth, borderColor: colors.ink },
+  box: { borderWidth: stroke, borderColor: colors.ink, overflow: 'hidden' },
+  waiting: { paddingHorizontal: space.lg, paddingVertical: space.md },
+  frame: { overflow: 'hidden' },
   // Grid lines overhang the frame so they still reach the edges while a pinch shrinks the drawing.
   vline: { position: 'absolute', top: -2000, bottom: -2000, width: StyleSheet.hairlineWidth, backgroundColor: colors.muted, opacity: 0.45 },
   hline: { position: 'absolute', left: -2000, right: -2000, height: StyleSheet.hairlineWidth, backgroundColor: colors.muted, opacity: 0.45 },
