@@ -1,4 +1,4 @@
-import { haversineMi, StoreIndex, formatMiles } from '../geo';
+import { haversineMi, StoreIndex, formatMiles, escapeBearing, bearingDeg } from '../geo';
 
 const RENO = { lat: 39.5296, lon: -119.8138 };
 const PAHRUMP = { lat: 36.2083, lon: -115.9839 };
@@ -55,5 +55,32 @@ describe('store places', () => {
 
   it('still loads data files without places', () => {
     expect(new StoreIndex([[40, -100]]).nearest({ lat: 40, lon: -100 })?.store).toEqual({ lat: 40, lon: -100 });
+  });
+});
+
+describe('escapeBearing', () => {
+  const angleGap = (a: number, b: number) => Math.abs(((a - b + 540) % 360) - 180);
+  it('points away from a lone store', () => {
+    const me = { lat: 40, lon: -100 };
+    const idx = new StoreIndex([[39.95, -100]]); // due south
+    expect(angleGap(escapeBearing(idx, me)!, 0)).toBeLessThanOrEqual(10);
+  });
+  it('heads for the gap between stores, not just away from the closest', () => {
+    const me = { lat: 40, lon: -100 };
+    // Stores north, south and west: the open side is east.
+    const idx = new StoreIndex([[40.05, -100], [39.95, -100], [40, -100.07]]);
+    expect(angleGap(escapeBearing(idx, me)!, 90)).toBeLessThanOrEqual(20);
+  });
+  it('is null with no stores', () => expect(escapeBearing(new StoreIndex([]), { lat: 0, lon: 0 })).toBeNull());
+  it('bearingDeg: due east is 90', () => expect(Math.round(bearingDeg({ lat: 0, lon: 0 }, { lat: 0, lon: 1 }))).toBe(90));
+});
+
+describe('escapeBearing on real store data', () => {
+  const real = new StoreIndex(require('../../../assets/data/stores.json').points);
+  const angleGap = (a: number, b: number) => Math.abs(((a - b + 540) % 360) - 180);
+  it('east Altadena points north into the San Gabriels, not away from the nearest store (NW)', () => {
+    // Field report 2026-11-26: nearest store ~1 mi SE, mountains due north.
+    const e = escapeBearing(real, { lat: 34.18, lon: -118.11 })!;
+    expect(angleGap(e, 0)).toBeLessThanOrEqual(30);
   });
 });

@@ -17,6 +17,16 @@ export function haversineMi(a: LatLon, b: LatLon): number {
   return 2 * EARTH_RADIUS_MI * Math.asin(Math.min(1, Math.sqrt(h)));
 }
 
+/** Initial great-circle bearing from a to b, degrees clockwise from true north. */
+export function bearingDeg(a: LatLon, b: LatLon): number {
+  const φ1 = toRad(a.lat);
+  const φ2 = toRad(b.lat);
+  const Δλ = toRad(b.lon - a.lon);
+  const y = Math.sin(Δλ) * Math.cos(φ2);
+  const x = Math.cos(φ1) * Math.sin(φ2) - Math.sin(φ1) * Math.cos(φ2) * Math.cos(Δλ);
+  return ((Math.atan2(y, x) * 180) / Math.PI + 360) % 360;
+}
+
 export const miToFt = (mi: number) => mi * 5280;
 
 /** Grid index over store points (1 degree cells). Nearest lookups search rings outward. */
@@ -90,6 +100,70 @@ export class StoreIndex {
         }
     return out.sort((a, b) => a.d - b.d).slice(0, limit).map((x) => x.s);
   }
+}
+
+/** Point `mi` miles from p along `deg` (clockwise from north). Flat-earth step, fine for a few miles. */
+export function offsetMi(p: LatLon, deg: number, mi: number): LatLon {
+  const t = toRad(deg);
+  return {
+    lat: p.lat + (Math.cos(t) * mi) / 69,
+    lon: p.lon + (Math.sin(t) * mi) / (69 * Math.max(0.05, Math.cos(toRad(p.lat)))),
+  };
+}
+
+/**
+ * Which way to head to get as far from McDonald's as you can within `horizonMi`: for each of
+ * 72 directions (5 deg), walk out in 0.25 mi steps and note the farthest-from-any-store point
+ * along that line; the arrow points down the line with the best one (a near-tie, within 0.05 mi,
+ * goes to the one that's closer to reach). This finds the big empty area (mountains, desert) rather than
+ * just the steepest way out of where you stand, which can point at a dead end.
+ *
+ * Fast: every sample is within horizonMi of p, so its nearest store is within
+ * nearest(p) + horizonMi of p. Those candidates are fetched once and checked with flat-earth
+ * math (good to well under 1% at these distances).
+ */
+export function escapeBearing(index: StoreIndex, p: LatLon, horizonMi = 5): number | null {
+  const here = index.nearest(p);
+  if (!here) return null;
+  const cands = index.within(p, here.mi + horizonMi + 0.5, 5000);
+  if (!cands.length) cands.push(here.store);
+  const kx = 69 * Math.cos(toRad(p.lat));
+  const xs = cands.map((c) => (c.lon - p.lon) * kx);
+  const ys = cands.map((c) => (c.lat - p.lat) * 69);
+  const nearestAt = (x: number, y: number) => {
+    let m = Infinity;
+    for (let i = 0; i < xs.length; i++) {
+      const d = (xs[i] - x) ** 2 + (ys[i] - y) ** 2;
+      if (d < m) m = d;
+    }
+    return Math.sqrt(m);
+  };
+  const STEP = 0.25;
+  const TIE_MI = 0.05; // absolute, so it means the same thing 1 mi or 80 mi from a store
+  let best: number | null = null;
+  let bestPeak = -Infinity;
+  let bestAt = Infinity;
+  for (let deg = 0; deg < 360; deg += 5) {
+    const dx = Math.sin(toRad(deg));
+    const dy = Math.cos(toRad(deg));
+    let peak = -Infinity;
+    let at = 0;
+    for (let s = STEP; s <= horizonMi + 1e-9; s += STEP) {
+      const m = nearestAt(dx * s, dy * s);
+      if (m > peak) {
+        peak = m;
+        at = s;
+      }
+    }
+    const clearlyBetter = peak > bestPeak + TIE_MI;
+    const tieButCloser = peak >= bestPeak - TIE_MI && at < bestAt;
+    if (best == null || clearlyBetter || tieButCloser) {
+      if (clearlyBetter || peak > bestPeak) bestPeak = peak;
+      best = deg;
+      bestAt = at;
+    }
+  }
+  return best;
 }
 
 export function formatMiles(mi: number | null | undefined): string {

@@ -1,4 +1,6 @@
-// Radar readout for Home: you at the center with a pulsing blip, a sweep arm, and
+// Full-size radar (parked: was on Home, swapped for the subtle EdgeCompass on 2026-11-26).
+// Drop <FullSizeRadar size you store heading /> back in to bring it up again.
+// you at the center with a pulsing blip, a sweep arm, and
 // a dashed line out to the nearest McDonald's (an ink square) along its real compass bearing.
 // The store always sits at the same radius; the big number above is the scale.
 // With a compass heading the whole dial turns so N points at real north; labels
@@ -6,7 +8,7 @@
 // Plain RN Animated with the native driver, so it costs nothing on the JS thread.
 import { useEffect, useMemo, useRef } from 'react';
 import { Animated, Easing, Platform, StyleSheet, View } from 'react-native';
-import type { LatLon } from '@/lib/geo';
+import { bearingDeg, type LatLon } from '@/lib/geo';
 import { colors } from './theme';
 
 const SWEEP_MS = 6000; // calm, old-school sweep (4s felt frantic, 8s too slow)
@@ -20,17 +22,6 @@ const DASH = 6;
 const GAP = 5;
 
 const toRad = (d: number) => (d * Math.PI) / 180;
-const toDeg = (r: number) => (r * 180) / Math.PI;
-
-/** Initial great-circle bearing from a to b, degrees clockwise from north. */
-export function bearingDeg(a: LatLon, b: LatLon): number {
-  const φ1 = toRad(a.lat);
-  const φ2 = toRad(b.lat);
-  const Δλ = toRad(b.lon - a.lon);
-  const y = Math.sin(Δλ) * Math.cos(φ2);
-  const x = Math.cos(φ1) * Math.sin(φ2) - Math.sin(φ1) * Math.cos(φ2) * Math.cos(Δλ);
-  return (toDeg(Math.atan2(y, x)) + 360) % 360;
-}
 
 const POINTS = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'];
 export const compassPoint = (deg: number) => POINTS[Math.round(deg / 22.5) % 16];
@@ -82,7 +73,7 @@ function useDialRotation(heading: number | null) {
   return { dial, upright };
 }
 
-export function Radar({ size, you, store, heading = null }: {
+export function FullSizeRadar({ size, you, store, heading = null }: {
   size: number; you: LatLon | null; store: LatLon | null; heading?: number | null;
 }) {
   const sweep = useLoop(SWEEP_MS);

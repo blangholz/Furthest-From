@@ -1,14 +1,15 @@
 // Home, the app's only screen (Decision #40): burger + wordmark + person icon (Me), "You are
-// currently" with the big live distance, a radar, the next check-in countdown, today's check-in
+// currently" with the big live distance, the edge compass (a dot + N in the margin pointing
+// at McDonald's within 5 mi and north, plus an arrow pointing the way to get farther away; the full-size radar is parked in ui/FullSizeRadar), the next check-in countdown, today's check-in
 // rows (the result becomes a register entry), and the leaderboard below.
 // The live number is computed on the phone from the bundled store list; watching it
 // never sends anything. Only "Check in" sends one point, once.
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { router } from 'expo-router';
-import { Alert, RefreshControl, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import { Alert, RefreshControl, StyleSheet, Text, View } from 'react-native';
 import { errorText, type LogResult } from '@/lib/api';
 import { demoMode } from '@/lib/config';
-import { formatMiles } from '@/lib/geo';
+import { bearingDeg, escapeBearing, formatMiles, haversineMi } from '@/lib/geo';
 import { nextCheckInOpensAt } from '@/lib/rules';
 import { currentFix, useHeading, useLiveLocation } from '@/lib/location';
 import { submitOrQueue } from '@/lib/offline-queue';
@@ -17,7 +18,7 @@ import { storeIndex } from '@/lib/stores';
 import { countdown, resultHeadline } from '@/ui/format';
 import { brand, BurgerMark, Button, Card, IconButton, Label, Row, Rows, Screen, Small, Title } from '@/ui/kit';
 import { Leaderboard } from '@/ui/Leaderboard';
-import { Radar } from '@/ui/Radar';
+import { EdgeCompass, RADIUS_MI, type EdgeStore } from '@/ui/EdgeCompass';
 import { colors, font, space } from '@/ui/theme';
 
 function useTick(ms: number) {
@@ -39,8 +40,17 @@ export default function Home() {
   useTick(1000);
 
   const nearest = useMemo(() => (pos ? storeIndex().nearest(pos) : null), [pos]);
-  const { width } = useWindowDimensions();
-  const radarSize = Math.min(width - space.lg * 6, 380);
+  // Margin dots: every McDonald's within RADIUS_MI (capped at 60 for dense downtowns), plus the nearest even if it's farther. Farthest first so the nearest draws on top.
+  const edgeStores = useMemo<EdgeStore[]>(() => {
+    if (!pos) return [];
+    const pts = storeIndex().within(pos, RADIUS_MI, 60);
+    if (nearest && !pts.length) pts.push(nearest.store);
+    return pts
+      .map((p) => ({ key: `${p.lat},${p.lon}`, bearing: bearingDeg(pos, p), mi: haversineMi(pos, p) }))
+      .sort((a, b) => b.mi - a.mi);
+  }, [pos, nearest]);
+  // Arrow: the way to walk to get farther from the surrounding McDonald's.
+  const escape = useMemo(() => (pos ? escapeBearing(storeIndex(), pos) : null), [pos]);
 
   const log = useCallback(async (kind: 'ping' | 'extra_fries') => {
     setBusy(kind === 'ping' ? 'ping' : 'fries');
@@ -75,6 +85,7 @@ export default function Home() {
   });
 
   return (
+    <View style={s.root}>
     <Screen refreshControl={<RefreshControl refreshing={refreshing} tintColor={colors.ink} onRefresh={async () => {
       setRefreshing(true);
       setBoardKey((k) => k + 1);
@@ -93,10 +104,6 @@ export default function Home() {
         <Text style={s.big} adjustsFontSizeToFit numberOfLines={1}>{formatMiles(nearest?.mi)}</Text>
         {error ? <Small>{error}</Small> : !pos ? <Small>Finding you…</Small> : null}
         <Label>Miles from the nearest McDonald's</Label>
-      </Card>
-
-      <Card style={s.radarBox}>
-        <Radar size={radarSize} you={pos} store={nearest?.store ?? null} heading={heading} />
       </Card>
 
       {!result ? (
@@ -146,16 +153,17 @@ export default function Home() {
 
       <Leaderboard refreshKey={boardKey} />
     </Screen>
+    <EdgeCompass stores={edgeStores} escape={escape} heading={heading} />
+    </View>
   );
 }
 
 const s = StyleSheet.create({
+  root: { flex: 1, backgroundColor: colors.bg },
   header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginRight: -10 },
   brandRow: { flexDirection: 'row', alignItems: 'center', gap: space.sm, flexShrink: 1 },
   wordmark: { ...font.title, fontSize: 30, color: colors.ink },
   big: { ...font.huge, color: colors.ink, lineHeight: 104, marginBottom: -6 },
-  // Room above and below for the radar's N label and facing tick.
-  radarBox: { alignItems: 'center', paddingTop: 52, paddingBottom: space.lg },
   nextTitle: { ...font.h2, color: colors.ink },
   // Countdown in clock digits (think the TV show 24): fixed-width so it doesn't jitter.
   nextClock: { ...font.value, fontSize: 22, color: colors.ink },
