@@ -1,9 +1,10 @@
 import { Stack, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { Alert, Linking, StyleSheet, View } from 'react-native';
+import { Alert, StyleSheet, View } from 'react-native';
 import MapView, { Circle, Marker } from 'react-native-maps';
 import { api, errorText, type Spot } from '@/lib/api';
 import { features } from '@/lib/config';
+import { openDirections } from '@/lib/directions';
 import { formatFeet, formatMiles, haversineMi, miToFt } from '@/lib/geo';
 import { currentFix, useLiveLocation } from '@/lib/location';
 import { RULES } from '@/lib/rules';
@@ -63,7 +64,7 @@ export default function SpotScreen() {
       </View>
       <Body>{ft == null ? 'Finding you…' : inRange ? "You're here. Tick it." : `You're ${formatFeet(ft)} away. Get within ${RULES.claimRadiusFt} ft to tick it.`}</Body>
       {!spot.claimed ? <Button title="Tick it" busy={busy} disabled={!inRange} onPress={claim} /> : null}
-      <Button title="Directions in Maps" kind="secondary" onPress={() => Linking.openURL(`https://maps.apple.com/?daddr=${spot.lat},${spot.lon}&dirflg=d`)} />
+      <Button title="Directions" kind="secondary" onPress={() => openDirections(spot, name)} />
       <Small>Remote spots can be far from roads, water and cell service. Check access, weather and land rules before you go, and carry what you need.</Small>
     </Screen>
   );

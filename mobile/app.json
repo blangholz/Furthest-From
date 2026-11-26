@@ -16,7 +16,11 @@
       ],
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "McFarthest uses your location to measure how far you are from the nearest McDonald's. Your exact location is never shown to anyone.",
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "LSApplicationQueriesSchemes": [
+          "comgooglemaps",
+          "waze"
+        ]
       }
     },
     "android": {
