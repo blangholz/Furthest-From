@@ -63,7 +63,8 @@
           "color": "#F2A900"
         }
       ],
-      "expo-apple-authentication"
+      "expo-apple-authentication",
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": false,

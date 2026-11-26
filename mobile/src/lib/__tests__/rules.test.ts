@@ -1,4 +1,5 @@
-import { addCredits, classify, creditsFor, roughlyLower48, seasonName, streakFrom, todaysPingWindow, pointsFor } from '../rules';
+import { addCredits, classify, creditsFor, nextCheckInOpensAt, roughlyLower48, seasonName, streakFrom, todaysPingWindow, pointsFor } from '../rules';
+import { countdown } from '../../ui/format';
 
 const RENO = { lat: 39.5296, lon: -119.8138 };
 
@@ -60,4 +61,26 @@ it('ping window is 1:20 to 2:20 PM local', () => {
   expect(w.opensAt.getHours()).toBe(13);
   expect(w.opensAt.getMinutes()).toBe(20);
   expect(w.closesAt.getTime() - w.opensAt.getTime()).toBe(3600_000);
+});
+
+describe('next check-in', () => {
+  const at = (h: number, m: number) => new Date(2026, 10, 12, h, m);
+  it('is today at 1:20 before the window', () => {
+    expect(nextCheckInOpensAt(at(9, 0))?.getTime()).toBe(at(13, 20).getTime());
+  });
+  it('is null while the window is open and not checked in', () => {
+    expect(nextCheckInOpensAt(at(13, 30), false)).toBeNull();
+  });
+  it('is tomorrow once checked in or after the window', () => {
+    const tomorrow = new Date(2026, 10, 13, 13, 20).getTime();
+    expect(nextCheckInOpensAt(at(13, 30), true)?.getTime()).toBe(tomorrow);
+    expect(nextCheckInOpensAt(at(15, 0))?.getTime()).toBe(tomorrow);
+  });
+});
+
+it('countdown reads like a clock', () => {
+  const now = 1_000_000_000_000;
+  expect(countdown(new Date(now + (48 * 60 + 36) * 1000), now)).toBe('48:36');
+  expect(countdown(new Date(now + (3 * 3600 + 42 * 60 + 10) * 1000), now)).toBe('03:42:10');
+  expect(countdown(new Date(now - 5000), now)).toBe('00:00');
 });

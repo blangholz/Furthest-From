@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>McFarthest Fonts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Archivo+Narrow:wght@700&family=Archivo:wght@800;900&family=Barlow+Condensed:wght@700;800&family=Bebas+Neue&family=Big+Shoulders+Display:wght@800;900&family=IBM+Plex+Mono:wght@600&family=IBM+Plex+Sans+Condensed:wght@700&family=IBM+Plex+Sans:wght@700&family=Inter+Tight:wght@800&family=Inter:wght@800&family=JetBrains+Mono:wght@700&family=League+Gothic&family=Oswald:wght@700&family=Roboto+Mono:wght@700&family=Space+Mono:wght@700&family=Work+Sans:wght@800&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #EED202; --ink: #1A1A1A; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--ink); font-family: -apple-system, system-ui, sans-serif; }
+  header { padding: 20px 16px 16px; border-bottom: 3px solid var(--ink); }
+  header h1 { font: 900 14px/1 -apple-system, system-ui, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .controls input { flex: 1 1 260px; min-height: 44px; font-size: 16px; padding: 8px 10px; border: 2px solid var(--ink); background: transparent; color: var(--ink); border-radius: 0; }
+  .controls button { min-height: 44px; padding: 0 14px; border: 2px solid var(--ink); background: transparent; color: var(--ink); font: 800 12px -apple-system, system-ui, sans-serif; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; border-radius: 0; }
+  .controls button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+  h2.group { padding: 22px 16px 8px; font: 800 11px -apple-system, system-ui, sans-serif; letter-spacing: .16em; text-transform: uppercase; border-bottom: 1px solid var(--ink); }
+  .row { border-bottom: 1px solid var(--ink); padding: 14px 16px 18px; }
+  .meta { display: flex; justify-content: space-between; gap: 12px; font: 600 11px ui-monospace, Menlo, monospace; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 8px; }
+  .meta .note { opacity: .7; text-align: right; }
+  .big { font-size: clamp(40px, 9vw, 96px); line-height: .95; overflow-wrap: anywhere; }
+  .sub { font-size: clamp(18px, 3.4vw, 30px); line-height: 1.1; margin-top: 6px; overflow-wrap: anywhere; }
+  .upper .big, .upper .sub { text-transform: uppercase; }
+  .upper .mc { text-transform: none; }
+</style>
+</head>
+<body>
+<header>
+  <h1>McFarthest · font options</h1>
+  <div class="controls">
+    <input id="line1" value="Furthest From" aria-label="Headline">
+    <input id="line2" value="412.7 miles to a McDonald's" aria-label="Subline">
+    <button id="caps" aria-pressed="true">All caps</button>
+  </div>
+</header>
+<main id="list" class="upper"></main>
+<script>
+const groups = [
+  ['Built into iOS (no install)', [
+    ['Futura', "Futura", 800, 'The Field Notes typeface'],
+    ['Futura Condensed', "'Futura-CondensedExtraBold', Futura", 800, 'Condensed ExtraBold'],
+    ['DIN Condensed', "'DIN Condensed'", 700, 'Signage feel'],
+    ['DIN Alternate', "'DIN Alternate'", 700, ''],
+    ['Avenir Next Condensed', "'Avenir Next Condensed'", 800, 'Heavy'],
+    ['Helvetica Neue Condensed', "'HelveticaNeue-CondensedBlack', 'Helvetica Neue'", 900, 'Condensed Black'],
+    ['Helvetica Neue', "'Helvetica Neue'", 700, 'Bold'],
+    ['Gill Sans', "'Gill Sans'", 700, 'Survey-map feel'],
+    ['Menlo', "Menlo", 700, 'Mono'],
+    ['Courier', "Courier", 700, 'Mono, typewriter'],
+  ]],
+  ['Google Fonts: headlines', [
+    ['Archivo Black', "'Archivo Black'", 400, 'Recommended for headlines'],
+    ['Archivo', "Archivo", 900, ''],
+    ['Archivo Narrow', "'Archivo Narrow'", 700, ''],
+    ['Barlow Condensed', "'Barlow Condensed'", 800, 'Highway sign'],
+    ['Oswald', "Oswald", 700, ''],
+    ['Big Shoulders Display', "'Big Shoulders Display'", 900, 'Strong for big numbers'],
+    ['Anton', "Anton", 400, 'Headlines only'],
+    ['League Gothic', "'League Gothic'", 400, 'Headlines only'],
+    ['Bebas Neue', "'Bebas Neue'", 400, 'No lowercase: breaks the "c" in Mc'],
+  ]],
+  ['Google Fonts: body', [
+    ['Inter', "Inter", 800, 'Recommended for body'],
+    ['Inter Tight', "'Inter Tight'", 800, ''],
+    ['Work Sans', "'Work Sans'", 800, ''],
+    ['IBM Plex Sans', "'IBM Plex Sans'", 700, ''],
+    ['IBM Plex Sans Condensed', "'IBM Plex Sans Condensed'", 700, ''],
+  ]],
+  ['Google Fonts: mono', [
+    ['IBM Plex Mono', "'IBM Plex Mono'", 600, 'Recommended for coordinates'],
+    ['JetBrains Mono', "'JetBrains Mono'", 700, ''],
+    ['Space Mono', "'Space Mono'", 700, ''],
+    ['Roboto Mono', "'Roboto Mono'", 700, ''],
+  ]],
+];
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+// Keep the "c" in "Mc" lowercase even in all caps.
+const mc = s => esc(s).replace(/\bMc/gi, m => '<span class="mc">' + m[0].toUpperCase() + 'c</span>');
+function render() {
+  const a = document.getElementById('line1').value, b = document.getElementById('line2').value;
+  document.getElementById('list').innerHTML = groups.map(([title, fonts]) =>
+    `<h2 class="group">${title}</h2>` + fonts.map(([name, fam, w, note]) =>
+      `<div class="row" style="font-family:${fam}, sans-serif; font-weight:${w}">
+        <div class="meta"><span>${name}</span><span class="note">${note}</span></div>
+        <div class="big">${mc(a)}</div>
+        <div class="sub">${mc(b)}</div>
+      </div>`).join('')).join('');
+}
+document.getElementById('line1').oninput = render;
+document.getElementById('line2').oninput = render;
+document.getElementById('caps').onclick = e => {
+  const on = e.target.getAttribute('aria-pressed') !== 'true';
+  e.target.setAttribute('aria-pressed', on);
+  document.getElementById('list').classList.toggle('upper', on);
+};
+render();
+</script>
+</body>
+</html>

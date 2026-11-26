@@ -29,7 +29,7 @@ export default function Feed() {
         }} />}
         ListHeaderComponent={<Title>Friends</Title>}
         ListEmptyComponent={items ? (
-          <Card><Body muted>Nothing yet. When you and your friends log, it shows up here.</Body></Card>
+          <Card><Body muted>Nothing yet. When you and your friends check in, it shows up here.</Body></Card>
         ) : undefined}
         renderItem={({ item }) => (
           <View style={[s.item, item.kind === 'extreme' && s.extreme]}>
@@ -46,6 +46,6 @@ export default function Feed() {
 }
 
 const s = StyleSheet.create({
-  item: { backgroundColor: colors.card, borderRadius: 12, paddingHorizontal: space.md, borderWidth: 1, borderColor: colors.line },
-  extreme: { borderColor: colors.gold, backgroundColor: colors.goldSoft },
+  item: { paddingHorizontal: space.md, borderWidth: 1, borderColor: colors.ink },
+  extreme: { borderWidth: 2 },
 });

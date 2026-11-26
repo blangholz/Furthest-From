@@ -1,10 +1,10 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { router, useLocalSearchParams } from 'expo-router';
 import { View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { api } from '@/lib/api';
 import { refreshStatus } from '@/lib/status';
 import { ONBOARDING_STEPS } from '@/onboarding/steps';
-import { Screen } from '@/ui/kit';
 import { colors, space } from '@/ui/theme';
 import { PENDING_INVITE_KEY } from '@/lib/invites';
 
@@ -28,14 +28,15 @@ export default function OnboardingStep() {
     await refreshStatus(); // flips the guard in _layout, which shows the tabs
   };
 
+  // Each step lays out its own scrolling body and the pinned bottom button (StepScreen).
   return (
-    <Screen>
-      <View style={{ flexDirection: 'row', gap: 6, marginBottom: space.md }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: colors.bg }} edges={['top', 'bottom']}>
+      <View style={{ flexDirection: 'row', gap: 6, paddingHorizontal: space.lg, paddingTop: space.lg, paddingBottom: space.sm }}>
         {ONBOARDING_STEPS.map((x, j) => (
-          <View key={x.key} style={{ flex: 1, height: 4, borderRadius: 2, backgroundColor: j <= i ? colors.teal : colors.line }} />
+          <View key={x.key} style={{ flex: 1, height: 4, backgroundColor: j <= i ? colors.teal : colors.line }} />
         ))}
       </View>
       <Component next={next} />
-    </Screen>
+    </SafeAreaView>
   );
 }

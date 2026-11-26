@@ -10,7 +10,7 @@ import { api, errorText } from '@/lib/api';
 import { Body, Button, Screen, Title } from '@/ui/kit';
 import { clearStatus, refreshStatus, useStatus } from '@/lib/status';
 import { registerForPush } from '@/lib/notifications';
-import { colors } from '@/ui/theme';
+import { colors, fonts } from '@/ui/theme';
 
 SplashScreen.preventAutoHideAsync().catch(() => {});
 
@@ -69,7 +69,11 @@ function Root() {
   return (
     <>
       <StatusBar style="dark" />
-      <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: colors.bg } }}>
+      <Stack screenOptions={{
+        headerShown: false, contentStyle: { backgroundColor: colors.bg },
+        headerTitleStyle: { fontFamily: fonts.condensed.fontFamily, fontWeight: '700', fontSize: 20 },
+        headerBackTitleStyle: { fontFamily: fonts.condensed.fontFamily, fontSize: 17 },
+      }}>
         <Stack.Protected guard={!signedIn}>
           <Stack.Screen name="sign-in" />
         </Stack.Protected>
@@ -78,9 +82,9 @@ function Root() {
         </Stack.Protected>
         <Stack.Protected guard={signedIn && onboarded}>
           <Stack.Screen name="(tabs)" />
-          <Stack.Screen name="spot/[id]" options={{ headerShown: true, title: '', headerBackTitle: 'Spots' }} />
-          <Stack.Screen name="friends" options={{ headerShown: true, title: 'Friends', headerBackTitle: 'Back' }} />
-          <Stack.Screen name="logs/[zone]" options={{ headerShown: true, title: '', headerBackTitle: 'Back' }} />
+          <Stack.Screen name="spot/[id]" options={{ headerShown: true, title: '', headerBackTitle: 'SPOTS' }} />
+          <Stack.Screen name="friends" options={{ headerShown: true, title: 'FRIENDS', headerBackTitle: 'BACK' }} />
+          <Stack.Screen name="logs/[zone]" options={{ headerShown: true, title: '', headerBackTitle: 'BACK' }} />
         </Stack.Protected>
         <Stack.Screen name="i/[code]" />
         <Stack.Screen name="auth-callback" />

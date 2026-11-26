@@ -144,7 +144,7 @@ export interface Api {
 export function errorText(e: unknown): string {
   const code = e instanceof ApiError ? e.code : 'unknown';
   switch (code) {
-    case 'no_open_ping': return 'No ping is open right now. The next one is at 1:20 PM.';
+    case 'no_open_ping': return 'Check-in isn\'t open right now. The next one is at 1:20 PM.';
     case 'no_extra_fries': return "You don't have any Extra Fries to use.";
     case 'too_far': return `You need to be within 150 ft of the spot${e instanceof ApiError && e.detail ? ` (you're ${e.detail} away)` : ''}.`;
     case 'already_claimed': return "You've already claimed this one.";
@@ -154,8 +154,8 @@ export function errorText(e: unknown): string {
     case 'no_such_user': return 'No player has that username.';
     case 'cannot_friend_self': return "That's you!";
     case 'bad_invite': return "That invite link doesn't work.";
-    case 'too_late': return 'That log is too old to upload.';
-    case 'network': return "Couldn't reach the server. Your log is saved and will upload when you're back online.";
+    case 'too_late': return 'That check-in is too old to upload.';
+    case 'network': return "Couldn't reach the server. Your check-in is saved and will upload when you're back online.";
     default: return e instanceof Error ? e.message : 'Something went wrong.';
   }
 }

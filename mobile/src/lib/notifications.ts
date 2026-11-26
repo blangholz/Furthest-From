@@ -24,7 +24,7 @@ export async function registerForPush(): Promise<string | null> {
   if (!Device.isDevice || api.mode === 'demo') return null;
   if (!(await notificationPermission(false))) return null;
   if (Platform.OS === 'android') {
-    await Notifications.setNotificationChannelAsync('default', { name: 'Pings', importance: Notifications.AndroidImportance.HIGH });
+    await Notifications.setNotificationChannelAsync('default', { name: 'Check-ins', importance: Notifications.AndroidImportance.HIGH });
   }
   // The EAS project id is written into app config by `eas init` (see mobile/README.md).
   const projectId = Constants.expoConfig?.extra?.eas?.projectId ?? Constants.easConfig?.projectId;
@@ -38,7 +38,7 @@ export async function registerForPush(): Promise<string | null> {
 export async function scheduleLocalPing(seconds: number): Promise<void> {
   if (!(await notificationPermission(true))) return;
   await Notifications.scheduleNotificationAsync({
-    content: { title: '🍟 Test ping!', body: 'How far from fries are you? You have an hour to log it.', data: { type: 'ping', test: true } },
+    content: { title: '🍟 Test check-in!', body: 'How far from fries are you? You have an hour to check in.', data: { type: 'ping', test: true } },
     trigger: { type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL, seconds },
   });
 }

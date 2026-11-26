@@ -23,3 +23,8 @@ Two things live here:
 
 Rules: `docs/GAME_RULES.md`. Accounts and keys: `docs/SETUP.md`.
 Never commit keys. Keep root `index.html` working.
+
+Visual style (Decision #27 in `Spec/`): Field Notes meets a summit register. Bold uppercase sans
+(except the lowercase "c" in McFarthest), thin ruled lines, boxed form fields, #EED202
+background with dark ink, flat print look. Sharp corners, never rounded.
+Sections are thin-stroked outline boxes with a margin, never a background fill. No gradients or soft shadows.

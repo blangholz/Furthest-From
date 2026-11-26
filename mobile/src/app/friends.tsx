@@ -6,7 +6,7 @@ import { config } from '@/lib/config';
 import { formatMiles } from '@/lib/geo';
 import { refreshStatus } from '@/lib/status';
 import { Body, Button, Card, H2, Row, Screen, Small } from '@/ui/kit';
-import { colors, radius, space } from '@/ui/theme';
+import { colors, fonts, radius, space } from '@/ui/theme';
 
 export default function Friends() {
   const [list, setList] = useState<Friend[]>([]);
@@ -83,5 +83,5 @@ export default function Friends() {
 }
 
 const s = StyleSheet.create({
-  input: { flex: 1, borderWidth: 1, borderColor: colors.line, borderRadius: radius.sm, padding: space.md, fontSize: 17, backgroundColor: '#fff' },
+  input: { flex: 1, borderWidth: 1, borderColor: colors.ink, borderRadius: radius.sm, padding: space.md, fontSize: 17, ...fonts.input },
 });

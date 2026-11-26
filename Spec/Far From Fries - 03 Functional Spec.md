@@ -247,7 +247,7 @@ Cross-platform codebase; Android must ship with minimal extra work.
 ### 10.6 Branding
 Avoid McDonald's trademarks ("Mc" names, Happy Meal) in the app's branding; include a "not affiliated" note.
 
-Visual style: Field Notes meets a summit register (Decision #27). Bold uppercase sans type (except the lowercase "c" in McFarthest), thin ruled lines and boxed form fields, sharp square corners (no rounding), full-width edge-to-edge blocks with no side margins, #EED202 background with dark ink, flat print look.
+Visual style: Field Notes meets a summit register (Decision #27). Bold uppercase sans type (except the lowercase "c" in McFarthest), thin ruled lines and boxed form fields, sharp square corners (no rounding), sections as thin-stroked outline boxes with a margin, no background fills, #EED202 background with dark ink, flat print look.
 
 ### 10.7 Integrations
 
@@ -276,6 +276,7 @@ Visual style: Field Notes meets a summit register (Decision #27). Bold uppercase
 - [ ] Missing McDonald's submissions
 - [ ] Points rebrand (fries or burgers)
 - [ ] State Extremes bonus point balancing
+- [ ] **Check-in Live Activity** (iOS lock screen + Dynamic Island) instead of a plain push. Starts 30 minutes before check-in opens and stays up until the window closes, with the countdown and your current miles from McDonald's. Tapping it checks you in for the day. Open questions: (1) a live mileage number needs location while the app is closed, which breaks the "no background tracking" promise (10.4), so either show the miles from when the app was last open or ask for background location as an opt-in; (2) starting it remotely needs ActivityKit push tokens sent from `push-dispatch`; (3) tap-to-check-in can open the app straight into a check-in (deep link) or run an App Intent, but location still needs the app in the foreground under when-in-use permission.
 
 ---
 

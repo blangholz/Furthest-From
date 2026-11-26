@@ -70,35 +70,35 @@ export default function Me() {
 
       <Card>
         <H2>Extra Fries 🍟</H2>
-        <Body>{status.friesCredits} of {status.friesPer} pings toward your next one{status.streak >= RULES.doubleCreditStreak ? ' (double speed on your streak!)' : ''}.</Body>
+        <Body>{status.friesCredits} of {status.friesPer} check-ins toward your next one{status.streak >= RULES.doubleCreditStreak ? ' (double speed on your streak!)' : ''}.</Body>
         {status.extraFries.length === 0 ? <Small>You don't have any right now.</Small> : status.extraFries.map((f) => (
           <Row key={f.id} left="Extra Fries" right={`expires ${new Date(f.expiresAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}`} />
         ))}
-        <Small>Earn one every {RULES.friesPerCredits} pings away from home. At a {RULES.doubleCreditStreak}-day streak they come twice as fast. Each lasts 2 weeks.</Small>
+        <Small>Earn one every {RULES.friesPerCredits} check-ins away from home. At a {RULES.doubleCreditStreak}-day streak they come twice as fast. Each lasts 2 weeks.</Small>
       </Card>
 
       <Card>
         {features.friends ? (
           <Row left="Friends" sub={`${status.friendCount} friend${status.friendCount === 1 ? '' : 's'}`} right="›" onPress={() => router.push('/friends')} />
         ) : null}
-        <Row left="Passport" sub="Logs outside the lower 48" right="›" onPress={() => router.push({ pathname: '/logs/[zone]', params: { zone: 'passport' } })} />
-        <Row left="Home log" sub="Check-ins from your home zone" right="›" onPress={() => router.push({ pathname: '/logs/[zone]', params: { zone: 'home' } })} />
+        <Row left="Passport" sub="Check-ins outside the lower 48" right="›" onPress={() => router.push({ pathname: '/logs/[zone]', params: { zone: 'passport' } })} />
+        <Row left="Home check-ins" sub="Check-ins from your home zone" right="›" onPress={() => router.push({ pathname: '/logs/[zone]', params: { zone: 'home' } })} />
         <Button title={features.friends ? 'Invite a friend' : 'Tell a friend'} kind="secondary" onPress={invite} />
       </Card>
 
       <Card>
         <H2>Home</H2>
         <Body>{status.hasHome ? `Your home pin is locked until ${status.homeLockedUntil ? new Date(status.homeLockedUntil).toLocaleDateString() : 'next season'}. You can move it when the next season starts.` : 'No home pin set.'}</Body>
-        <Small>Only you can see your home pin. Logs within {RULES.homeRadiusMi} miles of it score zero.</Small>
+        <Small>Only you can see your home pin. Check-ins within {RULES.homeRadiusMi} miles of it score zero.</Small>
       </Card>
 
-      {pending > 0 ? <Card tone="gold"><Body>{pending} log{pending === 1 ? '' : 's'} waiting to upload. They'll go when you're back online.</Body></Card> : null}
+      {pending > 0 ? <Card tone="gold"><Body>{pending} check-in{pending === 1 ? '' : 's'} waiting to upload. They'll go when you're back online.</Body></Card> : null}
 
       {demoMode ? (
         <Card tone="teal">
           <H2>Demo mode</H2>
           <Body>No server is connected, so this runs on your phone with sample players.</Body>
-          <Button title="Open a practice ping now" onPress={async () => {
+          <Button title="Open a practice check-in now" onPress={async () => {
             await demoApi.openDemoPing();
             await refreshStatus();
             router.navigate('/(tabs)/home');
@@ -113,8 +113,8 @@ export default function Me() {
       {__DEV__ && !demoMode ? (
         <Card tone="teal">
           <H2>Testing</H2>
-          <Body>Opens a test ping in 5 seconds so you can try a check-in. It scores like a real log but never affects your streak. Only shows in development builds.</Body>
-          <Button title="Ping me in 5 seconds" onPress={async () => {
+          <Body>Opens a test check-in in 5 seconds so you can try the flow. It scores like a real check-in but never affects your streak. Only shows in development builds.</Body>
+          <Button title="Open a check-in in 5 seconds" onPress={async () => {
             try {
               await api.openTestPing(5);
               await scheduleLocalPing(5);
@@ -123,7 +123,7 @@ export default function Me() {
                 router.navigate('/(tabs)/home');
               }, 5500);
             } catch (e) {
-              Alert.alert('Test ping failed', errorText(e));
+              Alert.alert('Test check-in failed', errorText(e));
             }
           }} />
         </Card>

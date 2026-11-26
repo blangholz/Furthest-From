@@ -16,7 +16,7 @@ A social iOS game (Android later): players get a daily ping and score miles, as 
 - Missed pings score zero, never a penalty. Scores lock at log time.
 - Distances are straight-line only.
 - Display name is McFarthest (#25, App Store and trademark check pending before launch). Always show the "not affiliated with McDonald's" note.
-- Visual style: Field Notes meets a summit register. Bold uppercase sans (except the lowercase "c" in McFarthest), thin ruled lines, boxed form fields, sharp corners (no rounding), full-width edge-to-edge blocks, #EED202 background with dark ink, flat print look (Decision #27).
+- Visual style: Field Notes meets a summit register. Bold uppercase sans (except the lowercase "c" in McFarthest), thin ruled lines, boxed form fields, sharp corners (no rounding), sections as thin-stroked outline boxes with a margin (no background fills), #EED202 background with dark ink, flat print look (Decision #27).
 
 ## Game rules
 - Daily ping at 1:20 PM in each player's phone time zone, 1-hour window (#30). Testers can open test pings in dev builds (#35).

@@ -10,9 +10,12 @@ export function timeAgo(iso: string, now = Date.now()): string {
   return new Date(iso).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
 }
 
-export function countdown(toIso: string, now = Date.now()): string {
-  const s = Math.max(0, Math.round((new Date(toIso).getTime() - now) / 1000));
-  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+/** Clock-style countdown: MM:SS under an hour, HH:MM:SS from an hour up. */
+export function countdown(to: string | Date, now = Date.now()): string {
+  const s = Math.max(0, Math.floor((new Date(to).getTime() - now) / 1000));
+  const two = (n: number) => String(n).padStart(2, '0');
+  const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
+  return h > 0 ? `${two(h)}:${two(m)}:${two(sec)}` : `${two(m)}:${two(sec)}`;
 }
 
 export function feedLine(f: FeedItem): string {

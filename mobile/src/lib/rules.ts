@@ -81,3 +81,17 @@ export function todaysPingWindow(now = new Date()): { opensAt: Date; closesAt: D
   opensAt.setHours(RULES.pingLocalTime.hour, RULES.pingLocalTime.minute, 0, 0);
   return { opensAt, closesAt: new Date(opensAt.getTime() + RULES.pingWindowMin * 60_000) };
 }
+
+/**
+ * When the next daily check-in window opens, in the device's time zone. Returns
+ * null while today's window is open by the clock but the player hasn't checked in
+ * (the server's open window is what counts, so the caller shows that instead).
+ */
+export function nextCheckInOpensAt(now = new Date(), checkedInToday = false): Date | null {
+  const today = todaysPingWindow(now);
+  if (now < today.opensAt) return today.opensAt;
+  if (now < today.closesAt && !checkedInToday) return null;
+  const tomorrow = new Date(today.opensAt);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  return tomorrow;
+}

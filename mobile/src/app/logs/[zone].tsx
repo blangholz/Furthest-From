@@ -10,14 +10,14 @@ export default function Logs() {
   useEffect(() => {
     api.myLogs(zone === 'home' ? 'home' : 'passport').then(setLogs).catch(() => setLogs([]));
   }, [zone]);
-  const title = zone === 'home' ? 'Home log' : 'Passport';
+  const title = zone === 'home' ? 'Home check-ins' : 'Passport';
   return (
     <Screen edges={[]}>
       <Stack.Screen options={{ title }} />
       <Small>
         {zone === 'home'
           ? 'Check-ins from inside your home zone. They score zero and pause your streak without breaking it.'
-          : "Logs outside the lower 48. They don't count on the leaderboards, but they keep your streak going and earn Extra Fries."}
+          : "Check-ins outside the lower 48. They don't count on the leaderboards, but they keep your streak going and earn Extra Fries."}
       </Small>
       {!logs ? <Loading /> : (
         <Card>

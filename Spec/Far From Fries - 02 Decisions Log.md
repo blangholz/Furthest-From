@@ -63,6 +63,7 @@ aliases:
 | 33 | Late uploads | In-window logs can upload up to 24 hours later |
 | 34 | Supabase project | Shared project, schemas fff / fff_private only |
 | 35 | Test pings | Testers can open a ping 5 s out in dev builds; no streak effect |
+| 36 | Typefaces | DIN Condensed (headings, buttons, labels) and DIN Alternate (body, numbers), all caps everywhere; typed text stays as typed |
 
 ---
 
@@ -254,7 +255,8 @@ Phase decided: Build
 **Decision #27**
 Topic: Visual style
 Question: What should the app look like?
-Decision: Field Notes memo book meets a summit register (2026-11-25). Bold, condensed, all-uppercase sans headings and labels (the one exception: the lowercase "c" in McFarthest). Thin rules and boxed fields like a printed log form: dotted or hairline lines for entries, labeled blanks ("PERTINENT COORDINATES", "DISTANCE"). Background color #EED202 (a bold yellow, like a field-book cover) with dark ink, flat and printed, not glossy: sharp square corners everywhere (no rounded corners), full-width cards, buttons and rows that run edge to edge with no side margins (only text keeps a gutter), no gradients or soft shadows. Logs read like signing a summit register: name, date, distance in a ruled row.
+Decision: Field Notes memo book meets a summit register (2026-11-25). Bold, condensed, all-uppercase sans headings and labels (the one exception: the lowercase "c" in McFarthest). Thin rules and boxed fields like a printed log form: dotted or hairline lines for entries, labeled blanks ("PERTINENT COORDINATES", "DISTANCE"). Background color #EED202 (a bold yellow, like a field-book cover) with dark ink, flat and printed, not glossy: sharp square corners everywhere (no rounded corners), sections (leaderboard, cards) are thin ink-stroked rectangles with a margin around them, never a different fill color; the page stays one flat #EED202 (reference: a thin white box framing "HOOD RIVER, OREGON / 45.7067° N, 121.5220° W" over a photo), no gradients or soft shadows. Logs read like signing a summit register: name, date, distance in a ruled row.
+References: (1) Field Notes memo books: kraft cover, bold condensed caps, ruled form fields. (2) A thin white outline box framing "HOOD RIVER, OREGON / 45.7067° N, 121.5220° W" in monospace over a photo. (3) A clean fintech screen (2026-11-26): monospace throughout, lots of white space, one bold headline, a short bold lead line, muted gray body text, label-and-value rows split by hairline dividers, one solid black primary button, one graphic as the only decoration. Take its restraint, monospace and label/value rows; keep our uppercase and sharp corners over its lowercase and pill-shaped button.
 Rationale: Fits the outdoorsy, go-explore spirit of the game and gives it a distinct, printed look.
 Status: `decided`
 Phase decided: Build
@@ -323,6 +325,24 @@ Rationale: Lets the check-in flow be tested any time without waiting for 1:20 PM
 Status: `decided`
 Phase decided: Build
 
+**Decision #36**
+Topic: Typefaces
+Question: Which fonts carry the #27 look?
+Decision: (2026-11-26) DIN Condensed for titles, headings, buttons, tab labels and nav headers; DIN Alternate for body text and numbers, including the big distance readout. All app-written text is uppercase, body included (this extends #27, which only required caps for headings and labels). The lowercase "c" stays in McFarthest and McDonald's (McFARTHEST, McDONALD'S). Text people type in fields is not forced to caps. Both faces ship with iOS, so nothing is bundled or licensed; Android falls back to Roboto Condensed / Roboto medium. The look-alike iOS permission alert (#29) keeps the system font so it matches the real alert.
+Rationale: Road-sign DIN fits the field-book, summit-register look and comes free on iOS.
+Status: `decided`
+Phase decided: Build
+
+---
+
+**Decision #37**
+Topic: Player-facing name for the daily moment
+Question: The app mixed "ping", "log" and "check-in" for the same thing. Which word do players see?
+Decision: (2026-11-26) **Check-in**, everywhere players read it: app, push notifications, web pages, docs. "Check in" is the verb ("You have an hour to check in"), "check-in" the noun. Home check-ins and Passport stamps stay as the names for those zones. Code and database keep `ping` (the daily window) and `log` (a submission); renaming tables and RPCs isn't worth the migration risk. Home also shows a live countdown in big clock digits: "Next check-in in HH:MM:SS" while closed, "You have MM:SS to check in" while open.
+Rationale: One word is easier to learn. "Check-in" already fit the summit-register theme and was in use for home check-ins.
+Status: `decided`
+Phase decided: Build
+
 ---
 
 ## Deferred Items
@@ -334,6 +354,7 @@ Phase decided: Build
 | B | Points rebrand (fries or burgers) | Phase 2 | Branding polish |
 | 3 | Friends (friend graph, feed, invites, friends board) | After launch | First build ships the global board only (#26) |
 | C | Final name confirmation | Before branding work | Needs App Store and trademark check |
+| D | Check-in Live Activity (lock screen / Dynamic Island) | Phase 2 | Needs a native widget extension; live mileage conflicts with no background location |
 
 ---
 

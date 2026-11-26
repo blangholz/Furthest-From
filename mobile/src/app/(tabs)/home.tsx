@@ -1,20 +1,22 @@
-// Home: the big live distance number, today's ping, Extra Fries, and your personal map.
+// Home: the big live distance number, a radar to the nearest McDonald's, today's check-in, Extra Fries,
+// and the leaderboard below (scroll down).
 // The live number is computed on the phone from the bundled store list; watching it
-// never sends or logs anything. Only "Log my distance" sends one point, once.
-import { useCallback, useEffect, useMemo, useState } from 'react';
-import { Alert, RefreshControl, StyleSheet, Text, View } from 'react-native';
-import MapView, { Circle, Marker } from 'react-native-maps';
-import { api, errorText, type LogResult } from '@/lib/api';
+// never sends anything. Only "Check in" sends one point, once.
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Alert, RefreshControl, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import { errorText, type LogResult } from '@/lib/api';
 import { demoMode } from '@/lib/config';
 import { formatMiles } from '@/lib/geo';
-import { currentFix, useLiveLocation } from '@/lib/location';
+import { nextCheckInOpensAt } from '@/lib/rules';
+import { currentFix, useHeading, useLiveLocation } from '@/lib/location';
 import { submitOrQueue } from '@/lib/offline-queue';
-import { RULES } from '@/lib/rules';
 import { useStatus, refreshStatus } from '@/lib/status';
 import { storeIndex } from '@/lib/stores';
 import { countdown, resultHeadline } from '@/ui/format';
-import { Body, Button, Card, H2, Pill, Screen, Small } from '@/ui/kit';
-import { colors, font, radius, space } from '@/ui/theme';
+import { Body, brand, Button, Card, H2, Pill, Screen, Small } from '@/ui/kit';
+import { Leaderboard } from '@/ui/Leaderboard';
+import { Radar } from '@/ui/Radar';
+import { colors, font, space } from '@/ui/theme';
 
 function useTick(ms: number) {
   const [, set] = useState(0);
@@ -27,18 +29,16 @@ function useTick(ms: number) {
 export default function Home() {
   const { status } = useStatus();
   const { pos, error } = useLiveLocation(true);
+  const heading = useHeading(pos != null);
   const [busy, setBusy] = useState<'ping' | 'fries' | null>(null);
   const [result, setResult] = useState<LogResult | null>(null);
-  const [home, setHome] = useState<{ lat: number; lon: number } | null>(null);
   const [refreshing, setRefreshing] = useState(false);
+  const [boardKey, setBoardKey] = useState(0);
   useTick(1000);
 
-  useEffect(() => {
-    api.myHome().then(setHome).catch(() => {});
-  }, []);
-
   const nearest = useMemo(() => (pos ? storeIndex().nearest(pos) : null), [pos]);
-  const nearby = useMemo(() => (pos ? storeIndex().within(pos, RULES.mapRadiusMi) : []), [pos]);
+  const { width } = useWindowDimensions();
+  const radarSize = Math.min(width - space.lg * 4, 420);
 
   const log = useCallback(async (kind: 'ping' | 'extra_fries') => {
     setBusy(kind === 'ping' ? 'ping' : 'fries');
@@ -48,24 +48,34 @@ export default function Home() {
       setResult(r);
       await refreshStatus();
     } catch (e) {
-      Alert.alert(kind === 'ping' ? 'Not logged' : 'Extra Fries not used', errorText(e));
+      Alert.alert(kind === 'ping' ? 'Check-in failed' : 'Extra Fries not used', errorText(e));
     } finally {
       setBusy(null);
     }
   }, []);
 
   const useFries = () =>
-    Alert.alert('Use Extra Fries?', 'This logs your distance right now and spends one Extra Fries.', [
+    Alert.alert('Use Extra Fries?', 'This checks you in right now and spends one Extra Fries.', [
       { text: 'Cancel', style: 'cancel' },
       { text: 'Use it', onPress: () => log('extra_fries') },
     ]);
 
   const open = status?.openPing && new Date(status.openPing.closesAt).getTime() > Date.now() ? status.openPing : null;
   const fries = status?.extraFries.length ?? 0;
+  const nextOpens = nextCheckInOpensAt(new Date(), status?.todayLogged ?? false);
+
+  // The window just opened by the clock but status hasn't caught up: re-check every 15 s.
+  const lastPoll = useRef(0);
+  useEffect(() => {
+    if (open || nextOpens || Date.now() - lastPoll.current < 15_000) return;
+    lastPoll.current = Date.now();
+    refreshStatus();
+  });
 
   return (
     <Screen refreshControl={<RefreshControl refreshing={refreshing} onRefresh={async () => {
       setRefreshing(true);
+      setBoardKey((k) => k + 1);
       await refreshStatus();
       setRefreshing(false);
     }} />}>
@@ -79,8 +89,12 @@ export default function Home() {
 
       <View style={s.hero}>
         <Text style={s.big} adjustsFontSizeToFit numberOfLines={1}>{formatMiles(nearest?.mi)}</Text>
-        <Text style={s.unit}>miles from the nearest McDonald's</Text>
+        <Text style={s.unit}>{brand("miles from the nearest McDonald's")}</Text>
         {error ? <Small center>{error}</Small> : !pos ? <Small center>Finding you…</Small> : null}
+      </View>
+
+      <View style={s.radar}>
+        <Radar size={radarSize} you={pos} store={nearest?.store ?? null} heading={heading} />
       </View>
 
       {result ? (
@@ -98,16 +112,17 @@ export default function Home() {
         </Card>
       ) : open ? (
         <Card tone="teal">
-          <H2>Ping! {countdown(open.closesAt)} left</H2>
-          <Body>Log your distance now. Your exact spot is used for the score and then thrown away.</Body>
-          <Button title="Log my distance" busy={busy === 'ping'} onPress={() => log('ping')} />
+          <Text style={s.clockLabel}>You have</Text>
+          <Text style={s.clock} adjustsFontSizeToFit numberOfLines={1}>{countdown(open.closesAt)}</Text>
+          <Text style={s.clockLabel}>to check in</Text>
+          <Small center>Your exact spot is used for the score and then thrown away.</Small>
+          <Button title="Check in" busy={busy === 'ping'} onPress={() => log('ping')} />
         </Card>
       ) : (
         <Card>
-          <Body>
-            {status?.todayLogged ? "Today's ping is logged. " : ''}The daily ping is at 1:20 PM your time. You get an hour to log.
-          </Body>
-          {demoMode ? <Small>Demo mode: open a practice ping from the Me tab.</Small> : null}
+          <Text style={s.clockLabel}>{nextOpens ? 'Next check-in in' : 'Check-in opening…'}</Text>
+          {nextOpens ? <Text style={s.clockSmall} adjustsFontSizeToFit numberOfLines={1}>{countdown(nextOpens)}</Text> : null}
+          {demoMode ? <Small center>Demo mode: open a practice check-in from the Me tab.</Small> : null}
         </Card>
       )}
 
@@ -121,24 +136,7 @@ export default function Home() {
         </Card>
       ) : null}
 
-      <View style={s.map}>
-        {pos ? (
-          <MapView
-            style={{ flex: 1 }}
-            showsUserLocation
-            showsPointsOfInterests={false}
-            initialRegion={{ latitude: pos.lat, longitude: pos.lon, latitudeDelta: 0.6, longitudeDelta: 0.6 }}>
-            {nearby.map((p, i) => (
-              <Marker key={i} coordinate={{ latitude: p.lat, longitude: p.lon }} pinColor={colors.gold} tracksViewChanges={false} />
-            ))}
-            {home ? (
-              <Circle center={{ latitude: home.lat, longitude: home.lon }} radius={RULES.homeRadiusMi * 1609.344}
-                strokeColor={colors.teal} fillColor="rgba(15,82,87,0.10)" />
-            ) : null}
-          </MapView>
-        ) : null}
-      </View>
-      <Small center>Only you see this map: you, your home zone, and McDonald's within {RULES.mapRadiusMi} miles.</Small>
+      <Leaderboard refreshKey={boardKey} />
     </Screen>
   );
 }
@@ -147,6 +145,10 @@ const s = StyleSheet.create({
   topRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   hero: { alignItems: 'center', paddingVertical: space.xl },
   big: { ...font.huge, color: colors.ink },
-  unit: { fontSize: 17, color: colors.muted, marginTop: -4 },
-  map: { height: 280, borderRadius: radius.md, overflow: 'hidden', backgroundColor: colors.line },
+  unit: { ...font.body, fontSize: 16, color: colors.muted, marginTop: -4 },
+  radar: { alignItems: 'center', paddingTop: 48, paddingBottom: space.xl },
+  // Countdown in big clock digits (think the TV show 24): fixed-width so it doesn't jitter.
+  clock: { ...font.huge, fontSize: 96, color: colors.ink, textAlign: 'center', lineHeight: 100 },
+  clockSmall: { ...font.huge, fontSize: 56, letterSpacing: -1, color: colors.ink, textAlign: 'center', lineHeight: 62 },
+  clockLabel: { ...font.h2, fontSize: 18, color: colors.ink, textAlign: 'center' },
 });
