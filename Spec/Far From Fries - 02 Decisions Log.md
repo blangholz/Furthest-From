@@ -64,6 +64,8 @@ aliases:
 | 34 | Supabase project | Shared project, schemas fff / fff_private only |
 | 35 | Test pings | Testers can open a ping 5 s out in dev builds; no streak effect |
 | 36 | Typefaces | DIN Condensed (headings, buttons, labels) and DIN Alternate (body, numbers), all caps everywhere; typed text stays as typed |
+| 37 | Player-facing name | "Check-in" everywhere players read it; code keeps ping/log |
+| 38 | Friend alerts | When friends ship: push when a friend passes you, and when a friend has an exceptional check-in for them |
 
 ---
 
@@ -345,6 +347,19 @@ Phase decided: Build
 
 ---
 
+**Decision #38**
+Topic: Friend alerts (ships with friends, #3 / #26)
+Question: Beyond "Benjamin is 63.2 miles from the nearest McDonald's", which friend events earn a push?
+Decision: (2026-11-26) Two more alerts once the friend graph exists:
+1. **Passed you.** When a friend's check-in moves them above you on your friends season board, you get a push naming them: "SAM JUST PASSED YOU. YOU'RE NOW #4 OF 9." Only the passed player is notified. At most one passed alert per friend per day. If several friends pass you around the same time, they batch into one push ("SAM AND JO PASSED YOU").
+2. **Exceptional check-in.** When a friend scores far above their own normal, all their friends get a push: "SAM IS 20.4 MILES OUT. THEY USUALLY CHECK IN AROUND 2.5." The baseline is the median of their last 20 scored check-ins, and needs at least 7 to exist. A check-in is exceptional when it is at least 3× that median and at least 10 miles above it. Example: median 2.5 mi, so the bar is 12.5 mi and a 20 mi check-in qualifies. Home check-ins and test pings (#35) never count toward the baseline or trigger it. An exceptional alert replaces the plain friend-log notification for that check-in, so friends get one push, not two.
+Both multipliers live in `fff.game_settings` so they can be tuned from real data without a migration. Both alerts go through the existing push outbox (`push-dispatch`) and each gets its own toggle in notification settings.
+Rationale: Rank changes and personal outliers are the moments that make friends react. Comparing a player against their own history means a homebody's big day counts as much as a road-tripper's.
+Status: `decided` (builds with friends, after launch)
+Phase decided: Build
+
+---
+
 ## Deferred Items
 
 | # | Topic | Deferred Until | Reason |
@@ -352,7 +367,7 @@ Phase decided: Build
 | 18 | User-submitted McDonald's | Phase 2 | Needs verification design; not core |
 | A | State Extremes bonus leaderboard points | Game balancing | Needs real play data |
 | B | Points rebrand (fries or burgers) | Phase 2 | Branding polish |
-| 3 | Friends (friend graph, feed, invites, friends board) | After launch | First build ships the global board only (#26) |
+| 3 | Friends (friend graph, feed, invites, friends board, friend alerts #38) | After launch | First build ships the global board only (#26) |
 | C | Final name confirmation | Before branding work | Needs App Store and trademark check |
 | D | Check-in Live Activity (lock screen / Dynamic Island) | Phase 2 | Needs a native widget extension; live mileage conflicts with no background location |
 

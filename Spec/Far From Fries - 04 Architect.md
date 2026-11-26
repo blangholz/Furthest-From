@@ -186,6 +186,7 @@ Offline Python job (geopandas, scipy KD-tree), results loaded into Supabase.
 - [ ] Friends and invite links (Vercel landing page with universal links)
 - [ ] Daily ping: pg_cron picks the time, Edge Function sends Expo push, 1-hour log window, scoring
 - [ ] Friend activity feed and "Benjamin is 63.2 miles from the nearest McDonald's" notifications
+- [ ] Friend alerts (#38): "passed you" on the friends board and exceptional check-ins vs. the friend's own median
 - [ ] Streaks (pause in home zone, break on a miss) and Extra Fries
 - [ ] Leaderboards: season, all-time, global
 - [ ] Passport and Home logs
