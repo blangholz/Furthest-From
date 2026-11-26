@@ -24,7 +24,7 @@ const CROSS = 14;
 const FIT = 6;
 const FIT_MAX_MI = 15;
 const STEP = 2; // + / − zoom factor
-const ASPECT = 0.375; // height / width: a wide, short strip
+const ASPECT = 0.5625; // height / width: 3/4 of the original 4:3 box
 
 export function MiniMap({ pos, nearest, heading = null }: {
   pos: LatLon | null; nearest: { store: Store; mi: number } | null; heading?: number | null;
