@@ -1,6 +1,6 @@
 # McFarthest: rules as built
 
-Numbers live in one row, `public.game_settings`, so they can change without code.
+Numbers live in one row, `fff.game_settings`, so they can change without code.
 The app mirrors them in `mobile/src/lib/rules.ts`.
 
 - **Distance**: straight-line miles from where you stand to the nearest McDonald's.
