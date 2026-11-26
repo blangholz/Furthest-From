@@ -39,6 +39,7 @@ export default function Home() {
   const [result, setResult] = useState<LogResult | null>(null);
   const [refreshing, setRefreshing] = useState(false);
   const [boardKey, setBoardKey] = useState(0);
+  const [topH, setTopH] = useState(0);
   useTick(1000);
 
   const nearest = useMemo(() => (pos ? storeIndex().nearest(pos) : null), [pos]);
@@ -102,13 +103,16 @@ export default function Home() {
         <IconButton icon="person" android="person" label="Me" onPress={() => router.push('/me')} />
       </View>
 
+      <View onLayout={(e) => setTopH(e.nativeEvent.layout.height)}>
       <Card label="You are currently">
         <Text style={s.big} adjustsFontSizeToFit numberOfLines={1}>{formatMiles(nearest?.mi)}</Text>
         {error ? <Small>{error}</Small> : !pos ? <Small>Finding you…</Small> : null}
         <Label>Miles from the nearest McDonald's</Label>
       </Card>
+      </View>
 
-      <MiniMap pos={pos} nearest={nearest} heading={heading} />
+      {/* Same height as the distance box above it. */}
+      <MiniMap pos={pos} nearest={nearest} heading={heading} height={topH || undefined} />
 
       {!result ? (
         <Card>
