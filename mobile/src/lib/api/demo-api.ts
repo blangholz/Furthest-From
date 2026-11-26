@@ -300,4 +300,13 @@ export const demoApi: Api & { openDemoPing(): Promise<void>; reset(): Promise<vo
       .filter((l) => l.userId === ME && l.zone === zone)
       .map((l) => ({ id: l.id, kind: l.kind, zone: l.zone, distanceMi: l.distanceMi, points: pointsFor(l.zone, l.distanceMi), regionName: l.regionName, loggedAt: l.loggedAt }));
   },
+  async openTestPing(delaySeconds) {
+    const s = await load();
+    const opens = new Date(Date.now() + delaySeconds * 1000);
+    const closes = new Date(opens.getTime() + 3600_000);
+    s.pings = s.pings.filter((p) => !(p.status === 'open'));
+    s.pings.unshift({ date: `test-${opens.getTime()}`, opensAt: opens.toISOString(), closesAt: closes.toISOString(), status: 'open' });
+    await save();
+    return { opensAt: opens.toISOString(), closesAt: closes.toISOString() };
+  },
 };

@@ -136,6 +136,8 @@ export interface Api {
   leaderboard(scope: 'friends' | 'global', period: 'season' | 'all'): Promise<LeaderRow[]>;
   spots(): Promise<Spot[]>;
   myLogs(zone: 'passport' | 'home'): Promise<MyLog[]>;
+  /** Testers only: opens a ping that starts in `delaySeconds` (development builds). */
+  openTestPing(delaySeconds: number): Promise<{ opensAt: string; closesAt: string }>;
 }
 
 /** Friendly words for an error code. */

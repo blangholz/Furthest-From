@@ -33,3 +33,12 @@ export async function registerForPush(): Promise<string | null> {
   await api.registerPushToken(token, Platform.OS);
   return token;
 }
+
+/** Development only: shows the ping notification on this phone after `seconds`. */
+export async function scheduleLocalPing(seconds: number): Promise<void> {
+  if (!(await notificationPermission(true))) return;
+  await Notifications.scheduleNotificationAsync({
+    content: { title: '🍟 Test ping!', body: 'How far from fries are you? You have an hour to log it.', data: { type: 'ping', test: true } },
+    trigger: { type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL, seconds },
+  });
+}

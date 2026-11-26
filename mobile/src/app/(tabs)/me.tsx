@@ -5,6 +5,7 @@ import { api, demoApi, errorText } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
 import { config, demoMode, features } from '@/lib/config';
 import { formatMiles } from '@/lib/geo';
+import { scheduleLocalPing } from '@/lib/notifications';
 import { pendingCount } from '@/lib/offline-queue';
 import { RULES } from '@/lib/rules';
 import { refreshStatus, useStatus } from '@/lib/status';
@@ -105,6 +106,25 @@ export default function Me() {
           <Button title="Reset demo" kind="quiet" onPress={async () => {
             await demoApi.reset();
             await signOut();
+          }} />
+        </Card>
+      ) : null}
+
+      {__DEV__ && !demoMode ? (
+        <Card tone="teal">
+          <H2>Testing</H2>
+          <Body>Opens a test ping in 5 seconds so you can try a check-in. It scores like a real log but never affects your streak. Only shows in development builds.</Body>
+          <Button title="Ping me in 5 seconds" onPress={async () => {
+            try {
+              await api.openTestPing(5);
+              await scheduleLocalPing(5);
+              setTimeout(() => {
+                refreshStatus();
+                router.navigate('/(tabs)/home');
+              }, 5500);
+            } catch (e) {
+              Alert.alert('Test ping failed', errorText(e));
+            }
           }} />
         </Card>
       ) : null}

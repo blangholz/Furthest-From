@@ -150,5 +150,9 @@ export function supabaseApi(db: NonNullable<typeof supabase>): Api {
         regionName: r.region_name, loggedAt: r.logged_at,
       } satisfies MyLog));
     },
+    async openTestPing(delaySeconds) {
+      const r = await rpc<Record<string, any>>('open_test_ping', { p_delay_seconds: delaySeconds });
+      return { opensAt: r.opens_at, closesAt: r.closes_at };
+    },
   };
 }
