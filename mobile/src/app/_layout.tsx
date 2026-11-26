@@ -11,6 +11,8 @@ import { Body, Button, Screen, Title } from '@/ui/kit';
 import { clearStatus, refreshStatus, useStatus } from '@/lib/status';
 import { registerForPush } from '@/lib/notifications';
 import { colors, fonts } from '@/ui/theme';
+import { BugReporter } from '@/ui/BugReporter';
+import { demoMode } from '@/lib/config';
 
 SplashScreen.preventAutoHideAsync().catch(() => {});
 
@@ -93,6 +95,7 @@ function Root() {
         <Stack.Screen name="i/[code]" />
         <Stack.Screen name="auth-callback" />
       </Stack>
+      {status?.isTester && !demoMode ? <BugReporter /> : null}
     </>
   );
 }

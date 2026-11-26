@@ -9,10 +9,11 @@ import { config, demoMode, features } from '@/lib/config';
 import { formatMiles, haversineMi } from '@/lib/geo';
 import { useLiveLocation } from '@/lib/location';
 import { scheduleLocalPing } from '@/lib/notifications';
+import { requestReport, useShakeToReport } from '@/lib/bug-report';
 import { pendingCount } from '@/lib/offline-queue';
 import { RULES } from '@/lib/rules';
 import { refreshStatus, useStatus } from '@/lib/status';
-import { Body, Button, Card, H2, Loading, Row, Rows, Screen, Small, Title } from '@/ui/kit';
+import { Body, Button, Card, H2, Loading, Row, Rows, Screen, Segmented, Small, Title } from '@/ui/kit';
 import { TickGrid } from '@/ui/TickGrid';
 import { colors, font } from '@/ui/theme';
 
@@ -165,6 +166,7 @@ export default function Me() {
 // Only for tester accounts (profiles.is_tester), set apart under a DEV rule.
 function DevTools({ onReset }: { onReset: () => Promise<void> }) {
   const [busy, setBusy] = useState<string | null>(null);
+  const [shakeOn, setShakeOn] = useShakeToReport();
   const testPing = async () => {
     setBusy('ping');
     try {
@@ -200,6 +202,12 @@ function DevTools({ onReset }: { onReset: () => Promise<void> }) {
         <Text style={s.devText}>DEV</Text>
         <View style={s.devLine} />
       </View>
+      <Card label="Shake to report">
+        <Small>Shake the phone on any screen to screenshot it, draw on it and add a note. It goes to Claude to look at.</Small>
+        <Segmented value={shakeOn ? 'on' : 'off'} onChange={(v) => setShakeOn(v === 'on')}
+          options={[{ value: 'off', label: 'Off' }, { value: 'on', label: 'On' }]} />
+        <Button title="Report a bug now" kind="secondary" onPress={requestReport} />
+      </Card>
       <Card label="Test check-in">
         <Small>Opens a check-in in 5 seconds. It scores like a real one but never touches your streak.</Small>
         <Button title="Ping me in 5 seconds" kind="secondary" busy={busy === 'ping'} onPress={testPing} />

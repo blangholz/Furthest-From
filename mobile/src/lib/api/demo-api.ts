@@ -315,4 +315,7 @@ export const demoApi: Api & { openDemoPing(): Promise<void>; reset(): Promise<vo
     s.home = null;
     await save();
   },
+  async submitBugReport() {
+    return 0; // demo players are never testers, so this is never reached
+  },
 };

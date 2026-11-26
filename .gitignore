@@ -5,3 +5,4 @@ pipeline/.cache/
 supabase/.temp/
 supabase/.branches/
 .DS_Store
+.bug-reports/

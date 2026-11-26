@@ -31,3 +31,9 @@ Sections are thin-stroked outline boxes with a margin, never a background fill. 
 Reference: direction A on the design canvas https://claude.ai/artifact/PBTz9CKozTxYmiiYRwKmn8.
 Shared pieces live in `mobile/src/ui/kit.tsx` (Card with label, Rows, Button, IconButton) and
 `mobile/src/ui/TickGrid.tsx`. One screen (Home) plus Me behind a person icon (#40).
+
+Bug reports from the phone (Decision #42): testers shake to report (DEV on Me). Reports land in
+`fff.bug_reports` + bucket `fff-bug-reports`. A SessionStart hook runs `node scripts/bug-reports.mjs --hook`;
+when it lists reports, Read each screenshot, ask Ben your questions, then `--mark seen <ids>` (later `--mark fixed`).
+Keep a live watcher running during sessions: Monitor `node scripts/bug-reports.mjs --watch` (30 min, re-arm).
+The script needs `SUPABASE_SERVICE_ROLE_KEY` in the gitignored `.env.local`.

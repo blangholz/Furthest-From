@@ -1,3 +1,4 @@
+import { base64ToBytes } from '../bug-report';
 import type { supabase } from '../supabase';
 import { ApiError, type Api, type ApiErrorCode, type FeedItem, type Friend, type LeaderRow, type MyLog, type Spot, type Status } from './types';
 
@@ -157,6 +158,15 @@ export function supabaseApi(db: NonNullable<typeof supabase>): Api {
     },
     async devResetOnboarding() {
       await rpc('dev_reset_onboarding');
+    },
+    async submitBugReport({ imageBase64, note, context }) {
+      const { data } = await db.auth.getSession();
+      const uid = data.session?.user.id;
+      if (!uid) throw new ApiError('not_signed_in', 'not_signed_in');
+      const path = `${uid}/${new Date().toISOString().replace(/[:.]/g, '-')}.jpg`;
+      const up = await db.storage.from('fff-bug-reports').upload(path, base64ToBytes(imageBase64), { contentType: 'image/jpeg' });
+      if (up.error) throw toApiError(up.error);
+      return rpc<number>('submit_bug_report', { p_note: note, p_screenshot_path: path, p_context: context });
     },
   };
 }

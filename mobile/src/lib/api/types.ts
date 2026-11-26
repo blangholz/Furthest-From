@@ -142,6 +142,8 @@ export interface Api {
   openTestPing(delaySeconds: number): Promise<{ opensAt: string; closesAt: string }>;
   /** Testers only: clears onboarding and the home pin so the flow can run from the start. */
   devResetOnboarding(): Promise<void>;
+  /** Testers only: uploads a marked-up screenshot (JPEG, base64) and records the note. Returns the report id. */
+  submitBugReport(r: { imageBase64: string; note: string; context: Record<string, unknown> }): Promise<number>;
 }
 
 /** Friendly words for an error code. */

@@ -66,6 +66,7 @@ aliases:
 | 36 | Typefaces | DIN Condensed (headings, buttons, labels) and DIN Alternate (body, numbers), all caps everywhere; typed text stays as typed |
 | 37 | Player-facing name | "Check-in" everywhere players read it; code keeps ping/log |
 | 38 | Friend alerts | When friends ship: push when a friend passes you, and when a friend has an exceptional check-in for them |
+| 42 | Tester feedback | Shake to report (testers): screenshot, draw, note, upload to Supabase; Claude pulls them each session |
 
 ---
 
@@ -382,6 +383,14 @@ Topic: Naming the nearest McDonald's
 Question: Home shows the nearest store's town ("Nearest: Hines, OR"). Where does the name come from?
 Decision: (2026-11-26) From the bundled store list: `pipeline/fff_data.py app-data` now writes a `places` array ("Town, ST") next to `points` in `mobile/assets/data/stores.json` (about 590 KB). The player's own spot shows coordinates only, with no place name, because naming it would mean sending the location to Apple's geocoder.
 Rationale: Keeps the promise that watching your distance never sends your location anywhere (#13).
+Status: `decided`
+Phase decided: Build
+
+**Decision #42**
+Topic: Tester feedback
+Question: How do testers send bugs and feedback from the phone to Claude?
+Decision: (2026-11-26) Shake to report. A DEV setting on Me (testers only, off by default) turns it on; "Report a bug now" does the same by hand. A shake grabs the screen and opens a sheet: draw on the screenshot (in-app pen with three colors, undo, clear), write a note, send. The image goes to the private bucket `fff-bug-reports` under the user's id; `fff.submit_bug_report` records the note, the path and app context (screen, device, OS, app version, runtime) in `fff.bug_reports`. Claude pulls new reports with `scripts/bug-reports.mjs` from a SessionStart hook and a live watcher, then marks them seen or fixed.
+Rationale: Ben wants to report bugs while using the app away from the computer and have them waiting when he's back. Apple's own Markup needs native code, which Expo Go can't run, so the pen is in-app for now; swap in PencilKit once there's a development build.
 Status: `decided`
 Phase decided: Build
 
