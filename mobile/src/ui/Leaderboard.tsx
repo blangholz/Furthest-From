@@ -45,8 +45,8 @@ export function Leaderboard({ refreshKey = 0 }: { refreshKey?: number }) {
         <Card>
           {rows.length === 0 ? <Body muted>No scores yet this season.</Body> : null}
           {rows.map((r) => (
-            <Row key={r.userId}
-              left={<Body>{r.rank}. {r.isMe ? 'You' : r.displayName}</Body>}
+            <Row key={r.userId} highlight={r.isMe}
+              left={<Body>{r.rank}. {r.displayName}</Body>}
               sub={`${r.logs} check-in${r.logs === 1 ? '' : 's'}`}
               right={<Body>{formatMiles(r.points)}</Body>} />
           ))}

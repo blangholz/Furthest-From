@@ -69,9 +69,10 @@ export function Button({ title, onPress, kind = 'primary', busy, disabled }: {
   );
 }
 
-export function Row({ left, right, sub, onPress }: { left: ReactNode; right?: ReactNode; sub?: ReactNode; onPress?: () => void }) {
+// highlight: a full-bleed band of the brand yellow across the card (e.g. your own leaderboard row).
+export function Row({ left, right, sub, onPress, highlight }: { left: ReactNode; right?: ReactNode; sub?: ReactNode; onPress?: () => void; highlight?: boolean }) {
   const inner = (
-    <View style={s.row}>
+    <View style={[s.row, highlight && s.rowHighlight]}>
       <View style={{ flex: 1 }}>
         {typeof left === 'string' ? <Text style={s.body}>{brand(left)}</Text> : left}
         {sub ? <Text style={[s.small, { marginTop: 2 }]}>{brand(sub)}</Text> : null}
@@ -122,6 +123,7 @@ const s = StyleSheet.create({
   quiet: { paddingVertical: 10 },
   buttonText: { ...fonts.condensed, fontSize: 21, letterSpacing: 1 },
   row: { flexDirection: 'row', alignItems: 'center', paddingVertical: space.sm, gap: space.md },
+  rowHighlight: { backgroundColor: colors.bg, marginHorizontal: -space.lg, paddingHorizontal: space.lg },
   rowRight: { ...font.body, fontWeight: '700', color: colors.ink, fontVariant: ['tabular-nums'] },
   seg: { flexDirection: 'row', borderWidth: 1, borderColor: colors.ink, borderRadius: radius.sm, padding: 3 },
   segItem: { flex: 1, paddingVertical: 8, alignItems: 'center', borderRadius: radius.sm - 2 },
