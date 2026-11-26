@@ -21,10 +21,13 @@ const ITEMS: [string, string][] = [
 export function RulesSheet({ visible, onClose }: { visible: boolean; onClose: () => void }) {
   return (
     <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
-      <Pressable style={s.dim} onPress={onClose} accessibilityLabel="Close">
-        <Pressable style={s.card} onPress={() => {}} accessible={false}>
+      <View style={s.dim}>
+        {/* The backdrop is a sibling behind the card, not a wrapper around it: a Pressable
+            wrapping a ScrollView takes the touch on iOS and the rules won't scroll. */}
+        <Pressable style={StyleSheet.absoluteFill} onPress={onClose} accessibilityRole="button" accessibilityLabel="Close" />
+        <View style={s.card}>
           <Text style={s.title}>{brand('How scoring works')}</Text>
-          <ScrollView style={{ flexShrink: 1 }} bounces={false}>
+          <ScrollView style={{ flexShrink: 1 }} showsVerticalScrollIndicator>
             <Rows>
               {ITEMS.map(([label, text]) => (
                 <View key={label} style={s.item}>
@@ -35,8 +38,8 @@ export function RulesSheet({ visible, onClose }: { visible: boolean; onClose: ()
             </Rows>
           </ScrollView>
           <Button title="Got it" onPress={onClose} />
-        </Pressable>
-      </Pressable>
+        </View>
+      </View>
     </Modal>
   );
 }
