@@ -83,19 +83,43 @@ Skip it for launch if you like: Apple and email cover iPhone users.
 
 ## 5. Expo / EAS (builds)
 
-Build settings are in `mobile/eas.json` (development, preview, production).
+Build settings are in `mobile/eas.json`. Each profile reads the EAS environment of
+the same name (development, preview, production).
 
-1. Done: the expo.dev project `far-from-fries` (owner `blangholzs-team`) is set
-   in `mobile/app.json`.
-2. Project settings > GitHub: link `blangholz/Furthest-From` with base directory
-   `mobile`, so builds can run from the repo without your Mac.
-3. Project > Environment variables: add `EXPO_PUBLIC_SUPABASE_URL` and
-   `EXPO_PUBLIC_SUPABASE_ANON_KEY` (plain text is fine; both are public values).
-   Builds without them run in demo mode.
-4. iOS builds need the Apple Developer membership (step 3). The first build
-   asks to sign in to Apple once and sets up the certificates and push key.
-5. Build a development build for your phone (`eas build --profile development --platform ios`
-   or from the expo.dev site), then later `production` and `eas submit` for TestFlight.
+Done:
+- expo.dev project `far-from-fries` (owner `blangholzs-team`), set in `mobile/app.json`.
+- `EXPO_PUBLIC_SUPABASE_URL` and `EXPO_PUBLIC_SUPABASE_ANON_KEY` are set in all three
+  EAS environments (2026-11-26). Builds without them would run in demo mode.
+
+Still needed (Benjamin):
+1. Apple Developer membership active (section 3).
+2. Optional: expo.dev > Project settings > GitHub: link `blangholz/Furthest-From`,
+   base directory `mobile`, so builds can start from GitHub without your Mac.
+
+### First development build (your phone)
+A development build replaces Expo Go: real pushes, Sign in with Apple, and magic
+links that open the app. Run these from `mobile/` once Apple is active:
+
+```bash
+npx eas-cli@latest device:create    # once: open the link on your iPhone to register it
+npx eas-cli@latest build --profile development --platform ios
+```
+The first build asks you to sign in to Apple once (interactive). Answer **yes** to
+letting EAS create the distribution certificate, provisioning profile and the push
+notifications key. After that, builds and credentials run without you.
+
+Install from the link or QR code the build prints. Then start the dev server with
+`npx expo start` (no `--go`) and open it from the McFarthest app.
+
+### TestFlight
+```bash
+npx eas-cli@latest build --profile production --platform ios
+npx eas-cli@latest submit --platform ios --latest
+```
+The first submit creates the App Store Connect app record. Before anyone outside
+your own Apple ID can test, App Store Connect needs a privacy policy URL (see
+`web/privacy.html`) and a beta review. The name check from Decision #25 should
+happen before this step.
 
 ## 6. Website (invite links, privacy page)
 
