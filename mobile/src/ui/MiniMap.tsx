@@ -24,6 +24,7 @@ const CROSS = 14;
 const FIT = 6;
 const FIT_MAX_MI = 15;
 const STEP = 2; // + / − zoom factor
+const ASPECT = 0.375; // height / width: a wide, short strip
 
 export function MiniMap({ pos, nearest, heading = null }: {
   pos: LatLon | null; nearest: { store: Store; mi: number } | null; heading?: number | null;
@@ -43,14 +44,14 @@ function NearMap({ w, pos, nearest, heading }: { w: number; pos: LatLon; nearest
   // Default zoom fits the nearest, and in towns widens to about the FIT nearest stores.
   const fit = useMemo(() => {
     const close = storeIndex().within(pos, FIT_MAX_MI, FIT);
-    return fitSpanMi(Math.max(nearest.mi, close.length ? haversineMi(pos, close[close.length - 1]) * 0.75 : 0));
+    return fitSpanMi(Math.max(nearest.mi, close.length ? haversineMi(pos, close[close.length - 1]) * 0.75 : 0), ASPECT);
   }, [pos, nearest.mi]);
   // Zoom is kept relative to the fit, so it follows you as the nearest store changes.
   const [zoom, setZoom] = useState(1);
   const spanMi = clampSpan(fit / zoom);
   const zoomTo = (spanWanted: number) => setZoom(fit / clampSpan(spanWanted));
 
-  const proj = useMemo(() => nearProjection(pos, spanMi, w), [pos, spanMi, w]);
+  const proj = useMemo(() => nearProjection(pos, spanMi, w, ASPECT), [pos, spanMi, w]);
   // Draw out to the frame's half-diagonal on every side, so turning never uncovers a corner.
   const pad = Math.ceil(Math.hypot(proj.w, proj.h) / 2 - proj.h / 2);
   const inPad = (p: Pt) => p.x >= -pad && p.y >= -pad && p.x <= proj.w + pad && p.y <= proj.h + pad;
