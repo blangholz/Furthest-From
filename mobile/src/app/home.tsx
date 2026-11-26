@@ -117,17 +117,20 @@ export default function Home() {
       {/* Same height as the distance box above it. */}
       <MiniMap pos={pos} nearest={nearest} heading={heading} height={topH || undefined} />
 
-      {!result ? (
+      {!result && open ? (
         <Card>
-          <Text style={s.nextTitle}>{open ? 'Check-in open · closes in' : 'Next check-in'}</Text>
-          <Text style={s.nextClock}>{open ? countdown(open.closesAt) : nextOpens ? countdown(nextOpens) : 'Opening…'}</Text>
-          {open ? (
-            <>
-              <Small>Your exact spot is used for the score and then thrown away.</Small>
-              <Button title="Check in" busy={busy === 'ping'} onPress={() => log('ping')} />
-            </>
-          ) : demoMode ? <Small>Demo mode: open a practice check-in from Me.</Small> : null}
+          <Text style={s.nextTitle}>Check-in open · closes in</Text>
+          <Text style={s.nextClock}>{countdown(open.closesAt)}</Text>
+          <Small>Your exact spot is used for the score and then thrown away.</Small>
+          <Button title="Check in" busy={busy === 'ping'} onPress={() => log('ping')} />
         </Card>
+      ) : null}
+      {/* Between check-ins: a disabled button that counts down to the next one (bug report #3). */}
+      {!result && !open ? (
+        <>
+          <Button title={`Next check-in ${nextOpens ? countdown(nextOpens) : '…'}`} disabled onPress={() => {}} />
+          {demoMode ? <Small>Demo mode: open a practice check-in from Me.</Small> : null}
+        </>
       ) : null}
 
       {result ? (
