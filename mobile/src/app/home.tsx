@@ -1,6 +1,6 @@
-// Home, the app's only screen (Decision #29): wordmark + person icon (Me), the big live
-// distance with the nearest McDonald's town and coordinates, a radar, your own coordinates
-// (only you see them), today's check-in as a register entry, and the leaderboard below.
+// Home, the app's only screen (Decision #40): burger + wordmark + person icon (Me), "You are
+// currently" with the big live distance, a radar, the next check-in countdown, today's check-in
+// rows (the result becomes a register entry), and the leaderboard below.
 // The live number is computed on the phone from the bundled store list; watching it
 // never sends anything. Only "Check in" sends one point, once.
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
@@ -14,7 +14,7 @@ import { currentFix, useHeading, useLiveLocation } from '@/lib/location';
 import { submitOrQueue } from '@/lib/offline-queue';
 import { useStatus, refreshStatus } from '@/lib/status';
 import { storeIndex } from '@/lib/stores';
-import { countdown, formatLatLon, resultHeadline } from '@/ui/format';
+import { countdown, resultHeadline } from '@/ui/format';
 import { brand, BurgerMark, Button, Card, IconButton, Label, Row, Rows, Screen, Small, Title } from '@/ui/kit';
 import { Leaderboard } from '@/ui/Leaderboard';
 import { Radar } from '@/ui/Radar';
@@ -74,10 +74,6 @@ export default function Home() {
     refreshStatus();
   });
 
-  const nearestLine = nearest
-    ? [nearest.store.place, formatLatLon(nearest.store)].filter(Boolean).join(' · ')
-    : null;
-
   return (
     <Screen refreshControl={<RefreshControl refreshing={refreshing} tintColor={colors.ink} onRefresh={async () => {
       setRefreshing(true);
@@ -93,19 +89,22 @@ export default function Home() {
         <IconButton icon="person" android="person" label="Me" onPress={() => router.push('/me')} />
       </View>
 
-      <Card label="Miles from the nearest McDonald's">
+      <Card label="You are currently">
         <Text style={s.big} adjustsFontSizeToFit numberOfLines={1}>{formatMiles(nearest?.mi)}</Text>
         {error ? <Small>{error}</Small> : !pos ? <Small>Finding you…</Small> : null}
-        {nearestLine ? <Label>Nearest: {nearestLine}</Label> : null}
+        <Label>Miles from the nearest McDonald's</Label>
       </Card>
 
       <Card style={s.radarBox}>
         <Radar size={radarSize} you={pos} store={nearest?.store ?? null} heading={heading} />
       </Card>
 
-      <Card label="You are here · only you see this">
-        <Text style={s.coords}>{pos ? formatLatLon(pos) : '—'}</Text>
-      </Card>
+      {!result ? (
+        <Card>
+          <Text style={s.nextTitle}>{open ? 'Check-in open · closes in' : status?.todayLogged ? 'Done today · next check-in' : 'Next check-in'}</Text>
+          <Text style={s.nextClock}>{open ? countdown(open.closesAt) : nextOpens ? countdown(nextOpens) : 'Opening…'}</Text>
+        </Card>
+      ) : null}
 
       {result ? (
         <Card label={`Signed · ${new Date().toLocaleDateString(undefined, { month: '2-digit', day: '2-digit', year: '2-digit' })}`}>
@@ -122,16 +121,9 @@ export default function Home() {
           <Button title="Done" onPress={() => setResult(null)} />
         </Card>
       ) : (
-        <Card label="Today's check-in">
-          {open ? (
-            <>
-              <Text style={s.clock} adjustsFontSizeToFit numberOfLines={1}>{countdown(open.closesAt)}</Text>
-              <Label>Left to check in</Label>
-            </>
-          ) : null}
+        <Card>
           <Rows>
-            <Row left="Status" right={open ? 'Open' : status?.todayLogged ? 'Done for today' : nextOpens ? 'Closed' : 'Opening…'} />
-            {!open && nextOpens ? <Row left="Next check-in in" right={countdown(nextOpens)} /> : null}
+            <Row left="Check-in" right={open ? 'Open' : status?.todayLogged ? 'Done for today' : nextOpens ? 'Closed' : 'Opening…'} />
             <Row left="Streak" right={String(status?.streak ?? 0)} />
             <Row left="Extra Fries" right={fries > 0
               ? `${fries} · exp. ${new Date(status!.extraFries[0].expiresAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}`
@@ -164,7 +156,7 @@ const s = StyleSheet.create({
   big: { ...font.huge, color: colors.ink, lineHeight: 104, marginBottom: -6 },
   // Room above and below for the radar's N label and facing tick.
   radarBox: { alignItems: 'center', paddingTop: 52, paddingBottom: space.lg },
-  coords: { ...font.h2, color: colors.ink, fontVariant: ['tabular-nums'] },
-  // Countdown in big clock digits (think the TV show 24): fixed-width so it doesn't jitter.
-  clock: { ...font.huge, fontSize: 88, lineHeight: 92, color: colors.ink, fontVariant: ['tabular-nums'] },
+  nextTitle: { ...font.h2, color: colors.ink },
+  // Countdown in clock digits (think the TV show 24): fixed-width so it doesn't jitter.
+  nextClock: { ...font.value, fontSize: 22, color: colors.ink },
 });
