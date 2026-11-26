@@ -21,12 +21,10 @@ export function niceStep(x: number): number {
   return (m >= 5 ? 5 : m >= 2 ? 2 : 1) * p;
 }
 
-/**
- * Default zoom, in miles across: wide enough that `fitMi` sits well inside (the test page's
- * "zoom to me": 2.6x the nearest distance, at least 3 mi), also fitting vertically.
- */
-export function fitSpanMi(fitMi: number, aspect = 0.75): number {
-  return clampSpan(Math.max(3, (fitMi * 2.6) / aspect));
+/** Default zoom, in miles across: 5x the distance to the nearest store (1 mi away: 5 mi across). */
+export const FIT_TIMES = 5;
+export function fitSpanMi(nearestMi: number): number {
+  return clampSpan(nearestMi * FIT_TIMES);
 }
 
 /** Map `spanMi` miles across, centered on you; `h` comes from the aspect ratio. */

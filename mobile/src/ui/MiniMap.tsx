@@ -1,7 +1,7 @@
 // An abstract map right under the "You are currently" box, filling its own box edge to edge; the root test page's dot map redrawn in
 // the Field Notes style. No tiles or roads: thin ruled grid lines, an ink dot per McDonald's,
-// a crosshair for you and a dashed line to the nearest. It opens zoomed so the nearest store
-// (or, in town, the six nearest) sits well inside; pinch or tap + / − to zoom, FIT to reset.
+// a crosshair for you and a dashed line to the nearest. It opens 5x the nearest distance across
+// (1 mi away: 5 mi across); pinch or tap + / − to zoom, FIT to reset.
 // Zoom is about you, the center. Drawn with plain Views (no SVG dependency), all on the phone.
 // With a compass heading the drawing turns about you so up is the way you face, in step with
 // the edge compass; the N rides the rim. Dots and grid are drawn past the frame's corners so a
@@ -9,7 +9,7 @@
 import { useMemo, useRef, useState } from 'react';
 import { Animated, Pressable, StyleSheet, Text, View } from 'react-native';
 import { GestureDetector, GestureHandlerRootView, usePinchGesture } from 'react-native-gesture-handler';
-import { haversineMi, type LatLon, type Store } from '@/lib/geo';
+import { type LatLon, type Store } from '@/lib/geo';
 import { binPoints, clampSpan, clipSegment, dashes, fitSpanMi, gridLines, nearProjection, type Pt } from '@/lib/minimap';
 import { storeIndex } from '@/lib/stores';
 import { useSmoothAngle } from './EdgeCompass';
@@ -21,8 +21,6 @@ const BIN_DOT = 4; // smaller dots once a zoomed-out view gets thinned
 const BIN_AT = 250; // more dots than this get binned to one per BIN_CELL px
 const BIN_CELL = 5;
 const CROSS = 14;
-const FIT = 6;
-const FIT_MAX_MI = 15;
 const STEP = 2; // + / − zoom factor
 const ASPECT = 0.5625; // height / width when no height is given
 
@@ -43,11 +41,8 @@ export function MiniMap({ pos, nearest, heading = null, height }: {
 }
 
 function NearMap({ w, aspect, pos, nearest, heading }: { w: number; aspect: number; pos: LatLon; nearest: { store: Store; mi: number }; heading: number | null }) {
-  // Default zoom fits the nearest, and in towns widens to about the FIT nearest stores.
-  const fit = useMemo(() => {
-    const close = storeIndex().within(pos, FIT_MAX_MI, FIT);
-    return fitSpanMi(Math.max(nearest.mi, close.length ? haversineMi(pos, close[close.length - 1]) * 0.75 : 0), aspect);
-  }, [pos, nearest.mi, aspect]);
+  // Default zoom: 5x the distance to the nearest store, across.
+  const fit = fitSpanMi(nearest.mi);
   // Zoom is kept relative to the fit, so it follows you as the nearest store changes.
   const [zoom, setZoom] = useState(1);
   const spanMi = clampSpan(fit / zoom);

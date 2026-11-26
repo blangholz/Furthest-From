@@ -7,11 +7,11 @@ test('niceStep picks 1/2/5 steps', () => {
   expect(niceStep(40)).toBe(20);
 });
 
-test('fitSpanMi keeps the nearest inside, at least 3 mi, within zoom limits', () => {
-  expect(fitSpanMi(0.2)).toBe(3);
-  expect(fitSpanMi(10)).toBeCloseTo((10 * 2.6) / 0.75);
+test('fitSpanMi is 5x the nearest distance, within zoom limits', () => {
+  expect(fitSpanMi(1)).toBe(5);
+  expect(fitSpanMi(10)).toBe(50);
+  expect(fitSpanMi(0.01)).toBe(MIN_SPAN_MI);
   expect(fitSpanMi(500)).toBe(MAX_SPAN_MI);
-  expect(clampSpan(0.01)).toBe(MIN_SPAN_MI);
 });
 
 test('nearProjection centers you and scales to the span', () => {

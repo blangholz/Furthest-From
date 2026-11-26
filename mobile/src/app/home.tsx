@@ -21,6 +21,9 @@ import { brand, BurgerMark, Button, Card, IconButton, Label, Row, Rows, Screen, 
 import { Leaderboard } from '@/ui/Leaderboard';
 import { MiniMap } from '@/ui/MiniMap';
 import { EdgeCompass, RADIUS_MI, type EdgeStore } from '@/ui/EdgeCompass';
+
+// Screen-edge compass (dots + N + escape arrow). Off for now; flip to true to bring it back.
+const SHOW_EDGE_COMPASS = false;
 import { colors, font, space } from '@/ui/theme';
 
 function useTick(ms: number) {
@@ -45,7 +48,7 @@ export default function Home() {
   const nearest = useMemo(() => (pos ? storeIndex().nearest(pos) : null), [pos]);
   // Margin dots: every McDonald's within RADIUS_MI (capped at 60 for dense downtowns), plus the nearest even if it's farther. Farthest first so the nearest draws on top.
   const edgeStores = useMemo<EdgeStore[]>(() => {
-    if (!pos) return [];
+    if (!SHOW_EDGE_COMPASS || !pos) return [];
     const pts = storeIndex().within(pos, RADIUS_MI, 60);
     if (nearest && !pts.length) pts.push(nearest.store);
     return pts
@@ -53,7 +56,7 @@ export default function Home() {
       .sort((a, b) => b.mi - a.mi);
   }, [pos, nearest]);
   // Arrow: the way to walk to get farther from the surrounding McDonald's.
-  const escape = useMemo(() => (pos ? escapeBearing(storeIndex(), pos) : null), [pos]);
+  const escape = useMemo(() => (SHOW_EDGE_COMPASS && pos ? escapeBearing(storeIndex(), pos) : null), [pos]);
 
   const log = useCallback(async (kind: 'ping' | 'extra_fries') => {
     setBusy(kind === 'ping' ? 'ping' : 'fries');
@@ -116,8 +119,14 @@ export default function Home() {
 
       {!result ? (
         <Card>
-          <Text style={s.nextTitle}>{open ? 'Check-in open · closes in' : status?.todayLogged ? 'Done today · next check-in' : 'Next check-in'}</Text>
+          <Text style={s.nextTitle}>{open ? 'Check-in open · closes in' : 'Next check-in'}</Text>
           <Text style={s.nextClock}>{open ? countdown(open.closesAt) : nextOpens ? countdown(nextOpens) : 'Opening…'}</Text>
+          {open ? (
+            <>
+              <Small>Your exact spot is used for the score and then thrown away.</Small>
+              <Button title="Check in" busy={busy === 'ping'} onPress={() => log('ping')} />
+            </>
+          ) : demoMode ? <Small>Demo mode: open a practice check-in from Me.</Small> : null}
         </Card>
       ) : null}
 
@@ -135,33 +144,13 @@ export default function Home() {
           {result.zone === 'home' ? <Small>Home check-ins score zero and pause your streak.</Small> : null}
           <Button title="Done" onPress={() => setResult(null)} />
         </Card>
-      ) : (
-        <Card>
-          <Rows>
-            <Row left="Check-in" right={open ? 'Open' : status?.todayLogged ? 'Done for today' : nextOpens ? 'Closed' : 'Opening…'} />
-            <Row left="Streak" right={String(status?.streak ?? 0)} />
-            <Row left="Extra Fries" right={fries > 0
-              ? `${fries} · exp. ${new Date(status!.extraFries[0].expiresAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}`
-              : '0'} />
-          </Rows>
-          {open ? (
-            <>
-              <Small>Your exact spot is used for the score and then thrown away.</Small>
-              <Button title="Check in" busy={busy === 'ping'} onPress={() => log('ping')} />
-            </>
-          ) : fries > 0 ? (
-            <>
-              <Small>Use Extra Fries when you know you're far out. It checks you in right now.</Small>
-              <Button title="Use Extra Fries" kind="secondary" busy={busy === 'fries'} onPress={useFries} />
-            </>
-          ) : null}
-          {demoMode && !open ? <Small>Demo mode: open a practice check-in from Me.</Small> : null}
-        </Card>
-      )}
+      ) : fries > 0 && !open ? (
+        <Button title={`Use Extra Fries (${fries})`} kind="secondary" busy={busy === 'fries'} onPress={useFries} />
+      ) : null}
 
       <Leaderboard refreshKey={boardKey} />
     </Screen>
-    <EdgeCompass stores={edgeStores} escape={escape} heading={heading} />
+    {SHOW_EDGE_COMPASS ? <EdgeCompass stores={edgeStores} escape={escape} heading={heading} /> : null}
     </View>
   );
 }
@@ -170,7 +159,9 @@ const s = StyleSheet.create({
   root: { flex: 1, backgroundColor: colors.bg },
   header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginRight: -10 },
   brandRow: { flexDirection: 'row', alignItems: 'center', gap: space.sm, flexShrink: 1 },
-  wordmark: { ...font.title, fontSize: 30, color: colors.ink },
+  // DIN Condensed keeps a tall descender area, so its caps sit high in the line box;
+  // nudge the wordmark down so the caps center on the burger and the person icon.
+  wordmark: { ...font.title, fontSize: 30, lineHeight: 34, marginTop: 6, color: colors.ink },
   big: { ...font.huge, color: colors.ink, lineHeight: 104, marginBottom: -6 },
   nextTitle: { ...font.h2, color: colors.ink },
   // Countdown in clock digits (think the TV show 24): fixed-width so it doesn't jitter.
