@@ -80,10 +80,15 @@ def cmd_app_data(a):
     spots = load_spots(a.states, a.top100)
     outdir = os.path.join(ROOT, 'mobile', 'assets', 'data')
     os.makedirs(outdir, exist_ok=True)
-    # Compact: [lat, lon] at 5 decimals (about 1 m). Only what the live readout and map need.
+    # Compact: [lat, lon] at 5 decimals (about 1 m), plus "Town, ST" per store so Home can
+    # name the nearest McDonald's offline. Only what the live readout and map need.
+    def place(s):
+        city, state = (s['city'] or '').strip(), (s['state'] or '').strip()
+        return f'{city}, {state}' if city and state else (city or None)
     with open(os.path.join(outdir, 'stores.json'), 'w') as f:
         json.dump({'source': os.path.relpath(a.stores, ROOT), 'count': len(stores),
-                   'points': [[round(s['lat'], 5), round(s['lon'], 5)] for s in stores]}, f, separators=(',', ':'))
+                   'points': [[round(s['lat'], 5), round(s['lon'], 5)] for s in stores],
+                   'places': [place(s) for s in stores]}, f, separators=(',', ':'))
     with open(os.path.join(outdir, 'spots.json'), 'w') as f:
         json.dump([dict(s, state_name=STATE_NAMES.get(s['state'], s['state'])) for s in spots], f,
                   separators=(',', ':'))

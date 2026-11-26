@@ -3,7 +3,7 @@
 // Regenerate with: python3 pipeline/fff_data.py app-data
 import { StoreIndex } from './geo';
 
-type StoreFile = { source: string; count: number; points: [number, number][] };
+type StoreFile = { source: string; count: number; points: [number, number][]; places?: (string | null)[] };
 export type BundledSpot = {
   kind: 'state' | 'top100';
   state: string;
@@ -21,7 +21,7 @@ let index: StoreIndex | null = null;
 export function storeIndex(): StoreIndex {
   if (!index) {
     const file = require('../../assets/data/stores.json') as StoreFile;
-    index = new StoreIndex(file.points);
+    index = new StoreIndex(file.points, file.places);
   }
   return index;
 }

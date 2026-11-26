@@ -44,3 +44,16 @@ it('formats miles to one decimal', () => {
   expect(formatMiles(63.24)).toBe('63.2');
   expect(formatMiles(null)).toBe('--');
 });
+
+describe('store places', () => {
+  it('returns the nearest store with its town when the data has one', () => {
+    const idx = new StoreIndex([[43.5866, -119.0545], [44.06, -121.31]], ['Burns, OR', null]);
+    const near = idx.nearest({ lat: 43.6, lon: -119 });
+    expect(near?.store.place).toBe('Burns, OR');
+    expect(idx.nearest({ lat: 44.05, lon: -121.3 })?.store.place).toBeUndefined();
+  });
+
+  it('still loads data files without places', () => {
+    expect(new StoreIndex([[40, -100]]).nearest({ lat: 40, lon: -100 })?.store).toEqual({ lat: 40, lon: -100 });
+  });
+});

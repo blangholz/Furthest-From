@@ -3,6 +3,8 @@
 // watching your distance never sends your location anywhere.
 
 export type LatLon = { lat: number; lon: number };
+/** A McDonald's: its point plus "Town, ST" when the bundled data has it. */
+export type Store = LatLon & { place?: string };
 
 const EARTH_RADIUS_MI = 3958.7613;
 const toRad = (d: number) => (d * Math.PI) / 180;
@@ -19,16 +21,18 @@ export const miToFt = (mi: number) => mi * 5280;
 
 /** Grid index over store points (1 degree cells). Nearest lookups search rings outward. */
 export class StoreIndex {
-  private cells = new Map<string, LatLon[]>();
+  private cells = new Map<string, Store[]>();
   readonly size: number;
 
-  constructor(points: [number, number][]) {
-    for (const [lat, lon] of points) {
+  /** places[i] names points[i] ("Burns, OR"); optional so older data files still load. */
+  constructor(points: [number, number][], places?: (string | null)[]) {
+    points.forEach(([lat, lon], i) => {
       const k = StoreIndex.key(Math.floor(lat), Math.floor(lon));
       let c = this.cells.get(k);
       if (!c) this.cells.set(k, (c = []));
-      c.push({ lat, lon });
-    }
+      const place = places?.[i];
+      c.push(place ? { lat, lon, place } : { lat, lon });
+    });
     this.size = points.length;
   }
 
@@ -36,17 +40,17 @@ export class StoreIndex {
     return `${la}:${lo}`;
   }
 
-  private cell(la: number, lo: number): LatLon[] {
+  private cell(la: number, lo: number): Store[] {
     const wrapped = ((((lo + 180) % 360) + 360) % 360) - 180;
     return this.cells.get(StoreIndex.key(la, wrapped)) ?? [];
   }
 
   /** Nearest store and its distance in miles, or null if the index is empty. */
-  nearest(p: LatLon): { store: LatLon; mi: number } | null {
+  nearest(p: LatLon): { store: Store; mi: number } | null {
     if (this.size === 0) return null;
     const la0 = Math.floor(p.lat);
     const lo0 = Math.floor(p.lon);
-    let best: LatLon | null = null;
+    let best: Store | null = null;
     let bestMi = Infinity;
     // One degree of latitude is ~69 mi; a ring r cells out is at least (r - 1) * 69 * cos(lat) mi away.
     const cosLat = Math.max(0.05, Math.cos(toRad(Math.min(89, Math.abs(p.lat) + 1))));
