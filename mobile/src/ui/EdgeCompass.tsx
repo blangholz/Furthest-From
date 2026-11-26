@@ -11,7 +11,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Animated, Easing, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { displayCornerRadius, edgeTables } from '@/lib/edge';
-import { colors, space } from './theme';
+import { colors, space, stroke } from './theme';
 
 export const RADIUS_MI = 5;
 const DOT = 8;
@@ -22,7 +22,7 @@ const INSET = space.lg / 2; // middle of the screen gutter
 const SPAN = 720; // table covers -SPAN..SPAN so unwrapped angles never fall off the end
 
 /** Unwrapped, smoothed angle (degrees, clockwise from screen-up) following `deg` the short way round. */
-function useAngle(deg: number | null) {
+export function useSmoothAngle(deg: number | null) {
   const v = useRef(new Animated.Value(0)).current;
   const shown = useRef<number | null>(null);
   useEffect(() => {
@@ -59,7 +59,7 @@ function place(geo: Geo, v: Animated.Value, size: number) {
 const fade = (mi: number) => Math.max(0.2, 1 - 0.8 * Math.min(1, mi / RADIUS_MI));
 
 function StoreDot({ geo, store, heading }: { geo: Geo; store: EdgeStore; heading: number }) {
-  const v = useAngle(store.bearing - heading);
+  const v = useSmoothAngle(store.bearing - heading);
   return (
     <Animated.View style={[s.dot, { opacity: fade(store.mi) }, place(geo, v, DOT)]} />
   );
@@ -67,7 +67,7 @@ function StoreDot({ geo, store, heading }: { geo: Geo; store: EdgeStore; heading
 
 /** Small triangle on the margin, rotated to point outward along the escape direction. */
 function EscapeArrow({ geo, bearing, heading }: { geo: Geo; bearing: number; heading: number }) {
-  const v = useAngle(bearing - heading);
+  const v = useSmoothAngle(bearing - heading);
   const rotate = v.interpolate({ inputRange: [-SPAN, SPAN], outputRange: [`${-SPAN}deg`, `${SPAN}deg`] });
   const p = place(geo, v, ARROW_W);
   return (
@@ -77,20 +77,28 @@ function EscapeArrow({ geo, bearing, heading }: { geo: Geo; bearing: number; hea
   );
 }
 
-/** `stores` should be sorted farthest first so the nearest draws on top. */
-export function EdgeCompass({ stores, escape, heading }: { stores: EdgeStore[]; escape: number | null; heading: number | null }) {
+/**
+ * `stores` should be sorted farthest first so the nearest draws on top.
+ * track 'screen': fill the whole screen and ride the display edge (rounded corners).
+ * track 'border': place inside a wrapper around a box and ride that box's border line.
+ */
+export function EdgeCompass({ stores, escape, heading, track = 'screen' }: {
+  stores: EdgeStore[]; escape: number | null; heading: number | null; track?: 'screen' | 'border';
+}) {
   const insets = useSafeAreaInsets();
   const [box, setBox] = useState<{ w: number; h: number } | null>(null);
-  const north = useAngle(heading != null ? -heading : null);
+  const north = useSmoothAngle(heading != null ? -heading : null);
 
-  // The track hugs the physical display, rounded corners included, INSET in from the glass.
+  // 'screen' hugs the physical display, rounded corners included, INSET in from the glass.
+  // 'border' runs down the middle of the box's stroke, sharp corners (Decision #27).
   const geo = useMemo(() => {
     if (!box) return null;
-    const W = box.w / 2 - INSET;
-    const H = box.h / 2 - INSET;
-    const r = Math.max(0, displayCornerRadius(box.w, insets.bottom) - INSET);
+    const inset = track === 'border' ? stroke / 2 : INSET;
+    const W = box.w / 2 - inset;
+    const H = box.h / 2 - inset;
+    const r = track === 'border' ? 0 : Math.max(0, displayCornerRadius(box.w, insets.bottom) - inset);
     return { cx: box.w / 2, cy: box.h / 2, t: edgeTables(W, H, r, SPAN) };
-  }, [box, insets.bottom]);
+  }, [box, insets.bottom, track]);
 
   return (
     <View style={StyleSheet.absoluteFill} pointerEvents="none" accessibilityElementsHidden importantForAccessibility="no-hide-descendants"
@@ -99,7 +107,7 @@ export function EdgeCompass({ stores, escape, heading }: { stores: EdgeStore[]; 
         <>
           {stores.map((st) => <StoreDot key={st.key} geo={geo} store={st} heading={heading} />)}
           {escape != null ? <EscapeArrow geo={geo} bearing={escape} heading={heading} /> : null}
-          <Animated.Text style={[s.n, place(geo, north, N_BOX)]}>N</Animated.Text>
+          <Animated.Text style={[s.n, track === 'border' && s.nOnLine, place(geo, north, N_BOX)]}>N</Animated.Text>
         </>
       ) : null}
     </View>
@@ -116,4 +124,6 @@ const s = StyleSheet.create({
     position: 'absolute', width: N_BOX, height: N_BOX, lineHeight: N_BOX, textAlign: 'center',
     fontSize: 11, fontWeight: '800', color: colors.ink,
   },
+  // On a border the N cuts the line, like a label set into a ruled box.
+  nOnLine: { backgroundColor: colors.bg },
 });

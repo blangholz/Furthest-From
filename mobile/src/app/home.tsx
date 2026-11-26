@@ -1,7 +1,7 @@
 // Home, the app's only screen (Decision #40): burger + wordmark + person icon (Me), "You are
 // currently" with the big live distance, the edge compass (a dot + N in the margin pointing
 // at McDonald's within 5 mi and north, plus an arrow pointing the way to get farther away; the full-size radar is parked in ui/FullSizeRadar), the next check-in countdown, today's check-in
-// rows (the result becomes a register entry), and the leaderboard below.
+// rows (the result becomes a register entry), the leaderboard, and the Vicinity map (ui/MiniMap) at the bottom.
 // The live number is computed on the phone from the bundled store list; watching it
 // never sends anything. Only "Check in" sends one point, once.
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
@@ -18,6 +18,7 @@ import { storeIndex } from '@/lib/stores';
 import { countdown, resultHeadline } from '@/ui/format';
 import { brand, BurgerMark, Button, Card, IconButton, Label, Row, Rows, Screen, Small, Title } from '@/ui/kit';
 import { Leaderboard } from '@/ui/Leaderboard';
+import { MiniMap } from '@/ui/MiniMap';
 import { EdgeCompass, RADIUS_MI, type EdgeStore } from '@/ui/EdgeCompass';
 import { colors, font, space } from '@/ui/theme';
 
@@ -152,6 +153,7 @@ export default function Home() {
       )}
 
       <Leaderboard refreshKey={boardKey} />
+      <MiniMap pos={pos} nearest={nearest} heading={heading} />
     </Screen>
     <EdgeCompass stores={edgeStores} escape={escape} heading={heading} />
     </View>
