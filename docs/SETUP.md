@@ -27,8 +27,12 @@ shared sign-in.
 4. In the SQL editor, add the two secrets the minute job uses to send pushes:
    ```sql
    select vault.create_secret('https://<project-ref>.supabase.co', 'fff_project_url');
-   select vault.create_secret('<service role key>', 'fff_service_role_key');
+   select vault.create_secret('<random, e.g. openssl rand -hex 32>', 'fff_dispatch_secret');
    ```
+   Give push-dispatch the same random value:
+   `supabase secrets set FFF_DISPATCH_SECRET=<same random>`. (Don't rely on the
+   service role key here: the key injected into Edge Functions may not match the
+   legacy key, and every dispatch then fails with 403.)
    Then check Database > Extensions shows `pg_cron` and `pg_net` on. If they
    weren't on when step 3 ran, run `supabase/migrations/20261112000006_cron.sql` again.
 5. Deploy the push sender (`brew install supabase/tap/supabase`, `supabase login`,

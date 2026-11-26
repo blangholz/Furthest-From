@@ -1,6 +1,6 @@
 // push-dispatch: sends queued push messages (public.outbox) through Expo's push service.
-// Called every minute by pg_cron (see migrations/20261112000006_cron.sql) with the
-// service role key. Uses only the service role; never sees anyone's location.
+// Called every minute by pg_cron (see migrations/20261126000003_push_dispatch_secret.sql)
+// with a shared secret. Uses only the service role; never sees anyone's location.
 import { createClient } from 'npm:@supabase/supabase-js@2';
 
 type Claimed = { id: number; title: string; body: string; data: Record<string, unknown>; tokens: string[] };
@@ -10,9 +10,14 @@ const EXPO_PUSH_URL = 'https://exp.host/--/api/v2/push/send';
 const BATCH = 100; // Expo accepts up to 100 messages per request
 
 Deno.serve(async (req) => {
-  const auth = req.headers.get('Authorization') ?? '';
+  // Only pg_cron may call this. It sends a shared secret kept in Vault (fff_dispatch_secret)
+  // and in this function's secrets (FFF_DISPATCH_SECRET). We don't compare against the
+  // injected service role key: the platform may inject a different key format than the
+  // one stored in Vault (it did: every call got 403 and no pushes went out).
+  const expected = Deno.env.get('FFF_DISPATCH_SECRET') ?? '';
+  const given = req.headers.get('x-dispatch-secret') ?? '';
+  if (!expected || given !== expected) return new Response('forbidden', { status: 403 });
   const serviceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
-  if (auth !== `Bearer ${serviceKey}`) return new Response('forbidden', { status: 403 });
 
   const db = createClient(Deno.env.get('SUPABASE_URL')!, serviceKey, {
     auth: { persistSession: false },
