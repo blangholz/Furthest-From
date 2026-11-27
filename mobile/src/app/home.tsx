@@ -2,7 +2,7 @@
 // currently" with the big live distance, the edge compass (a dot + N in the margin pointing
 // at McDonald's within 5 mi and north, plus an arrow pointing the way to get farther away; the full-size radar is parked in ui/FullSizeRadar), the next check-in countdown, today's check-in
 // rows (the result becomes a register entry), and the leaderboard below. The map of nearby
-// McDonald's (ui/MiniMap) holds the live distance in its top-left corner.
+// McDonald's (ui/MiniMap) sits right under the unboxed live distance.
 // The live number is computed on the phone from the bundled store list; watching it
 // never sends anything. Only "Check in" sends one point, once.
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
@@ -107,14 +107,15 @@ export default function Home() {
         <IconButton icon="person" android="person" label="Me" onPress={() => router.push('/me')} />
       </View>
 
-      {/* Distance and vicinity in one box: the live distance sits in the map's top-left corner
-          (Figma: Combined vicinity and current distance 2). 348pt tall on a 390pt-wide phone. */}
-      <MiniMap pos={pos} nearest={nearest} heading={heading} height={Math.round((width - 2 * space.lg) * 0.97)}>
-        <Label>You are currently</Label>
+      {/* The live distance stands on the page, unboxed, with the vicinity map right under it
+          (Figma: Combined vicinity and current distance 3). The map is 285pt tall on a
+          390pt-wide phone and scales with width. */}
+      <View style={s.distance}>
         <Text style={s.big} adjustsFontSizeToFit numberOfLines={1}>{formatMiles(nearest?.mi)}</Text>
         {error ? <Small>{error}</Small> : null}
         <Label>Miles from the nearest McDonald's</Label>
-      </MiniMap>
+      </View>
+      <MiniMap pos={pos} nearest={nearest} heading={heading} height={Math.round((width - 2 * space.lg) * 0.796)} />
 
       {!result && open ? (
         <Card>
@@ -165,7 +166,8 @@ const s = StyleSheet.create({
   // DIN Condensed keeps a tall descender area, so its caps sit high in the line box;
   // nudge the wordmark down so the caps center on the burger and the person icon.
   wordmark: { ...font.title, fontSize: 30, lineHeight: 34, marginTop: 6, color: colors.ink },
-  big: { ...font.huge, fontSize: 89, lineHeight: 96, marginBottom: -6, color: colors.ink },
+  distance: { gap: space.sm },
+  big: { ...font.huge, lineHeight: 104, marginBottom: -6, color: colors.ink },
   nextTitle: { ...font.h2, color: colors.ink },
   // Countdown in clock digits (think the TV show 24): fixed-width so it doesn't jitter.
   nextClock: { ...font.value, fontSize: 22, color: colors.ink },
