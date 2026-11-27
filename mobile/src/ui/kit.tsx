@@ -3,7 +3,7 @@ import type { ScrollViewInstance } from 'react-native';
 import { ActivityIndicator, KeyboardAvoidingView, Pressable, ScrollView, StyleSheet, Text, View, type ViewStyle, type RefreshControlProps } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { SymbolView } from 'expo-symbols';
-import { colors, font, fonts, radius, space, stroke } from './theme';
+import { capsNudge, colors, font, fonts, radius, space, stroke } from './theme';
 
 // Field Notes kit (Spec Decision #27, canvas direction A): one flat page color,
 // 1pt ink outlines around sections, label/value rows split by thin rules, one
@@ -198,15 +198,15 @@ const s = StyleSheet.create({
   button: { borderRadius: radius.md, paddingVertical: 17, paddingHorizontal: space.lg, alignItems: 'center', minHeight: 56, justifyContent: 'center' },
   outline: { borderWidth: stroke, borderColor: colors.ink, paddingVertical: 16 },
   quiet: { paddingVertical: 12, minHeight: 44 },
-  buttonText: { ...fonts.condensed, fontSize: 22, letterSpacing: 2 },
-  quietText: { ...fonts.condensed, fontSize: 18, letterSpacing: 1.5, textDecorationLine: 'underline' },
+  buttonText: { ...fonts.condensed, fontSize: 22, letterSpacing: 2, ...capsNudge(22) },
+  quietText: { ...fonts.condensed, fontSize: 18, letterSpacing: 1.5, textDecorationLine: 'underline', ...capsNudge(18) },
   row: { flexDirection: 'row', alignItems: 'center', paddingVertical: 10, gap: space.md, minHeight: 44 },
   rowHighlight: { borderWidth: 2, borderColor: colors.ink, marginHorizontal: -space.sm, paddingHorizontal: space.sm - 2 },
   rowRight: { ...font.value, color: colors.ink, marginTop: 5 },
   seg: { flexDirection: 'row', borderWidth: stroke, borderColor: colors.ink, borderRadius: radius.sm },
   segItem: { flex: 1, paddingVertical: 12, alignItems: 'center', minHeight: 44, justifyContent: 'center' },
   segOn: { backgroundColor: colors.ink },
-  segText: { ...fonts.condensed, fontSize: 16, letterSpacing: 1.5 },
+  segText: { ...fonts.condensed, fontSize: 16, letterSpacing: 1.5, ...capsNudge(16) },
   pill: { alignSelf: 'flex-start', paddingHorizontal: 8, paddingVertical: 3, borderRadius: 0, borderWidth: stroke, borderColor: colors.ink },
   iconButton: { width: 44, height: 44, alignItems: 'center', justifyContent: 'center' },
 });

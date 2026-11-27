@@ -21,7 +21,7 @@ import { currentFix } from '@/lib/location';
 import { notificationPermission, registerForPush } from '@/lib/notifications';
 import { RULES } from '@/lib/rules';
 import { Body, Button, Card, Small, Title } from '@/ui/kit';
-import { colors, font, fonts, radius, space } from '@/ui/theme';
+import { capsNudge, colors, font, fonts, radius, space } from '@/ui/theme';
 import { PermissionPrimer, primerSupported, type PrimerKind } from './PermissionPrimer';
 
 export type StepProps = { next: () => void };
@@ -335,7 +335,7 @@ const s = StyleSheet.create({
   input: { borderWidth: 1, borderColor: colors.ink, borderRadius: radius.sm, padding: space.md, fontSize: 17, ...fonts.input },
   searchRow: { flexDirection: 'row', gap: space.sm },
   searchBtn: { backgroundColor: colors.ink, paddingHorizontal: space.lg, justifyContent: 'center', minWidth: 64, alignItems: 'center' },
-  searchBtnText: { ...fonts.condensed, color: colors.bg, fontSize: 21, letterSpacing: 1 },
+  searchBtnText: { ...fonts.condensed, color: colors.bg, fontSize: 21, letterSpacing: 1, ...capsNudge(21) },
   map: { height: 300, borderRadius: radius.md, overflow: 'hidden', borderWidth: 1, borderColor: colors.ink },
   link: { ...font.body, color: colors.ink, textDecorationLine: 'underline', paddingVertical: space.xs },
 });

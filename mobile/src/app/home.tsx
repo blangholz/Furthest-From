@@ -153,7 +153,7 @@ export default function Home() {
       ) : null}
 
       <Leaderboard refreshKey={boardKey} />
-      <Button title={features.friends ? 'Invite your friends' : 'Tell your friends'} kind="secondary" onPress={shareInvite} />
+      <Button title="Invite your friends" kind="secondary" onPress={shareInvite} />
     </Screen>
     {SHOW_EDGE_COMPASS ? <EdgeCompass stores={edgeStores} escape={escape} heading={heading} /> : null}
     </View>

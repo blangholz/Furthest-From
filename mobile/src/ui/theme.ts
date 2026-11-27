@@ -28,6 +28,11 @@ export const fonts = {
   input: { fontFamily: DIN_ALTERNATE },
 };
 
+/** DIN Condensed keeps a tall descender area, so its caps sit high in the line box.
+ *  Shift caps-only button text down by this much so it centers in its button
+ *  (measured on device: ~0.17 em; bug reports #5 and #6). */
+export const capsNudge = (fontSize: number) => ({ transform: [{ translateY: Math.round(fontSize * 0.17) }] });
+
 export const space = { xs: 4, sm: 8, md: 12, lg: 16, xl: 24, xxl: 32 };
 // Field Notes look: sharp corners everywhere (Decision #27).
 export const radius = { sm: 0, md: 0, lg: 0 };

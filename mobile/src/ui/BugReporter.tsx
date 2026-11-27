@@ -21,7 +21,7 @@ import { captureRef, captureScreen } from 'react-native-view-shot';
 import { api, errorText } from '@/lib/api';
 import { feedShake, newShakeState, onReportRequested, useShakeToReport } from '@/lib/bug-report';
 import { Button } from './kit';
-import { colors, font, fonts, space, stroke } from './theme';
+import { capsNudge, colors, font, fonts, space, stroke } from './theme';
 
 type Shot = { uri: string; width: number; height: number };
 type Stroke = { color: string; points: { x: number; y: number }[] };
@@ -214,7 +214,7 @@ const s = StyleSheet.create({
   page: { flex: 1, backgroundColor: colors.bg },
   header: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: space.lg, height: 48 },
   headerBtn: { minWidth: 72, minHeight: 44, justifyContent: 'center' },
-  headerText: { ...fonts.condensed, fontSize: 17, color: colors.ink },
+  headerText: { ...fonts.condensed, fontSize: 17, color: colors.ink, ...capsNudge(17) },
   title: { ...font.h2, flex: 1, textAlign: 'center', color: colors.ink },
   canvasArea: { flex: 1, alignItems: 'center', justifyContent: 'center', paddingHorizontal: space.lg },
   canvas: { borderWidth: stroke, borderColor: colors.ink, overflow: 'hidden' },
