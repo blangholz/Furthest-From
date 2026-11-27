@@ -152,7 +152,11 @@ export default function Home() {
       ) : null}
 
       <Leaderboard refreshKey={boardKey} />
-      <Button title="Invite your friends" kind="secondary" onPress={shareInvite} />
+      {/* Invite card (Figma: Combined vicinity and current distance 3). */}
+      <Card>
+        <Text style={s.inviteTitle}>{brand('McFarthest is more fun with friends')}</Text>
+        <Button title="Invite a friend" onPress={shareInvite} />
+      </Card>
     </Screen>
     {SHOW_EDGE_COMPASS ? <EdgeCompass stores={edgeStores} escape={escape} heading={heading} /> : null}
     </View>
@@ -167,6 +171,7 @@ const s = StyleSheet.create({
   // nudge the wordmark down so the caps center on the burger and the person icon.
   wordmark: { ...font.title, fontSize: 30, lineHeight: 34, marginTop: 6, color: colors.ink },
   distance: { gap: space.sm },
+  inviteTitle: { ...font.h2, color: colors.ink },
   big: { ...font.huge, lineHeight: 104, marginBottom: -6, color: colors.ink },
   nextTitle: { ...font.h2, color: colors.ink },
   // Countdown in clock digits (think the TV show 24): fixed-width so it doesn't jitter.
