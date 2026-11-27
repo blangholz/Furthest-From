@@ -9,7 +9,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { router } from 'expo-router';
 import { Alert, RefreshControl, StyleSheet, Text, View } from 'react-native';
 import { errorText, type LogResult } from '@/lib/api';
-import { demoMode, features } from '@/lib/config';
+import { demoMode } from '@/lib/config';
 import { bearingDeg, escapeBearing, formatMiles, haversineMi } from '@/lib/geo';
 import { nextCheckInOpensAt } from '@/lib/rules';
 import { currentFix, useHeading, useLiveLocation } from '@/lib/location';
