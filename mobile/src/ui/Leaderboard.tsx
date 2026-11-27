@@ -52,7 +52,6 @@ export function Leaderboard({ refreshKey = 0 }: { refreshKey?: number }) {
               {rows.map((r) => (
                 <Row key={r.userId} highlight={r.isMe}
                   left={<Body>{r.rank}. {r.displayName}</Body>}
-                  sub={`${r.logs} check-in${r.logs === 1 ? '' : 's'}`}
                   right={`${formatMiles(r.points)} pts`} />
               ))}
             </Rows>
