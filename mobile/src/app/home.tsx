@@ -155,7 +155,7 @@ export default function Home() {
       {/* Invite card (Figma: Combined vicinity and current distance 3). */}
       <Card>
         <Text style={s.inviteTitle}>{brand('McFarthest is more fun with friends')}</Text>
-        <Button title="Invite a friend" onPress={shareInvite} />
+        <Button title="Invite a friend" kind="secondary" onPress={shareInvite} />
       </Card>
     </Screen>
     {SHOW_EDGE_COMPASS ? <EdgeCompass stores={edgeStores} escape={escape} heading={heading} /> : null}
