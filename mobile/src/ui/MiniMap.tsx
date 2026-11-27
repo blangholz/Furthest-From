@@ -6,7 +6,7 @@
 // With a compass heading the drawing turns about you so up is the way you face, in step with
 // the edge compass; the N rides the rim. Dots and grid are drawn past the frame's corners so a
 // turned map never shows empty corners.
-import { useMemo, useRef, useState } from 'react';
+import { useMemo, useRef, useState, type ReactNode } from 'react';
 import { Animated, Pressable, StyleSheet, Text, View } from 'react-native';
 import { GestureDetector, GestureHandlerRootView, usePinchGesture } from 'react-native-gesture-handler';
 import { type LatLon, type Store } from '@/lib/geo';
@@ -24,9 +24,11 @@ const CROSS = 14;
 const STEP = 2; // + / − zoom factor
 const ASPECT = 0.5625; // height / width when no height is given
 
-/** `height` (outline included) makes the box match another one; otherwise it's ASPECT of the width. */
-export function MiniMap({ pos, nearest, heading = null, height }: {
-  pos: LatLon | null; nearest: { store: Store; mi: number } | null; heading?: number | null; height?: number;
+/** `height` (outline included) sets the box height; otherwise it's ASPECT of the width.
+ *  `children` is an overlay in the top-left corner (Home puts the live distance there). It
+ *  ignores touches, so pinch and the zoom buttons still work under it. */
+export function MiniMap({ pos, nearest, heading = null, height, children }: {
+  pos: LatLon | null; nearest: { store: Store; mi: number } | null; heading?: number | null; height?: number; children?: ReactNode;
 }) {
   const [w, setW] = useState(0);
   const aspect = height && w > 0 ? (height - 2 * stroke) / w : ASPECT;
@@ -36,6 +38,7 @@ export function MiniMap({ pos, nearest, heading = null, height }: {
       {w > 0 && pos && nearest ? <NearMap w={w} aspect={aspect} pos={pos} nearest={nearest} heading={heading} /> : (
         <View style={s.waiting}><Small>Finding you…</Small></View>
       )}
+      {children ? <View style={s.overlay} pointerEvents="none">{children}</View> : null}
     </View>
   );
 }
@@ -164,6 +167,8 @@ const s = StyleSheet.create({
   n: { ...fonts.condensed, position: 'absolute', top: 4, left: 6, fontSize: 13, color: colors.ink },
   nRim: { ...fonts.condensed, position: 'absolute', width: 18, height: 18, lineHeight: 18, textAlign: 'center', fontSize: 13,
     color: colors.ink, backgroundColor: colors.bg },
+  // Inset to clear the N in the top-left corner (Figma: Combined vicinity and current distance 2).
+  overlay: { position: 'absolute', left: 25, top: 14, maxWidth: 170, gap: 2 },
   scale: { position: 'absolute', left: 6, bottom: 4, gap: 2 },
   scaleBar: { height: 4, borderWidth: 1, borderTopWidth: 0, borderColor: colors.ink },
   mapText: { ...fonts.alternate, fontSize: 10, letterSpacing: 1, color: colors.ink },
