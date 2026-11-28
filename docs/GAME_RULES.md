@@ -1,0 +1,33 @@
+# McFarthest: rules as built
+
+Numbers live in one row, `fff.game_settings`, so they can change without code.
+The app mirrors them in `mobile/src/lib/rules.ts`.
+
+Players only ever see the word **check-in** (Decision #37). In the code and database
+the daily window is still a `ping` and a submitted check-in is still a `log`.
+
+- **Distance**: straight-line miles from where you stand to the nearest McDonald's.
+- **Daily check-in**: 1:20 PM in each player's current phone time zone (travelers follow
+  their phone). Open for 1 hour. A check-in taken in the window can upload up to 24 hours later.
+- **Scoring zone**: the lower 48 and DC. Points = miles, to one decimal.
+- **Home zone**: within 5 miles of your home pin. Scores 0, keeps your streak alive,
+  never shown to other players. Home pin set at onboarding, can move once per season.
+- **Passport**: anywhere outside the lower 48 (Alaska, Hawaii, abroad, at sea).
+  Keeps the streak and earns Extra Fries, no leaderboard points.
+- **Streak**: consecutive days with a daily check-in. Missing a day resets it.
+- **Extra Fries**: one per 7 non-home daily check-ins (twice as fast at a 12-day streak).
+  Lets you check in once outside the daily window. Lasts 14 days, warning 48 hours before.
+- **Leaderboard**: one global board, by season or all time. Lists everyone who has
+  scored in the period. No friends in the first release (`features.friends` is off);
+  when they return there is also a Friends board, and the global board can require
+  `global_min_friends` friends again.
+- **Seasons**: Mar 1, Jun 1, Sep 1, Dec 1, Pacific time.
+- **Ticks** (formerly State Extremes): the furthest point from any McDonald's in
+  each state and DC on accessible public land (PAD-US open access). Tick one by standing within 150 ft.
+  Once per state, permanent even if the point moves.
+- **Top 100 ticks** (formerly Top 100 Spots): the 100 furthest points in the lower 48,
+  at least 50 miles apart, on accessible public land. Same 150 ft rule, once each, permanent.
+  Ticks live in Me (state grid, Top 100, full list).
+- **Monthly refresh**: spots that move less than 2 miles keep their identity.
+- **Privacy**: check-ins store distance, region and time only. Exact positions are
+  used once on the server and discarded. Other players never see locations or home.

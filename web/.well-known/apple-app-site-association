@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["TEAMID.app.farfromfries"],
+        "components": [{ "/": "/i/*", "comment": "Friend invites open in the app" }]
+      }
+    ]
+  }
+}
