@@ -17,4 +17,10 @@ export const demoMode = !config.supabaseUrl || !config.supabaseAnonKey;
 // docs/GAME_RULES.md and supabase/migrations/20261125000001_global_board_only.sql).
 export const features = {
   friends: false,
+  // Apple and Google sign-in aren't set up on the Supabase project yet: email only.
+  socialSignIn: false,
 };
+
+// The App Store reviewer's account (pre-created, confirmed, tester). Reviewers can't
+// receive our emails, so this one address signs in with a password instead of a code.
+export const REVIEW_EMAIL = 'appreview@farfromfries.app';

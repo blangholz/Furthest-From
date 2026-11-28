@@ -31,6 +31,8 @@ type AuthValue = {
   email: string | null;
   sendMagicLink(email: string): Promise<void>;
   verifyEmailCode(email: string, code: string): Promise<void>;
+  /** App Store review account only (REVIEW_EMAIL). */
+  signInWithPassword(email: string, password: string): Promise<void>;
   signInWithApple(): Promise<void>;
   signInWithGoogle(): Promise<void>;
   handleAuthUrl(url: string): Promise<boolean>;
@@ -107,6 +109,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           return endRehearsal();
         }
         const { error } = await need().auth.verifyOtp({ email: email.trim(), token: code.trim(), type: 'email' });
+        if (error) throw error;
+      },
+      async signInWithPassword(email, password) {
+        if (rehearsing) return endRehearsal();
+        const { error } = await need().auth.signInWithPassword({ email: email.trim(), password });
         if (error) throw error;
       },
       async signInWithApple() {

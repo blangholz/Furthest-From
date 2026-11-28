@@ -2,7 +2,7 @@ import * as AppleAuthentication from 'expo-apple-authentication';
 import { useEffect, useRef, useState } from 'react';
 import { Alert, Keyboard, Platform, StyleSheet, Text, TextInput, type ScrollViewInstance } from 'react-native';
 import { useAuth } from '@/lib/auth';
-import { demoMode } from '@/lib/config';
+import { demoMode, features, REVIEW_EMAIL } from '@/lib/config';
 import { Body, brand, Button, Card, Gap, H2, Screen, Small } from '@/ui/kit';
 import { colors, font, fonts, radius, space } from '@/ui/theme';
 
@@ -10,6 +10,7 @@ export default function SignIn() {
   const auth = useAuth();
   const [email, setEmail] = useState('');
   const [code, setCode] = useState('');
+  const [password, setPassword] = useState('');
   const [sent, setSent] = useState(false);
   const [busy, setBusy] = useState<string | null>(null);
   const scrollRef = useRef<ScrollViewInstance>(null);
@@ -35,6 +36,7 @@ export default function SignIn() {
   };
 
   const validEmail = /.+@.+\..+/.test(email);
+  const isReview = email.trim().toLowerCase() === REVIEW_EMAIL;
   const sendLink = run('email', async () => {
     await auth.sendMagicLink(email.trim());
     setSent(true);
@@ -63,7 +65,7 @@ export default function SignIn() {
         </Card>
       ) : (
         <>
-          {Platform.OS === 'ios' ? (
+          {features.socialSignIn && Platform.OS === 'ios' ? (
             <AppleAuthentication.AppleAuthenticationButton
               buttonType={AppleAuthentication.AppleAuthenticationButtonType.CONTINUE}
               buttonStyle={AppleAuthentication.AppleAuthenticationButtonStyle.BLACK}
@@ -72,10 +74,20 @@ export default function SignIn() {
               onPress={run('apple', auth.signInWithApple)}
             />
           ) : null}
-          <Button title="Continue with Google" kind="secondary" busy={busy === 'google'} onPress={run('google', auth.signInWithGoogle)} />
-          <Gap />
-          <Card label={sent ? 'Check your email' : 'Or sign in by email'}>
-            {!sent ? (
+          {features.socialSignIn ? (
+            <>
+              <Button title="Continue with Google" kind="secondary" busy={busy === 'google'} onPress={run('google', auth.signInWithGoogle)} />
+              <Gap />
+            </>
+          ) : null}
+          <Card label={sent ? 'Check your email' : features.socialSignIn ? 'Or sign in by email' : 'Sign in by email'}>
+            {isReview && !sent ? (
+              <>
+                <TextInput style={s.input} value={email} onChangeText={setEmail} autoCapitalize="none" keyboardType="email-address" />
+                <TextInput style={s.input} placeholder="Password" secureTextEntry autoCapitalize="none" value={password} onChangeText={setPassword} />
+                <Button title="Sign in" disabled={!password} busy={busy === 'password'} onPress={run('password', () => auth.signInWithPassword(email, password))} />
+              </>
+            ) : !sent ? (
               <>
                 <TextInput
                   style={s.input}
